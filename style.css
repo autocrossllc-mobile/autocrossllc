@@ -54,7 +54,7 @@ z-index: 1000;
 margin-top: 80px; /* space for fixed header */
 min-height: 100vh;
 width: 100%;
-background: url("images/camaro91-hero.jpg") center center / cover no-repeat;
+background: url("images/camaro91.jpg") center center / cover no-repeat;
 position: relative;
 display: flex;
 align-items: center;
