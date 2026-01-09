@@ -47,7 +47,7 @@ nav a:hover {
 background: #222;
 }
 
- .hero {.overlay 
+ .hero .overlay 
 position: relative;
 min-height: 100vh; /* full screen */
 width: 100%;
