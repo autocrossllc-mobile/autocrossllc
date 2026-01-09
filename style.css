@@ -91,17 +91,6 @@ border-radius: 6px;
 }
 
 
-/* CALL BUTTON */
-.call-btn {
-background: #e60000;
-color: #fff;
-padding: 15px 25px;
-margin-top: 20px;
-text-decoration: none;
-font-size: 1.1rem;
-border-radius: 6px;
-}
-
 /* Call button */
 .call-btn {
 background: #e10600;
@@ -111,16 +100,6 @@ text-decoration: none;
 font-weight: bold;
 margin-top: 20px;
 border-radius: 4px;
-}
-
-.call-btn {
-background: #e10600;
-color: #fff;
-padding: 15px;
-text-decoration: none;
-margin-top: 20px;
-text-align: center;
-width: fit-content;
 }
 
 .content {
