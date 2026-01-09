@@ -46,6 +46,16 @@ border-bottom: 1px solid #222;
 nav a:hover {
 background: #222;
 }
+.hero {
+position: relative;
+min-height: 100vh;
+width: 100%;
+background: url("images/camaro91-hero.jpg") center center / cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
 .hero .overlay {
 background: rgba(0, 0, 0, 0.55);
 width: 100%;
@@ -56,11 +66,6 @@ justify-content: center;
 align-items: center;
 text-align: center;
 color: #fff;
-}
- fy-content: center;
-}
-flex-direction: column;
-justify-content: center;
 }
 
 .call-btn {
