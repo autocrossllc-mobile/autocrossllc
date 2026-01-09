@@ -33,8 +33,7 @@ Serving San Bernardino & surrounding areas.
 </a>
 </div>
 </section>
-  </body>
-  </html>
+ 
 <section class="content">
 <h2>Professional Mobile Repair</h2>
 <p>
@@ -57,5 +56,31 @@ is in your driveway, garage, or broken down on the side of the road.
 </footer>
 
 <script src="script.js"></script>
+<script>
+function toggleMenu() {
+document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
 </body>
 </html>
+@media (max-width: 768px) {
+
+.menu-toggle {
+display: block;
+}
+
+nav {
+display: none;
+position: absolute;
+top: 60px;
+right: 0;
+width: 200px;
+background: #000;
+z-index: 20;
+}
+
+nav.show {
+display: flex;
+}
+
+}
