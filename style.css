@@ -87,7 +87,7 @@ background-position: center;
 background-repeat: no-repeat;
 min-height: 75vh;
 position: relative;
-color: white;
+color: #fff;
 }.hero .overlay {
 background: rgba(0, 0, 0, 0.55);
 padding: 80px 20px;
