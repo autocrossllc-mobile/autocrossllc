@@ -4,7 +4,9 @@ font-family: Arial, sans-serif;
 color: #fff;
 background: #111;
 }
-
+.menu-toggle {
+display: none;
+}
 header {
   position; relative;
   top: 0;
