@@ -51,7 +51,7 @@ background: #222;
 z-index: 1000;
 }
 .hero {
-padding-top: 80px; /* space for fixed header */
+margin-top: 80px; /* space for fixed header */
 min-height: 100vh;
 width: 100%;
 background: url("images/camaro91-hero.jpg") center center / cover no-repeat;
@@ -61,10 +61,11 @@ align-items: center;
 justify-content: center;
 }
 
-.hero .overlay {
-background: rgba(0, 0, 0, 0.55); /* dark overlay for readability */
+/* DARK OVERLAY + CONTENT */
+.hero-overlay {
+background: rgba(0, 0, 0, 0.65);
 width: 100%;
-min-height: 100vh;
+height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -74,16 +75,26 @@ color: #fff;
 padding: 20px;
 }
 
-/* Hero text */
+/* HERO TEXT */
 .hero h1 {
 font-size: 2.5rem;
-font-weight: bold;
 margin-bottom: 15px;
 }
 
 .hero p {
 font-size: 1.2rem;
 max-width: 700px;
+}
+
+/* CALL BUTTON */
+.call-btn {
+background: #e60000;
+color: #fff;
+padding: 15px 25px;
+margin-top: 20px;
+text-decoration: none;
+font-size: 1.1rem;
+border-radius: 6px;
 }
 
 /* Call button */
