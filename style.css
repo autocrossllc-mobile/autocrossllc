@@ -4,15 +4,18 @@ font-family: Arial, sans-serif;
 color: #fff;
 background: #111;
 }
-.menu-toggle {
-display: none;
-}
 header {
   position; relative;
   top: 0;
   width 100%;
 z-index: 10;
-
+}
+.menu-toggle {
+  display: block;
+  fontsie: 28px;
+  cursor: pointer;
+  color: #fff;
+}
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -135,4 +138,23 @@ border-radius: 4px;
 }
 .hero {
 background-color: transparent !important;
+}
+@media (max-width: 768px) {
+.menu-toggle {
+display: block;
+}
+
+nav {
+display: none;
+flex-direction: column;
+background: #000;
+position: absolute;
+top: 60px;
+right: 0;
+width: 200px;
+}
+
+nav.show {
+display: flex;
+}
 }
