@@ -47,16 +47,15 @@ nav a:hover {
 background: #222;
 }
 
-.hero {
-background: url("images/camaro91-hero.jpg") center/cover no-repeat;
-height: 90vh;
+ .hero {
+background: url('/images/camaro91-hero.jpg') center/cover no-repeat;
+min-height: 45vh;
+width: 100%;
 position: relative;
 }
-
 .overlay {
-background: rgba(0,0,0,0.65);
-height: 100%;
-padding: 40px;
+background: rgba(0, 0, 0, 0.45);
+min-height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
