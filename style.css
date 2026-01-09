@@ -5,17 +5,43 @@ color: #fff;
 background: #111;
 }
 header {
-  position; relative;
-  top: 0;
-  width 100%;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
 z-index: 1000;
-  display: flex;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #000;
+padding: 15px;
+}
   justify-content: space-between;
   align-items: center;
   background: #000;
   padding: 15px;
 }
 .menu-toggle {
+  nav {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background: #000;
+flex-direction: column;
+z-index: 999;
+}
+
+nav.show {
+display: flex;
+}
+
+nav a {
+padding: 15px;
+border-top: 1px solid #222;
+color: #fff;
+}
 .logo {
 font-size: 18px;
 font-weight: bold;
