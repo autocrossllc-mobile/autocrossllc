@@ -56,10 +56,12 @@ background-image: url("images/camaro91.jpg");
 background-size: cover;
 background-position: center;
 position: relative;
+margin-top: 60px; /* fixes fixed header overlap */
 }
 
 .hero-overlay {
-height: 100%;
+position: absolute;
+inset: 0;
 background: rgba(0, 0, 0, 0.65);
 display: flex;
 flex-direction: column;
@@ -69,18 +71,6 @@ text-align: center;
 color: white;
 padding: 20px;
 }
-
-.hero h1 {
-font-size: 2.5rem;
-margin-bottom: 15px;
-}
-
-.hero p {
-max-width: 600px;
-margin-bottom: 20px;
-font-size: 1.1rem;
-}
-
 .call-btn {
 background: red;
 color: white;
