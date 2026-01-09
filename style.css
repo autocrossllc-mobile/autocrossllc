@@ -56,22 +56,20 @@ background-image: url("images/camaro1.jpg");
 background-size: cover;
 background-position: center;
 position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .hero-overlay {
 position: relative;
 inset: 0;
-
 background: rgba(0, 0, 0, 0.55); /* NOT black */
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
-
 text-align: center;
 padding: 1.5rem;
-
+  padding-top:; 35vh
 z-index: 2;
 }
 }
@@ -81,7 +79,7 @@ margin-bottom: 15px;
 }
 
 .hero p {
-font-size: clamp(1rem, 3.5vw, 1.2rem);
+font-size: clamp(1.2rem, 3.9vw, 1.35rem);
 max-width: 600px;
 margin-bottom: 20px;
 }
