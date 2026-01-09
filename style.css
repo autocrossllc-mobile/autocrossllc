@@ -50,29 +50,30 @@ nav a:hover {
 background: #222;
 z-index: 11;
 }
-hero {
+.hero {
 height: 90vh;
 background-image: url("images/camaro1.jpg");
 background-size: cover;
 background-position: center;
 position: relative;
+  z-index: 3;
 }
 
 .hero-overlay {
-position: absolute;
-inset: 0; /* fills entire hero */
-background: rgba(0, 0, 0, 0.65);
+position: relative;
+inset: 0;
 
+background: rgba(0, 0, 0, 0.55); /* NOT black */
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 
 text-align: center;
-color: #fff;
-padding: 20px;
+padding: 1.5rem;
 
-  z-index: 1;
+z-index: 2;
+}
 }
   hero h1 {
 font-size: clamp(1.8rem, 5vw, 3rem);
