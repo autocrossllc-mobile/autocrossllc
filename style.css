@@ -6,10 +6,10 @@ background: #111;
 }
 
 header {
-  position; fixed;
+  position; relative;
   top: 0;
   width 100%;
-z-index: 1000;
+z-index: 10;
 }
 display: flex;
 justify-content: space-between;
@@ -33,7 +33,7 @@ nav {
 display: none;
 flex-direction: column;
 background: #000;
-position: absolute;
+position: relative;
 top: 60px;
 right: 0;
 width: 200px;
@@ -48,7 +48,7 @@ border-bottom: 1px solid #222;
 
 nav a:hover {
 background: #222;
-z-index: 1000;
+z-index: 11;
 }
 hero {
 height: 90vh;
@@ -61,7 +61,7 @@ position: relative;
 .hero-overlay {
 position: absolute;
 inset: 0; /* fills entire hero */
-background: rgba(0, 0, 0, 0.6);
+background: rgba(0, 0, 0, 0.65);
 
 display: flex;
 flex-direction: column;
@@ -69,16 +69,18 @@ justify-content: center;
 align-items: center;
 
 text-align: center;
-color: white;
+color: #fff;
 padding: 20px;
+
+  z-index: 1;
 }
   hero h1 {
-font-size: clamp(1.8rem, 6vw, 3rem);
+font-size: clamp(1.8rem, 5vw, 3rem);
 margin-bottom: 15px;
 }
 
 .hero p {
-font-size: clamp(1rem, 4vw, 1.3rem);
+font-size: clamp(1rem, 3.5vw, 1.2rem);
 max-width: 600px;
 margin-bottom: 20px;
 }
@@ -94,10 +96,10 @@ text-decoration: none;
 .call-btn {
 background: red;
 color: white;
-padding: 15px 30px;
+padding: 15px 25px;
+border-radius: 6px;
 text-decoration: none;
 font-weight: bold;
-border-radius: 6px;
 }
 
 
