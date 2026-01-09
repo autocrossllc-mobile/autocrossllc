@@ -50,7 +50,7 @@ nav a:hover {
 background: #222;
 z-index: 1000;
 }
-hero {
+.hero {
 height: 90vh;
 background-image: url("images/camaro91.jpg");
 background-size: cover;
