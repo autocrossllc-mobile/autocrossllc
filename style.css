@@ -17,7 +17,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 120px;
   background: #000;
   z-index: 1000;
 }
@@ -25,24 +25,27 @@ header {
 /* ================= LOGO (CLICKABLE HOME LINK) ================= */
 .site-logo {
   position: fixed;
-  top: 12px;
-  left: 16px;
+  top: 70px;              /* moved down ~5 rows */
+  left: 20px;
   z-index: 1200;
 }
 
 .site-logo-img {
-  height: 150px; /* ~3x larger */
+  height: 220px;          /* 2x bigger */
   width: auto;
+  border-radius: 50%;     /* round logo */
+  background: transparent;
+  object-fit: cover;
   cursor: pointer;
 }
 
 /* ================= DESKTOP NAV ================= */
 nav {
   position: absolute;
-  right: 24px;
-  top: 32px;
+  right: 30px;
+  top: 45px;
   display: flex;
-  gap: 22px;
+  gap: 24px;
 }
 
 nav a {
@@ -57,8 +60,8 @@ nav a:hover {
 
 /* ================= HERO ================= */
 .hero {
-  height: calc(100vh - 90px);
-  margin-top: 90px;
+  height: calc(100vh - 120px);
+  margin-top: 120px;
   background: url("./images/camaro91.jpg") center / cover no-repeat;
   position: relative;
 }
@@ -100,7 +103,7 @@ nav a:hover {
 
 /* ================= CONTENT ================= */
 .content {
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 footer {
@@ -112,26 +115,27 @@ footer {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-  /* LOGO */
+  header {
+    height: 140px;
+  }
+
   .site-logo {
-    top: 10px;
-    left: 12px;
+    top: 80px;
+    left: 14px;
   }
 
   .site-logo-img {
-    height: 110px;
+    height: 160px;
   }
 
-  /* MOBILE NAV */
   nav {
     display: none;
     position: absolute;
-    top: 90px;
+    top: 140px;
     left: 0;
     width: 100%;
     background: #000;
     flex-direction: column;
-    padding: 10px 0;
   }
 
   nav.show {
@@ -139,7 +143,7 @@ footer {
   }
 
   nav a {
-    padding: 14px;
+    padding: 15px;
     border-top: 1px solid #222;
   }
 }
