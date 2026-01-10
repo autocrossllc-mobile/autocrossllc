@@ -113,6 +113,32 @@ nav a:hover {
   background-repeat: no-repeat;
   position: relative;
 }
+.call-btn {
+  margin-top: 25px;
+  padding: 15px 28px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
+  border: 2px solid #ff3b3b;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.4);
+
+  transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+  background: #ff3b3b;
+  color: #fff;
+
+  box-shadow:
+    0 0 10px rgba(255,59,59,0.6),
+    0 0 25px rgba(255,59,59,0.4);
+
+  transform: translateY(-1px);
+}
 
 /* ========== CONTENT ========== */
 .content {
