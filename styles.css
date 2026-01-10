@@ -20,19 +20,19 @@ justify-content: center;
 text-align: center;
 }
 
-/* LOGO */
+/* LOGO (STEP 1 UPDATE) */
 .hero-logo {
 position: absolute;
-top: 30px;
+top: 40px; /* moved slightly down */
 left: 50%;
 transform: translateX(-50%);
-width: 140px;
-filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+width: 180px; /* BIGGER logo */
+filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
 transition: transform 0.3s ease;
 }
 
 .hero-logo:hover {
-transform: translateX(-50%) scale(1.05);
+transform: translateX(-50%) scale(1.08);
 }
 
 /* HERO TEXT */
@@ -78,7 +78,7 @@ cursor: pointer;
 z-index: 20;
 }
 
-/* MOBILE MENU (TRANSPARENT) */
+/* MOBILE MENU */
 .mobile-menu {
 display: none;
 position: absolute;
@@ -95,7 +95,6 @@ text-decoration: none;
 font-size: 18px;
 }
 
-/* SHOW MOBILE MENU */
 .mobile-menu.show {
 display: flex;
 }
