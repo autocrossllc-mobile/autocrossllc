@@ -18,21 +18,13 @@ header {
 }
 
 /* ================= LOGO ================= */
-.logo {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1300;
-}
-
-.logo-img {
-  height: 52px;
-  width: auto;
-  cursor: pointer;
-  animation: logoEnter 1.2s ease-out forwards,
-             logoFloat 6s ease-in-out infinite;
-}
+<a href="index.html" class="logo">
+  <img
+    src="images/autocross-logo.png"
+    alt="AutoCross LLC Home"
+    class="logo-img"
+  >
+</a>
 
 /* ================= DESKTOP NAV ================= */
 nav {
@@ -136,19 +128,21 @@ body {
 
 /* LOGO */
 
-  height: 65px;
-  animation: logoEnter 1.2s ease-out forwards,
-             logoFloat 6s ease-in-out infinite;
-}
-
+/* ===== IMAGE LOGO (HOME LINK) ===== */
+.logo {
   position: absolute;
+  top: 14px;               /* lowers logo so it clears nav */
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  font-family: Impact, sans-serif;
+  z-index: 1400;
 }
 
+.logo-img {
+  height: 56px;
+  width: auto;
+  cursor: pointer;
+  display: block;
+}
 
 /* HERO */
 .hero {
@@ -231,12 +225,21 @@ body {
   z-index: 1300;
 }
 
-.logo-img {
-  height: 44px;
+/* ===== IMAGE LOGO (HOME LINK) ===== */
+.logo {
+  position: absolute;
+  top: 14px;               /* lowers logo so it clears nav */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1400;
 }
 
-    animation: logoEnter 1.2s ease-out forwards;
-  }
+.logo-img {
+  height: 56px;
+  width: auto;
+  cursor: pointer;
+  display: block;
+}
 }
 
 @media (max-width: 768px) {
@@ -259,6 +262,11 @@ body {
     border-top: 1px solid #222;
   }
 
+  .logo-img {
+    height: 44px;
+  }
+}
+@media (max-width: 768px) {
   .logo-img {
     height: 44px;
   }
