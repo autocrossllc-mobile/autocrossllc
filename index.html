@@ -1,75 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AutoCross LLC | Mobile Automotive Repair</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCross LLC</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-/* ================= LOGO PREMIUM ANIMATION ================= */
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="site-logo">
+      <img 
+        src="images/autocross-logo.png" 
+        alt="AutoCross LLC Logo" 
+        class="site-logo-img"
+      />
+    </a>
 
-/* Idle float */
-.site-logo-img {
-  animation: logoFloat 6s ease-in-out infinite;
-}
+    <!-- (Hamburger comes NEXT step) -->
+  </header>
 
-/* Pause float on hover */
-.site-logo-img:hover {
-  animation-play-state: paused;
-}
-
-/* Gloss sweep overlay */
-.site-logo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255,255,255,0.35),
-    transparent 70%
-  );
-  transform: translateX(-120%);
-  transition: transform 0.8s ease;
-  pointer-events: none;
-}
-
-/* Trigger sweep */
-.site-logo:hover::after {
-  transform: translateX(120%);
-}
-
-/* Floating animation */
-@keyframes logoFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-
-<section class="hero">
-  <div class="hero-overlay">
-    <h1>Mobile Automotive & LS Swap Services</h1>
-    <p>
-      We come to your home, roadside, or garage.<br>
-      Serving Southern California.
-    </p>
-    <a class="call-btn" href="tel:8402712408">Call Now: 840-271-2408</a>
-  </div>
-</section>
-
-<section class="content">
-  <h2>Professional Mobile Repair</h2>
-  <p>Diagnostics, brakes, LS swaps, and performance — done right.</p>
-</section>
-
-<footer>
-  📞 840-271-2408 | Mobile Service — Southern California
-</footer>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Mobile Automotive & LS Swaps</h1>
+    <p>Serving Southern California</p>
+  </section>
 
 </body>
 </html>
