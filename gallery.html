@@ -7,46 +7,59 @@
 <meta name="description" content="See real automotive, LS swap, and mobile repair work completed by AutoCross LLC.">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="header">
-<div class="logo">AutoCross LLC</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<nav id="nav-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls-swaps.html">LS Swaps</a>
-<a href="gallery.html">Gallery</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
+<header>
+  <div class="logo">
+    <span class="logo-main">AutoCross</span>
+    <span class="logo-sub">LLC</span>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls-swaps.html">LS Swaps</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<section class="hero" style="background-image:url('images/gallery.jpg');">
-<div class="overlay">
-<h1>Our Work</h1>
-<p>Real builds. Real repairs. Mobile service.</p>
-</div>
+<!-- HERO SECTION -->
+<section class="hero" style="background-image: url('./images/gallery.jpg');">
+  <div class="hero-overlay">
+    <h1>Our Work</h1>
+    <p>Real builds. Real repairs. Mobile service.</p>
+  </div>
 </section>
 
+<!-- CONTENT -->
 <section class="content">
-<h2>Recent Projects</h2>
-<p>
-Below are examples of real automotive repairs, LS swaps,
-and mobile service work completed by AutoCross LLC.
-</p>
+  <h2>Recent Projects</h2>
+  <p>
+    Below are examples of real automotive repairs, LS swaps,
+    and mobile service work completed by AutoCross LLC.
+  </p>
 
-<div class="gallery-grid">
-<img src="images/photo1.jpg" alt="Auto repair work">
-<img src="images/photo2.jpg" alt="LS swap build">
-<img src="images/photo3.jpg" alt="Mobile repair">
-</div>
+  <div class="gallery-grid">
+    <img src="images/photo1.jpg" alt="Auto repair work">
+    <img src="images/photo2.jpg" alt="LS swap build">
+    <img src="images/photo3.jpg" alt="Mobile repair">
+  </div>
 </section>
 
 <footer>
-<p>📞 840-271-2408 | Mobile Service – San Bernardino, CA</p>
+  <p>📞 840-271-2408 | Mobile Service – San Bernardino, CA</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
