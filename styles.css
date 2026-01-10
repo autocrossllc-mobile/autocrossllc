@@ -1,4 +1,46 @@
 * {
+  /* NAVBAR FIX */
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px 20px;
+background: black;
+}
+
+.logo {
+height: 50px;
+}
+
+.hamburger {
+font-size: 28px;
+color: white;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+/* Hide menu by default */
+.nav-links {
+display: none;
+flex-direction: column;
+background: black;
+position: absolute;
+top: 70px;
+right: 20px;
+padding: 10px;
+}
+
+/* Show menu when clicked */
+.nav-links.show {
+display: flex;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+padding: 10px 0;
+}
   .logo {
 height: 96px; /* increase/decrease as needed */
 width: auto;
