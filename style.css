@@ -85,7 +85,6 @@ nav a:hover {
   background-size: cover;/* GALLERY HERO FIX */
 .gallery-hero {
   height: 90vh;
-  background-image: url("./images/gallery.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
