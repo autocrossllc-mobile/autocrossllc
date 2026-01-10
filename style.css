@@ -1,311 +1,170 @@
 /* ================= RESET ================= */
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-color: #fff;
-background: #111;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #111;
 }
 
 /* ================= HEADER ================= */
 header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 70px;
-background: #000;
-z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #000;
+  z-index: 1000;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
 .logo {
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-align-items: baseline;
-gap: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 
-font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-text-transform: uppercase;
-letter-spacing: 1px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .logo-main {
-font-size: 24px;
-color: #ffffff;
+  font-size: 24px;
+  color: #fff;
 }
 
 .logo-sub {
-font-size: 12px;
-color: #ff3b3b;
-letter-spacing: 2px;
+  font-size: 12px;
+  color: #ff3b3b;
+  letter-spacing: 2px;
 }
 
-/* MENU BUTTON */
+/* ================= MENU TOGGLE ================= */
 .menu-toggle {
-position: absolute;
-right: 15px;
-font-size: 38px; /* bigger, clearer bars */
-cursor: pointer;
-user-select: none;
+  position: absolute;
+  right: 15px;
+  font-size: 38px; /* thicker, easier to see */
+  cursor: pointer;
+  user-select: none;
+  display: none; /* hidden on desktop */
 }
 
-/* DESKTOP NAV */
-/* ================= RESET ================= */
-* {
-box-sizing: border-box;
-}
-
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-color: #fff;
-background: #111;
-}
-
-/* ================= HEADER ================= */
-header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 70px;
-background: #000;
-z-index: 1000;
-
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-/* LOGO */
-.logo {
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-align-items: baseline;
-gap: 6px;
-
-font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-.logo-main {
-font-size: 24px;
-color: #ffffff;
-}
-
-.logo-sub {
-font-size: 12px;
-color: #ff3b3b;
-letter-spacing: 2px;
-}
-
-/* MENU BUTTON */
-.menu-toggle {
-position: absolute;
-right: 15px;
-font-size: 38px; /* bigger, clearer bars */
-cursor: pointer;
-user-select: none;
-}
-
-/* DESKTOP NAV */
+/* ================= DESKTOP NAV ================= */
 nav {
-position: absolute;
-right: 20px;
-display: flex;
-gap: 18px;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 18px;
 }
 
 nav a {
-color: #fff;
-text-decoration: none;
-font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 nav a:hover {
-opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* ================= HERO ================= */
 .hero {
-height: 90vh;
-margin-top: 70px;
-background-image: url("./images/camaro91.jpg");
-background-size: cover;
-background-position: center;
-position: relative;
+  height: 90vh;
+  margin-top: 70px;
+  background-image: url("./images/camaro91.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .hero-overlay {
-position: absolute;
-inset: 0;
-background: rgba(0,0,0,0.55);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero h1 {
-font-size: clamp(2rem, 5vw, 3rem);
-margin-bottom: 15px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 15px;
 }
 
 .hero p {
-font-size: clamp(1.2rem, 4vw, 1.4rem);
-max-width: 600px;
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  max-width: 600px;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .call-btn {
-margin-top: 20px;
-color: #fff;
-padding: 15px 25px;
-text-decoration: none;
-font-weight: bold;
-border: 2px solid #fff;
+  margin-top: 20px;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #fff;
 }
 
 /* ================= CONTENT ================= */
 .content {
-padding: 40px 20px;
+  padding: 40px 20px;
 }
 
 .features li {
-margin: 10px 0;
+  margin: 10px 0;
 }
 
+/* ================= FOOTER ================= */
 footer {
-background: #000;
-padding: 20px;
-text-align: center;
+  background: #000;
+  padding: 20px;
+  text-align: center;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-nav {
-display: none;
-position: absolute;
-top: 70px;
-left: 0;
-width: 100%;
-background: #000;
-flex-direction: column;
-z-index: 2000;
-}
+  /* show hamburger */
+  .menu-toggle {
+    display: block;
+  }
 
-nav.show {
-display: flex;
-}
+  /* hide desktop nav */
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    z-index: 2000;
+  }
 
+  nav.show {
+    display: flex;
+  }
 
-nav a {
-color: #fff;
-text-decoration: none;
-font-size: 16px;
-  padding: 8px 6px;
-}
-
-nav a:hover {
-opacity: 0.8;
-}
-
-/* ================= HERO ================= */
-.hero {
-height: 90vh;
-margin-top: 70px;
-background-image: url("./images/camaro91.jpg");
-background-size: cover;
-background-position: center;
-position: relative;
-}
-
-.hero-overlay {
-position: absolute;
-inset: 0;
-background: rgba(0,0,0,0.55);
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 20px;
-}
-
-.hero h1 {
-font-size: clamp(2rem, 5vw, 3rem);
-margin-bottom: 15px;
-}
-
-.hero p {
-font-size: clamp(1.2rem, 4vw, 1.4rem);
-max-width: 600px;
-}
-
-/* BUTTON */
-.call-btn {
-margin-top: 20px;
-color: #fff;
-padding: 15px 25px;
-text-decoration: none;
-font-weight: bold;
-border: 2px solid #fff;
-}
-
-/* ================= CONTENT ================= */
-.content {
-padding: 40px 20px;
-}
-
-.features li {
-margin: 10px 0;
-}
-
-footer {
-background: #000;
-padding: 20px;
-text-align: center;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-nav {
-display: none;
-position: absolute;
-top: 70px;
-left: 0;
-width: 100%;
-background: #000;
-flex-direction: column;
-z-index: 2000;
-}
-
-nav.show {
-display: flex;
-}
-
-nav a {
-padding: 15px;
-border-top: 1px solid #222;
-font-size: 16px;
-}
+  nav a {
+    padding: 15px;
+    border-top: 1px solid #222;
+    font-size: 16px;
+    text-align: center;
+  }
 }
