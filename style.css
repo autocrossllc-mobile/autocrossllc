@@ -187,4 +187,80 @@ footer {
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0); }
 }
+/* ================= HEADER BASE ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 2000;
+}
 
+/* LOGO */
+.site-logo {
+  position: relative;
+}
+
+.site-logo-img {
+  height: 90px; /* 2x larger */
+  width: auto;
+  border-radius: 50%;
+}
+
+/* DESKTOP NAV */
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 18px;
+    border-top: 1px solid #222;
+    font-size: 16px;
+  }
+
+  /* Push logo down so it NEVER overlaps menu */
+  .site-logo {
+    margin-top: 12px;
+  }
+}
