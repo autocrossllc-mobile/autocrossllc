@@ -4,7 +4,16 @@
   margin: 0;
   padding: 0;
 }
-
+<script>
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
 /* ========== BODY ========== */
 body {
   font-family: Arial, sans-serif;
@@ -60,7 +69,22 @@ nav a:hover {
 .menu-toggle {
   display: none;
 }
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
 
+  background: linear-gradient(
+    to bottom,
+    rgba(17,17,17,0) 0%,
+    rgba(17,17,17,1) 100%
+  );
+
+  pointer-events: none;
+}
 /* ========== HERO (HOME) ========== */
 .hero {
   height: calc(100vh - 70px);
@@ -72,7 +96,10 @@ nav a:hover {
   position: relative;
   overflow: hidden;
 }
-
+/* HEADER SCROLL SHADOW */
+header.scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
 /* HERO OVERLAY */
 .hero-overlay {
   position: absolute;
