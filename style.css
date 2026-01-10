@@ -1,60 +1,62 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
 /* ================= HEADER ================= */
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 70px;
   background: #000;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
-/* ================= LOGO ================= */
-<a href="index.html" class="logo">
-  <img
-    src="images/autocross-logo.png"
-    alt="AutoCross LLC Home"
-    class="logo-img"
-  >
-</a>
+/* LOGO (IMAGE = HOME LINK) */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
 
 /* ================= DESKTOP NAV ================= */
 nav {
   position: absolute;
-  right: 20px;
+  right: 25px;
   display: flex;
   gap: 18px;
-  z-index: 1100;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   font-size: 15px;
-  position: relative;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #ff3b3b;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
+nav a:hover {
+  opacity: 0.8;
 }
 
 /* ================= HERO ================= */
@@ -65,209 +67,89 @@ nav a:hover::after {
   position: relative;
 }
 
+/* GALLERY HERO BACKGROUND */
+.gallery-hero {
+  background: url("./images/gallery.jpg") center / cover no-repeat;
+}
+
+/* HERO OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.55),
-    rgba(17,17,17,.9)
-  );
+  background: rgba(0, 0, 0, 0.55);
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
 }
 
 /* ================= BUTTON ================= */
 .call-btn {
-  margin-top: 25px;
-  padding: 15px 28px;
-  border: 2px solid #ff3b3b;
-  background: rgba(0,0,0,.4);
-  transition: 0.3s;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .call-btn:hover {
-  background: #ff3b3b;
-  box-shadow: 0 0 20px rgba(255,59,59,.6);
+  background: #fff;
+  color: #000;
 }
 
-/* ================= LOGO ANIMATION ================= */
-@keyframes logoEnter {
-  from {
-    opacity: 0;
-    transform: translateY(-6px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes logoFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-}
-
-.logo-img:hover {
-  animation-play-state: paused;
-}
-/* FORCE WHITE TEXT */
-body,
-h1,h2,h3,h4,h5,h6,
-p,span,li,a {
-  color: #fff;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-}
-
-/* LOGO */
-
-/* ===== IMAGE LOGO (HOME LINK) ===== */
-.logo {
-  position: absolute;
-  top: 14px;               /* lowers logo so it clears nav */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1400;
-}
-
-.logo-img {
-  height: 56px;
-  width: auto;
-  cursor: pointer;
-  display: block;
-}
-
-/* HERO */
-.hero {
-  height: calc(100vh - 70px);
-  margin-top: 70px;
-  background: url("./images/camaro91.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,.55),
-    rgba(17,17,17,.9)
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* ================= CONTENT ================= */
+.content {
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* CALL BUTTON */
-.call-btn {
-  margin-top: 25px;
-  padding: 15px 28px;
-  border: 2px solid #ff3b3b;
-  background: rgba(0,0,0,.4);
-  transition: .3s;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.call-btn:hover {
-  background: #ff3b3b;
-  box-shadow: 0 0 20px rgba(255,59,59,.6);
-}
-
-/* CONTENT FADE */
-.content {
-  position: relative;
-  padding: 80px 20px;
-  margin-top: -80px;
-}
-
-.content::before {
-  content: "";
-  position: absolute;
-  top: 0;
+.gallery-grid img {
   width: 100%;
-  height: 80px;
-  background: linear-gradient(
-    to bottom,
-    rgba(17,17,17,0),
-    rgba(17,17,17,1)
-  );
-}
-/* LOGO ENTER ANIMATION */
-@keyframes logoEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(-6px) scale(0.96);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* SUBTLE FLOAT (PREMIUM IDLE EFFECT) */
-@keyframes logoFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-  100% { transform: translateY(0); }
-}
-.logo-img:hover {
-  animation-play-state: paused;
-}
-  top: 10px;
-  z-index: 1300;
-}
-
-/* ===== IMAGE LOGO (HOME LINK) ===== */
-.logo {
-  position: absolute;
-  top: 14px;               /* lowers logo so it clears nav */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1400;
-}
-
-.logo-img {
-  height: 56px;
-  width: auto;
-  cursor: pointer;
   display: block;
 }
+
+/* ================= FOOTER ================= */
+footer {
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
+/* ================= MOBILE (LATER TUNING) ================= */
 @media (max-width: 768px) {
+
+  /* LOWER LOGO TO AVOID MENU OVERLAP */
+  .logo {
+    top: 14px;
+  }
+
+  .logo-img {
+    height: 42px;
+  }
+
   nav {
     display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 15px;
-    border-top: 1px solid #222;
-  }
-
-  .logo-img {
-    height: 44px;
-  }
-}
-@media (max-width: 768px) {
-  .logo-img {
-    height: 44px;
   }
 }
