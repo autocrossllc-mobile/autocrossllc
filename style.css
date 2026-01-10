@@ -63,14 +63,14 @@ nav a:hover {
 
 /* ========== HERO (HOME) ========== */
 .hero {
-  min-height: calc(100vh - 70px); /* full screen minus header */
+  height: 100vh;
   margin-top: 70px;
   background-image: url("./images/camaro91.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-}
+  overflow:
 /* HERO OVERLAY */
 .hero-overlay {
   position: absolute;
