@@ -1,4 +1,8 @@
 * {
+  .logo {
+height: 96px; /* increase/decrease as needed */
+width: auto;
+}
   margin: 0;
   padding: 0;
   box-sizing: border-box;
