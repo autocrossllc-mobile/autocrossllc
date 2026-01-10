@@ -169,3 +169,32 @@ body {
     display: flex;
   }
 }
+/* HEADER */
+.navbar {
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+
+/* CENTER LOGO */
+.logo-link {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+top: 15px;
+z-index: 1001;
+}
+
+.logo {
+height: 60px;
+max-width: 180px;
+cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+.logo {
+height: 50px;
+}
+}
