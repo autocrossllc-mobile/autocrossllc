@@ -9,6 +9,7 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <a href="index.html" class="logo-link">
     <img src="images/autocross-logo.png" alt="AutoCross LLC Logo" class="site-logo">
@@ -21,4 +22,25 @@
     <a href="gallery.html">Gallery</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
-  </nav
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Mobile Automotive & LS Swaps</h1>
+    <p>Serving Southern California</p>
+  </div>
+</section>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
