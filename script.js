@@ -1,4 +1,8 @@
 function toggleMenu() {
-const menu = document.getElementById("nav-menu");
-menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  document.getElementById("nav-menu").classList.toggle("show");
 }
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 10);
+});
