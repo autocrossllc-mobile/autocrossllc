@@ -1,8 +1,6 @@
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("show");
-}
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("siteNav");
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  header.classList.toggle("scrolled", window.scrollY > 10);
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });
