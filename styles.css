@@ -1,4 +1,24 @@
 * {
+  .hero {
+height: 80vh;
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("hero.jpg") center/cover no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero p {
+font-size: 1.2rem;
+opacity: 0.9;
+}
   /* NAVBAR FIX */
 .navbar {
 display: flex;
