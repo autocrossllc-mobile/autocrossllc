@@ -36,6 +36,12 @@ header.scrolled {
 
 /* LOGO */
 .logo {
+  .logo-img {
+  height: 65px;
+  animation: logoEnter 1.2s ease-out forwards,
+             logoFloat 6s ease-in-out infinite;
+}
+
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -105,3 +111,30 @@ header.scrolled {
     rgba(17,17,17,1)
   );
 }
+/* LOGO ENTER ANIMATION */
+@keyframes logoEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* SUBTLE FLOAT (PREMIUM IDLE EFFECT) */
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+.logo-img:hover {
+  animation-play-state: paused;
+}
+@media (max-width: 768px) {
+  .logo-img {
+    animation: logoEnter 1.2s ease-out forwards;
+  }
+}
+
