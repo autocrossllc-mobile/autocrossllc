@@ -1,156 +1,50 @@
-/* ================= RESET ================= */
+/* =========================
+   GLOBAL
+========================= */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
   color: #fff;
 }
 
-/* ================= HEADER ================= */
-header {
+/* =========================
+   HEADER
+========================= */
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 120px;
-  background: #000;
   z-index: 1000;
+  pointer-events: none;
 }
 
-/* ================= LOGO (CLICKABLE HOME LINK) ================= */
+/* =========================
+   LOGO
+========================= */
 .site-logo {
-  position: fixed;
-  top: 70px;              /* moved down ~5 rows */
+  position: absolute;
+  top: 40px;        /* pushes logo DOWN */
   left: 20px;
-  z-index: 1200;
+  width: 140px;     /* 2× size */
+  height: 140px;
+  border-radius: 50%;
+  overflow: visible;
+  pointer-events: auto;
 }
 
 .site-logo-img {
-  height: 220px;          /* 2x bigger */
-  width: auto;
-  border-radius: 50%;     /* round logo */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
   background: transparent;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-/* ================= DESKTOP NAV ================= */
-nav {
-  position: absolute;
-  right: 30px;
-  top: 45px;
-  display: flex;
-  gap: 24px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-nav a:hover {
-  opacity: 0.8;
-}
-
-/* ================= HERO ================= */
-.hero {
-  height: calc(100vh - 120px);
-  margin-top: 120px;
-  background: url("./images/camaro91.jpg") center / cover no-repeat;
-  position: relative;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
-}
-
-/* ================= BUTTON ================= */
-.call-btn {
-  margin-top: 25px;
-  padding: 15px 28px;
-  border: 2px solid #ff3b3b;
-  color: #fff;
-  text-decoration: none;
-}
-
-.call-btn:hover {
-  background: #ff3b3b;
-}
-
-/* ================= CONTENT ================= */
-.content {
-  padding: 80px 20px;
-}
-
-footer {
-  background: #000;
-  padding: 20px;
-  text-align: center;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  header {
-    height: 140px;
-  }
-
-  .site-logo {
-    top: 80px;
-    left: 14px;
-  }
-
-  .site-logo-img {
-    height: 160px;
-  }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 140px;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 15px;
-    border-top: 1px solid #222;
-  }
-}
-/* ================= LOGO PREMIUM ANIMATION ================= */
-
-/* Idle float */
-.site-logo-img {
   animation: logoFloat 6s ease-in-out infinite;
 }
 
@@ -159,7 +53,9 @@ footer {
   animation-play-state: paused;
 }
 
-/* Gloss sweep overlay */
+/* =========================
+   PREMIUM GLOSS SWEEP
+========================= */
 .site-logo::after {
   content: "";
   position: absolute;
@@ -176,91 +72,25 @@ footer {
   pointer-events: none;
 }
 
-/* Trigger sweep */
 .site-logo:hover::after {
   transform: translateX(120%);
 }
 
-/* Floating animation */
+/* =========================
+   LOGO FLOAT ANIMATION
+========================= */
 @keyframes logoFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
   100% { transform: translateY(0); }
 }
-/* ================= HEADER BASE ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 2000;
-}
 
-/* LOGO */
-.site-logo {
-  position: relative;
-}
-
-.site-logo-img {
-  height: 90px; /* 2x larger */
-  width: auto;
-  border-radius: 50%;
-}
-
-/* DESKTOP NAV */
-.site-nav {
-  display: flex;
-  gap: 24px;
-}
-
-.site-nav a {
-  text-decoration: none;
-  font-size: 15px;
-  position: relative;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 38px;
-  cursor: pointer;
-}
-
-/* ================= MOBILE MENU ================= */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-    display: none;
-    text-align: center;
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  .site-nav a {
-    padding: 18px;
-    border-top: 1px solid #222;
-    font-size: 16px;
-  }
-
-  /* Push logo down so it NEVER overlaps menu */
-  .site-logo {
-    margin-top: 12px;
-  }
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 100vh;
+  padding-top: 180px;
+  text-align: center;
+  background: linear-gradient(to bottom, #111, #000);
 }
