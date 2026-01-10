@@ -12,10 +12,32 @@
 
 <header>
   <div class="logo">
-    <span class="logo-main">AutoCross</span>
-    <span class="logo-sub">LLC</span>
-  </div>
+  <span class="logo-main">AUTOCROSS</span>
+  <span class="logo-sub">LLC</span>
+</div>
+ .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo-main {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.logo-sub {
+  font-size: 12px;
+  color: #ff3b3b;
+  letter-spacing: 2px;
+}
   <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
