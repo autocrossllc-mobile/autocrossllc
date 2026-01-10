@@ -1,139 +1,54 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCross LLC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
+<!-- HEADER / NAV -->
+<header class="header">
+  <div class="header-container">
 
-/* HEADER */
-.header {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
+    <!-- LOGO -->
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="AutoCross LLC Logo" class="logo">
+    </a>
 
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">
+      ☰
+    </button>
 
-/* LOGO */
-.logo-link {
-  display: flex;
-  align-items: center;
-}
+    <!-- NAV LINKS -->
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-.logo {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 50%;
-  background: transparent;
-}
+  </div>
+</header>
 
-/* NAV */
-.nav {
-  display: flex;
-  gap: 25px;
-}
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Mobile Automotive & LS Swaps</h1>
+    <p>Serving Southern California</p>
+  </div>
+</section>
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-}
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
 
-.nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
-}
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+</script>
 
-.nav a:hover::after {
-  width: 100%;
-}
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 140px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav {
-    position: absolute;
-    top: 120px;
-    left: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 20px 0;
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .nav a {
-    padding: 12px 0;
-    font-size: 1.1rem;
-  }
-
-  .logo {
-    width: 75px;
-    height: 75px;
-  }
-}
+</body>
+</html>
