@@ -74,7 +74,11 @@ nav a:hover {
 }
 
 /* ========== HERO ========== */
-.hero {
+.hero {/* GALLERY HERO IMAGE (DESKTOP FIX) */
+.gallery-hero {
+  background-image: url("./images/gallery.jpg");
+}
+
   height: 90vh;
   margin-top: 70px;
   background-image: url("./images/camaro91.jpg");
