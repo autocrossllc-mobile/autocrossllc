@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Work | AutoCross LLC</title>
+  <title>AutoCross LLC | Mobile Automotive Repair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="View real automotive, LS swap, and mobile repair projects by AutoCross LLC.">
+  <meta name="description" content="AutoCross LLC provides mobile automotive repair, LS swaps, and diagnostics in Southern California.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+  <!-- LOGO (HOME LINK) -->
   <a href="index.html" class="logo">
     <img src="images/autocross-logo.png" alt="AutoCross LLC Home" class="logo-img">
   </a>
 
-  <nav>
+  <!-- NAVIGATION -->
+  <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="ls-swaps.html">LS Swaps</a>
@@ -23,32 +25,39 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- MOBILE MENU ICON -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="hero gallery-hero">
+<section class="hero">
   <div class="hero-overlay">
-    <h1>Our Work</h1>
-    <p>Real builds. Real repairs. Mobile service.</p>
+    <h1>Mobile Automotive & LS Swap Services</h1>
+    <p>
+      We come to your home, roadside, or garage.<br>
+      Serving Southern California.
+    </p>
+    <a class="call-btn" href="tel:8402712408">Call Now: 840-271-2408</a>
   </div>
 </section>
 
 <section class="content">
-  <h2>Recent Projects</h2>
+  <h2>Professional Mobile Repair</h2>
   <p>
-    Below are examples of real automotive repairs, LS swaps,
-    and mobile service work completed by AutoCross LLC.
+    Family-owned and operated mobile automotive service specializing in LS swaps,
+    diagnostics, repairs, and performance solutions.
   </p>
-
-  <div class="gallery-grid">
-    <img src="images/photo1.jpg" alt="Automotive repair">
-    <img src="images/photo2.jpg" alt="LS swap build">
-    <img src="images/photo3.jpg" alt="Mobile service repair">
-  </div>
 </section>
 
 <footer>
   <p>📞 840-271-2408 | Mobile Service – Southern California</p>
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
