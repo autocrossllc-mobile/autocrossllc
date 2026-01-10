@@ -9,20 +9,47 @@
 
 <body>
 
-<header>
-  <a href="index.html" class="site-logo">
-    <img src="images/autocross-logo.png" alt="AutoCross LLC Home" class="site-logo-img">
-  </a>
+/* ================= LOGO PREMIUM ANIMATION ================= */
 
-  <nav id="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls-swaps.html">LS Swaps</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+/* Idle float */
+.site-logo-img {
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+/* Pause float on hover */
+.site-logo-img:hover {
+  animation-play-state: paused;
+}
+
+/* Gloss sweep overlay */
+.site-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.35),
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+/* Trigger sweep */
+.site-logo:hover::after {
+  transform: translateX(120%);
+}
+
+/* Floating animation */
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
 
 <section class="hero">
   <div class="hero-overlay">
