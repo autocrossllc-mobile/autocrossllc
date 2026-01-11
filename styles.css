@@ -104,3 +104,8 @@ display: none;
 display: block;
 }
 }
+@media (max-width: 768px) {
+.site-logo img {
+height: 120px;
+}
+}
