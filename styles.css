@@ -112,3 +112,46 @@ border-radius:6px;
 .ls-cards { flex-direction:column; }
 .ls-cards img { width:100%; }
 }
+/* CONTACT PAGE */
+.contact-hero {
+background: linear-gradient(180deg,#000,#111);
+}
+
+.contact-section {
+padding: 60px 20px;
+max-width: 600px;
+margin: auto;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+padding: 12px;
+background: #111;
+border: 1px solid #333;
+color: white;
+}
+
+.hold-box {
+padding: 14px;
+border: 1px solid #ff2a2a;
+background: rgba(255,0,0,0.08);
+font-size: 14px;
+}
+
+.call-option {
+margin-top: 30px;
+text-align: center;
+}
+
+.call-option a {
+color: #ff2a2a;
+text-decoration: none;
+font-weight: bold;
+}
