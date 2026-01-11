@@ -7,36 +7,14 @@ box-sizing: border-box;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-overflow: hidden;
+overflow-x: hidden;
 }
 
-/* HERO LOCKED */
+/* HERO */
 .hero {
 position: relative;
-width: 100vw;
 height: 100vh;
-background: url("hero.jpg") center / cover no-repeat;
-overflow: hidden;
-}
-
-/* LOGO DEFAULT (SMALL + FIXED POSITION) */
-.logo-bounce {
-position: fixed;
-top: 14px;
-left: 14px;
-width: 90px; /* MUCH SMALLER */
-z-index: 50;
-}
-
-.logo-bounce img {
-width: 100%;
-height: auto;
-filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
-}
-
-/* HOME PAGE ONLY — TEMP BOUNCE */
-body.home .logo-bounce {
-position: absolute;
+background: url("camaro-mister.jpeg") center / cover no-repeat;
 }
 
 /* HERO TEXT */
@@ -46,25 +24,109 @@ bottom: 18%;
 width: 100%;
 text-align: center;
 color: white;
-text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 
 .hero-text h1 {
-font-size: 2.4rem;
+font-size: 2.2rem;
 }
 
 .hero-text p {
-margin-top: 8px;
+margin-top: 10px;
 font-size: 1.1rem;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+position: absolute;
+top: 20px;
+right: 30px;
+display: flex;
+gap: 22px;
+z-index: 20;
+}
+
+.desktop-menu a {
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 14px;
+}
+
+.desktop-menu a:hover {
+color: #ff2a2a;
+}
+
+/* MOBILE MENU ICON */
+.menu-toggle {
+position: absolute;
+top: 18px;
+left: 18px;
+font-size: 28px;
+color: white;
+cursor: pointer;
+display: none;
+z-index: 25;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+position: absolute;
+top: 60px;
+left: 18px;
+display: none;
+flex-direction: column;
+gap: 14px;
+z-index: 24;
+}
+
+.mobile-menu a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+letter-spacing: 1px;
+}
+
+.mobile-menu.active {
+display: flex;
+}
+
+/* FLOATING LOGOS */
+.logo-float,
+.ls-float {
+position: absolute;
+width: 70px;
+z-index: 15;
+}
+
+.logo-float img,
+.ls-float img {
+width: 100%;
+}
+
+/* FINAL LOCKED POSITIONS */
+.logo-locked {
+top: 20px;
+left: 20px;
+}
+
+.ls-locked {
+bottom: 20px;
+right: 20px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-.logo-bounce {
-width: 70px;
+.desktop-menu {
+display: none;
+}
+
+.menu-toggle {
+display: block;
 }
 
 .hero-text h1 {
-font-size: 1.8rem;
+font-size: 1.7rem;
 }
 }
