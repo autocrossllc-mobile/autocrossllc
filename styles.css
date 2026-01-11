@@ -108,3 +108,39 @@ margin-bottom: 0.5rem;
 font-size: clamp(1rem, 2.5vw, 1.4rem);
 opacity: 0.9;
 }
+/* ===== MOBILE MENU FIX ===== */
+#hamburger {
+display: none;
+font-size: 2rem;
+cursor: pointer;
+color: white;
+}
+
+@media (max-width: 768px) {
+#hamburger {
+display: block;
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 1001;
+}
+
+#navLinks {
+display: none;
+position: absolute;
+top: 70px;
+right: 0;
+background: rgba(0,0,0,0.95);
+width: 100%;
+text-align: center;
+z-index: 1000;
+}
+
+#navLinks.show {
+display: block;
+}
+
+#navLinks li {
+padding: 1rem 0;
+}
+}
