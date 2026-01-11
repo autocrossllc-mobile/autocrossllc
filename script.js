@@ -1,41 +1,34 @@
-const logo = document.querySelector(".logo-bounce");
-const isHome = document.body.classList.contains("home");
+const logo = document.getElementById("mainLogo");
+const lsLogo = document.getElementById("lsLogo");
+const mobileMenu = document.getElementById("mobileMenu");
 
-if (isHome && logo) {
-let x = 60;
-let y = 60;
-let dx = 2.2;
-let dy = 2.0;
-
-const hero = document.querySelector(".hero");
-const startTime = Date.now();
-const bounceDuration = 8000; // 8 seconds
-
-function animateLogo() {
-const now = Date.now();
-
-if (now - startTime > bounceDuration) {
-// LOCK LOGO TOP LEFT AFTER BOUNCE
-logo.style.position = "fixed";
-logo.style.top = "14px";
-logo.style.left = "14px";
-logo.style.transform = "translate(0,0)";
-return;
+// MOBILE MENU
+function toggleMenu() {
+mobileMenu.classList.toggle("active");
 }
 
-const heroRect = hero.getBoundingClientRect();
-const logoRect = logo.getBoundingClientRect();
+// RANDOM FLOATING MOTION
+function floatAround(el) {
+let x = Math.random() * (window.innerWidth - 100);
+let y = Math.random() * (window.innerHeight - 100);
 
-x += dx;
-y += dy;
-
-if (x + logoRect.width >= heroRect.width || x <= 0) dx *= -1;
-if (y + logoRect.height >= heroRect.height || y <= 0) dy *= -1;
-
-logo.style.transform = `translate(${x}px, ${y}px)`;
-
-requestAnimationFrame(animateLogo);
+el.style.left = x + "px";
+el.style.top = y + "px";
 }
 
-animateLogo();
-}
+// START FLOATING
+let logoInterval = setInterval(() => floatAround(logo), 700);
+let lsInterval = setInterval(() => floatAround(lsLogo), 700);
+
+// STOP AFTER 8 SECONDS
+setTimeout(() => {
+clearInterval(logoInterval);
+clearInterval(lsInterval);
+
+logo.classList.add("logo-locked");
+lsLogo.classList.add("ls-locked");
+
+logo.style.transition = "all 1s ease";
+lsLogo.style.transition = "all 1s ease";
+
+}, 8000);
