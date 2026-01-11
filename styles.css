@@ -65,21 +65,31 @@ background: url("hero.jpg") center / cover no-repeat;
 position: relative;
 }
 
+/* =========================
+LS HERO (SAFE + CENTERED)
+========================= */
 .ls-hero {
-background: url("ls-hero.png") center / cover no-repeat;
+width: 100%;
+height: 70vh; /* desktop */
+min-height: 420px;
+background-image: url("ls-hero.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain; /* SHOW FULL IMAGE */
+display: flex;
+align-items: flex-end;
+justify-content: center;
+padding-bottom: 40px;
 }
 
-.hero-overlay {
-position:absolute;
-inset:0;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:rgba(0,0,0,0.45);
-text-align:center;
+/* Mobile fix */
+@media (max-width: 768px) {
+.ls-hero {
+height: 55vh;
+min-height: 320px;
+background-size: contain;
 }
-
+}
 /* CTA */
 .cta-btn {
 margin-top: 25px;
