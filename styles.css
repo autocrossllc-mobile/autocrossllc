@@ -122,3 +122,58 @@ display: none;
 letter-spacing: 2px;
 }
 }
+.site-header {
+position: fixed;
+top: 0;
+width: 100%;
+background: black;
+z-index: 1000;
+}
+
+.header-inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 20px;
+}
+
+.logo img {
+height: 45px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-weight: 600;
+}
+
+.menu-toggle {
+display: none;
+font-size: 26px;
+background: none;
+color: white;
+border: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+nav {
+display: none;
+flex-direction: column;
+background: black;
+position: absolute;
+top: 65px;
+right: 0;
+width: 100%;
+}
+
+nav a {
+padding: 15px;
+border-top: 1px solid #222;
+}
+
+.menu-toggle {
+display: block;
+}
+}
