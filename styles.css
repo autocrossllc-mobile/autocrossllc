@@ -58,35 +58,31 @@ z-index: 1002;
 display: flex;
 }
 
-/* HERO */
-.hero {
-height: 100vh;
-background: url("hero.jpg") center / cover no-repeat;
-position: relative;
-}
-
 /* =========================
-LS HERO (SAFE + CENTERED)
+LS HERO — FIT & CENTERED
 ========================= */
 .ls-hero {
 width: 100%;
-height: 70vh; /* desktop */
-min-height: 420px;
+height: 58vh; /* reduced so content below is visible */
+max-height: 520px; /* laptop-safe */
+min-height: 340px; /* still premium, not cramped */
+
 background-image: url("ls-hero.png");
 background-position: center center;
 background-repeat: no-repeat;
 background-size: contain; /* SHOW FULL IMAGE */
-display: flex;
-align-items: flex-end;
-justify-content: center;
-padding-bottom: 40px;
+
 }
 
+.ls-page .hero {
+height: auto;
+}
 /* Mobile fix */
 @media (max-width: 768px) {
 .ls-hero {
-height: 55vh;
-min-height: 320px;
+height: 50vh;
+min-height: 420px;
+  min-height: 300px;
 background-size: contain;
 }
 }
@@ -116,6 +112,12 @@ border-radius:6px;
 
 /* MOBILE */
 @media (max-width:768px) {
+  .ls-hero {
+height: 50vh;
+max-height: 420px;
+background-size: contain;
+}
+}
 .desktop-menu { display:none; }
 .menu-toggle { display:block; }
 .site-logo img { height:100px; }
@@ -370,4 +372,7 @@ transparent,
 transparent
 );
 opacity: 0.75;
+}
+.ls-section:first-of-type {
+margin-top: 20px;
 }
