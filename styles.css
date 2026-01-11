@@ -1,123 +1,83 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Arial, sans-serif;
 }
 
-/* ================= HEADER ================= */
-.site-header {
-position: fixed;
-top: 0;
-width: 100%;
-height: 70px;
-background: rgba(0,0,0,0.75);
+body {
+font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;
+}
+
+/* ================= HERO (LOCKED BACKGROUND) ================= */
+.hero {
+position: relative;
+height: 100vh;
+background-image: url("hero.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed; /* 🔒 HERO IMAGE LOCKED */
 display: flex;
 align-items: center;
-justify-content: space-between;
-padding: 0 20px;
-z-index: 10000;
+justify-content: center;
+text-align: center;
 }
 
-/* LOGO */
-.logo img {
-height: 45px;
-animation: logoBounce 4s infinite ease-in-out;
-cursor: pointer;
+/* ================= LOGO (NOT LOCKED) ================= */
+/* Smaller + free so we can animate later */
+.hero-logo {
+width: 120px;
+height: auto;
+position: absolute;
+top: 90px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 5;
 }
 
-/* PERFORMANCE LOGO ANIMATION */
-@keyframes logoBounce {
-0% { transform: translateY(0); }
-50% { transform: translateY(-6px); }
-100% { transform: translateY(0); }
+/* ================= HERO TEXT ================= */
+.hero-text {
+position: absolute;
+bottom: 18%;
+color: white;
+text-shadow: 0 4px 10px rgba(0,0,0,0.7);
 }
 
-/* ================= DESKTOP MENU ================= */
+.hero-text h1 {
+font-size: 2.4rem;
+}
+
+.hero-text p {
+font-size: 1.1rem;
+margin-top: 10px;
+}
+
+/* ================= DESKTOP MENU (LOCKED) ================= */
 .desktop-menu {
+position: fixed; /* 🔒 MENU LOCKED */
+top: 20px;
+right: 30px;
 display: flex;
-gap: 20px;
+gap: 24px;
+z-index: 1000;
 }
 
 .desktop-menu a {
 color: white;
 text-decoration: none;
-font-weight: bold;
+font-size: 15px;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
 .desktop-menu a:hover {
 color: #ff2a2a;
 }
 
-/* ================= HAMBURGER ================= */
-.hamburger {
-display: none;
-background: none;
-border: none;
-color: white;
-font-size: 28px;
-cursor: pointer;
-}
-
-/* ================= MOBILE MENU ================= */
+/* ================= MOBILE (INTENTIONALLY DISABLED) ================= */
+.menu-toggle,
 .mobile-menu {
-position: fixed;
-top: 70px;
-left: 0;
-width: 100%;
-background: black;
 display: none;
-flex-direction: column;
-z-index: 9999;
-}
-
-.mobile-menu a {
-color: white;
-padding: 15px;
-text-decoration: none;
-border-bottom: 1px solid #333;
-}
-
-.mobile-menu a:hover {
-background: #ff2a2a;
-}
-
-/* ================= HERO ================= */
-.hero {
-height: 100vh;
-background: url("hero.jpg") center/cover no-repeat fixed;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding-top: 70px;
-}
-
-.hero-text h1 {
-color: white;
-font-size: 3rem;
-text-shadow: 0 4px 10px black;
-}
-
-.hero-text p {
-color: white;
-font-size: 1.3rem;
-margin-top: 10px;
-text-shadow: 0 4px 10px black;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-.desktop-menu {
-display: none;
-}
-
-.hamburger {
-display: block;
-}
-
-.hero-text h1 {
-font-size: 2rem;
-}
 }
