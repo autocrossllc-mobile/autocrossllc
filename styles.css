@@ -1,74 +1,4 @@
-/* RESET */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: Arial, Helvetica, sans-serif;
-overflow-x: hidden;
-}
-
-/* HERO */
-.hero {
-position: relative;
-height: 100vh;
-background: url("camaro-mister.jpeg") center / cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-}
-
-/* LOGO — LEFT ALONE */
-.hero-logo {
-width: 120px;
-height: auto;
-z-index: 5;
-}
-
-/* HERO TEXT */
-.hero-text {
-position: absolute;
-bottom: 18%;
-color: white;
-text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
-
-.hero-text h1 {
-font-size: 2.2rem;
-}
-
-.hero-text p {
-font-size: 1.1rem;
-margin-top: 8px;
-}
-
-/* DESKTOP MENU (TOP RIGHT) */
-.desktop-menu {
-position: absolute;
-top: 20px;
-right: 30px;
-display: flex;
-gap: 24px;
-z-index: 10;
-}
-
-.desktop-menu a {
-color: #ffffff;
-text-decoration: none;
-font-size: 16px;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.desktop-menu a:hover {
-color: #ff2a2a;
-}
-
-/* MOBILE MENU ICON (TOP LEFT) */
-.menu-icon {
+.menu-toggle {
 position: absolute;
 top: 18px;
 left: 18px;
@@ -76,10 +6,9 @@ font-size: 28px;
 color: white;
 cursor: pointer;
 display: none;
-z-index: 15;
+z-index: 20;
 }
 
-/* MOBILE MENU (DROPDOWN, NO BACKGROUND) */
 .mobile-menu {
 position: absolute;
 top: 60px;
@@ -87,37 +16,19 @@ left: 18px;
 display: none;
 flex-direction: column;
 gap: 16px;
-z-index: 14;
+z-index: 19;
 }
 
-.mobile-menu a {
-color: white;
-text-decoration: none;
-font-size: 18px;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-.mobile-menu a:hover {
-color: #ff2a2a;
-}
-
-/* SHOW MOBILE MENU */
 .mobile-menu.active {
 display: flex;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
 .desktop-menu {
 display: none;
 }
 
-.menu-icon {
+.menu-toggle {
 display: block;
-}
-
-.hero-text h1 {
-font-size: 1.8rem;
 }
 }
