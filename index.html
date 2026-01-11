@@ -8,84 +8,46 @@
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-<div class="logo">
-<a href="index.html">AutoCross LLC</a>
-</div>
+<!-- HERO -->
+<section class="hero">
 
+<!-- DESKTOP MENU -->
 <nav class="desktop-menu">
 <a href="index.html">Home</a>
 <a href="gallery.html">Gallery</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
 </nav>
-</header>
 
-<!-- HERO SECTION -->
-/* HERO TEXT STYLING */
-.hero-overlay {
-position: absolute;
-inset: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: white;
-z-index: 2;
-}
+<!-- MOBILE HAMBURGER -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-/* SVG CURVED TEXT */
-.hero-text-svg {
-width: 90%;
-max-width: 1000px;
-height: auto;
-}
+<!-- MOBILE MENU -->
+<nav id="mobileMenu" class="mobile-menu">
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-.hero-text-svg text {
-font-family: 'Impact', 'Arial Black', sans-serif;
-font-size: 72px;
-fill: white;
-letter-spacing: 4px;
-text-transform: uppercase;
-animation: lsPulse 3s ease-in-out infinite;
-filter: drop-shadow(0 0 10px rgba(255,0,0,0.6));
-}
+<!-- MAIN LOGO -->
+<a href="index.html">
+<img src="logo.png" id="mainLogo" class="floating-logo" alt="AutoCross Logo">
+</a>
 
-/* SUBTEXT */
-.hero-subtext {
-margin-top: 20px;
-font-size: 20px;
-letter-spacing: 3px;
-text-transform: uppercase;
-opacity: 0.9;
-}
+<!-- LS LOGO -->
+<a href="ls.html">
+<img src="ls-swap.png" id="lsLogo" class="floating-ls" alt="LS Performance">
+</a>
 
-/* LS PERFORMANCE ANIMATION */
-@keyframes lsPulse {
-0% {
-transform: scale(1);
-filter: drop-shadow(0 0 6px rgba(255,0,0,0.4));
-}
-50% {
-transform: scale(1.02);
-filter: drop-shadow(0 0 14px rgba(255,0,0,0.9));
-}
-100% {
-transform: scale(1);
-filter: drop-shadow(0 0 6px rgba(255,0,0,0.4));
-}
-}
+<!-- HERO TEXT -->
+<div class="hero-text">
+<h1>Mobile Automotive Repair<br>LS Swaps</h1>
+<p>Performance • Reliability • Anywhere</p>
+</div>
 
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 768px) {
-.hero-text-svg text {
-font-size: 48px;
-}
+</section>
 
-.hero-subtext {
-font-size: 16px;
-}
-}
-
+<script src="script.js"></script>
+</body>
+</html>
