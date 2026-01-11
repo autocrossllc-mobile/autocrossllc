@@ -33,17 +33,18 @@ z-index: 1;
 }
 
 /* LOGO */
-.logo {
+.site-logo {
 position: fixed;
 top: 20px;
 left: 20px;
 z-index: 1000;
 }
 
-.logo img {
-height: 120px;
+.site-logo img {
+height: 180px; /* 4x bigger feel */
 width: auto;
 }
+
 
 /* DESKTOP MENU */
 .desktop-menu {
