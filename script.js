@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  <script>
+function toggleMenu() {
+const menu = document.getElementById("nav-menu");
+menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 const logo = document.getElementById("mainLogo");
 const lsLogo = document.getElementById("lsLogo");
 const mobileMenu = document.getElementById("mobileMenu");
