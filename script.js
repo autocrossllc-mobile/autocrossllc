@@ -1,4 +1,6 @@
-unction toggleMenu() {
-const menu = document.getElementById("mobileMenu");
-menu.classList.toggle("active");
-}
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+mobileMenu.classList.toggle("active");
+});
