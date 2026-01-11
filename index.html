@@ -22,6 +22,7 @@
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="ls.html">LS</a>
+<a href="gallery.html">Gallery</a>
 <a href="contact.html">Contact</a>
 </nav>
 
@@ -47,3 +48,47 @@
 <script src="script.js"></script>
 </body>
 </html>
+/* ===== LS MOBILE TOGGLE ===== */
+.menu-toggle {
+position: fixed;
+top: 18px;
+right: 18px;
+z-index: 9999;
+font-size: 28px;
+color: #fff;
+background: rgba(0,0,0,0.85);
+padding: 10px 14px;
+border: 1px solid rgba(255,60,0,0.4);
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+position: fixed;
+top: 70px;
+right: 18px;
+width: 220px;
+background: linear-gradient(180deg, #0d0d0d, #000);
+border: 1px solid rgba(255,60,0,0.35);
+display: none;
+flex-direction: column;
+z-index: 9998;
+}
+
+.mobile-menu a {
+padding: 14px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+font-size: 14px;
+color: #fff;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-menu a:hover {
+background: rgba(255,60,0,0.15);
+}
+
+.mobile-menu.active {
+display: flex;
+}
