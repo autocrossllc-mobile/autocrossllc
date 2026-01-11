@@ -246,21 +246,16 @@ letter-spacing: 6px;
 text-transform: uppercase;
 }
 
-.ls-cards {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
-padding: 60px 20px;
-}
-
 .ls-card {
-padding: 40px 20px;
-border: 1px solid rgba(255,255,255,0.15);
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 2px;
+opacity: 0;
+transform: translateY(24px);
+transition: all 0.6s ease;
 }
 
+.ls-card.show {
+opacity: 1;
+transform: translateY(0);
+}
 .ls-cta {
 text-align: center;
 padding: 80px 20px;
@@ -276,4 +271,18 @@ font-size: 16px;
 letter-spacing: 2px;
 text-transform: uppercase;
 border-radius: 4px;
+}
+/* LS HERO TEXT ANIMATION */
+.ls-title {
+opacity: 0;
+transform: translateY(12px);
+animation: lsFadeIn 1.2s ease forwards;
+animation-delay: 0.4s;
+}
+
+@keyframes lsFadeIn {
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
