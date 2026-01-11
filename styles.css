@@ -26,30 +26,37 @@ z-index: 2;
 
 /* SVG CURVED TEXT */
 .hero-text-svg {
-width: 90%;
-max-width: 1000px;
-height: auto;
+width: 130%;
+max-width: 1600px;
+margin: 0 auto;
+display: block;
+overflow: visible;
 }
 
 .hero-text-svg text {
 font-family: 'Impact', 'Arial Black', sans-serif;
-font-size: 72px;
-fill: white;
-letter-spacing: 4px;
+font-size: 360px; /* MASSIVE like Summit/Holley */
+letter-spacing: 14px;
+fill: url(#lsMetal);
 text-transform: uppercase;
-animation: lsPulse 3s ease-in-out infinite;
-filter: drop-shadow(0 0 10px rgba(255,0,0,0.6));
+
+filter:
+drop-shadow(0 0 8px rgba(255, 0, 0, 0.6))
+drop-shadow(0 0 24px rgba(255, 80, 0, 0.45))
+drop-shadow(0 0 50px rgba(0, 0, 0, 0.9));
+
+animation: lsIdle 3.5s ease-in-out infinite;
 }
 
-/* SUBTEXT */
 .hero-subtext {
-margin-top: 20px;
-font-size: 20px;
+text-align: center;
+margin-top: -40px;
+font-size: 22px;
 letter-spacing: 3px;
+color: #ffffff;
 text-transform: uppercase;
-opacity: 0.9;
+text-shadow: 0 0 10px rgba(255,0,0,0.5);
 }
-
 /* LS PERFORMANCE ANIMATION */
 @keyframes lsPulse {
 0% {
