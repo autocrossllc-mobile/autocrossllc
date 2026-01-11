@@ -286,3 +286,25 @@ opacity: 1;
 transform: translateY(0);
 }
 }
+cta-button {
+box-shadow: 0 0 12px rgba(255,0,0,0.45);
+animation: ctaPulse 4s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+0% {
+box-shadow: 0 0 12px rgba(255,0,0,0.35);
+}
+50% {
+box-shadow: 0 0 20px rgba(255,80,0,0.6);
+}
+100% {
+box-shadow: 0 0 12px rgba(255,0,0,0.35);
+}
+}
+@media (prefers-reduced-motion: reduce) {
+* {
+animation: none !important;
+transition: none !important;
+}
+}
