@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
 margin: 0;
 padding: 0;
@@ -7,78 +7,65 @@ box-sizing: border-box;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-overflow-x: hidden;
+overflow: hidden; /* PREVENT SCROLL */
 }
 
-/* ================= HERO (LOCKED BACKGROUND) ================= */
+/* HERO (LOCKED BACKGROUND) */
 .hero {
 position: relative;
+width: 100vw;
 height: 100vh;
-background-image: url("hero.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed; /* 🔒 HERO IMAGE LOCKED */
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+background: url("hero.jpg") center / cover no-repeat;
+overflow: hidden;
 }
 
-/* ================= LOGO (NOT LOCKED) ================= */
-/* Smaller + free so we can animate later */
-.hero-logo {
-width: 360px; /* 🔼 3x bigger */
-height: auto;
+/* BOUNCING LOGO LINK */
+.logo-bounce {
 position: absolute;
-top: 90px;
-left: 50%;
-transform: translateX(-50%);
-z-index: 5;
+width: 180px; /* 3x BIGGER PERFORMANCE SIZE */
+cursor: pointer;
+z-index: 10;
 }
 
+.logo-bounce img {
+width: 100%;
+height: auto;
+filter: drop-shadow(0 8px 16px rgba(0,0,0,0.7));
+transition: transform 0.15s ease;
+}
 
-/* ================= HERO TEXT ================= */
+.logo-bounce:hover img {
+transform: scale(1.12) rotate(-1deg);
+}
+
+/* HERO TEXT */
 .hero-text {
 position: absolute;
 bottom: 18%;
+width: 100%;
+text-align: center;
 color: white;
-text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+text-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
 
 .hero-text h1 {
 font-size: 2.4rem;
+letter-spacing: 1px;
 }
 
 .hero-text p {
 font-size: 1.1rem;
-margin-top: 10px;
+margin-top: 8px;
+opacity: 0.9;
 }
 
-/* ================= DESKTOP MENU (LOCKED) ================= */
-.desktop-menu {
-position: fixed; /* 🔒 MENU LOCKED */
-top: 20px;
-right: 30px;
-display: flex;
-gap: 24px;
-z-index: 1000;
+/* MOBILE */
+@media (max-width: 768px) {
+.logo-bounce {
+width: 130px;
 }
 
-.desktop-menu a {
-color: white;
-text-decoration: none;
-font-size: 15px;
-letter-spacing: 1px;
-text-transform: uppercase;
+.hero-text h1 {
+font-size: 1.8rem;
 }
-
-.desktop-menu a:hover {
-color: #ff2a2a;
-}
-
-/* ================= MOBILE (INTENTIONALLY DISABLED) ================= */
-.menu-toggle,
-.mobile-menu {
-display: none;
 }
