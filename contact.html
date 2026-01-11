@@ -14,80 +14,44 @@
 <img src="official-logo.png" alt="AutoCross LLC Logo">
 </a>
 
-<!-- HAMBURGER -->
-<div class="menu-toggle" id="menuToggle">☰</div>
-
-<!-- MOBILE MENU -->
-<nav class="mobile-menu" id="mobileMenu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls.html">LS</a>
-<a href="contact.html">Contact</a>
-</nav>
-
 <!-- DESKTOP MENU -->
 <nav class="desktop-menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
 <a href="ls.html">LS</a>
 <a href="contact.html">Contact</a>
 </nav>
 
-<!-- CONTACT HERO -->
-<section class="hero contact-hero">
-<div class="hero-overlay">
-<h1>Request Appointment</h1>
-<p>Secure your spot • $25 refundable hold</p>
-</div>
-</section>
-
-<!-- CONTACT FORM -->
 <section class="contact-section">
+<h1>Request an Appointment</h1>
+<p class="contact-sub">
+A <strong>$25 scheduling hold</strong> is required and will be applied to your service.
+</p>
 
-<form class="contact-form">
+<form class="appointment-form">
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Vehicle (Year / Make / Model)" required>
 
-<label>Name</label>
-<input type="text" required>
+<textarea placeholder="Describe the service needed" required></textarea>
 
-<label>Email</label>
-<input type="email" required>
-
-<label>Phone</label>
-<input type="tel" required>
-
-<label>Service Needed</label>
-<select required>
-<option value="">Select Service</option>
-<option>LS Swap</option>
-<option>Diagnostics</option>
-<option>Repair</option>
-<option>Performance Upgrade</option>
-</select>
-
-<label>Describe Your Vehicle / Request</label>
-<textarea rows="4" required></textarea>
-
-<!-- HOLD FEE INFO -->
-<div class="hold-box">
-<strong>$25 Appointment Hold</strong>
-<p>This secures your appointment and is applied toward your service.</p>
-</div>
-
-<!-- STRIPE BUTTON -->
-<button type="button" class="cta-btn">
+<!-- STRIPE PAYMENT LINK -->
+<a
+href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
+class="cta-button"
+target="_blank"
+>
 Pay $25 & Request Appointment
-</button>
-
+</a>
 </form>
 
-<!-- CALL OPTION -->
-<div class="call-option">
-<p>Prefer to speak now?</p>
-<a href="tel:15555555555">Call Now</a>
-</div>
-
+<p class="contact-note">
+No cash required. Card & ACH accepted.<br>
+Appointment holds reduce no-shows and protect your time.
+</p>
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>
