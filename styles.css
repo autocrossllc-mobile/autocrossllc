@@ -308,3 +308,49 @@ animation: none !important;
 transition: none !important;
 }
 }
+/* =========================
+LS CARD IMAGE BACKGROUNDS
+========================= */
+.ls-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 24px;
+padding: 80px 20px;
+}
+
+.ls-card {
+position: relative;
+height: 220px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+border: 1px solid rgba(255,255,255,0.15);
+overflow: hidden;
+background-size: cover;
+background-position: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.ls-card::before {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.85)
+);
+}
+
+.ls-card h3 {
+position: relative;
+z-index: 1;
+font-size: 1.2rem;
+}
+
+/* IMAGE ASSIGNMENTS */
+.ls-card.engine { background-image: url("ls-engine.jpg"); }
+.ls-card.cam { background-image: url("ls-cam.jpg"); }
+.ls-card.diagnostics { background-image: url("ls-diagnostics.jpg"); }
+.ls-card.show { background-image: url("ls-show.jpg"); }
