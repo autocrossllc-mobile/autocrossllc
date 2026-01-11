@@ -150,3 +150,31 @@ font-size: clamp(1rem, 3vw, 1.4rem);
 letter-spacing: 2px;
 opacity: 0.9;
 }
+/* ===== LS PAGE HERO UPGRADE ===== */
+.hero-text h1 {
+font-family: 'Impact', 'Arial Black', sans-serif;
+font-size: clamp(3rem, 10vw, 6rem);
+letter-spacing: 6px;
+text-transform: uppercase;
+animation: lsBounce 2.8s ease-in-out infinite;
+color: #ffffff;
+
+text-shadow:
+0 0 8px rgba(255,0,0,0.6),
+0 0 20px rgba(255,80,0,0.5),
+0 0 40px rgba(0,0,0,0.9);
+}
+
+.hero-text p {
+margin-top: 0.5rem;
+letter-spacing: 3px;
+text-transform: uppercase;
+opacity: 0.9;
+}
+
+/* LS PERFORMANCE BOUNCE */
+@keyframes lsBounce {
+0% { transform: scale(1); }
+50% { transform: scale(1.04); }
+100% { transform: scale(1); }
+}
