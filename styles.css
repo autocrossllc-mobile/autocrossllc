@@ -7,10 +7,10 @@ box-sizing: border-box;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-overflow: hidden; /* PREVENT SCROLL */
+overflow: hidden;
 }
 
-/* HERO (LOCKED BACKGROUND) */
+/* HERO LOCKED */
 .hero {
 position: relative;
 width: 100vw;
@@ -19,23 +19,24 @@ background: url("hero.jpg") center / cover no-repeat;
 overflow: hidden;
 }
 
-/* BOUNCING LOGO LINK */
+/* LOGO DEFAULT (SMALL + FIXED POSITION) */
 .logo-bounce {
-position: absolute;
-width: 180px; /* 3x BIGGER PERFORMANCE SIZE */
-cursor: pointer;
-z-index: 10;
+position: fixed;
+top: 14px;
+left: 14px;
+width: 90px; /* MUCH SMALLER */
+z-index: 50;
 }
 
 .logo-bounce img {
 width: 100%;
 height: auto;
-filter: drop-shadow(0 8px 16px rgba(0,0,0,0.7));
-transition: transform 0.15s ease;
+filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
 }
 
-.logo-bounce:hover img {
-transform: scale(1.12) rotate(-1deg);
+/* HOME PAGE ONLY — TEMP BOUNCE */
+body.home .logo-bounce {
+position: absolute;
 }
 
 /* HERO TEXT */
@@ -50,19 +51,17 @@ text-shadow: 0 4px 12px rgba(0,0,0,0.7);
 
 .hero-text h1 {
 font-size: 2.4rem;
-letter-spacing: 1px;
 }
 
 .hero-text p {
-font-size: 1.1rem;
 margin-top: 8px;
-opacity: 0.9;
+font-size: 1.1rem;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
 .logo-bounce {
-width: 130px;
+width: 70px;
 }
 
 .hero-text h1 {
