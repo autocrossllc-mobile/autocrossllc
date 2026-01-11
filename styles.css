@@ -10,40 +10,41 @@ font-family: Arial, Helvetica, sans-serif;
 overflow-x: hidden;
 }
 
-/* HERO */
-.hero {
-position: relative;
-height: 100vh;
-background: url("camaro-mister.jpeg") center / cover no-repeat;
-}
-
-/* HERO TEXT */
-.hero-text {
-position: absolute;
-bottom: 18%;
+/* HEADER (LOCKED, ALWAYS VISIBLE) */
+.site-header {
+position: fixed;
+top: 0;
 width: 100%;
-text-align: center;
-color: white;
-text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+height: 70px;
+z-index: 1000;
+pointer-events: none;
 }
 
-.hero-text h1 {
-font-size: 2.2rem;
+.site-header a,
+.menu-toggle {
+pointer-events: auto;
 }
 
-.hero-text p {
-margin-top: 10px;
-font-size: 1.1rem;
+/* DOCKED LOGO (AFTER ANIMATION) */
+.dock-logo {
+position: fixed;
+top: 10px;
+left: 14px;
+opacity: 0;
+transition: opacity 1s ease;
+}
+
+.dock-logo img {
+width: 70px;
 }
 
 /* DESKTOP MENU */
 .desktop-menu {
-position: absolute;
-top: 20px;
+position: fixed;
+top: 22px;
 right: 30px;
 display: flex;
-gap: 22px;
-z-index: 20;
+gap: 24px;
 }
 
 .desktop-menu a {
@@ -51,82 +52,95 @@ color: white;
 text-decoration: none;
 text-transform: uppercase;
 letter-spacing: 1px;
-font-size: 14px;
 }
 
 .desktop-menu a:hover {
 color: #ff2a2a;
 }
 
-/* MOBILE MENU ICON */
+/* MOBILE MENU */
 .menu-toggle {
-position: absolute;
+position: fixed;
 top: 18px;
-left: 18px;
+right: 18px;
 font-size: 28px;
 color: white;
-cursor: pointer;
 display: none;
-z-index: 25;
+cursor: pointer;
 }
 
-/* MOBILE MENU */
 .mobile-menu {
-position: absolute;
-top: 60px;
-left: 18px;
+position: fixed;
+top: 70px;
+right: 18px;
 display: none;
 flex-direction: column;
-gap: 14px;
-z-index: 24;
+gap: 16px;
 }
 
 .mobile-menu a {
 color: white;
 text-decoration: none;
-font-size: 16px;
-letter-spacing: 1px;
 }
 
 .mobile-menu.active {
 display: flex;
 }
 
-/* FLOATING LOGOS */
-.logo-float,
-.ls-float {
+/* HERO (LOCKED BACKGROUND) */
+.hero {
+height: 100vh;
+background: url("camaro-mister.jpeg") center/cover no-repeat;
+position: relative;
+overflow: hidden;
+}
+
+/* HERO TEXT */
+.hero-text {
 position: absolute;
-width: 70px;
-z-index: 15;
-}
-
-.logo-float img,
-.ls-float img {
+bottom: 20%;
 width: 100%;
+text-align: center;
+color: white;
+text-shadow: 0 2px 10px black;
 }
 
-/* FINAL LOCKED POSITIONS */
-.logo-locked {
-top: 20px;
-left: 20px;
+/* BOUNCING LOGOS */
+.bounce-logo {
+position: absolute;
+animation: bounce 8s linear forwards;
 }
 
-.ls-locked {
-bottom: 20px;
-right: 20px;
+.bounce-logo img {
+width: 90px;
 }
 
-/* MOBILE */
+/* INDIVIDUAL START POSITIONS */
+.main-logo {
+top: 20%;
+left: 10%;
+}
+
+.chevy-logo {
+bottom: 20%;
+right: 10%;
+}
+
+/* BOUNCE PATH */
+@keyframes bounce {
+0% { transform: translate(0, 0); }
+25% { transform: translate(60vw, 10vh); }
+50% { transform: translate(20vw, 50vh); }
+75% { transform: translate(70vw, 30vh); }
+100% { transform: translate(0, 0); opacity: 0; }
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
 .desktop-menu {
 display: none;
 }
-
 .menu-toggle {
 display: block;
-}
-
-.hero-text h1 {
-font-size: 1.7rem;
 }
 }
