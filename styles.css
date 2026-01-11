@@ -28,7 +28,7 @@ text-align: center;
 /* ================= LOGO (NOT LOCKED) ================= */
 /* Smaller + free so we can animate later */
 .hero-logo {
-width: 120px;
+width: 360px; /* 🔼 3x bigger */
 height: auto;
 position: absolute;
 top: 90px;
@@ -36,6 +36,7 @@ left: 50%;
 transform: translateX(-50%);
 z-index: 5;
 }
+
 
 /* ================= HERO TEXT ================= */
 .hero-text {
