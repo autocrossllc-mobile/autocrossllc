@@ -1,6 +1,7 @@
-const menuToggle = document.getElementById("menuToggle");
+const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click", () => {
-mobileMenu.classList.toggle("active");
+hamburger.addEventListener("click", () => {
+mobileMenu.style.display =
+mobileMenu.style.display === "flex" ? "none" : "flex";
 });
