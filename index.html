@@ -6,6 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="styles.css" />
 </head>
+  <script>
+function toggleMenu() {
+document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+setTimeout(() => {
+document.querySelector(".dock-logo").style.opacity = "1";
+}, 8000);
+</script>
+
 <body>
 <header class="site-header">
 <a href="index.html" class="dock-logo">
