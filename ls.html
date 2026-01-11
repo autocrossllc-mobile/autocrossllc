@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>LS Performance | AutoCross LLC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav class="desktop-menu">
+<!-- LOGO (TOP LEFT, SAME AS HOME) -->
+<a href="index.html" class="logo">
+<img src="official-logo.png" alt="AutoCross LLC Logo">
+</a>
+
+<!-- HAMBURGER (MOBILE) -->
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
 <a href="index.html">Home</a>
-<a href="ls.html">LS</a>
-<a href="gallery.html">Gallery</a>
 <a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="ls.html">LS</a>
 <a href="contact.html">Contact</a>
 </nav>
 
-<section style="min-height:100vh; padding:120px 20px; text-align:center;">
-<h1>LS Performance</h1>
-<p>LS Swaps • Repairs • Diagnostics • Performance Builds</p>
+<!-- DESKTOP MENU -->
+<nav class="desktop-menu">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="ls.html">LS</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<!-- LS HERO -->
+<section class="hero" style="background-image:url('hero.jpg')">
+<div class="hero-overlay">
+<h1>LS PERFORMANCE</h1>
+<p>Build • Repair • Swap • Showcase</p>
+</div>
 </section>
 
+<!-- LS CONTENT -->
+<section style="padding:60px 20px; max-width:1000px; margin:auto;">
+<h2 style="text-transform:uppercase; letter-spacing:2px;">What We Do</h2>
+<p style="margin-top:20px; line-height:1.6;">
+LS engine diagnostics, swaps, cam installs, valve train upgrades,
+fueling, wiring cleanup, drivability tuning prep, and performance consulting.
+</p>
+
+<p style="margin-top:20px;">
+Brands & platforms inspired by Summit, Holley, GM Performance,
+street & track proven builds.
+</p>
+
+<p style="margin-top:30px; font-weight:bold;">
+📞 Call or message us to discuss your LS build.
+</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
