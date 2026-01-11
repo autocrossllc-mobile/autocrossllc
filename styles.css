@@ -144,3 +144,12 @@ display: none;
 display: block;
 }
 }
+/* ===== HERO FIX ===== */
+.hero {
+width: 100%;
+height: 100vh;
+background-image: url("camaro-mister.jpeg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
