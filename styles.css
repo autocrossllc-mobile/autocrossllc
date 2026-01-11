@@ -21,7 +21,7 @@ justify-content: center;
 text-align: center;
 }
 
-/* LOGO — LEFT ALONE (VISIBLE, NO OVERLAYS) */
+/* LOGO — LEFT ALONE */
 .hero-logo {
 width: 120px;
 height: auto;
@@ -45,7 +45,7 @@ font-size: 1.1rem;
 margin-top: 8px;
 }
 
-/* DESKTOP MENU (TOP RIGHT, PERFORMANCE LOOK) */
+/* DESKTOP MENU (TOP RIGHT) */
 .desktop-menu {
 position: absolute;
 top: 20px;
@@ -64,11 +64,11 @@ text-transform: uppercase;
 }
 
 .desktop-menu a:hover {
-color: #ff2a2a; /* performance red */
+color: #ff2a2a;
 }
 
 /* MOBILE MENU ICON (TOP LEFT) */
-.menu-toggle {
+.menu-icon {
 position: absolute;
 top: 18px;
 left: 18px;
@@ -79,7 +79,7 @@ display: none;
 z-index: 15;
 }
 
-/* MOBILE MENU (DROPDOWN — NO BACKGROUND, HERO ALWAYS SHOWS) */
+/* MOBILE MENU (DROPDOWN, NO BACKGROUND) */
 .mobile-menu {
 position: absolute;
 top: 60px;
@@ -113,7 +113,7 @@ display: flex;
 display: none;
 }
 
-.menu-toggle {
+.menu-icon {
 display: block;
 }
 
