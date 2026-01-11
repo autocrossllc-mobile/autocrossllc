@@ -138,7 +138,7 @@ padding: 12px 20px;
 }
 
 .logo img {
-height: 45px;
+height: 180px; /* 4x bigger */
 }
 
 nav a {
@@ -175,5 +175,10 @@ border-top: 1px solid #222;
 
 .menu-toggle {
 display: block;
+}
+}
+@media (max-width: 768px) {
+.logo img {
+height: 120px;
 }
 }
