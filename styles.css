@@ -120,3 +120,33 @@ display: none;
 display: block;
 }
 }
+* HERO TEXT – SAFE MOBILE FIX */
+.hero-text {
+position: absolute;
+inset: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+z-index: 5;
+padding: 1rem;
+}
+
+.hero-text h1 {
+font-family: Impact, Arial Black, sans-serif;
+font-size: clamp(2.2rem, 7vw, 4.5rem);
+letter-spacing: 3px;
+text-transform: uppercase;
+text-shadow:
+0 0 10px rgba(255,0,0,0.6),
+0 0 30px rgba(0,0,0,0.9);
+}
+
+.hero-text p {
+margin-top: 10px;
+font-size: clamp(1rem, 3vw, 1.4rem);
+letter-spacing: 2px;
+opacity: 0.9;
+}
