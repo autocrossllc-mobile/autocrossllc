@@ -376,3 +376,37 @@ opacity: 0.75;
 .ls-section:first-of-type {
 margin-top: 20px;
 }
+/* ===== LS ANIMATION CORE ===== */
+@keyframes lsFadeUp {
+from {
+opacity: 0;
+transform: translateY(18px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* HERO TEXT */
+.ls-hero h1,
+.ls-hero p {
+animation: lsFadeUp 0.9s ease-out forwards;
+}
+
+/* LS CARDS */
+.ls-card {
+opacity: 0;
+animation: lsFadeUp 0.8s ease-out forwards;
+}
+
+.ls-card:nth-child(1) { animation-delay: 0.1s; }
+.ls-card:nth-child(2) { animation-delay: 0.2s; }
+.ls-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* CTA GLOW PULSE */
+@keyframes lsPulse {
+0% { box-shadow: 0 0 0 rgba(255,60,0,0.3); }
+50% { box-shadow: 0 0 18px rgba(255,60,0,0.6); }
+100% { box-shadow: 0 0 0 rgba(255,60,0,0.3); }
+}
