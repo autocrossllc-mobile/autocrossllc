@@ -192,3 +192,9 @@ display: block;
 height: 100px;
 }
 }
+/* =========================
+LS HERO IMAGE
+========================= */
+.ls-hero {
+background: url("ls-hero.png") center / cover no-repeat;
+}
