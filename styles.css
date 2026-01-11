@@ -1,127 +1,123 @@
-.menu-toggle {
-position: absolute;
-top: 18px;
-left: 18px;
-font-size: 28px;
-color: white;
-cursor: pointer;
-display: none;
-z-index: 20;
+/* RESET */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
 }
 
-.mobile-menu {
-position: absolute;
-top: 60px;
-left: 18px;
-display: none;
-flex-direction: column;
-gap: 16px;
-z-index: 19;
-}
-
-.mobile-menu.active {
+/* ================= HEADER ================= */
+.site-header {
+position: fixed;
+top: 0;
+width: 100%;
+height: 70px;
+background: rgba(0,0,0,0.75);
 display: flex;
-}
-
-@media (max-width: 768px) {
-.desktop-menu {
-display: none;
-}
-
-.menu-toggle {
-display: block;
-}
-}
-/* ===== FIX NAV + LOGO VISIBILITY (DESKTOP & MOBILE) ===== */
-
-.hero {
-position: relative;
-min-height: 100vh;
-background: url("hero.jpg") center/cover no-repeat;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+z-index: 10000;
 }
 
 /* LOGO */
-.hero-logo-link {
-position: absolute;
-top: 20px;
-left: 50%;
-transform: translateX(-50%);
-z-index: 1001;
+.logo img {
+height: 45px;
+animation: logoBounce 4s infinite ease-in-out;
+cursor: pointer;
 }
 
-.hero-logo {
-width: 140px;
-max-width: 80%;
+/* PERFORMANCE LOGO ANIMATION */
+@keyframes logoBounce {
+0% { transform: translateY(0); }
+50% { transform: translateY(-6px); }
+100% { transform: translateY(0); }
 }
 
-/* DESKTOP MENU */
+/* ================= DESKTOP MENU ================= */
 .desktop-menu {
-position: absolute;
-top: 20px;
-right: 30px;
-z-index: 1001;
+display: flex;
+gap: 20px;
 }
 
 .desktop-menu a {
-color: #ff2a2a; /* performance red */
-margin-left: 18px;
-font-weight: bold;
+color: white;
 text-decoration: none;
+font-weight: bold;
 }
 
 .desktop-menu a:hover {
-color: #ffffff;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-position: absolute;
-top: 22px;
-left: 25px;
-font-size: 30px;
 color: #ff2a2a;
-z-index: 1002;
-cursor: pointer;
-display: none;
 }
 
-/* MOBILE MENU */
-.mobile-menu {
+/* ================= HAMBURGER ================= */
+.hamburger {
 display: none;
-position: absolute;
+background: none;
+border: none;
+color: white;
+font-size: 28px;
+cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+position: fixed;
 top: 70px;
 left: 0;
 width: 100%;
-background: rgba(0,0,0,0.95);
-z-index: 1000;
-text-align: center;
+background: black;
+display: none;
+flex-direction: column;
+z-index: 9999;
 }
 
 .mobile-menu a {
-display: block;
+color: white;
 padding: 15px;
-color: #ff2a2a;
-font-size: 18px;
 text-decoration: none;
+border-bottom: 1px solid #333;
 }
 
 .mobile-menu a:hover {
 background: #ff2a2a;
-color: #000;
 }
 
-/* ACTIVE STATE */
-.mobile-menu.show {
-display: block;
+/* ================= HERO ================= */
+.hero {
+height: 100vh;
+background: url("hero.jpg") center/cover no-repeat fixed;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding-top: 70px;
 }
 
-/* MOBILE ONLY */
+.hero-text h1 {
+color: white;
+font-size: 3rem;
+text-shadow: 0 4px 10px black;
+}
+
+.hero-text p {
+color: white;
+font-size: 1.3rem;
+margin-top: 10px;
+text-shadow: 0 4px 10px black;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 .desktop-menu {
 display: none;
 }
 
-.menu-toggle {
+.hamburger {
 display: block;
+}
+
+.hero-text h1 {
+font-size: 2rem;
 }
 }
