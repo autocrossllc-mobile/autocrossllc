@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AutoCross LLC</title>
 
 <style>
-/* RESET */
+/* ===== RESET ===== */
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-body {
-font-family: Arial, Helvetica, sans-serif;
+html, body {
+width: 100%;
+height: 100%;
 overflow-x: hidden;
+font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
 position: fixed;
 top: 0;
+left: 0;
 width: 100%;
-height: 64px;
-background: rgba(0,0,0,0.75);
-z-index: 1000;
+height: 70px;
+background: rgba(0,0,0,0.85);
+z-index: 10000;
 }
 
 /* LOGO */
-.site-logo {
+.logo {
 position: absolute;
-top: 10px;
-left: 12px;
-width: 55px; /* SMALL + CONTROLLED */
-height: auto;
+top: 12px;
+left: 14px;
+width: 52px;
 }
-.site-logo img {
+.logo img {
 width: 100%;
-height: auto;
+display: block;
 }
 
 /* DESKTOP MENU */
 .desktop-menu {
 position: absolute;
 right: 24px;
-top: 22px;
+top: 24px;
 display: flex;
 gap: 24px;
 }
@@ -55,12 +57,12 @@ font-size: 14px;
 text-transform: uppercase;
 }
 
-/* MOBILE TOGGLE */
-.menu-toggle {
+/* MOBILE HAMBURGER */
+.hamburger {
 display: none;
 position: absolute;
-right: 20px;
-top: 16px;
+right: 18px;
+top: 18px;
 font-size: 28px;
 color: white;
 cursor: pointer;
@@ -68,57 +70,57 @@ cursor: pointer;
 
 /* MOBILE MENU */
 .mobile-menu {
-display: none;
 position: fixed;
-top: 64px;
+top: 70px;
 left: 0;
 width: 100%;
 background: black;
-padding: 20px;
-z-index: 999;
+display: none;
+flex-direction: column;
+z-index: 9999;
 }
 .mobile-menu a {
-display: block;
 color: white;
 text-decoration: none;
-padding: 12px 0;
+padding: 16px;
+border-bottom: 1px solid #222;
 }
 .mobile-menu.active {
-display: block;
+display: flex;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
 position: relative;
+width: 100%;
 min-height: 100vh;
-background: url("camaro-mister.jpeg") center / cover no-repeat;
-padding-top: 64px;
-z-index: 1;
+background: url("camaro-mister.jpeg") center center / cover no-repeat;
+margin-top: 70px;
 }
 
 /* HERO TEXT */
 .hero-text {
 position: absolute;
-bottom: 20%;
+bottom: 22%;
 width: 100%;
 text-align: center;
 color: white;
 text-shadow: 0 3px 10px black;
 }
 .hero-text h1 {
-font-size: 2.4rem;
+font-size: 2.5rem;
 }
 .hero-text p {
-margin-top: 8px;
+margin-top: 10px;
 font-size: 1.1rem;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 .desktop-menu {
 display: none;
 }
-.menu-toggle {
+.hamburger {
 display: block;
 }
 }
@@ -128,11 +130,11 @@ display: block;
 <body>
 
 <header>
-<a href="index.html" class="site-logo">
+<a href="index.html" class="logo">
 <img src="logo.png" alt="AutoCross LLC">
 </a>
 
-<div class="menu-toggle" id="hamburger">☰</div>
+<div class="hamburger" id="hamburger">☰</div>
 
 <nav class="desktop-menu">
 <a href="index.html">Home</a>
@@ -141,11 +143,11 @@ display: block;
 </nav>
 </header>
 
-<div class="mobile-menu" id="navLinks">
+<nav class="mobile-menu" id="mobileMenu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
-</div>
+</nav>
 
 <section class="hero">
 <div class="hero-text">
@@ -155,9 +157,9 @@ display: block;
 </section>
 
 <script>
-document.getElementById("hamburger").addEventListener("click", () => {
-document.getElementById("navLinks").classList.toggle("active");
-});
+document.getElementById("hamburger").onclick = () => {
+document.getElementById("mobileMenu").classList.toggle("active");
+};
 </script>
 
 </body>
