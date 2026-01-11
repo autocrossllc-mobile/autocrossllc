@@ -21,17 +21,19 @@ justify-content: center;
 text-align: center;
 }
 
-/* LOGO — LEFT ALONE */
+/* LOGO — LEFT ALONE (VISIBLE, NO OVERLAYS) */
 .hero-logo {
 width: 120px;
 height: auto;
+z-index: 5;
 }
 
 /* HERO TEXT */
 .hero-text {
 position: absolute;
-bottom: 20%;
+bottom: 18%;
 color: white;
+text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero-text h1 {
@@ -43,50 +45,64 @@ font-size: 1.1rem;
 margin-top: 8px;
 }
 
-/* DESKTOP MENU */
+/* DESKTOP MENU (TOP RIGHT, PERFORMANCE LOOK) */
 .desktop-menu {
 position: absolute;
 top: 20px;
 right: 30px;
 display: flex;
-gap: 20px;
+gap: 24px;
+z-index: 10;
 }
 
 .desktop-menu a {
-color: white;
+color: #ffffff;
 text-decoration: none;
 font-size: 16px;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 
-/* MOBILE MENU ICON */
+.desktop-menu a:hover {
+color: #ff2a2a; /* performance red */
+}
+
+/* MOBILE MENU ICON (TOP LEFT) */
 .menu-toggle {
 position: absolute;
-top: 20px;
-left: 20px;
+top: 18px;
+left: 18px;
 font-size: 28px;
 color: white;
 cursor: pointer;
 display: none;
-z-index: 10;
+z-index: 15;
 }
 
-/* MOBILE MENU (DROPDOWN, NO BACKGROUND) */
+/* MOBILE MENU (DROPDOWN — NO BACKGROUND, HERO ALWAYS SHOWS) */
 .mobile-menu {
 position: absolute;
 top: 60px;
-left: 20px;
+left: 18px;
 display: none;
 flex-direction: column;
-gap: 15px;
+gap: 16px;
+z-index: 14;
 }
 
 .mobile-menu a {
 color: white;
 text-decoration: none;
 font-size: 18px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
-/* SHOW MENU */
+.mobile-menu a:hover {
+color: #ff2a2a;
+}
+
+/* SHOW MOBILE MENU */
 .mobile-menu.active {
 display: flex;
 }
@@ -99,5 +115,9 @@ display: none;
 
 .menu-toggle {
 display: block;
+}
+
+.hero-text h1 {
+font-size: 1.8rem;
 }
 }
