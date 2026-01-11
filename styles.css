@@ -155,3 +155,103 @@ color: #ff2a2a;
 text-decoration: none;
 font-weight: bold;
 }
+/* =========================
+CONTACT PAGE
+========================= */
+.contact-section {
+min-height: 100vh;
+padding: 140px 20px 60px;
+text-align: center;
+}
+
+.contact-section h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+}
+
+.contact-sub {
+margin-bottom: 30px;
+opacity: 0.9;
+}
+
+.appointment-form {
+max-width: 500px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+.appointment-form input,
+.appointment-form textarea {
+padding: 12px;
+font-size: 16px;
+border: none;
+outline: none;
+}
+
+.contact-note {
+margin-top: 30px;
+font-size: 14px;
+opacity: 0.7;
+}
+
+/* =========================
+CTA BUTTON (GLOBAL)
+========================= */
+.cta-button {
+margin-top: 10px;
+padding: 14px;
+text-decoration: none;
+color: white;
+font-weight: bold;
+text-transform: uppercase;
+background: linear-gradient(90deg, #ff0000, #ff6a00);
+box-shadow: 0 0 20px rgba(255,0,0,0.6);
+}
+
+/* =========================
+LS PAGE
+========================= */
+.ls-hero {
+height: 100vh;
+background: url("ls-hero.png") center / cover no-repeat;
+position: relative;
+}
+
+.ls-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.55);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.ls-overlay h1 {
+font-family: Impact, Arial Black, sans-serif;
+font-size: clamp(3rem, 8vw, 6rem);
+letter-spacing: 6px;
+text-transform: uppercase;
+}
+
+.ls-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+padding: 60px 20px;
+}
+
+.ls-card {
+padding: 40px 20px;
+border: 1px solid rgba(255,255,255,0.15);
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.ls-cta {
+text-align: center;
+padding: 60px 20px;
+}
