@@ -17,7 +17,12 @@ font-family: Arial, Helvetica, sans-serif;
 background:black;
 color:white;
 }
-
+/* ===== iOS SAFE AREA SUPPORT ===== */
+:root {
+--safe-top: env(safe-area-inset-top);
+--safe-right: env(safe-area-inset-right);
+--safe-left: env(safe-area-inset-left);
+}
 /* LOGO */
 .site-logo {
 position: fixed;
@@ -1268,9 +1273,4 @@ pointer-events: auto;
 .mobile-nav-bar * {
 pointer-events: auto;
 }
-/* ===== iOS SAFE AREA SUPPORT ===== */
-:root {
---safe-top: env(safe-area-inset-top);
---safe-right: env(safe-area-inset-right);
---safe-left: env(safe-area-inset-left);
-}
+
