@@ -14,11 +14,9 @@ const volumeSlider = document.getElementById("lsVolume");
 
 if (!audio || !playBtn || !muteBtn || !volumeSlider) return;
 
-/* DEFAULT SETTINGS */
-audio.volume = 0.45;
+audio.volume = 0.5;
 audio.loop = true;
 
-/* PLAY / PAUSE */
 playBtn.addEventListener("click", () => {
 if (audio.paused) {
 audio.play().catch(() => {});
@@ -29,13 +27,11 @@ playBtn.textContent = "▶";
 }
 });
 
-/* MUTE */
 muteBtn.addEventListener("click", () => {
 audio.muted = !audio.muted;
 muteBtn.textContent = audio.muted ? "🔊" : "🔇";
 });
 
-/* VOLUME */
 volumeSlider.addEventListener("input", (e) => {
 audio.volume = e.target.value;
 });
