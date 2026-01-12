@@ -1015,3 +1015,8 @@ margin: auto;
 font-size: 18px;
 line-height: 1.6;
 }
+/* ===== HOME PAGE: REMOVE BLACK HEADLINER ===== */
+body.home .mobile-nav-bar {
+background: transparent;
+border-bottom: none;
+}
