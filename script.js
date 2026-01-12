@@ -2,42 +2,33 @@ document.addEventListener("DOMContentLoaded", () => {
 const audio = document.getElementById("lsCamSound");
 const playBtn = document.getElementById("lsPlay");
 const muteBtn = document.getElementById("lsMute");
-const volumeSlider = document.getElementById("lsVolume");
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
+const volume = document.getElementById("lsVolume");
 
-/* MENU TOGGLE */
-if (menuToggle && mobileMenu) {
-menuToggle.addEventListener("click", () => {
-mobileMenu.classList.toggle("active");
-});
-}
+if (!audio || !playBtn || !muteBtn || !volume) return;
 
-/* AUDIO GUARD */
-if (!audio || !playBtn || !muteBtn || !volumeSlider) return;
-
-audio.volume = 0.5;
+audio.volume = 0.6;
 audio.loop = true;
 
-/* PLAY / PAUSE */
+// PLAY / PAUSE (USER TAP REQUIRED FOR MOBILE)
 playBtn.addEventListener("click", () => {
 if (audio.paused) {
-audio.play();
+audio.play().then(() => {
 playBtn.textContent = "⏸";
+}).catch(() => {});
 } else {
 audio.pause();
 playBtn.textContent = "▶";
 }
 });
 
-/* MUTE */
+// MUTE
 muteBtn.addEventListener("click", () => {
 audio.muted = !audio.muted;
 muteBtn.textContent = audio.muted ? "🔊" : "🔇";
 });
 
-/* VOLUME */
-volumeSlider.addEventListener("input", (e) => {
+// VOLUME
+volume.addEventListener("input", (e) => {
 audio.volume = e.target.value;
 });
 });
