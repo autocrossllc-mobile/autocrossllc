@@ -1268,3 +1268,9 @@ pointer-events: auto;
 .mobile-nav-bar * {
 pointer-events: auto;
 }
+/* ===== iOS SAFE AREA SUPPORT ===== */
+:root {
+--safe-top: env(safe-area-inset-top);
+--safe-right: env(safe-area-inset-right);
+--safe-left: env(safe-area-inset-left);
+}
