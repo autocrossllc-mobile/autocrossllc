@@ -181,3 +181,61 @@ text-shadow:
 0 0 12px rgba(255,60,0,0.9),
 0 0 28px rgba(255,60,0,0.6);
 }
+.about-hero {
+height: 100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+url("about-chevy.jpg") center / cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.about-overlay h1 {
+font-family: Impact, Arial Black, sans-serif;
+font-size: clamp(2.2rem, 6vw, 3.4rem);
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #ff3c00;
+text-shadow:
+0 0 10px rgba(255,60,0,0.8),
+0 0 30px rgba(255,60,0,0.6);
+}
+
+.about-overlay p {
+margin-top: 12px;
+letter-spacing: 2px;
+text-transform: uppercase;
+opacity: 0.9;
+}
+.about-content {
+max-width: 900px;
+margin: auto;
+padding: 80px 20px;
+}
+
+.about-block h2 {
+font-family: Impact, Arial Black, sans-serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #ff3c00;
+margin-bottom: 12px;
+}
+
+.about-block p {
+line-height: 1.7;
+opacity: 0.85;
+}
+.about-divider {
+height: 2px;
+width: 100%;
+margin: 50px 0;
+background: linear-gradient(
+90deg,
+transparent,
+#ff3c00,
+#ff6a00,
+#ff3c00,
+transparent
+);
+}
