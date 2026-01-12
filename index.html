@@ -26,7 +26,9 @@
 </a>
 
 <!-- LS MENU TOGGLE -->
-<div id="menuToggle" class="menu-toggle">LS</div>
+<div id="menuToggle" class="menu-toggle">
+<span class="ls-toggle">LS</span>
+</div>
 </header>
 
 <!-- MOBILE MENU -->
@@ -50,4 +52,15 @@
 
 <script src="script.js"></script>
 </body>
+  <!-- LS CAM SOUND -->
+<audio id="lsCamSound" preload="auto">
+<source src="ls-cam-idle.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SOUND CONTROLS -->
+<div class="ls-sound-controls">
+<button id="lsPlay">▶</button>
+<button id="lsMute">🔇</button>
+<input id="lsVolume" type="range" min="0" max="1" step="0.01">
+</div>
 </html>
