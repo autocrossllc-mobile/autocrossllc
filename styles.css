@@ -700,3 +700,43 @@ rgba(0,0,0,0.75),
 rgba(0,0,0,0.2)
 );
 }
+/* ===== LS MENU TOGGLE ===== */
+.menu-toggle {
+position: absolute;
+right: 18px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+z-index: 10002;
+}
+
+/* LS TEXT STYLE */
+.ls-toggle {
+font-family: Impact, "Arial Black", sans-serif;
+font-size: 26px;
+letter-spacing: 2px;
+color: #ffffff;
+text-shadow:
+0 0 6px rgba(255,0,0,0.6),
+0 0 12px rgba(255,80,0,0.6);
+animation: lsGlow 2.5s ease-in-out infinite;
+}
+
+/* GLOW ANIMATION */
+@keyframes lsGlow {
+0% {
+text-shadow:
+0 0 6px rgba(255,0,0,0.4),
+0 0 10px rgba(255,80,0,0.4);
+}
+50% {
+text-shadow:
+0 0 10px rgba(255,0,0,0.9),
+0 0 18px rgba(255,120,0,0.9);
+}
+100% {
+text-shadow:
+0 0 6px rgba(255,0,0,0.4),
+0 0 10px rgba(255,80,0,0.4);
+}
+}
