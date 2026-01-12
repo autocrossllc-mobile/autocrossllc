@@ -740,3 +740,70 @@ text-shadow:
 0 0 10px rgba(255,80,0,0.4);
 }
 }
+/* ===== MOBILE NAV BAR ===== */
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+background: rgba(0,0,0,0.95);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+z-index: 10000;
+border-bottom: 1px solid rgba(255,60,0,0.35);
+}
+
+.site-logo img {
+height: 46px;
+}
+
+/* ===== LS MENU TOGGLE ===== */
+.menu-toggle {
+position: absolute;
+right: 16px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+}
+
+.ls-toggle {
+font-family: Impact, "Arial Black", sans-serif;
+font-size: 26px;
+letter-spacing: 2px;
+color: white;
+text-shadow:
+0 0 6px rgba(255,0,0,0.6),
+0 0 12px rgba(255,80,0,0.6);
+}
+
+/* ===== MOBILE MENU PANEL ===== */
+.mobile-menu {
+position: fixed;
+top: 70px;
+right: 16px;
+width: 220px;
+background: #000;
+border: 1px solid rgba(255,60,0,0.4);
+display: none;
+flex-direction: column;
+z-index: 10001;
+}
+
+.mobile-menu.active {
+display: flex;
+}
+
+.mobile-menu a {
+padding: 14px;
+color: white;
+text-transform: uppercase;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* hide desktop menu */
+.desktop-menu {
+display: none;
+}
