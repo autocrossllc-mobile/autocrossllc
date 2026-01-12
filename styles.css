@@ -1250,3 +1250,21 @@ display: none;
 display: flex;
 }
 }
+/* ===== iOS TAP FIX ===== */
+
+/* Remove tap highlight */
+* {
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure header is tappable */
+.mobile-nav-bar,
+.menu-toggle {
+touch-action: manipulation;
+pointer-events: auto;
+}
+
+/* Prevent invisible overlays */
+.mobile-nav-bar * {
+pointer-events: auto;
+}
