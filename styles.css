@@ -1117,15 +1117,6 @@ width: 100%;
 z-index: 9999;
 }
 
-/* SOUND CONTROLS: ONLY BUTTONS CAN BE CLICKED */
-.ls-sound-controls {
-pointer-events: none;
-}
-
-.ls-sound-controls button,
-.ls-sound-controls input {
-pointer-events: auto;
-}
 .mobile-nav-bar {
 position: fixed;
 top: 0;
