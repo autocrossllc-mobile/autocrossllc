@@ -12,16 +12,6 @@ z-index: 1000;
 }
 
 
-/* REMOVE BLACK SQUARE */
-.menu-toggle::before,
-.menu-toggle::after {
-display: none;
-}
-p, a, li {
-font-family: Arial, Helvetica, sans-serif;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-
 body {
 font-family: Arial, Helvetica, sans-serif;
 background:black;
@@ -39,23 +29,6 @@ z-index: 1000;
 .site-logo img {
 height: 140px;
 }
-
-/* MENUS */
-.desktop-menu {
-position: fixed;
-top: 30px;
-right: 30px;
-display: flex;
-gap: 24px;
-z-index: 1000;
-}
-
-.desktop-menu a {
-color: white;
-text-decoration: none;
-text-transform: uppercase;
-}
-
 
 /* Mobile fix */
 @media (max-width: 768px) {
@@ -115,9 +88,6 @@ border-radius:6px;
 
 /* MOBILE */
 @media (max-width:768px) {
-
-}
-.desktop-menu { display:none; }
 
 .site-logo img { height:100px; }
 .ls-cards { flex-direction:column; }
@@ -458,10 +428,6 @@ width: auto;
 
 body {
 padding-top: 70px;
-}
-
-.desktop-menu {
-display: none;
 }
 
 .mobile-nav-bar {
@@ -1200,6 +1166,79 @@ border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Desktop */
+@media (min-width: 769px) {
+.mobile-nav-bar,
+.mobile-menu,
+.menu-toggle {
+display: none;
+}
+
+.desktop-menu {
+display: flex;
+}
+}
+/* ===== MOBILE NAV CORE ===== */
+
+body {
+padding-top: 70px;
+}
+
+/* HEADER BAR */
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+background: black;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+z-index: 9999;
+}
+
+.site-logo img {
+height: 48px;
+}
+
+/* MENU BUTTON */
+.menu-toggle {
+font-family: Impact, Arial Black, sans-serif;
+font-size: 20px;
+letter-spacing: 3px;
+color: white;
+cursor: pointer;
+user-select: none;
+}
+
+/* SLIDE-IN MENU */
+.mobile-menu {
+position: fixed;
+top: 70px;
+right: -240px;
+width: 220px;
+background: black;
+border-left: 2px solid rgba(255,60,0,0.6);
+display: flex;
+flex-direction: column;
+transition: right 0.35s ease;
+z-index: 10000;
+}
+
+.mobile-menu.active {
+right: 16px;
+}
+
+.mobile-menu a {
+padding: 14px;
+color: white;
+text-transform: uppercase;
+text-decoration: none;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* DESKTOP */
 @media (min-width: 769px) {
 .mobile-nav-bar,
 .mobile-menu,
