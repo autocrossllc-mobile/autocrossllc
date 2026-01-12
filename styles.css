@@ -1132,3 +1132,21 @@ rgba(255,40,0,0.6)
 text-shadow:
 0 0 12px rgba(255,60,0,0.4);
 }
+/* FORCE HEADER ABOVE EVERYTHING */
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 9999;
+}
+
+/* SOUND CONTROLS: ONLY BUTTONS CAN BE CLICKED */
+.ls-sound-controls {
+pointer-events: none;
+}
+
+.ls-sound-controls button,
+.ls-sound-controls input {
+pointer-events: auto;
+}
