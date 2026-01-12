@@ -425,3 +425,18 @@ margin: auto;
 line-height: 1.6;
 font-size: 18px;
 }
+/* ===== LS PERFORMANCE GLOW ===== */
+@keyframes lsGlow {
+0% {
+box-shadow: 0 0 8px rgba(255,60,0,0.35);
+text-shadow: 0 0 6px rgba(255,60,0,0.4);
+}
+50% {
+box-shadow: 0 0 18px rgba(255,80,0,0.85);
+text-shadow: 0 0 14px rgba(255,80,0,0.85);
+}
+100% {
+box-shadow: 0 0 8px rgba(255,60,0,0.35);
+text-shadow: 0 0 6px rgba(255,60,0,0.4);
+}
+}
