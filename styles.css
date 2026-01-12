@@ -143,3 +143,22 @@ text-decoration: none;
 font-weight: bold;
 }
 }
+* DESKTOP MENU DEFAULT */
+.desktop-menu {
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+background: #000;
+}
+
+.desktop-menu a {
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+.desktop-menu a:hover {
+color: red;
+}
