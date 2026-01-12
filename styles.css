@@ -1113,3 +1113,11 @@ height: 180px; /* BIGGER visual */
 body.home .site-logo {
 padding: 12px; /* BIGGER clickable area */
 }
+hero p {
+letter-spacing: 3px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.9);
+text-shadow:
+0 0 6px rgba(255,60,0,0.4),
+0 0 14px rgba(255,60,0,0.2);
+}
