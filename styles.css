@@ -619,3 +619,58 @@ letter-spacing: 2px;
 opacity: 0.85;
 margin: 8px 0 20px;
 }
+/* MOBILE NAV */
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+height: 70px;
+width: 100%;
+background: rgba(0,0,0,0.95);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+z-index: 10000;
+}
+
+.site-logo img {
+height: 48px;
+}
+
+.menu-toggle {
+font-size: 28px;
+color: white;
+cursor: pointer;
+}
+
+/* MOBILE MENU PANEL */
+.mobile-menu {
+position: fixed;
+top: 70px;
+right: 16px;
+width: 220px;
+background: #000;
+border: 1px solid rgba(255,60,0,0.4);
+display: none;
+flex-direction: column;
+z-index: 10001;
+}
+
+.mobile-menu.active {
+display: flex;
+}
+
+.mobile-menu a {
+padding: 14px;
+text-transform: uppercase;
+color: white;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* BODY OFFSET */
+body {
+padding-top: 70px;
+background: black;
+color: white;
+}
