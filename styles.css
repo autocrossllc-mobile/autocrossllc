@@ -6,9 +6,24 @@ text-transform: uppercase;
 letter-spacing: 3px;
 }
 /* FIX HEADER TAP ISSUES */
+/* ===== MOBILE NAV BAR (SAFE AREA AWARE) ===== */
 .mobile-nav-bar {
-position: relative;
-z-index: 1000;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+
+height: calc(64px + var(--safe-top));
+padding-top: var(--safe-top);
+padding-left: calc(16px + var(--safe-left));
+padding-right: calc(16px + var(--safe-right));
+
+background: rgba(0,0,0,0.95);
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+z-index: 9999;
 }
 
 
