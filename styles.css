@@ -835,7 +835,15 @@ text-shadow:
 0 0 6px rgba(255,0,0,0.6),
 0 0 12px rgba(255,80,0,0.6);
 }
+@keyframes lsIdle {
+0% { text-shadow: 0 0 6px rgba(255,60,0,0.4); }
+50% { text-shadow: 0 0 12px rgba(255,80,0,0.7); }
+100% { text-shadow: 0 0 6px rgba(255,60,0,0.4); }
+}
 
+.ls-toggle {
+animation: lsIdle 3.5s ease-in-out infinite;
+}
 /* ===== MOBILE MENU PANEL ===== */
 .mobile-menu {
 position: fixed;
