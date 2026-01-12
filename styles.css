@@ -459,3 +459,47 @@ text-shadow:
 0 1px 0 #000,
 0 2px 4px rgba(0,0,0,0.7);
 }
+/* ===== MOBILE NAV LOCK ===== */
+@media (max-width: 768px) {
+
+body {
+padding-top: 70px; /* reserve space for fixed nav */
+}
+
+nav.desktop-menu {
+display: none;
+}
+
+.site-logo {
+height: 50px;
+}
+
+.site-logo img {
+height: 100%;
+width: auto;
+}
+
+.menu-toggle {
+position: fixed;
+top: 10px;
+right: 16px;
+font-size: 28px;
+color: white;
+z-index: 10001;
+}
+
+/* fixed nav bar container */
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+height: 70px;
+width: 100%;
+background: rgba(0,0,0,0.95);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+z-index: 10000;
+}
+}
