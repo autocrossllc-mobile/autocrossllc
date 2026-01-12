@@ -1,12 +1,23 @@
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click", (e) => {
+function toggleMenu(e) {
+e.preventDefault();
 e.stopPropagation();
 mobileMenu.classList.toggle("active");
-});
+}
+
+/* iOS SAFE EVENTS */
+menuToggle.addEventListener("touchstart", toggleMenu, { passive: false });
+menuToggle.addEventListener("click", toggleMenu);
 
 /* TAP OUTSIDE TO CLOSE */
+document.addEventListener("touchstart", (e) => {
+if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+mobileMenu.classList.remove("active");
+}
+}, { passive: true });
+
 document.addEventListener("click", (e) => {
 if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
 mobileMenu.classList.remove("active");
