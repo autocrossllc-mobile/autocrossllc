@@ -440,3 +440,8 @@ box-shadow: 0 0 8px rgba(255,60,0,0.35);
 text-shadow: 0 0 6px rgba(255,60,0,0.4);
 }
 }
+.menu-toggle,
+.cta-button,
+.ls-card {
+animation: lsGlow 3.5s ease-in-out infinite;
+}
