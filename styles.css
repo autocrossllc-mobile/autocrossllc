@@ -593,15 +593,15 @@ display: none;
 
 }
 /* MOBILE HERO */
+/* ===== HOME HERO (Option A) ===== */
 .hero {
 width: 100%;
-height: calc(100vh - 70px);
-background: url("ls-hero.png") center / cover no-repeat;
+height: calc(100vh - 64px); /* accounts for mobile nav bar */
+background: url("hero.jpg") center center / cover no-repeat;
 display: flex;
 align-items: flex-end;
 justify-content: center;
 }
-
 .hero-overlay {
 width: 100%;
 padding: 32px 20px;
