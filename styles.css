@@ -933,3 +933,24 @@ right: 18px !important;
 left: auto !important;
 z-index: 10002;
 }
+/* ===== RESPONSIVE MENU LOCK ===== */
+
+/* Desktop */
+@media (min-width: 769px) {
+.desktop-menu {
+display: flex;
+}
+
+.menu-toggle,
+.mobile-menu,
+.mobile-nav-bar {
+display: none !important;
+}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+.desktop-menu {
+display: none;
+}
+}
