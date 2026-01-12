@@ -6,25 +6,37 @@ menuToggle.addEventListener("click", () => {
 mobileMenu.classList.toggle("active");
 });
 }
-/* ===== LS CAM SOUND (ONE TIME) ===== */
-const lsSound = document.getElementById("lsCamSound");
+document.addEventListener("DOMContentLoaded", () => {
+const audio = document.getElementById("lsCamSound");
+const playBtn = document.getElementById("lsPlay");
+const muteBtn = document.getElementById("lsMute");
+const volumeSlider = document.getElementById("lsVolume");
 
-let lsSoundPlayed = false;
+if (!audio || !playBtn || !muteBtn || !volumeSlider) return;
 
-const playLsSoundOnce = () => {
-if (!lsSoundPlayed && lsSound) {
-lsSound.volume = 0.5; // subtle, not loud
-lsSound.play().catch(() => {});
-lsSoundPlayed = true;
+/* DEFAULT SETTINGS */
+audio.volume = 0.45;
+audio.loop = true;
 
-// stop after ~6 seconds (safe)
-setTimeout(() => {
-lsSound.pause();
-lsSound.currentTime = 0;
-}, 6000);
+/* PLAY / PAUSE */
+playBtn.addEventListener("click", () => {
+if (audio.paused) {
+audio.play().catch(() => {});
+playBtn.textContent = "⏸";
+} else {
+audio.pause();
+playBtn.textContent = "▶";
 }
-};
+});
 
-/* trigger on first user interaction */
-document.addEventListener("click", playLsSoundOnce, { once: true });
-document.addEventListener("touchstart", playLsSoundOnce, { once: true });
+/* MUTE */
+muteBtn.addEventListener("click", () => {
+audio.muted = !audio.muted;
+muteBtn.textContent = audio.muted ? "🔊" : "🔇";
+});
+
+/* VOLUME */
+volumeSlider.addEventListener("input", (e) => {
+audio.volume = e.target.value;
+});
+});
