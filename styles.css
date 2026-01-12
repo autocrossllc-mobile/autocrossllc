@@ -924,3 +924,12 @@ display: none;
 .ls-toggle {
   animation: lsGlow 4s ease-in-out infinite;
 }
+/* ===== FORCE LS TOGGLE TOP RIGHT ===== */
+#menuToggle,
+.ls-toggle {
+position: fixed !important;
+top: 18px !important;
+right: 18px !important;
+left: auto !important;
+z-index: 10002;
+}
