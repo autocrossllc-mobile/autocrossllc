@@ -350,9 +350,6 @@ animation: lsFadeUp 0.8s ease-out forwards;
 }
 
 @media (min-width: 769px) {
-.menu-toggle {
-display: flex; /* SHOW ON DESKTOP */
-}
 }
 /* ===== LS SECTION HEADERS ===== */
 .ls-section-title {
