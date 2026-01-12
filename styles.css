@@ -239,3 +239,51 @@ transparent,
 transparent
 );
 }
+/* ===== ABOUT HERO ENGINE TEXTURE ===== */
+.about-hero::after {
+content: "";
+position: absolute;
+inset: 0;
+background: url("engine-texture.png") center / cover no-repeat;
+opacity: 0.08;
+mix-blend-mode: overlay;
+pointer-events: none;
+}
+
+/* ensure hero layers correctly */
+.about-hero {
+position: relative;
+overflow: hidden;
+}
+
+.about-overlay {
+position: relative;
+z-index: 2;
+}
+<section class="about-cta">
+<h2>Build With AutoCross</h2>
+<p>Performance work done right — from daily drivers to full LS builds.</p>
+<a href="contact.html" class="cta-button">Start Your Build</a>
+</section>
+/* ===== ABOUT CTA ===== */
+.about-cta {
+text-align: center;
+padding: 100px 20px;
+background:
+linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,1));
+}
+
+.about-cta h2 {
+font-family: Impact, Arial Black, sans-serif;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #ff3c00;
+margin-bottom: 14px;
+}
+
+.about-cta p {
+max-width: 600px;
+margin: auto;
+opacity: 0.85;
+margin-bottom: 30px;
+}
