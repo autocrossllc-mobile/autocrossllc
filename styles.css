@@ -11,10 +11,6 @@ position: relative;
 z-index: 1000;
 }
 
-.ls-sound-controls {
-pointer-events: auto;
-z-index: 900;
-}
 
 /* REMOVE BLACK SQUARE */
 .menu-toggle::before,
@@ -1149,4 +1145,10 @@ pointer-events: none;
 .ls-sound-controls button,
 .ls-sound-controls input {
 pointer-events: auto;
+}
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 9999;
 }
