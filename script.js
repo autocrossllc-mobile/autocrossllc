@@ -23,3 +23,11 @@ if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
 mobileMenu.classList.remove("active");
 }
 });
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+link.addEventListener("touchstart", () => {
+mobileMenu.classList.remove("active");
+});
+link.addEventListener("click", () => {
+mobileMenu.classList.remove("active");
+});
+});
