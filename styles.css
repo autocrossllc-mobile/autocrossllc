@@ -1,447 +1,145 @@
+/* =========================
+GLOBAL RESET
+========================= */
 * {
-box-sizing: border-box;
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 
 body {
-background: black;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-padding-top: 70px;
+background: #0b0b0b;
+color: #f2f2f2;
+font-family: "Arial", sans-serif;
 }
 
-/* MOBILE HEADER */
+/* =========================
+MOBILE NAV BAR
+========================= */
 .mobile-nav-bar {
 position: fixed;
-top: env(safe-area-inset-top);
-left: 0;
-right: 0;
-height: 70px;
-background: black;
+top: 0;
+width: 100%;
+height: 64px;
+background: #000;
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 16px;
 z-index: 1000;
+border-bottom: 1px solid #1a1a1a;
 }
 
 .site-logo img {
-height: 45px;
+height: 42px;
 }
 
+/* LS TOGGLE BUTTON */
 .menu-toggle {
 background: none;
-border: 2px solid white;
-color: white;
-padding: 8px 14px;
+border: 2px solid #ff0000;
+color: #ff0000;
 font-weight: bold;
+padding: 6px 14px;
+letter-spacing: 2px;
+cursor: pointer;
 }
 
-/* MOBILE MENU */
+/* =========================
+MOBILE MENU
+========================= */
 .mobile-menu {
 position: fixed;
-top: 70px;
+top: 64px;
 right: -100%;
 width: 100%;
-background: black;
+height: calc(100vh - 64px);
+background: linear-gradient(#000, #0b0b0b);
 display: flex;
 flex-direction: column;
-text-align: center;
+padding: 40px;
 transition: right 0.3s ease;
 z-index: 999;
 }
 
 .mobile-menu a {
-padding: 16px;
-border-bottom: 1px solid #333;
-color: white;
+color: #fff;
 text-decoration: none;
+font-size: 22px;
+margin-bottom: 24px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
+/* MENU OPEN */
 .mobile-menu.active {
 right: 0;
 }
 
-/* DESKTOP MENU */
+/* =========================
+DESKTOP MENU
+========================= */
 .desktop-menu {
 display: none;
-justify-content: center;
-gap: 24px;
-padding: 16px;
-background: black;
 }
 
-.desktop-menu a {
-color: white;
-text-decoration: none;
-}
-
-/* HERO */
+/* =========================
+HERO SECTION
+========================= */
 .hero {
-height: 70vh;
-background: url("hero.jpg") center/cover no-repeat;
+height: 100vh;
+background: linear-gradient(
+rgba(0, 0, 0, 0.85),
+rgba(0, 0, 0, 0.85)
+),
+url("engine-texture.png") center / cover no-repeat;
 display: flex;
 align-items: center;
 justify-content: center;
+text-align: center;
 }
 
-.hero-overlay {
-background: rgba(0,0,0,0.6);
-padding: 24px;
-text-align: center;
+.hero-overlay h1 {
+font-size: 42px;
+color: #fff;
+text-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.hero-overlay p {
+margin: 16px 0;
+color: #aaa;
 }
 
 .cta-button {
 display: inline-block;
-margin-top: 16px;
-padding: 12px 20px;
-border: 2px solid white;
-color: white;
+margin-top: 20px;
+padding: 14px 28px;
+background: #ff0000;
+color: #fff;
 text-decoration: none;
+font-weight: bold;
 }
 
-/* DESKTOP */
-@media (min-width: 768px) {
-.mobile-nav-bar,
+/* =========================
+DESKTOP BREAKPOINT
+========================= */
+@media (min-width: 900px) {
+.menu-toggle,
 .mobile-menu {
 display: none;
 }
 
 .desktop-menu {
 display: flex;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+background: #000;
 }
 
-body {
-padding-top: 0;
-}
-}
-.menu-toggle {
-font-family: "Impact", "Arial Black", sans-serif;
-letter-spacing: 2px;
-text-transform: uppercase;
-border: 2px solid #ff3c00;
-color: #ff3c00;
-box-shadow:
-0 0 6px rgba(255,60,0,0.6),
-0 0 14px rgba(255,60,0,0.4);
-transition: all 0.2s ease;
-}
-
-.menu-toggle:hover,
-.menu-toggle:active {
-box-shadow:
-0 0 10px rgba(255,60,0,0.9),
-0 0 26px rgba(255,60,0,0.7);
-transform: scale(1.05);
-}
-body {
-font-family: "Arial Narrow", "Impact", "Helvetica Condensed", sans-serif;
-letter-spacing: 0.6px;
-}
-.hero-overlay h1 {
-font-family: "Impact", "Arial Black", sans-serif;
-font-size: 2.2rem;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: #ffffff;
-text-shadow:
-0 0 8px rgba(255,60,0,0.6),
-0 0 18px rgba(255,60,0,0.4);
-}
-.hero-overlay p {
-margin-top: 10px;
-font-size: 1rem;
-letter-spacing: 1.5px;
-color: #dddddd;
-text-transform: uppercase;
-}
-.cta-button {
-border: 2px solid #ff3c00;
-color: #ff3c00;
+.desktop-menu a {
+color: #fff;
+text-decoration: none;
 font-weight: bold;
-letter-spacing: 1.5px;
-box-shadow:
-0 0 6px rgba(255,60,0,0.6);
-transition: all 0.2s ease;
 }
-
-.cta-button:hover {
-background: #ff3c00;
-color: black;
-box-shadow:
-0 0 12px rgba(255,60,0,0.9),
-0 0 28px rgba(255,60,0,0.7);
-}
-.ls-overlay h1 {
-font-family: "Impact", sans-serif;
-letter-spacing: 3px;
-color: #ff3c00;
-text-shadow:
-0 0 12px rgba(255,60,0,0.9),
-0 0 28px rgba(255,60,0,0.6);
-}
-.about-hero {
-height: 100vh;
-background:
-linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-url("about-chevy.jpg") center / cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-}
-.about-overlay h1 {
-font-family: Impact, Arial Black, sans-serif;
-font-size: clamp(2.2rem, 6vw, 3.4rem);
-letter-spacing: 3px;
-text-transform: uppercase;
-color: #ff3c00;
-text-shadow:
-0 0 10px rgba(255,60,0,0.8),
-0 0 30px rgba(255,60,0,0.6);
-}
-
-.about-overlay p {
-margin-top: 12px;
-letter-spacing: 2px;
-text-transform: uppercase;
-opacity: 0.9;
-}
-.about-content {
-max-width: 900px;
-margin: auto;
-padding: 80px 20px;
-}
-
-.about-block h2 {
-font-family: Impact, Arial Black, sans-serif;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: #ff3c00;
-margin-bottom: 12px;
-}
-
-.about-block p {
-line-height: 1.7;
-opacity: 0.85;
-}
-.about-divider {
-height: 2px;
-width: 100%;
-margin: 50px 0;
-background: linear-gradient(
-90deg,
-transparent,
-#ff3c00,
-#ff6a00,
-#ff3c00,
-transparent
-);
-}
-/* ===== ABOUT HERO ENGINE TEXTURE ===== */
-.about-hero::after {
-content: "";
-position: absolute;
-inset: 0;
-background: url("engine-texture.png") center / cover no-repeat;
-opacity: 0.08;
-mix-blend-mode: overlay;
-pointer-events: none;
-}
-
-/* ensure hero layers correctly */
-.about-hero {
-position: relative;
-overflow: hidden;
-}
-
-.about-overlay {
-position: relative;
-z-index: 2;
-}
-<section class="about-cta">
-<h2>Build With AutoCross</h2>
-<p>Performance work done right — from daily drivers to full LS builds.</p>
-<a href="contact.html" class="cta-button">Start Your Build</a>
-</section>
-/* ===== ABOUT CTA ===== */
-.about-cta {
-text-align: center;
-padding: 100px 20px;
-background:
-linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,1));
-}
-
-.about-cta h2 {
-font-family: Impact, Arial Black, sans-serif;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: #ff3c00;
-margin-bottom: 14px;
-}
-
-.about-cta p {
-max-width: 600px;
-margin: auto;
-opacity: 0.85;
-margin-bottom: 30px;
-}
-.about-hero {
-position: relative;
-height: 85vh;
-background:
-linear-gradient(
-rgba(0,0,0,0.72),
-rgba(0,0,0,0.88)
-),
-url("images/engine-texture.png") center / cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding-top: env(safe-area-inset-top);
-}
-.about-hero-overlay h1 {
-font-size: clamp(2.5rem, 6vw, 4.5rem);
-font-weight: 900;
-letter-spacing: 2px;
-text-transform: uppercase;
-color: #e10600; /* Chevy red */
-text-shadow: 0 0 20px rgba(225,6,0,0.4);
-}
-
-.about-hero-overlay h1 span {
-font-size: 0.6em;
-margin-left: 8px;
-color: #000;
-background: #e10600;
-padding: 4px 8px;
-border-radius: 4px;
-}
-
-.about-hero-overlay p {
-margin-top: 14px;
-font-size: 1.1rem;
-letter-spacing: 1px;
-color: #ddd;
-text-transform: uppercase;
-}
-.about-hero-overlay {
-animation: fadeUp 1.1s ease-out forwards;
-}
-
-@keyframes fadeUp {
-from {
-opacity: 0;
-transform: translateY(18px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-.about-hero-overlay {
-animation: fadeUp 1.1s ease-out forwards;
-}
-
-@keyframes fadeUp {
-from {
-opacity: 0;
-transform: translateY(18px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-@media (max-width: 768px) {
-.about-hero {
-height: 75vh;
-padding: 0 16px;
-}
-}
-/* ===== ABOUT HERO ===== */
-.about-hero {
-position: relative;
-height: 80vh;
-background:
-url("engine-texture.png") center / cover no-repeat,
-#000;
-}
-
-.about-hero-overlay {
-position: absolute;
-inset: 0;
-background:
-radial-gradient(circle at center,
-rgba(255,60,0,0.15),
-rgba(0,0,0,0.85)
-);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.about-hero-content {
-text-align: center;
-color: white;
-animation: lsFadeUp 1.2s ease forwards;
-}
-
-.about-hero h1 {
-font-family: Impact, Arial Black, sans-serif;
-font-size: clamp(3rem, 7vw, 5rem);
-letter-spacing: 4px;
-text-transform: uppercase;
-text-shadow: 0 0 14px rgba(255,60,0,0.6);
-}
-
-.about-hero .llc {
-font-size: 0.55em;
-color: #111;
-background: #fff;
-padding: 4px 10px;
-margin-left: 6px;
-}
-
-.chevy-badge {
-width: 140px;
-margin: 20px auto;
-filter: drop-shadow(0 0 12px rgba(0,0,0,0.8));
-}
-
-.about-hero p {
-letter-spacing: 2px;
-text-transform: uppercase;
-opacity: 0.9;
-}
-
-/* ABOUT CONTENT */
-.about-content {
-padding: 80px 20px;
-max-width: 800px;
-margin: auto;
-line-height: 1.6;
-font-size: 18px;
-}
-/* ===== LS PERFORMANCE GLOW ===== */
-@keyframes lsGlow {
-0% {
-box-shadow: 0 0 8px rgba(255,60,0,0.35);
-text-shadow: 0 0 6px rgba(255,60,0,0.4);
-}
-50% {
-box-shadow: 0 0 18px rgba(255,80,0,0.85);
-text-shadow: 0 0 14px rgba(255,80,0,0.85);
-}
-100% {
-box-shadow: 0 0 8px rgba(255,60,0,0.35);
-text-shadow: 0 0 6px rgba(255,60,0,0.4);
-}
-}
-.menu-toggle,
-.cta-button,
-.ls-card {
-animation: lsGlow 3.5s ease-in-out infinite;
 }
