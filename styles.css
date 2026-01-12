@@ -467,7 +467,7 @@ border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 }
 
-* ===== MOBILE NAV (FINAL CLEAN) ===== */
+/* ===== MOBILE NAV (FINAL CLEAN) ===== */
 @media (max-width: 768px) {
 
 body {
