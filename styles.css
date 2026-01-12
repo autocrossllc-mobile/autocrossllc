@@ -1020,3 +1020,11 @@ body.home .mobile-nav-bar {
 background: transparent;
 border-bottom: none;
 }
+/* ===== HOME PAGE: LARGE LOGO ===== */
+body.home .site-logo img {
+height: 180px; /* BIGGER visual */
+}
+
+body.home .site-logo {
+padding: 12px; /* BIGGER clickable area */
+}
