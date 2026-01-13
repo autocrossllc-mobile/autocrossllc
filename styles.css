@@ -162,3 +162,15 @@ letter-spacing: 1px;
 .desktop-menu a:hover {
 color: red;
 }
+.hero {
+min-height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+background-size: cover;
+background-position: center;
+padding: 40px;
+}
