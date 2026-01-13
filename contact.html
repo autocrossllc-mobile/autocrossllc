@@ -6,9 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+
 <body>
 
+<!-- MOBILE NAV -->
 <header class="mobile-nav-bar">
 <a href="index.html" class="site-logo">
 <img src="official-logo.png" alt="AutoCross LLC">
@@ -25,6 +26,7 @@
 <a href="about.html">About</a>
 </nav>
 
+<!-- DESKTOP MENU -->
 <nav class="desktop-menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -34,15 +36,23 @@
 <a href="about.html">About</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero hero-services">
+<!-- CONTACT HERO -->
+<section class="hero hero-contact">
+<div class="hero-overlay">
 <h1>Request an Appointment</h1>
-<p>Mobile Service • Reliable Scheduling</p>
+<p>Mobile Automotive & LS Performance</p>
+</div>
 </section>
 
-<!-- CONTENT -->
-<section class="content">
-<p><strong>$25 scheduling hold</strong> required (applied to service).</p>
+<!-- CONTACT CONTENT -->
+<main class="contact-content">
+
+<div class="contact-box">
+<h2>Schedule Service</h2>
+<p class="contact-note">
+A <strong>$25 scheduling hold</strong> is required and applied toward your service.
+This protects your appointment time.
+</p>
 
 <form class="appointment-form">
 <input type="text" placeholder="Full Name" required>
@@ -51,11 +61,22 @@
 <input type="text" placeholder="Vehicle (Year / Make / Model)" required>
 <textarea placeholder="Describe the service needed" required></textarea>
 
-<a class="cta-button" href="#" target="_blank">
+<!-- STRIPE LINK -->
+<a
+href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
+class="cta-button full"
+target="_blank"
+>
 Pay $25 & Request Appointment
 </a>
 </form>
-</section>
+
+<p class="contact-sub">
+Card & ACH accepted • No cash required
+</p>
+</div>
+
+</main>
 
 <script src="script.js"></script>
 </body>
