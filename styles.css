@@ -303,3 +303,58 @@ DESKTOP POWER TUNING
 font-size: 78px;
 }
 }
+/* =========================
+ABOUT PAGE STYLING
+========================= */
+.about-title {
+font-family: "Teko", sans-serif;
+font-size: 44px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #ffffff;
+text-shadow:
+0 0 8px rgba(255,0,0,0.6),
+0 6px 20px rgba(0,0,0,0.9);
+}
+
+.about-sub {
+margin-top: 12px;
+font-size: 15px;
+color: #bbb;
+letter-spacing: 1px;
+}
+
+/* CONTENT */
+.about-content {
+padding: 80px 20px;
+max-width: 900px;
+margin: auto;
+}
+
+.about-block {
+margin-bottom: 50px;
+}
+
+.about-block h2 {
+color: #ff0000;
+letter-spacing: 1px;
+margin-bottom: 12px;
+text-transform: uppercase;
+}
+
+.about-block p {
+color: #ccc;
+line-height: 1.7;
+}
+
+.about-block.highlight {
+border-left: 4px solid red;
+padding-left: 20px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+.about-title {
+font-size: 64px;
+}
+}
