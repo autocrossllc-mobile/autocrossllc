@@ -74,6 +74,28 @@ DESKTOP MENU
 display: none;
 }
 
+@media (min-width: 900px) {
+.desktop-menu {
+display: flex;
+justify-content: center;
+gap: 32px;
+padding: 22px;
+background: #000;
+}
+
+.desktop-menu a {
+font-family: "Oswald", sans-serif;
+color: #fff;
+text-decoration: none;
+letter-spacing: 1px;
+font-size: 16px;
+}
+
+.desktop-menu a:hover {
+color: #ff0000;
+}
+}
+
 /* =========================
 DESKTOP BREAKPOINT
 ========================= */
