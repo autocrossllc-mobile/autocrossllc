@@ -10,7 +10,9 @@ color: #f2f2f2;
 font-family: "Inter", system-ui, sans-serif;
 }
 
-/* ========== NAV BAR (MOBILE + DESKTOP) ========== */
+/* =========================
+NAV BAR
+========================= */
 .mobile-nav-bar {
 position: fixed;
 top: 0;
@@ -18,8 +20,8 @@ width: 100%;
 height: 64px;
 background: #000;
 display: flex;
-justify-content: space-between;
 align-items: center;
+justify-content: space-between;
 padding: 0 16px;
 z-index: 1000;
 }
@@ -29,32 +31,29 @@ height: 42px;
 }
 
 .menu-toggle {
-border: 2px solid #ff0000;
 background: none;
-color: #ff0000;
+border: 2px solid red;
+color: red;
 padding: 6px 14px;
 font-weight: bold;
-letter-spacing: 2px;
 cursor: pointer;
 }
 
-/* MOBILE MENU */
+/* =========================
+MOBILE MENU
+========================= */
 .mobile-menu {
 position: fixed;
 top: 64px;
 right: -100%;
 width: 100%;
 height: calc(100vh - 64px);
-background: linear-gradient(#000, #0b0b0b);
-padding: 40px;
+background: #000;
 display: flex;
 flex-direction: column;
+padding: 40px;
 transition: right 0.3s ease;
 z-index: 999;
-}
-
-.mobile-menu.active {
-right: 0;
 }
 
 .mobile-menu a {
@@ -62,16 +61,24 @@ color: #fff;
 text-decoration: none;
 font-size: 22px;
 margin-bottom: 24px;
-text-transform: uppercase;
 }
 
-/* DESKTOP MENU */
+.mobile-menu.active {
+right: 0;
+}
+
+/* =========================
+DESKTOP MENU
+========================= */
 .desktop-menu {
 display: none;
 }
 
+/* =========================
+DESKTOP BREAKPOINT
+========================= */
 @media (min-width: 900px) {
-.menu-toggle,
+.mobile-nav-bar,
 .mobile-menu {
 display: none;
 }
@@ -87,7 +94,8 @@ background: #000;
 .desktop-menu a {
 color: white;
 text-decoration: none;
-font-weight: bold;
+font-weight: 600;
+letter-spacing: 1px;
 }
 
 .desktop-menu a:hover {
