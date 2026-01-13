@@ -244,3 +244,62 @@ font-size: 64px;
 font-size: 18px;
 }
 }
+/* =========================
+AGGRESSIVE LS HERO TEXT
+========================= */
+.ls-cut {
+font-family: "Teko", sans-serif;
+font-weight: 700;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+/* Image-through-text effect */
+color: transparent;
+background:
+linear-gradient(
+rgba(255,0,0,0.35),
+rgba(255,0,0,0.15)
+),
+url("hero.jpg") center / cover no-repeat;
+background-clip: text;
+-webkit-background-clip: text;
+
+/* LS Glow + depth */
+text-shadow:
+0 0 10px rgba(255,0,0,0.8),
+0 0 30px rgba(255,0,0,0.6),
+0 8px 20px rgba(0,0,0,0.9);
+
+line-height: 0.95;
+}
+
+/* =========================
+MORE POP ON HERO IMAGE
+========================= */
+.hero-home {
+background:
+linear-gradient(
+rgba(0,0,0,0.6),
+rgba(0,0,0,0.85)
+),
+url("hero.jpg") center / cover no-repeat;
+}
+
+/* =========================
+MOBILE POWER TUNING
+========================= */
+@media (max-width: 600px) {
+.ls-cut {
+font-size: 40px;
+letter-spacing: 2px;
+}
+}
+
+/* =========================
+DESKTOP POWER TUNING
+========================= */
+@media (min-width: 900px) {
+.ls-cut {
+font-size: 78px;
+}
+}
