@@ -737,3 +737,63 @@ max-width: 100%;
 height: auto;
 display: block;
 }
+/* =========================
+HOME HERO – LS STYLE
+========================= */
+
+.hero-home {
+background-image:
+linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.9)),
+url("hero.jpg");
+}
+
+/* CONTENT WRAPPER */
+.hero-content {
+text-align: left;
+max-width: 600px;
+}
+
+/* TITLE */
+.hero-title {
+font-size: clamp(38px, 8vw, 64px);
+font-weight: 900;
+line-height: 1.05;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+/* LS RED ACCENT */
+.ls-accent {
+color: #ff0000;
+text-shadow:
+0 0 10px rgba(255,0,0,.6),
+0 0 20px rgba(255,0,0,.4);
+}
+
+/* TAGLINE */
+.hero-tagline {
+margin-top: 18px;
+font-size: 16px;
+color: #ccc;
+letter-spacing: 1px;
+}
+
+/* CTA BUTTON */
+.hero-cta {
+display: inline-block;
+margin-top: 30px;
+padding: 16px 34px;
+background: #ff0000;
+color: #fff;
+text-decoration: none;
+font-weight: 700;
+letter-spacing: 1px;
+border-radius: 4px;
+box-shadow: 0 0 25px rgba(255,0,0,.4);
+transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.hero-cta:hover {
+transform: translateY(-2px);
+box-shadow: 0 0 40px rgba(255,0,0,.7);
+}
