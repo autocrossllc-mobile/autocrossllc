@@ -894,3 +894,16 @@ margin: 0 auto;
 padding: 80px 20px;
 text-align: center;
 }
+.hero-services {
+background-image:
+linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+url("services-bg.jpg");
+}
+
+.services-content {
+max-width: 800px;
+margin: 0 auto;
+padding: 70px 20px;
+text-align: center;
+color: #cfcfcf;
+}
