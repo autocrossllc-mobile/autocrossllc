@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AutoCross LLC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- MOBILE NAV -->
+
 <header class="mobile-nav-bar">
 <a href="index.html" class="site-logo">
 <img src="official-logo.png" alt="AutoCross LLC">
 </a>
-
-<div id="menuToggle" class="menu-toggle">MENU</div>
+<button id="menuToggle" class="menu-toggle">LS</button>
 </header>
 
 <nav id="mobileMenu" class="mobile-menu">
@@ -25,7 +24,7 @@
 <a href="contact.html">Contact</a>
 <a href="about.html">About</a>
 </nav>
-<!-- DESKTOP MENU -->
+
 <nav class="desktop-menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -34,49 +33,30 @@
 <a href="contact.html">Contact</a>
 <a href="about.html">About</a>
 </nav>
-<!-- LOGO -->
-<a href="index.html" class="site-logo">
-<img src="official-logo.png" alt="AutoCross LLC Logo">
-</a>
 
-<!-- DESKTOP MENU -->
-<nav class="desktop-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="ls.html">LS</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<section class="contact-section">
+<!-- HERO -->
+<section class="hero hero-services">
 <h1>Request an Appointment</h1>
-<p class="contact-sub">
-A <strong>$25 scheduling hold</strong> is required and will be applied to your service.
-</p>
+<p>Mobile Service • Reliable Scheduling</p>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+<p><strong>$25 scheduling hold</strong> required (applied to service).</p>
 
 <form class="appointment-form">
 <input type="text" placeholder="Full Name" required>
 <input type="tel" placeholder="Phone Number" required>
 <input type="email" placeholder="Email Address" required>
 <input type="text" placeholder="Vehicle (Year / Make / Model)" required>
-
 <textarea placeholder="Describe the service needed" required></textarea>
 
-<!-- STRIPE PAYMENT LINK -->
-<a
-href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
-class="cta-button"
-target="_blank"
->
+<a class="cta-button" href="#" target="_blank">
 Pay $25 & Request Appointment
 </a>
 </form>
-
-<p class="contact-note">
-No cash required. Card & ACH accepted.<br>
-Appointment holds reduce no-shows and protect your time.
-</p>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
