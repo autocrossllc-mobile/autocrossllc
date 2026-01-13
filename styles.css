@@ -632,3 +632,57 @@ text-shadow:
 .hero-ls h1 {
 animation: lsGlowPulse 3.5s ease-in-out infinite;
 }
+/* =========================
+RESPONSIVE HERO TEXT FIX
+========================= */
+
+.hero h1 {
+font-size: clamp(2.2rem, 8vw, 4.5rem);
+line-height: 1.1;
+word-break: keep-all;
+text-wrap: balance;
+max-width: 92vw;
+margin: 0 auto;
+}
+
+.hero p {
+font-size: clamp(1rem, 4vw, 1.4rem);
+max-width: 90vw;
+margin: 16px auto 0;
+}
+/* =========================
+HOME HERO LS TEXT STYLE
+========================= */
+
+.hero-home h1 {
+font-weight: 900;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: rgba(255, 255, 255, 0.88);
+text-shadow:
+0 0 18px rgba(255, 0, 0, 0.6),
+0 0 36px rgba(255, 0, 0, 0.35);
+}
+
+.hero-home p {
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: rgba(255, 255, 255, 0.7);
+}
+@keyframes lsGlowPulse {
+0% {
+text-shadow:
+0 0 10px rgba(255, 0, 0, 0.7),
+0 0 22px rgba(255, 0, 0, 0.45);
+}
+50% {
+text-shadow:
+0 0 22px rgba(255, 0, 0, 1),
+0 0 44px rgba(255, 0, 0, 0.7);
+}
+100% {
+text-shadow:
+0 0 10px rgba(255, 0, 0, 0.7),
+0 0 22px rgba(255, 0, 0, 0.45);
+}
+}
