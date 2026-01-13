@@ -797,3 +797,31 @@ transition: transform .2s ease, box-shadow .2s ease;
 transform: translateY(-2px);
 box-shadow: 0 0 40px rgba(255,0,0,.7);
 }
+/* =========================
+MOBILE HEADER – POLISHED
+========================= */
+
+.mobile-nav-bar {
+height: 64px;
+padding: 0 18px;
+background: rgba(0,0,0,.96);
+backdrop-filter: blur(6px);
+}
+
+/* LOGO */
+.site-logo img {
+height: 40px;
+}
+
+/* LS BUTTON */
+.menu-toggle {
+font-size: 14px;
+padding: 6px 16px;
+border-radius: 3px;
+background: transparent;
+border: 2px solid #ff0000;
+color: #ff0000;
+letter-spacing: 2px;
+text-transform: uppercase;
+box-shadow: 0 0 12px rgba(255,0,0,.35);
+}
