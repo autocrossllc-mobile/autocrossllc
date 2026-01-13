@@ -947,3 +947,18 @@ letter-spacing: 1px;
 color: rgba(255,255,255,.75);
 max-width: 90%;
 }
+/* =========================
+RACING TYPOGRAPHY
+========================= */
+
+h1, h2, h3,
+.hero-title,
+.ls-section-title {
+font-family: "Oswald", sans-serif;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.hero-title {
+font-family: "Oswald", sans-serif;
+font-weight: 800;
+}
