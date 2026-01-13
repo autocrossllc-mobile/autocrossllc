@@ -907,3 +907,44 @@ padding: 70px 20px;
 text-align: center;
 color: #cfcfcf;
 }
+/* =========================
+HOME HERO – AGGRESSIVE LS TYPE
+========================= */
+
+.hero-home {
+background-image:
+linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+url("hero.jpg");
+}
+
+/* HERO TITLE */
+.hero-title {
+font-size: clamp(32px, 6vw, 64px);
+font-weight: 900;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #ffffff;
+line-height: 1.1;
+text-shadow:
+0 0 10px rgba(255,0,0,.45),
+0 0 22px rgba(0,0,0,.8);
+}
+
+/* LS PERFORMANCE LINE */
+.hero-title span {
+display: block;
+color: #ff1e1e;
+letter-spacing: 3px;
+text-shadow:
+0 0 12px rgba(255,0,0,.7),
+0 0 28px rgba(255,0,0,.6);
+}
+
+/* TAGLINE */
+.hero-tagline {
+margin-top: 16px;
+font-size: clamp(14px, 3.5vw, 18px);
+letter-spacing: 1px;
+color: rgba(255,255,255,.75);
+max-width: 90%;
+}
