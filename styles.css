@@ -540,3 +540,43 @@ box-shadow:
 0 0 12px rgba(255,0,0,0.4),
 0 0 30px rgba(255,0,0,0.2);
 }
+/* =========================
+ABOUT HERO
+========================= */
+
+.hero-about {
+min-height: 90vh;
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+url("valve-cover.jpg") center / cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 40px 20px;
+}
+
+/* =========================
+ABOUT CONTENT
+========================= */
+
+.about-content {
+background: #0b0b0b;
+padding: 60px 20px;
+max-width: 900px;
+margin: auto;
+}
+
+.about-content h2 {
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #ff0000;
+margin-bottom: 30px;
+}
+
+.about-content p {
+font-size: 17px;
+line-height: 1.7;
+color: #d0d0d0;
+margin-bottom: 20px;
+}
