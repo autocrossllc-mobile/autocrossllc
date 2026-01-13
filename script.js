@@ -1,12 +1,19 @@
+document.addEventListener("DOMContentLoaded", () => {
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click", () => {
+if (!menuToggle || !mobileMenu) return;
+
+menuToggle.addEventListener("click", (e) => {
+e.stopPropagation();
 mobileMenu.classList.toggle("active");
 });
 
-document.addEventListener("click", (e) => {
-if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+document.addEventListener("click", () => {
 mobileMenu.classList.remove("active");
-}
+});
+
+mobileMenu.addEventListener("click", (e) => {
+e.stopPropagation();
+});
 });
