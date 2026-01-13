@@ -80,8 +80,24 @@ right: 0;
 DESKTOP MENU
 ========================= */
 .desktop-menu {
-display: none;
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+background: #000;
 }
+
+.desktop-menu a {
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+.desktop-menu a:hover {
+color: red;
+}
+
 
 /* =========================
 HERO SECTION
