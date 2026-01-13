@@ -686,3 +686,49 @@ text-shadow:
 0 0 22px rgba(255, 0, 0, 0.45);
 }
 }
+/* =========================
+SUBTLE HERO MOTION
+========================= */
+
+.hero {
+background-attachment: fixed;
+animation: heroDrift 30s linear infinite;
+}
+
+@keyframes heroDrift {
+0% {
+background-position: center top;
+}
+100% {
+background-position: center bottom;
+}
+}
+
+/* Disable motion on mobile for performance */
+@media (max-width: 768px) {
+.hero {
+animation: none;
+background-attachment: scroll;
+}
+}
+/* =========================
+GLOBAL HERO STRUCTURE
+========================= */
+
+.hero {
+min-height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 80px 20px;
+}
+
+.hero > * {
+max-width: 1100px;
+width: 100%;
+}
+.hero h1,
+.hero p {
+text-align: center;
+}
