@@ -825,3 +825,16 @@ letter-spacing: 2px;
 text-transform: uppercase;
 box-shadow: 0 0 12px rgba(255,0,0,.35);
 }
+/* =========================
+MOBILE MENU SPACING
+========================= */
+
+.mobile-menu {
+padding-top: 50px;
+}
+
+.mobile-menu a {
+font-size: 20px;
+padding: 12px 0;
+border-bottom: 1px solid rgba(255,255,255,.08);
+}
