@@ -11,14 +11,16 @@ body {
 background: #0b0b0b;
 color: #f2f2f2;
 font-family: "Inter", system-ui, sans-serif;
+overflow-x: hidden;
 }
 
 /* =========================
-NAVIGATION
+GLOBAL NAVIGATION
 ========================= */
 .mobile-nav-bar {
 position: fixed;
 top: 0;
+left: 0;
 width: 100%;
 height: 64px;
 background: #000;
@@ -26,23 +28,25 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 18px;
-z-index: 1000;
+z-index: 9999;
 }
 
 .site-logo img {
-height: 40px;
+height: 42px;
+display: block;
 }
 
 .menu-toggle {
 background: transparent;
 border: 2px solid #ff0000;
 color: #ff0000;
-font-weight: bold;
+font-weight: 800;
 letter-spacing: 2px;
 padding: 6px 16px;
 cursor: pointer;
 }
 
+/* MOBILE MENU */
 .mobile-menu {
 position: fixed;
 top: 64px;
@@ -52,23 +56,26 @@ height: calc(100vh - 64px);
 background: #000;
 display: flex;
 flex-direction: column;
-padding: 40px;
+padding: 30px;
 transition: right 0.3s ease;
-z-index: 999;
-}
-
-.mobile-menu.active {
-right: 0;
+z-index: 9998;
 }
 
 .mobile-menu a {
 color: #fff;
 text-decoration: none;
 font-size: 20px;
-padding: 14px 0;
-border-bottom: 1px solid rgba(255,255,255,.08);
+padding: 16px 0;
+border-bottom: 1px solid rgba(255,255,255,.1);
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
 }
 
+.mobile-menu.active {
+right: 0;
+}
+
+/* DESKTOP MENU */
 .desktop-menu {
 display: none;
 }
@@ -82,16 +89,20 @@ display: none;
 .desktop-menu {
 display: flex;
 justify-content: center;
-gap: 36px;
+gap: 40px;
 padding: 22px;
 background: #000;
+position: sticky;
+top: 0;
+z-index: 9999;
 }
 
 .desktop-menu a {
 font-family: "Oswald", sans-serif;
 color: #fff;
 text-decoration: none;
-letter-spacing: 2px;
+letter-spacing: 3px;
+font-weight: 600;
 }
 
 .desktop-menu a:hover {
@@ -100,182 +111,136 @@ color: #ff0000;
 }
 
 /* =========================
-GLOBAL HERO SYSTEM (RESTORED)
+HERO SYSTEM (ALL PAGES)
 ========================= */
 .hero {
 min-height: 100vh;
-padding-top: 64px;
+padding-top: 64px; /* CRITICAL: prevents nav overlap */
 display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
 background-size: cover;
 background-position: center;
+position: relative;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.9)
+);
 }
 
 .hero-overlay {
-max-width: 900px;
+position: relative;
+z-index: 2;
+max-width: 760px;
 padding: 20px;
 }
 
 /* =========================
-HOME HERO (SAFE)
-========================= */
-.hero-home {
-background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
-url("hero.jpg") center / cover no-repeat;
-}
-
-.hero-title {
-font-family: "Oswald", sans-serif;
-font-size: clamp(38px, 8vw, 72px);
-font-weight: 900;
-letter-spacing: 3px;
-text-transform: uppercase;
-line-height: 1.05;
-color: #ffffff;
-}
-
-.hero-title span {
-display: block;
-color: #ff0000;
-}
-
-/* =========================
-LS HERO (ISOLATED — DOES NOT BREAK SITE)
+LS HERO
 ========================= */
 .hero-ls {
-background:
-linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
-url("ls-hero.png") center / cover no-repeat;
+background-image: url("ls-hero.png");
 }
 
-/* Desktop only parallax */
 @media (min-width: 900px) {
 .hero-ls {
 background-attachment: fixed;
 }
 }
 
-/* LS TEXT — CENTERED */
-.hero-ls h1 {
+.ls-title {
 font-family: "Oswald", sans-serif;
-font-size: clamp(52px, 9vw, 104px);
+font-size: clamp(56px, 9vw, 110px);
 font-weight: 900;
 letter-spacing: 5px;
 text-transform: uppercase;
 line-height: 0.95;
+color: #fff;
+text-shadow:
+0 0 18px rgba(255,0,0,.8),
+0 0 40px rgba(255,0,0,.4);
 }
 
-.hero-ls h1 a {
-color: #ffffff;
-text-decoration: none;
-}
-
-.hero-ls h1 a:hover {
-color: #ff0000;
-}
-
-.hero-ls p {
-margin-top: 14px;
-letter-spacing: 3px;
-text-transform: uppercase;
+.ls-title span {
+display: block;
+font-size: 0.6em;
+letter-spacing: 6px;
 color: rgba(255,255,255,.75);
 }
 
-/* MOBILE FIX */
-@media (max-width: 899px) {
-.hero {
-min-height: 100svh;
-}
-
-.hero-ls {
-background-attachment: scroll;
-}
+.ls-tagline {
+margin-top: 16px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: rgba(255,255,255,.8);
 }
 
 /* =========================
-OTHER PAGES
+SERVICES HERO
 ========================= */
 .hero-services {
-background:
-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
-url("services-bg.jpg") center / cover no-repeat;
+background-image: url("services-hero.png");
 }
 
-.hero-about {
-background:
-linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.95)),
-url("valve-cover.jpg") center / cover no-repeat;
+.services-title {
+font-family: "Oswald", sans-serif;
+font-size: clamp(42px, 7vw, 88px);
+font-weight: 900;
+letter-spacing: 4px;
+text-transform: uppercase;
 }
 
 /* =========================
-CONTENT
+BUTTONS
+========================= */
+.cta-button {
+display: inline-block;
+margin-top: 30px;
+padding: 16px 38px;
+background: #ff0000;
+color: #fff;
+text-decoration: none;
+font-weight: 800;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.cta-outline {
+display: inline-block;
+margin-top: 14px;
+padding: 14px 36px;
+border: 2px solid #ff0000;
+color: #fff;
+text-decoration: none;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+/* =========================
+CONTENT SECTIONS
 ========================= */
 .section {
-max-width: 900px;
+max-width: 1000px;
 margin: auto;
-padding: 80px 20px;
+padding: 90px 24px;
 text-align: center;
+}
+
+.section h2 {
+font-family: "Oswald", sans-serif;
+font-size: 36px;
+letter-spacing: 3px;
+margin-bottom: 20px;
 }
 
 .section p {
-color: #cccccc;
+color: #ccc;
 line-height: 1.7;
-}
-/* =========================
-LS PAGE — FINAL FIX
-========================= */
-
-/* LS hero overrides global hero safely */
-.hero-ls {
-padding-top: 64px; /* offset mobile nav */
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-/* LS overlay container */
-.ls-overlay {
-text-align: center;
-max-width: 900px;
-padding: 0 20px;
-}
-
-/* Title */
-.ls-title {
-font-family: "Oswald", sans-serif;
-font-size: clamp(44px, 10vw, 110px);
-font-weight: 900;
-letter-spacing: 5px;
-line-height: 0.95;
-text-transform: uppercase;
-}
-
-/* Clickable title */
-.ls-title a {
-color: #ffffff;
-text-decoration: none;
-}
-
-.ls-title a:hover {
-color: #ff0000;
-}
-
-/* Tagline */
-.ls-tagline {
-margin-top: 16px;
-font-size: clamp(14px, 3vw, 20px);
-letter-spacing: 3px;
-text-transform: uppercase;
-color: rgba(255,255,255,.75);
-}
-
-/* MOBILE GUARANTEE */
-@media (max-width: 899px) {
-.hero-ls {
-min-height: 100svh;
-background-attachment: scroll;
-}
 }
