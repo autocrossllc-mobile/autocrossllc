@@ -169,17 +169,24 @@ linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
 url("services-bg.jpg");
 }
 
+/* =========================
+LS HERO — BRUTAL PERFORMANCE
+========================= */
 .hero-ls {
+position: relative;
+min-height: 90vh;
 background:
-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),
-url("ls-engine.jpg");
-animation: lsGlow 3s infinite;
-}
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.15),
+rgba(0,0,0,0.9)
+),
+url("ls-hero.png") center / cover no-repeat;
 
-.hero-about {
-background:
-linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),
-url("engine-texture.png");
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding: 0 6vw 14vh;
 }
 
 /* LS GLOW (LS PAGE ONLY) */
@@ -1167,7 +1174,28 @@ padding: 0 8vw;
 .hero-ls .hero-overlay {
 max-width: 700px;
 }
+/* LS HERO TEXT */
+.hero-ls h1 {
+font-family: "Oswald", sans-serif;
+font-size: clamp(48px, 9vw, 96px);
+font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 3px;
+line-height: 0.95;
+color: #ffffff;
 
+text-shadow:
+0 0 12px rgba(255,0,0,0.35),
+0 0 28px rgba(255,0,0,0.25);
+}
+
+.hero-ls p {
+margin-top: 16px;
+font-family: "Inter", sans-serif;
+font-size: clamp(16px, 3.5vw, 22px);
+letter-spacing: 1.5px;
+color: #cfcfcf;
+}
 .ls-title {
 font-family: 'Oswald', sans-serif;
 font-size: clamp(3.5rem, 8vw, 6.5rem);
@@ -1241,4 +1269,18 @@ display: flex;
 flex-direction: column;
 justify-content: flex-end;
 padding: 0 6vw 12vh;
+}
+.hero-ls::after {
+content: "";
+position: absolute;
+inset: 0;
+background:
+repeating-linear-gradient(
+135deg,
+rgba(255,255,255,0.02),
+rgba(255,255,255,0.02) 2px,
+transparent 2px,
+transparent 6px
+);
+pointer-events: none;
 }
