@@ -185,7 +185,22 @@ align-items: flex-end;
 padding: 0 6vw 14vh;
 overflow: hidden;
 }
+/* LS PERFORMANCE LINK */
+.ls-link {
+text-decoration: none;
+color: inherit;
+display: inline-block;
+}
 
+/* Subtle aggressive hover (desktop only) */
+@media (hover: hover) {
+.ls-link:hover span {
+text-shadow:
+0 0 18px rgba(255,0,0,.9),
+0 0 36px rgba(255,0,0,.6);
+transform: scale(1.02);
+}
+}
 /* DESKTOP ONLY — SCROLLING / DEPTH */
 @media (min-width: 900px) {
 .hero-ls {
