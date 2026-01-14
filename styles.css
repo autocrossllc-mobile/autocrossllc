@@ -216,3 +216,16 @@ display: none !important;
 display: flex !important;
 }
 }
+.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 64px;
+background: #000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+z-index: 9999;
+}
