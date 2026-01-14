@@ -1,99 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services | AutoCross LLC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<meta name="description" content="AutoCross LLC provides mobile automotive services, diagnostics, repairs, and LS performance upgrades. Chevy-focused performance culture.">
-<meta name="keywords" content="LS swaps, mobile mechanic, Chevy performance, automotive diagnostics, AutoCross LLC">
-<meta name="author" content="AutoCross LLC">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================
+RESET
+========================= */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-<!-- STYLES -->
-<link rel="stylesheet" href="styles.css">
+body {
+background: #0b0b0b;
+color: #f2f2f2;
+font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =========================
+NAV BAR (SIMPLE)
+========================= */
+.nav {
+height: 64px;
+background: #000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+}
+
+.nav img {
+height: 42px;
+}
+
+.nav a {
+color: #fff;
+text-decoration: none;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+border: 2px solid #ff0000;
+padding: 6px 14px;
+}
+
+/* =========================
+SERVICES HERO
+========================= */
+.services-hero {
+min-height: 100vh;
+background:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+url("services-hero.png") center / cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 24px;
+}
+
+.services-hero-content {
+max-width: 900px;
+}
+
+.services-hero h1 {
+font-family: "Oswald", sans-serif;
+font-size: clamp(44px, 8vw, 96px);
+font-weight: 900;
+letter-spacing: 4px;
+text-transform: uppercase;
+line-height: 1;
+text-shadow:
+0 0 18px rgba(255,0,0,.7),
+0 0 40px rgba(0,0,0,1);
+}
+
+.services-hero p {
+margin-top: 18px;
+font-size: clamp(15px, 2.5vw, 20px);
+letter-spacing: 3px;
+text-transform: uppercase;
+color: rgba(255,255,255,.85);
+}
+
+/* CTA */
+.hero-buttons {
+margin-top: 34px;
+display: flex;
+gap: 20px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.hero-buttons a {
+text-decoration: none;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+padding: 14px 32px;
+border: 2px solid #ff0000;
+color: #fff;
+transition: all .25s ease;
+}
+
+.hero-buttons a.primary {
+background: #ff0000;
+}
+
+.hero-buttons a:hover {
+background: #ff0000;
+}
+
+/* =========================
+SERVICES SECTION
+========================= */
+.section {
+max-width: 1100px;
+margin: auto;
+padding: 90px 24px;
+}
+
+.section h2 {
+font-family: "Oswald", sans-serif;
+font-size: 42px;
+letter-spacing: 3px;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 28px;
+}
+
+.service-box {
+border: 1px solid rgba(255,255,255,.1);
+padding: 26px;
+background: rgba(0,0,0,.6);
+}
+
+.service-box h3 {
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+.service-box p {
+color: #ccc;
+line-height: 1.6;
+}
+
+/* =========================
+VEHICLES
+========================= */
+.vehicles {
+text-align: center;
+margin-top: 70px;
+}
+
+.vehicles p {
+letter-spacing: 2px;
+color: #aaa;
+}
+
+/* =========================
+FOOTER LINK
+========================= */
+.footer-link {
+text-align: center;
+padding: 40px;
+}
+
+.footer-link a {
+color: #ff0000;
+text-decoration: none;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- MOBILE NAV -->
-<header class="mobile-nav-bar">
-<a href="index.html" class="site-logo">
-<img src="official-logo.png" alt="AutoCross LLC">
-</a>
-<button id="menuToggle" class="menu-toggle">MENU</button>
-</header>
-
-<!-- MOBILE MENU -->
-<nav id="mobileMenu" class="mobile-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls.html">LS</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
+<nav class="nav">
+<img src="logo.png" alt="AutoCross LLC">
+<a href="rentals.html">Rentals</a>
 </nav>
 
-<!-- DESKTOP MENU -->
-<nav class="desktop-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls.html">LS</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-</nav>
+<section class="services-hero">
+<div class="services-hero-content">
+<h1>Performance Built<br>Not Rushed</h1>
+<p>LS Swaps • Engine & Transmission Builds • Marine & Trailer Repair</p>
 
-<!-- HERO -->
-<section class="services-grid">
-
-<div class="service-card">
-<h3>Mobile Diagnostics</h3>
-<p>
-Advanced scan tools, electrical testing, and
-real-world troubleshooting done on-site.
-</p>
+<div class="hero-buttons">
+<a href="#services" class="primary">Book Service</a>
+<a href="rentals.html">Rental Services</a>
 </div>
-
-<div class="service-card">
-<h3>Mechanical Repairs</h3>
-<p>
-Brakes, suspension, cooling systems, driveline
-repairs — precision work without the shop wait.
-</p>
 </div>
-
-<div class="service-card">
-<h3>Performance Upgrades</h3>
-<p>
-Cam swaps, bolt-ons, tuning prep, and reliability
-upgrades built for street and track.
-</p>
-</div>
-
-<div class="service-card">
-<h3>LS Services</h3>
-<p>
-LS diagnostics, installs, swap support, and
-Chevy-focused performance builds done right.
-</p>
-</div>
-
-</section>
-<!-- CONTENT -->
-<section class="services-content">
-<p>
-Mobile automotive diagnostics, mechanical repairs,
-performance upgrades, and LS-related services —
-delivered with precision, reliability, and racing DNA.
-</p>
 </section>
 
-<script src="script.js"></script>
+<section class="section" id="services">
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-box">
+<h3>LS Swaps</h3>
+<p>Complete LS engine conversions built for reliability, power, and OEM-level fitment.</p>
+</div>
+
+<div class="service-box">
+<h3>Engine Rebuilds & Overhauls</h3>
+<p>Precision rebuilds using proven components for long-term durability and performance.</p>
+</div>
+
+<div class="service-box">
+<h3>Transmission Rebuilds</h3>
+<p>Automatic and manual transmission rebuilds and overhauls.</p>
+</div>
+
+<div class="service-box">
+<h3>Brake Repair</h3>
+<p>Complete brake service and upgrades for safety and performance.</p>
+</div>
+
+<div class="service-box">
+<h3>Maintenance & Tune-Ups</h3>
+<p>Oil changes, tune-ups, and preventive maintenance.</p>
+</div>
+
+<div class="service-box">
+<h3>Marine & Trailer Repair</h3>
+<p>Boat engines, marine systems, and trailer repair services.</p>
+</div>
+
+<div class="service-box">
+<h3>Fabrication</h3>
+<p>Custom fabrication solutions built to fit your application.</p>
+</div>
+
+</div>
+
+<div class="vehicles">
+<p>Cars • Trucks • SUVs • Motorcycles • ATVs • Boats</p>
+</div>
+</section>
+
+<div class="footer-link">
+<a href="rentals.html">View Rental Services →</a>
+</div>
+
 </body>
 </html>
