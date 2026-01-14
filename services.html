@@ -275,6 +275,13 @@ letter-spacing: 2px;
 <div class="footer-link">
 <a href="rentals.html">View Rental Services →</a>
 </div>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
+menuToggle.addEventListener("click", () => {
+mobileMenu.classList.toggle("active");
+});
+</script>
 </body>
 </html>
