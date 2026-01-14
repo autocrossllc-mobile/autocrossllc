@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | AutoCross LLC</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* =========================
-RESET
-========================= */
+/* ================= RESET ================= */
 * {
 margin: 0;
 padding: 0;
@@ -20,39 +18,84 @@ box-sizing: border-box;
 body {
 background: #0b0b0b;
 color: #f2f2f2;
-font-family: "Inter", system-ui, sans-serif;
+font-family: "Inter", sans-serif;
 }
 
-/* =========================
-NAV BAR (SIMPLE)
-========================= */
-.nav {
+/* ================= HEADER ================= */
+header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
 height: 64px;
 background: #000;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 0 20px;
+padding: 0 16px;
+z-index: 9999;
 }
 
-.nav img {
+.site-logo img {
 height: 42px;
+max-height: 42px;
+width: auto;
+object-fit: contain;
 }
 
-.nav a {
+.menu-toggle {
+background: none;
+border: 2px solid #ff0000;
+color: #fff;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+padding: 6px 14px;
+cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+position: fixed;
+top: 64px;
+left: 0;
+right: 0;
+background: #000;
+display: none;
+flex-direction: column;
+border-top: 1px solid rgba(255,255,255,.1);
+z-index: 9998;
+}
+
+.mobile-menu a {
+padding: 14px;
+text-decoration: none;
+color: #fff;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.mobile-menu.active {
+display: flex;
+}
+
+/* ================= DESKTOP MENU ================= */
+.desktop-menu {
+display: none;
+gap: 26px;
+}
+
+.desktop-menu a {
 color: #fff;
 text-decoration: none;
 font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
-border: 2px solid #ff0000;
-padding: 6px 14px;
 }
 
-/* =========================
-SERVICES HERO
-========================= */
+/* ================= HERO ================= */
 .services-hero {
 min-height: 100vh;
+padding-top: 64px;
 background:
 linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
 url("services-hero.png") center / cover no-repeat;
@@ -60,7 +103,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
-padding: 0 24px;
+padding-left: 24px;
+padding-right: 24px;
 }
 
 .services-hero-content {
@@ -69,25 +113,21 @@ max-width: 900px;
 
 .services-hero h1 {
 font-family: "Oswald", sans-serif;
-font-size: clamp(44px, 8vw, 96px);
+font-size: clamp(42px, 8vw, 96px);
 font-weight: 900;
 letter-spacing: 4px;
-text-transform: uppercase;
 line-height: 1;
-text-shadow:
-0 0 18px rgba(255,0,0,.7),
-0 0 40px rgba(0,0,0,1);
+text-transform: uppercase;
+text-shadow: 0 0 18px rgba(255,0,0,.7);
 }
 
 .services-hero p {
 margin-top: 18px;
-font-size: clamp(15px, 2.5vw, 20px);
 letter-spacing: 3px;
 text-transform: uppercase;
 color: rgba(255,255,255,.85);
 }
 
-/* CTA */
 .hero-buttons {
 margin-top: 34px;
 display: flex;
@@ -97,16 +137,16 @@ flex-wrap: wrap;
 }
 
 .hero-buttons a {
-text-decoration: none;
 font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
 padding: 14px 32px;
 border: 2px solid #ff0000;
 color: #fff;
-transition: all .25s ease;
+text-decoration: none;
+transition: .25s;
 }
 
-.hero-buttons a.primary {
+.hero-buttons .primary {
 background: #ff0000;
 }
 
@@ -114,9 +154,7 @@ background: #ff0000;
 background: #ff0000;
 }
 
-/* =========================
-SERVICES SECTION
-========================= */
+/* ================= SERVICES ================= */
 .section {
 max-width: 1100px;
 margin: auto;
@@ -154,22 +192,13 @@ color: #ccc;
 line-height: 1.6;
 }
 
-/* =========================
-VEHICLES
-========================= */
 .vehicles {
 text-align: center;
-margin-top: 70px;
-}
-
-.vehicles p {
+margin-top: 60px;
 letter-spacing: 2px;
 color: #aaa;
 }
 
-/* =========================
-FOOTER LINK
-========================= */
 .footer-link {
 text-align: center;
 padding: 40px;
@@ -181,19 +210,32 @@ text-decoration: none;
 font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
 }
+
+/* ================= DESKTOP BREAKPOINT ================= */
+@media (min-width: 900px) {
+.menu-toggle {
+display: none;
+}
+
+.mobile-menu {
+display: none !important;
+}
+
+.desktop-menu {
+display: flex;
+}
+}
 </style>
 </head>
 
 <body>
 
-<header class="mobile-nav-bar">
+<header>
 <a href="index.html" class="site-logo">
 <img src="official-logo.png" alt="AutoCross LLC">
 </a>
-<button id="menuToggle" class="menu-toggle">MENU</button>
-</header>
 
-<nav id="mobileMenu" class="mobile-menu">
+<nav class="desktop-menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="ls.html">LS</a>
@@ -203,7 +245,10 @@ letter-spacing: 2px;
 <a href="about.html">About</a>
 </nav>
 
-<nav class="desktop-menu">
+<button class="menu-toggle" id="menuToggle">MENU</button>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="ls.html">LS</a>
@@ -229,52 +274,24 @@ letter-spacing: 2px;
 <h2>Our Services</h2>
 
 <div class="services-grid">
-
-<div class="service-box">
-<h3>LS Swaps</h3>
-<p>Complete LS engine conversions built for reliability, power, and OEM-level fitment.</p>
-</div>
-
-<div class="service-box">
-<h3>Engine Rebuilds & Overhauls</h3>
-<p>Precision rebuilds using proven components for long-term durability and performance.</p>
-</div>
-
-<div class="service-box">
-<h3>Transmission Rebuilds</h3>
-<p>Automatic and manual transmission rebuilds and overhauls.</p>
-</div>
-
-<div class="service-box">
-<h3>Brake Repair</h3>
-<p>Complete brake service and upgrades for safety and performance.</p>
-</div>
-
-<div class="service-box">
-<h3>Maintenance & Tune-Ups</h3>
-<p>Oil changes, tune-ups, and preventive maintenance.</p>
-</div>
-
-<div class="service-box">
-<h3>Marine & Trailer Repair</h3>
-<p>Boat engines, marine systems, and trailer repair services.</p>
-</div>
-
-<div class="service-box">
-<h3>Fabrication</h3>
-<p>Custom fabrication solutions built to fit your application.</p>
-</div>
-
+<div class="service-box"><h3>LS Swaps</h3><p>Complete LS engine conversions built for power and reliability.</p></div>
+<div class="service-box"><h3>Engine Rebuilds</h3><p>Precision engine rebuilds and overhauls.</p></div>
+<div class="service-box"><h3>Transmission Rebuilds</h3><p>Automatic and manual transmission services.</p></div>
+<div class="service-box"><h3>Brake Repair</h3><p>Complete brake repair and upgrades.</p></div>
+<div class="service-box"><h3>Maintenance</h3><p>Oil changes, tune-ups, and diagnostics.</p></div>
+<div class="service-box"><h3>Marine & Trailer</h3><p>Boat engines and trailer repair.</p></div>
+<div class="service-box"><h3>Fabrication</h3><p>Custom fabrication solutions.</p></div>
 </div>
 
 <div class="vehicles">
-<p>Cars • Trucks • SUVs • Motorcycles • ATVs • Boats</p>
+Cars • Trucks • SUVs • Motorcycles • ATVs • Boats
 </div>
 </section>
 
 <div class="footer-link">
 <a href="rentals.html">View Rental Services →</a>
 </div>
+
 <script>
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -283,5 +300,6 @@ menuToggle.addEventListener("click", () => {
 mobileMenu.classList.toggle("active");
 });
 </script>
+
 </body>
 </html>
