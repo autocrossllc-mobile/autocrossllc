@@ -165,38 +165,44 @@ letter-spacing: 1px;
 }
 
 /* =========================
-LS PAGE — FINAL HERO (AGGRESSIVE)
+LS HERO — FINAL AGGRESSIVE
 ========================= */
-
-/* BASE LS HERO */
 .hero-ls {
 min-height: 100vh;
-background:
-linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.9)),
-url("ls-hero.png") center / cover no-repeat;
+background-image:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.9)
+),
+url("ls-hero.png");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
 display: flex;
 align-items: center;
 justify-content: center;
 text-align: center;
+
 padding: 0 6vw;
 }
-/* Subtle aggressive hover (desktop only) */
-@media (hover: hover) {
-.ls-link:hover span {
-text-shadow:
-0 0 18px rgba(255,0,0,.9),
-0 0 36px rgba(255,0,0,.6);
-transform: scale(1.02);
-}
-}
-/* DESKTOP ONLY — SCROLLING / DEPTH */
+
+/* Desktop scroll effect */
 @media (min-width: 900px) {
 .hero-ls {
 background-attachment: fixed;
-animation: lsScroll 35s linear infinite;
 }
 }
+
+/* Mobile safety */
+@media (max-width: 768px) {
+.hero-ls {
+background-attachment: scroll;
+min-height: 100svh;
+}
+}
+
 .ls-title {
 font-family: "Oswald", sans-serif;
 font-size: clamp(56px, 9vw, 110px);
