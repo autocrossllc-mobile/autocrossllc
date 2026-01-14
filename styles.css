@@ -178,3 +178,9 @@ margin-bottom: 20px;
 color: #ccc;
 line-height: 1.7;
 }
+.site-logo img {
+height: 42px;
+max-height: 42px;
+width: auto;
+object-fit: contain;
+}
