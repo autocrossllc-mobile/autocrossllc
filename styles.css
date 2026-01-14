@@ -197,7 +197,24 @@ background-attachment: fixed;
 animation: lsScroll 35s linear infinite;
 }
 }
+.ls-title {
+font-family: "Oswald", sans-serif;
+font-size: clamp(56px, 9vw, 110px);
+font-weight: 900;
+letter-spacing: 5px;
+text-transform: uppercase;
+line-height: 0.95;
+color: #ffffff;
+text-shadow:
+0 0 20px rgba(255,0,0,.8),
+0 0 45px rgba(255,0,0,.45);
+}
 
+.ls-tagline {
+margin-top: 14px;
+letter-spacing: 3px;
+color: rgba(255,255,255,.85);
+}
 /* BACKGROUND MOTION */
 @keyframes lsScroll {
 0% { background-position: center top; }
