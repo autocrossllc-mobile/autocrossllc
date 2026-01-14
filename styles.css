@@ -100,97 +100,118 @@ color: #ff0000;
 }
 
 /* =========================
-GLOBAL HERO
+GLOBAL HERO SYSTEM (RESTORED)
 ========================= */
 .hero {
-min-height: calc(100vh - 64px);
+min-height: 100vh;
 padding-top: 64px;
 display: flex;
+align-items: center;
 justify-content: center;
 text-align: center;
+background-size: cover;
+background-position: center;
+}
+
+.hero-overlay {
+max-width: 900px;
+padding: 20px;
 }
 
 /* =========================
-LS HERO — FINAL (SINGLE SYSTEM)
+HOME HERO (SAFE)
+========================= */
+.hero-home {
+background:
+linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+url("hero.jpg") center / cover no-repeat;
+}
+
+.hero-title {
+font-family: "Oswald", sans-serif;
+font-size: clamp(38px, 8vw, 72px);
+font-weight: 900;
+letter-spacing: 3px;
+text-transform: uppercase;
+line-height: 1.05;
+color: #ffffff;
+}
+
+.hero-title span {
+display: block;
+color: #ff0000;
+}
+
+/* =========================
+LS HERO (ISOLATED — DOES NOT BREAK SITE)
 ========================= */
 .hero-ls {
 background:
-linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.9)),
+linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
 url("ls-hero.png") center / cover no-repeat;
-
-align-items: flex-end;
-padding-bottom: 12vh;
 }
 
-/* Desktop parallax */
+/* Desktop only parallax */
 @media (min-width: 900px) {
 .hero-ls {
 background-attachment: fixed;
 }
 }
 
-/* Hero content */
-.hero-ls .hero-overlay {
-max-width: 860px;
-}
-
-/* LS PERFORMANCE (CLICKABLE) */
+/* LS TEXT — CENTERED */
 .hero-ls h1 {
 font-family: "Oswald", sans-serif;
-font-size: clamp(56px, 9vw, 110px);
+font-size: clamp(52px, 9vw, 104px);
 font-weight: 900;
-letter-spacing: 6px;
-line-height: 0.95;
+letter-spacing: 5px;
 text-transform: uppercase;
-
-color: #ffffff;
-text-shadow:
-0 0 20px rgba(255,0,0,0.85),
-0 0 50px rgba(255,0,0,0.5),
-0 12px 35px rgba(0,0,0,1);
+line-height: 0.95;
 }
 
 .hero-ls h1 a {
-color: inherit;
+color: #ffffff;
 text-decoration: none;
 }
 
-.hero-ls h1:hover {
+.hero-ls h1 a:hover {
 color: #ff0000;
 }
 
-/* Tagline */
 .hero-ls p {
-margin-top: 16px;
-font-size: clamp(14px, 2.5vw, 20px);
+margin-top: 14px;
 letter-spacing: 3px;
 text-transform: uppercase;
-color: rgba(255,255,255,0.75);
+color: rgba(255,255,255,.75);
 }
 
-/* =========================
-MOBILE FIX (YOUR SCREENSHOT ISSUE)
-========================= */
+/* MOBILE FIX */
 @media (max-width: 899px) {
-.hero-ls {
+.hero {
 min-height: 100svh;
-padding-bottom: 0;
-align-items: center;
+}
+
+.hero-ls {
 background-attachment: scroll;
 }
-
-.hero-ls h1 {
-font-size: clamp(42px, 11vw, 72px);
-letter-spacing: 3px;
-}
-
-.hero-ls p {
-letter-spacing: 2px;
-}
 }
 
 /* =========================
-CONTENT SECTIONS
+OTHER PAGES
+========================= */
+.hero-services {
+background:
+linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+url("services-bg.jpg") center / cover no-repeat;
+}
+
+.hero-about {
+background:
+linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.95)),
+url("valve-cover.jpg") center / cover no-repeat;
+}
+
+/* =========================
+CONTENT
 ========================= */
 .section {
 max-width: 900px;
