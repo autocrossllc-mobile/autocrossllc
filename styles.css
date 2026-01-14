@@ -38,7 +38,63 @@ font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
 }
 }
+/* =========================
+DESKTOP FIXES ONLY
+========================= */
+@media (min-width: 900px) {
 
+/* Prevent hero from covering page */
+body {
+padding-top: 72px;
+}
+
+/* Header positioning */
+header.mobile-nav-bar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+}
+
+/* Proper logo size on desktop */
+.site-logo img {
+height: 44px;
+width: auto;
+}
+
+/* Hide mobile menu + toggle on desktop */
+.menu-toggle,
+.mobile-menu {
+display: none !important;
+}
+
+/* Desktop menu layout */
+.desktop-menu {
+display: flex !important;
+position: fixed;
+top: 0;
+right: 0;
+height: 72px;
+align-items: center;
+gap: 22px;
+padding-right: 26px;
+background: #000;
+z-index: 1001;
+}
+
+.desktop-menu a {
+color: #fff;
+text-decoration: none;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+}
+
+/* Hero height adjustment */
+.services-hero {
+min-height: calc(100vh - 72px);
+}
+}
 /* PUSH CONTENT BELOW FIXED HEADER */
 .services-hero {
 padding-top: 64px;
