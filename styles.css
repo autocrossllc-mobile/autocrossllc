@@ -229,3 +229,21 @@ justify-content: space-between;
 padding: 0 16px;
 z-index: 9999;
 }
+/* ================= DESKTOP VISIBILITY FIX ================= */
+@media (min-width: 900px) {
+body {
+padding-top: 64px;
+}
+
+header {
+position: fixed;
+}
+
+.services-hero {
+min-height: calc(100vh - 64px);
+}
+
+.desktop-menu {
+display: flex !important;
+}
+}
