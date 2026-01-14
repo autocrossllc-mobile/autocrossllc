@@ -184,3 +184,35 @@ max-height: 42px;
 width: auto;
 object-fit: contain;
 }
+/* FORCE HIDE ALL MENUS FIRST */
+.mobile-menu,
+.desktop-menu {
+display: none !important;
+}
+/* MOBILE DEFAULT */
+.mobile-menu {
+display: none;
+}
+
+.mobile-menu.active {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
+
+/* DESKTOP ONLY */
+@media (min-width: 900px) {
+.menu-toggle {
+display: none;
+}
+
+.mobile-menu {
+display: none !important;
+}
+
+.desktop-menu {
+display: flex !important;
+}
+}
