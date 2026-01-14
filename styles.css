@@ -170,28 +170,17 @@ LS PAGE — FINAL HERO (AGGRESSIVE)
 
 /* BASE LS HERO */
 .hero-ls {
-position: relative;
 min-height: 100vh;
 background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,0.25),
-rgba(0,0,0,0.9)
-),
+linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.9)),
 url("ls-hero.png") center / cover no-repeat;
 
 display: flex;
-align-items: flex-end;
-padding: 0 6vw 14vh;
-overflow: hidden;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0 6vw;
 }
-/* LS PERFORMANCE LINK */
-.ls-link {
-text-decoration: none;
-color: inherit;
-display: inline-block;
-}
-
 /* Subtle aggressive hover (desktop only) */
 @media (hover: hover) {
 .ls-link:hover span {
