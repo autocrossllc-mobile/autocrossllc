@@ -476,3 +476,12 @@ text-decoration: none;
 font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
 }
+/* === CONTACT HERO HARD FORCE === */
+.hero.hero-contact {
+min-height: 100vh !important;
+background-image: url("./contact-hero.png") !important;
+background-size: cover !important;
+background-position: center !important;
+background-repeat: no-repeat !important;
+outline: 6px solid red !important;
+}
