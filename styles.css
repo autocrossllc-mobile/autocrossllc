@@ -129,13 +129,19 @@ max-width: 900px;
 HOME HERO
 ========================= */
 .hero-home {
-background:
-linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
-url("hero.png") center / cover no-repeat;
-}
-.hero-home {
 min-height: 100vh;
+position: relative;
 display: flex;
+align-items: center;
+justify-content: center;
+
+background-image:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
+url("./hero.png");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 /* =========================
@@ -321,4 +327,15 @@ font-size: 14px;
 }
 .hero-home {
 outline: 4px solid red;
+}
+.hero-overlay {
+position: relative;
+z-index: 2;
+}
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background: transparent;
+z-index: 1;
 }
