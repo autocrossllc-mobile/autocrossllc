@@ -203,18 +203,30 @@ url("about-hero.png") center / cover no-repeat;
 }
 
 /* =========================
-CONTACT HERO
+CONTACT HERO (FINAL)
 ========================= */
+
 .hero-contact {
-min-height: 100vh;
+min-height: calc(100vh - 64px);
 background-image:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
 url("contact-hero.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
+.hero-contact .hero-overlay {
+position: relative;
+z-index: 2;
+text-align: center;
+max-width: 900px;
+padding: 24px;
+}
 /* =========================
 HERO TEXT
 ========================= */
