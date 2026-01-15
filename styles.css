@@ -308,3 +308,20 @@ height: 38px;
 width: auto;
 display: block;
 }
+.hero-services {
+background:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+url("services-hero.png") center / cover no-repeat;
+}
+
+.hero-ls {
+background:
+linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
+url("ls-hero.png") center / cover no-repeat;
+}
+
+.hero-about {
+background:
+linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.95)),
+url("about-hero.png") center / cover no-repeat;
+}
