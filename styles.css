@@ -482,3 +482,11 @@ text-decoration: none;
 color: #fff;
 background: #ff0000;
 }
+.mobile-menu {
+display: none;
+}
+
+.mobile-menu.active {
+display: flex;
+flex-direction: column;
+}
