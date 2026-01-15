@@ -424,3 +424,61 @@ font-size: 14px;
 letter-spacing: 2px;
 cursor: pointer;
 }
+/* =========================
+GLOBAL HERO BASE
+========================= */
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* =========================
+HOME HERO
+========================= */
+.hero-home {
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.85)),
+url("hero.png") center / cover no-repeat;
+}
+
+/* =========================
+HERO OVERLAY
+========================= */
+.hero-overlay {
+text-align: center;
+padding: 0 20px;
+}
+
+.hero-title {
+font-family: "Oswald", sans-serif;
+font-size: clamp(42px, 8vw, 92px);
+font-weight: 800;
+letter-spacing: 4px;
+text-transform: uppercase;
+}
+
+.hero-title span {
+color: #ff0000;
+}
+
+.hero-tagline {
+margin-top: 16px;
+font-size: 18px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.85);
+}
+
+.cta-button {
+display: inline-block;
+margin-top: 32px;
+padding: 14px 34px;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+text-decoration: none;
+color: #fff;
+background: #ff0000;
+}
