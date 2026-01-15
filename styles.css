@@ -206,9 +206,13 @@ url("about-hero.png") center / cover no-repeat;
 CONTACT HERO
 ========================= */
 .hero-contact {
-background:
-linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
-url("contact-hero.png") center / cover no-repeat;
+min-height: 100vh;
+background-image:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+url("contact-hero.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 /* =========================
