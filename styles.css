@@ -11,428 +11,106 @@ body {
 background: #0b0b0b;
 color: #f2f2f2;
 font-family: "Inter", system-ui, sans-serif;
-overflow-x: hidden;
-}
-
-@media (min-width: 900px) {
-.menu-toggle,
-.mobile-menu {
-display: none;
-}
-
-.desktop-menu {
-display: flex;
-position: fixed;
-top: 0;
-right: 20px;
-height: 64px;
-align-items: center;
-gap: 22px;
-z-index: 1000;
-}
-
-.desktop-menu a {
-color: #fff;
-text-decoration: none;
-font-family: "Oswald", sans-serif;
-letter-spacing: 2px;
-}
-}
-/* =========================
-DESKTOP FIXES ONLY
-========================= */
-@media (min-width: 900px) {
-
-/* Prevent hero from covering page */
-body {
-padding-top: 72px;
-}
-
-/* Header positioning */
-header.mobile-nav-bar {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 1000;
-}
-
-/* Proper logo size on desktop */
-.site-logo img {
-height: 44px;
-width: auto;
-}
-
-/* Hide mobile menu + toggle on desktop */
-.menu-toggle,
-.mobile-menu {
-display: none !important;
-}
-
-/* Desktop menu layout */
-.desktop-menu {
-display: flex !important;
-position: fixed;
-top: 0;
-right: 0;
-height: 72px;
-align-items: center;
-gap: 22px;
-padding-right: 26px;
-background: #000;
-z-index: 1001;
-}
-
-.desktop-menu a {
-color: #fff;
-text-decoration: none;
-font-family: "Oswald", sans-serif;
-letter-spacing: 2px;
-}
-
-/* Hero height adjustment */
-.services-hero {
-min-height: calc(100vh - 72px);
-}
-}
-/* PUSH CONTENT BELOW FIXED HEADER */
-.services-hero {
-padding-top: 64px;
 }
 
 /* =========================
-HERO SYSTEM (ALL PAGES)
+NAVIGATION
 ========================= */
-.hero {
-min-height: 100vh;
-padding-top: 64px; /* CRITICAL: prevents nav overlap */
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-background-size: cover;
-background-position: center;
-position: relative;
-}
 
-.hero::after {
-content: "";
-position: absolute;
-inset: 0;
-background: linear-gradient(
-rgba(0,0,0,0.35),
-rgba(0,0,0,0.9)
-);
-}
-
-.hero-overlay {
-position: relative;
-z-index: 2;
-max-width: 760px;
-padding: 20px;
-}
-
-/* =========================
-LS HERO
-========================= */
-.hero-ls {
-background-image: url("ls-hero.png");
-}
-
-@media (min-width: 900px) {
-.hero-ls {
-background-attachment: fixed;
-}
-}
-
-.ls-title {
-font-family: "Oswald", sans-serif;
-font-size: clamp(56px, 9vw, 110px);
-font-weight: 900;
-letter-spacing: 5px;
-text-transform: uppercase;
-line-height: 0.95;
-color: #fff;
-text-shadow:
-0 0 18px rgba(255,0,0,.8),
-0 0 40px rgba(255,0,0,.4);
-}
-
-.ls-title span {
-display: block;
-font-size: 0.6em;
-letter-spacing: 6px;
-color: rgba(255,255,255,.75);
-}
-
-.ls-tagline {
-margin-top: 16px;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: rgba(255,255,255,.8);
-}
-
-/* =========================
-SERVICES HERO
-========================= */
-.hero-services {
-background-image: url("services-hero.png");
-}
-
-.services-title {
-font-family: "Oswald", sans-serif;
-font-size: clamp(42px, 7vw, 88px);
-font-weight: 900;
-letter-spacing: 4px;
-text-transform: uppercase;
-}
-
-/* =========================
-BUTTONS
-========================= */
-.cta-button {
-display: inline-block;
-margin-top: 30px;
-padding: 16px 38px;
-background: #ff0000;
-color: #fff;
-text-decoration: none;
-font-weight: 800;
-letter-spacing: 2px;
-text-transform: uppercase;
-}
-
-.cta-outline {
-display: inline-block;
-margin-top: 14px;
-padding: 14px 36px;
-border: 2px solid #ff0000;
-color: #fff;
-text-decoration: none;
-font-weight: 700;
-letter-spacing: 2px;
-}
-
-/* =========================
-CONTENT SECTIONS
-========================= */
-.section {
-max-width: 1000px;
-margin: auto;
-padding: 90px 24px;
-text-align: center;
-}
-
-.section h2 {
-font-family: "Oswald", sans-serif;
-font-size: 36px;
-letter-spacing: 3px;
-margin-bottom: 20px;
-}
-
-.section p {
-color: #ccc;
-line-height: 1.7;
-}
-.site-logo img {
-height: 42px;
-max-height: 42px;
-width: auto;
-object-fit: contain;
-}
-/* FORCE HIDE ALL MENUS FIRST */
-.mobile-menu,
-.desktop-menu {
-display: none !important;
-}
-/* MOBILE DEFAULT */
-.mobile-menu {
-display: none;
-}
-
-.mobile-menu.active {
-display: flex;
-}
-
-.menu-toggle {
-display: block;
-}
-
-/* DESKTOP ONLY */
-@media (min-width: 900px) {
-.menu-toggle {
-display: none;
-}
-
-.mobile-menu {
-display: none !important;
-}
-
-.desktop-menu {
-display: flex !important;
-}
-}
+/* MOBILE NAV BAR */
 .mobile-nav-bar {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
+display: none;
 height: 64px;
 background: #000;
+padding: 0 18px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 0 16px;
-z-index: 10000;
-}
-/* ================= DESKTOP VISIBILITY FIX ================= */
-@media (min-width: 900px) {
-body {
-padding-top: 64px;
 }
 
-header {
-position: fixed;
-}
-
-.services-hero {
-min-height: calc(100vh - 64px);
-}
-
-.desktop-menu {
-display: flex !important;
-}
-}
 .site-logo img {
-height: 38px;
-width: auto;
-display: block;
-}
-.hero-home {
-background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
-url("hero.png") center / cover no-repeat;
-}
-/* =========================
-HOME HERO
-========================= */
-
-.hero {
-min-height: 100vh;
-width: 100%;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+height: 40px;
 }
 
-.hero-home {
-background:
-linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.9)),
-url("hero.png") center / cover no-repeat;
+.menu-toggle {
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+color: #fff;
+border: 2px solid #ff0000;
+padding: 6px 14px;
+cursor: pointer;
+background: transparent;
 }
 
-.hero-services {
-background:
-linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
-url("services-hero.png") center / cover no-repeat;
-}
-
-.hero-ls {
-background:
-linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
-url("ls-hero.png") center / cover no-repeat;
-}
-
-.hero-about {
-background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.95)),
-url("about-hero.png") center / cover no-repeat;
-}
-.site-logo img {
-height: 38px;
-width: auto;
-display: block;
-}
-.hero-services {
-background:
-linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
-url("services-hero.png") center / cover no-repeat;
-}
-
-.hero-ls {
-background:
-linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.9)),
-url("ls-hero.png") center / cover no-repeat;
-}
-
-.hero-about {
-background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.95)),
-url("about-hero.png") center / cover no-repeat;
-}
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-
-menuToggle.addEventListener("click", () => {
-mobileMenu.classList.toggle("active");
-});
-</script>
-/* =========================
-MOBILE MENU FIX
-========================= */
-
+/* MOBILE MENU */
 .mobile-menu {
-position: fixed;
-top: 64px;
-right: 0;
-width: 100%;
-height: calc(100vh - 64px);
-background: #000;
 display: none;
 flex-direction: column;
-padding: 30px;
-z-index: 9999;
+background: #000;
+padding: 20px;
 }
 
 .mobile-menu a {
 color: #fff;
 text-decoration: none;
 font-family: "Oswald", sans-serif;
-font-size: 22px;
 letter-spacing: 2px;
-padding: 14px 0;
-border-bottom: 1px solid rgba(255,255,255,.1);
+padding: 12px 0;
 }
 
 .mobile-menu.active {
 display: flex;
 }
-.hero-overlay {
-padding-top: 80px;
-max-width: 900px;
+
+/* DESKTOP MENU */
+.desktop-menu {
+height: 64px;
+background: #000;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 32px;
 }
-  .menu-toggle {
-background: #fff;
-color: #000;
+
+.desktop-menu a {
+color: #fff;
+text-decoration: none;
 font-family: "Oswald", sans-serif;
-padding: 6px 14px;
-border-radius: 20px;
-font-size: 14px;
 letter-spacing: 2px;
-cursor: pointer;
+border-bottom: 2px solid transparent;
 }
+
+.desktop-menu a:hover {
+border-color: #ff0000;
+}
+
+/* =========================
+RESPONSIVE NAV SWITCH
+========================= */
+@media (max-width: 900px) {
+.desktop-menu {
+display: none;
+}
+
+.mobile-nav-bar {
+display: flex;
+}
+}
+
 /* =========================
 GLOBAL HERO BASE
 ========================= */
 .hero {
-position: relative;
 min-height: 100vh;
+position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+.hero-overlay {
+text-align: center;
+padding: 0 20px;
 }
 
 /* =========================
@@ -440,24 +118,57 @@ HOME HERO
 ========================= */
 .hero-home {
 background:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.85)),
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
 url("hero.png") center / cover no-repeat;
 }
 
 /* =========================
-HERO OVERLAY
+LS HERO
 ========================= */
-.hero-overlay {
-text-align: center;
-padding: 0 20px;
+.hero-ls {
+background:
+linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.9)),
+url("ls-hero.png") center / cover no-repeat;
 }
 
+/* =========================
+SERVICES HERO
+========================= */
+.services-hero,
+.hero-services {
+background:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+url("services-hero.png") center / cover no-repeat;
+}
+
+/* =========================
+ABOUT HERO
+========================= */
+.hero-about {
+background:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+url("about-hero.png") center / cover no-repeat;
+}
+
+/* =========================
+CONTACT HERO
+========================= */
+.hero-contact {
+background:
+linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+url("contact-hero.png") center / cover no-repeat;
+}
+
+/* =========================
+HERO TEXT
+========================= */
 .hero-title {
 font-family: "Oswald", sans-serif;
-font-size: clamp(42px, 8vw, 92px);
+font-size: clamp(42px, 8vw, 96px);
 font-weight: 800;
 letter-spacing: 4px;
 text-transform: uppercase;
+line-height: 1;
 }
 
 .hero-title span {
@@ -465,28 +176,83 @@ color: #ff0000;
 }
 
 .hero-tagline {
-margin-top: 16px;
+margin-top: 18px;
 font-size: 18px;
 letter-spacing: 3px;
 text-transform: uppercase;
-color: rgba(255,255,255,0.85);
+color: rgba(255,255,255,.85);
 }
 
+/* =========================
+CTA BUTTON
+========================= */
 .cta-button {
 display: inline-block;
-margin-top: 32px;
-padding: 14px 34px;
+margin-top: 34px;
+padding: 14px 36px;
 font-family: "Oswald", sans-serif;
 letter-spacing: 2px;
 text-decoration: none;
-color: #fff;
 background: #ff0000;
-}
-.mobile-menu {
-display: none;
+color: #fff;
+border: none;
 }
 
-.mobile-menu.active {
-display: flex;
-flex-direction: column;
+/* =========================
+SECTIONS
+========================= */
+.section {
+max-width: 1100px;
+margin: auto;
+padding: 90px 24px;
+}
+
+.section h2 {
+font-family: "Oswald", sans-serif;
+font-size: 42px;
+letter-spacing: 3px;
+text-align: center;
+margin-bottom: 50px;
+}
+
+/* =========================
+SERVICES GRID
+========================= */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 28px;
+}
+
+.service-box {
+
+border: 1px solid rgba(255,255,255,.1);
+padding: 26px;
+background: rgba(0,0,0,.6);
+}
+
+.service-box h3 {
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+.service-box p {
+color: #ccc;
+line-height: 1.6;
+}
+
+/* =========================
+FOOTER LINK
+========================= */
+.footer-link {
+text-align: center;
+padding: 40px;
+}
+
+.footer-link a {
+color: #ff0000;
+text-decoration: none;
+font-family: "Oswald", sans-serif;
+letter-spacing: 2px;
 }
