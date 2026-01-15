@@ -4,13 +4,13 @@ const mobileMenu = document.getElementById("mobileMenu");
 
 if (!menuToggle || !mobileMenu) return;
 
+// Toggle mobile menu
 menuToggle.addEventListener("click", () => {
 mobileMenu.classList.toggle("active");
 });
 
-// Close menu when link is clicked (mobile UX)
-const mobileLinks = mobileMenu.querySelectorAll("a");
-mobileLinks.forEach(link => {
+// Close menu when a link is clicked
+mobileMenu.querySelectorAll("a").forEach(link => {
 link.addEventListener("click", () => {
 mobileMenu.classList.remove("active");
 });
