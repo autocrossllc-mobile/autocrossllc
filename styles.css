@@ -303,3 +303,8 @@ min-height: calc(100vh - 64px);
 display: flex !important;
 }
 }
+.site-logo img {
+height: 38px;
+width: auto;
+display: block;
+}
