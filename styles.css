@@ -325,3 +325,8 @@ background:
 linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.95)),
 url("about-hero.png") center / cover no-repeat;
 }
+.site-logo img {
+height: 38px;
+width: auto;
+display: block;
+}
