@@ -560,3 +560,32 @@ position: relative;
   color: white;
   text-decoration: none;
 }
+/* ===== HERO IMAGES ===== */
+
+.hero-home {
+  background-image: url("hero.png");
+}
+
+.hero-ls {
+  background-image: url("ls-hero.png");
+}
+
+.hero-contact {
+  background-image: url("contact-hero.png");
+}
+
+.hero-about {
+  background-image: url("valve-cover.png");
+}
+
+.hero-services {
+  background-image: url("services-hero.png");
+}
+
+.hero-gallery {
+  background-image: url("gallery-hero.png");
+}
+
+.hero-rentals {
+  background-image: url("rentals-hero.png");
+}
