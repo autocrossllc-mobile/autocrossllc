@@ -518,3 +518,45 @@ align-items: center;
 justify-content: center;
 position: relative;
 }
+/* ===== HERO SYSTEM (USE ON ALL PAGES) ===== */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  text-align: center;
+  padding: 24px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  color: red;
+}
+
+.hero-tagline {
+  margin-top: 12px;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 14px 28px;
+  background: red;
+  color: white;
+  text-decoration: none;
+}
