@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoCross LLC</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+MOBILE NAV
+========================= -->
+<div class="mobile-nav-bar">
+  <div class="site-logo">
+    <img src="logo.png" alt="AutoCross Logo">
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">MENU</div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ls.html">LS</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="rentals.html">Rentals</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- =========================
+DESKTOP NAV
+========================= -->
+<div class="desktop-menu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="ls.html">LS</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="rentals.html">Rentals</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- =========================
+HOME HERO
+========================= -->
+<section class="hero hero-home">
+  <div class="hero-overlay">
+
+    <h1 class="hero-title">
+      MOBILE AUTOMOTIVE <br>
+      <span>LS PERFORMANCE</span>
+    </h1>
+
+    <p class="hero-tagline">
+      BUILT NOT RUSHED • DIAGNOSTICS FIRST • REAL POWER
+    </p>
+
+    <a href="contact.html" class="cta-button">
+      Request Appointment
+    </a>
+
+  </div>
+</section>
+
+<!-- =========================
+SERVICES PREVIEW
+========================= -->
+<section class="section">
+  <h2>Services</h2>
+
+  <div class="services-grid">
+
+    <div class="service-box">
+      <h3>Diagnostics</h3>
+      <p>Accurate troubleshooting before any parts are replaced.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>LS Swaps</h3>
+      <p>Complete LS engine installs built for reliability and power.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Maintenance</h3>
+      <p>Brakes, suspension, tune-ups, and general automotive repair.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+FOOTER LINK
+========================= -->
+<div class="footer-link">
+  <a href="contact.html">Book Service</a>
+</div>
+
+<!-- =========================
+SCRIPT
+========================= -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
