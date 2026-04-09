@@ -1,39 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LS Performance | AutoCross LLC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS Performance | AutoCross LLC</title>
+    <meta name="description" content="Boosted LS swaps, race builds, and performance diagnostics. AutoCross LLC builds engines meant to be driven hard.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<meta name="description" content="Boosted LS swaps, race builds, and performance diagnostics. AutoCross LLC builds engines meant to be driven hard.">
-<meta name="keywords" content="LS swaps, boosted LS, turbo LS, cam builds, Chevy race engines">
-<meta name="author" content="AutoCross LLC">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Styles -->
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- MOBILE NAV -->
 <header class="mobile-nav-bar">
-<a href="index.html" class="site-logo">
-<img src="official-logo.png" alt="AutoCross LLC">
-</a>
-<button id="menuToggle" class="menu-toggle">MENU</button>
+    <a href="index.html" class="site-logo">
+        <img src="official-logo.png" alt="AutoCross LLC">
+    </a>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
 </header>
 
 <nav id="mobileMenu" class="mobile-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls.html">LS</a>
-<a href="gallery.html">Gallery</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<nav class="desktop-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html" class="active">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<section class="hero hero-ls">
+    <div class="hero-overlay">
+        <h1 class="hero-title">
+            LS PERFORMANCE<br>
+            <span>BUILT TO ABUSE</span>
+        </h1>
+        <p class="hero-tagline">Boosted • Cammed • Swapped • Built</p>
+        <a href="contact.html" class="cta-button">Build My LS</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 style="text-align:center;">No Stock Builds</h2>
+        <p style="max-width: 850px; margin: auto; text-align: center; line-height: 1.9; color: #ccc;">
+            AutoCross LLC specializes in LS platforms that are meant to be driven hard. 
+            From turbo setups and aggressive cam profiles to full engine swaps—we focus on 
+            performance that delivers under pressure.
+            <br><br>
+            If you’re looking for quiet, factory-feel upgrades, you're in the wrong place. 
+            We build engines that idle rough, pull hard, and make zero apologies.
+        </p>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Mechanical Specialties</h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>Full Swaps</h3>
+                <p>Complete engine conversions: mounted, wired, and fuel-ready. We handle the integration so you can handle the power.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Boosted Builds</h3>
+                <p>Turbocharged and supercharged systems. We don't just bolt them on; we build them to survive real-world abuse.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Cam & Valvetrain</h3>
+                <p>Aggressive grinds, dual valve springs, chromoly pushrods, and the trunnion upgrades needed to let it scream.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Fuel & Air</h3>
+                <p>High-flow injectors, twin-pump systems, and custom intake solutions to keep your AFRs on point.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Wiring & ECU</h3>
+                <p>Standalone harness installs and troubleshooting. No bird's nests—clean, functional electrical work.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Track Prep</h3>
+                <p>From street-shredders to weekend drag builds. We optimize for reliability because DNF isn't an option.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 80px 0; background: #111;">
+    <div class="footer-link" style="margin-bottom: 30px;">
+        <a href="gallery.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
+            See The Builds →
+        </a>
+    </div>
+    <p style="color: #666; font-size: 12px;">© 2026 AutoCross LLC. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 <a href="rentals.html">Rentals</a>
 <a href="contact.html">Contact</a>
 <a href="about.html">About</a>
