@@ -1,39 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact | AutoCross LLC</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Request mobile automotive service or LS performance work with AutoCross LLC. Diagnostics-first, performance-driven.">
-<meta name="keywords" content="mobile mechanic, LS swaps, automotive diagnostics, AutoCross LLC">
-<meta name="author" content="AutoCross LLC">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Styles -->
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AutoCross LLC</title>
+    <meta name="description" content="Request mobile automotive service or LS performance work with AutoCross LLC.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<!-- CONTACT HERO -->
+
+<header class="mobile-nav-bar">
+    <a href="index.html" class="site-logo">
+        <img src="official-logo.png" alt="AutoCross LLC">
+    </a>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<nav class="desktop-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
 <section class="hero hero-contact">
-<div class="hero-overlay">
-<h1 class="hero-title">
-CONTACT <span>AUTOCROSS</span>
-</h1>
-<section class="section contact-section">
+    <div class="hero-overlay">
+        <h1 class="hero-title">CONTACT <span>AUTOCROSS</span></h1>
+        <p class="hero-tagline">Diagnostics First • Performance Focused • Mobile Service</p>
+    </div>
+</section>
 
-  <h2>Contact Us</h2>
+<section class="section">
+    <div class="container">
+        <h2 style="text-align:center;">Schedule an Appointment</h2>
+        <p style="max-width: 800px; margin: 0 auto 40px; text-align: center; color: #ccc; line-height: 1.8;">
+            AutoCross LLC operates by appointment only. 
+            A <strong>$25 scheduling hold</strong> is required to lock your time and is applied toward your service total.
+        </p>
 
-  <div class="contact-grid">
+        <div class="contact-grid">
+            <div class="contact-form" id="booking-form">
+                <form action="https://formsubmit.co/autocrossllc.services@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Service Request - AutoCross LLC">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option>LS Swap / Performance</option>
+                        <option>General Repair</option>
+                        <option>Vehicle Rental</option>
+                        <option>Electrical / Wiring</option>
+                        <option>Other</option>
+                    </select>
+                    
+                    <textarea name="message" rows="5" placeholder="Year, Make, Model & details on what you need..." required></textarea>
+                    
+                    <button type="submit" class="cta-button">Submit Request</button>
+                </form>
+            </div>
 
-    <!-- LEFT: FORM -->
-    <div class="contact-form">
+            <div class="contact-info">
+                <h3>Fastest Response</h3>
+                <div class="action-btns">
+                    <a href="sms:9094191015" class="cta-button sms-btn">TEXT NOW</a>
+                    <a href="tel:9094191015" class="cta-button call-btn">CALL NOW</a>
+                </div>
+                <p class="contact-note">
+                    We respond fastest to text. Send photos and vehicle details for a fast quote.
+                </p>
 
+                <div class="service-area">
+                    <h4>Service Area</h4>
+                    <p>Los Angeles • San Bernardino • Riverside • Orange County • Inland Empire</p>
+                </div>
+                
+                <div class="stripe-cta" style="margin-top: 30px; border-top: 1px solid #444; padding-top: 20px;">
+                    <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" target="_blank" class="cta-button" style="background: #6772e5;">
+                        Pay $25 Scheduling Hold
+                    </a>
+                    <p style="font-size: 12px; color: #aaa; margin-top: 10px;">Secure your slot via Stripe • Applied to service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="services-grid">
+        <div class="service-box">
+            <h3>Vehicle Info</h3>
+            <p>Please have your VIN ready. This ensures we source the exact parts for your specific trim and engine build.</p>
+        </div>
+        <div class="service-box">
+            <h3>The Process</h3>
+            <p>We perform full diagnostics before recommending parts. We fix it right the first time, performance-style.</p>
+        </div>
+        <div class="service-box">
+            <h3>Mobile Service</h3>
+            <p>We come to you. Whether it's a daily driver in a driveway or a project in a garage, we bring the shop to your door.</p>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 60px 0; background: #111;">
+    <a href="services.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">View All Services →</a>
+    <p style="color: #666; font-size: 12px; margin-top: 30px;">© 2026 AutoCross LLC. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
       <form action="https://formsubmit.co/youremail@email.com" method="POST">
 
         <input type="text" name="name" placeholder="Full Name" required>
