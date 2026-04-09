@@ -10,19 +10,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0b0b0b; color: #f2f2f2; font-family: "Inter", sans-serif; overflow-x: hidden; }
+
+        /* HEADER & NAV */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; height: 70px;
+            background: rgba(0,0,0,0.95); display: flex; align-items: center;
+            justify-content: space-between; padding: 0 5%; z-index: 10000;
+            border-bottom: 1px solid rgba(255,0,0,0.2);
+        }
+        .site-logo img { height: 45px; width: auto; }
+        .desktop-menu { display: none; gap: 25px; }
+        .desktop-menu a { color: #fff; text-decoration: none; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.3s; }
+        .desktop-menu a:hover, .desktop-menu a.active { color: #ff0000; }
+        .menu-toggle { background: none; border: 2px solid #ff0000; color: #fff; font-family: "Oswald", sans-serif; padding: 5px 15px; cursor: pointer; font-weight: 700; }
+
+        /* MOBILE MENU */
+        .mobile-menu { position: fixed; top: 70px; left: 0; right: 0; background: #000; display: none; flex-direction: column; z-index: 9999; border-bottom: 2px solid #ff0000; }
+        .mobile-menu a { padding: 15px 5%; text-decoration: none; color: #fff; font-family: "Oswald", sans-serif; border-bottom: 1px solid #222; text-transform: uppercase; }
+        .mobile-menu.active { display: flex; }
+
+        /* HERO */
+        .hero {
+            height: 70vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('services-hero.png') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px;
+        }
+        .hero-title { font-family: "Oswald", sans-serif; font-size: clamp(40px, 8vw, 80px); line-height: 1; text-transform: uppercase; font-weight: 900; }
+        .hero-title span { color: #ff0000; }
+        .hero-tagline { margin-top: 15px; font-size: 1.2rem; letter-spacing: 2px; color: #ccc; text-transform: uppercase; }
+
+        /* SECTION & GRID */
+        .section { max-width: 1200px; margin: auto; padding: 80px 20px; }
+        h2 { font-family: "Oswald", sans-serif; font-size: 3rem; text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-box { background: #111; padding: 40px; border-left: 4px solid #ff0000; transition: 0.3s; }
+        .service-box:hover { background: #1a1a1a; transform: translateY(-5px); }
+        .service-box h3 { font-family: "Oswald", sans-serif; font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; color: #fff; }
+        .service-box p { color: #aaa; line-height: 1.6; }
+
+        /* FOOTER */
+        .footer-cta { text-align: center; padding: 60px 20px; background: #050505; }
+        .cta-button { 
+            display: inline-block; padding: 15px 35px; background: #ff0000; color: #fff; 
+            text-decoration: none; font-family: "Oswald", sans-serif; font-weight: 700; 
+            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; 
+        }
+        .cta-button:hover { background: #cc0000; }
+        .vehicles { text-align: center; margin-top: 40px; color: #555; letter-spacing: 5px; font-weight: 800; font-size: 0.9rem; }
+
+        @media (min-width: 900px) {
+            .desktop-menu { display: flex; }
+            .menu-toggle { display: none; }
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="mobile-nav-bar">
+<header>
     <a href="index.html" class="site-logo">
         <img src="official-logo.png" alt="AutoCross LLC">
     </a>
-    <button id="menuToggle" class="menu-toggle">MENU</button>
+    <nav class="desktop-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="ls.html">LS</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rentals.html">Rentals</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">MENU</button>
 </header>
 
-<nav id="mobileMenu" class="mobile-menu">
+<nav class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="ls.html">LS</a>
@@ -31,9 +94,82 @@
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
+  
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">PERFORMANCE <span>BUILT</span><br>NOT RUSHED</h1>
+        <p class="hero-tagline">Diagnostics • Power • Reliability</p>
+    </div>
+</section>
 
-<nav class="desktop-menu">
-    <a href="index.html">Home</a>
+<section class="section" id="services">
+    <h2>Our Capabilities</h2>
+
+    <div class="services-grid">
+        <div class="service-box">
+            <h3>LS Swaps</h3>
+            <p>Complete engine conversions. From mounts to custom wiring harnesses, we bring modern power to your project.</p>
+        </div>
+        <div class="service-box">
+            <h3>Engine Rebuilds</h3>
+            <p>Precision blueprinting and assembly. Whether it's a stock refresh or a forged bottom-end build.</p>
+        </div>
+        <div class="service-box">
+            <h3>Diagnostics</h3>
+            <p>Electrical gremlins to mechanical noise. We use advanced tools to find the root cause, not just swap parts.</p>
+        </div>
+        <div class="service-box">
+            <h3>Transmissions</h3>
+            <p>Performance builds for 4L60/80e and T56 platforms. Shift kits, converters, and complete overhauls.</p>
+        </div>
+        <div class="service-box">
+            <h3>Brakes & Suspension</h3>
+            <p>Hydraulic repair and performance handling upgrades. Stopping power is just as important as engine power.</p>
+        </div>
+        <div class="service-box">
+            <h3>Marine & Trailer</h3>
+            <p>Specialized marine engine maintenance and trailer axle/bearing service to keep you on the water.</p>
+        </div>
+        <div class="service-box">
+            <h3>Fabrication</h3>
+            <p>Custom brackets, exhaust modifications, and performance plumbing solutions.</p>
+        </div>
+        <div class="service-box">
+            <h3>General Repair</h3>
+            <p>Quality mobile maintenance for your daily driver. Brakes, cooling systems, and major component repair.</p>
+        </div>
+    </div>
+
+    <div class="vehicles">
+        CARS • TRUCKS • SUVs • MOTORCYCLES • ATVs • BOATS
+    </div>
+</section>
+
+<div class="footer-cta">
+    <a href="contact.html" class="cta-button">Request a Quote</a>
+    <p style="margin-top: 25px;">
+        <a href="rentals.html" style="color: #aaa; text-decoration: none; font-size: 0.9rem;">View Rental Services →</a>
+    </p>
+</div>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>
     <a href="services.html" class="active">Services</a>
     <a href="ls.html">LS</a>
     <a href="gallery.html">Gallery</a>
