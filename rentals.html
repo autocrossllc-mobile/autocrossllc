@@ -1,39 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Vehicle Rentals | AutoCross LLC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rentals | AutoCross LLC</title>
+    <meta name="description" content="Reliable vehicle rentals from AutoCross LLC. Work trucks, daily drivers, and cargo vans ready for the road.">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="desktop-menu">
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="ls.html">LS</a>
-<a href="gallery.html">Gallery</a>
-<a href="rentals.html">Rentals</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
+<header class="mobile-nav-bar">
+    <a href="index.html" class="site-logo">
+        <img src="official-logo.png" alt="AutoCross LLC">
+    </a>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero hero-rentals">
-  <div class="hero-overlay">
-    <h1 class="hero-title">
-      VEHICLE <span>RENTALS</span>
-    </h1>
+<nav class="desktop-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html" class="active">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
 
-    <p class="hero-tagline">
-      Reliable • Clean • Ready to Work
-    </p>
+<section class="hero hero-rentals">
+    <div class="hero-overlay">
+        <h1 class="hero-title">
+            VEHICLE <span>RENTALS</span>
+        </h1>
+        <p class="hero-tagline">Reliable • Clean • Ready to Work</p>
+        <a href="#inventory" class="cta-button">View Inventory</a>
+    </div>
+</section>
+
+<section id="inventory" class="section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 50px;">Available Vehicles</h2>
+
+        <div class="services-grid">
+
+            <div class="service-box rental-card" style="text-align: center;">
+                <img src="truck1.png" alt="Work Truck" style="width: 100%; border-radius: 4px; margin-bottom: 15px;">
+                <h3>Work Truck</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px;">$85 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 20px;">Towing capable, heavy-duty bed liner, perfect for projects.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block;">Call to Rent</a>
+            </div>
+
+            <div class="service-box rental-card" style="text-align: center;">
+                <img src="sedan1.png" alt="Sedan" style="width: 100%; border-radius: 4px; margin-bottom: 15px;">
+                <h3>Daily Driver</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px;">$65 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 20px;">Fuel-efficient, reliable transportation while your car is in the shop.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block;">Call to Rent</a>
+            </div>
+
+            <div class="service-box rental-card" style="text-align: center;">
+                <img src="van1.png" alt="Cargo Van" style="width: 100%; border-radius: 4px; margin-bottom: 15px;">
+                <h3>Cargo Van</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px;">$95 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 20px;">Spacious interior for moving parts, engines, or equipment.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block;">Call to Rent</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container" style="text-align: center;">
+        <h2>Rental Requirements</h2>
+        <div style="max-width: 600px; margin: 40px auto 0; text-align: left; line-height: 2;">
+            <p>• Valid Driver's License required</p>
+            <p>• Proof of Insurance required</p>
+            <p>• Security deposit due at pickup</p>
+            <p>• Must be 21+ years of age</p>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 80px 0; background: #111;">
+    <div class="footer-link">
+        <a href="contact.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 1.2rem;">
+            Questions? Contact AutoCross →
+        </a>
+    </div>
+    <p style="color: #666; font-size: 12px; margin-top: 40px;">© 2026 AutoCross LLC • 909-419-1015</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 
     <a href="#inventory" class="cta-button">
       View Vehicles
