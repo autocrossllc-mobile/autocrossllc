@@ -202,11 +202,32 @@ linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
 url("about-hero.png") center / cover no-repeat;
 }
 
-/* =========================
-CONTACT HERO (FINAL)
-========================= */
+/* ================= CONTACT HERO (LOCKED) ================= */
 
-hero
+.hero-contact {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background-image: url("contact-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* overlay fix */
+.hero-contact .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
 /* =========================
 HERO TEXT
 ========================= */
