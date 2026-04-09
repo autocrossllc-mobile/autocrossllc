@@ -1,39 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AutoCross LLC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AutoCross LLC | Mobile LS Performance & Repair</title>
+    <meta name="description" content="Mobile automotive diagnostics and LS performance builds serving Southern California. Built not rushed.">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- =========================
-MOBILE NAV
-========================= -->
-<div class="mobile-nav-bar">
-  <div class="site-logo">
-    <img src="logo.png" alt="AutoCross Logo">
-  </div>
-  <div class="menu-toggle" onclick="toggleMenu()">MENU</div>
-</div>
+<header class="mobile-nav-bar">
+    <a href="index.html" class="site-logo">
+        <img src="official-logo.png" alt="AutoCross LLC">
+    </a>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
+</header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="ls.html">LS</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="rentals.html">Rentals</a>
-  <a href="contact.html">Contact</a>
-  <a href="about.html">About</a>
-</div>
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
 
+<nav class="desktop-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<section class="hero hero-home">
+    <div class="hero-overlay">
+        <h1 class="hero-title">
+            MOBILE AUTOMOTIVE <br>
+            <span>LS PERFORMANCE</span>
+        </h1>
+        <p class="hero-tagline">
+            BUILT NOT RUSHED • DIAGNOSTICS FIRST • REAL POWER
+        </p>
+        <div class="hero-btns">
+            <a href="contact.html" class="cta-button">Request Appointment</a>
+            <a href="services.html" class="cta-button outline">View Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 style="text-align: center;">Performance & Repair</h2>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>Diagnostics</h3>
+                <p>Advanced troubleshooting and electrical repair. We find the root cause before you spend a dime on unnecessary parts.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>LS Swaps</h3>
+                <p>Complete engine conversions, performance camshafts, and forced induction setups built for the street or track.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Maintenance</h3>
+                <p>Precision suspension tuning, brake upgrades, and general mechanical repair for those who care about quality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container" style="text-align: center;">
+        <h2>Why Choose Us?</h2>
+        <div class="services-grid" style="margin-top: 40px;">
+            <div class="info-item">
+                <h4 style="color: #ff3e3e; font-family: 'Oswald';">WE COME TO YOU</h4>
+                <p>Save the tow fee. We bring the shop to your driveway or garage.</p>
+            </div>
+            <div class="info-item">
+                <h4 style="color: #ff3e3e; font-family: 'Oswald';">NO GUESSWORK</h4>
+                <p>Every job starts with logic and data. We fix it right the first time.</p>
+            </div>
+            <div class="info-item">
+                <h4 style="color: #ff3e3e; font-family: 'Oswald';">LS SPECIALISTS</h4>
+                <p>Deep expertise in GM's most famous platform. Performance is our DNA.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 80px 0; background: #111;">
+    <div class="footer-link">
+        <a href="contact.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 1.8rem;">
+            Ready to Build? Book Now →
+        </a>
+    </div>
+    <p style="color: #666; font-size: 12px; margin-top: 40px;">© 2026 AutoCross LLC • Serving SoCal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 <!-- =========================
 DESKTOP NAV
 ========================= -->
