@@ -1,39 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | AutoCross LLC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | AutoCross LLC</title>
+    <meta name="description" content="Professional mobile automotive services: LS Swaps, Engine Rebuilds, Marine Repair, and Performance Diagnostics.">
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-/* ================= RESET ================= */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-body {
-background: #0b0b0b;
-color: #f2f2f2;
-font-family: "Inter", sans-serif;
-}
+<body>
 
-/* ================= HEADER ================= */
-header {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-height: 64px;
-background: #000;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 16px;
-z-index: 9999;
+<header class="mobile-nav-bar">
+    <a href="index.html" class="site-logo">
+        <img src="official-logo.png" alt="AutoCross LLC">
+    </a>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<nav class="desktop-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<section class="hero hero-services">
+    <div class="hero-overlay">
+        <h1 class="hero-title">
+            PERFORMANCE BUILT<br>
+            <span>NOT RUSHED</span>
+        </h1>
+        <p class="hero-tagline">LS Swaps • Engine builds • Marine & Trailer Repair</p>
+        <div class="hero-btns" style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+            <a href="contact.html" class="cta-button">Book Service</a>
+            <a href="rentals.html" class="cta-button outline">Rental Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 50px;">Our Capabilities</h2>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>LS Swaps</h3>
+                <p>Complete LS engine conversions. We handle mounting, wiring, and plumbing for a turn-key performance experience.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Engine Rebuilds</h3>
+                <p>From stock refreshes to high-performance long blocks. Precision assembly and quality components only.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Diagnostics</h3>
+                <p>Advanced electrical and mechanical troubleshooting. We find the "why" before we change the "what."</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Transmissions</h3>
+                <p>Automatic and manual transmission builds, clutch replacements, and torque converter upgrades.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Brake Upgrades</h3>
+                <p>Standard pad/rotor service to big-brake kit conversions for high-horsepower applications.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Maintenance</h3>
+                <p>Full-synthetic oil services, fluid flushes, and scheduled maintenance to keep your build reliable.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Marine & Trailer</h3>
+                <p>Specialized boat engine repair and trailer hub/bearing/lighting service to get you to the water safely.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Fabrication</h3>
+                <p>Custom bracketry, exhaust modifications, and one-off solutions for unique project needs.</p>
+            </div>
+        </div>
+
+        <div class="vehicles" style="text-align: center; margin-top: 60px; color: #666; letter-spacing: 3px; font-weight: bold; text-transform: uppercase;">
+            Cars • Trucks • SUVs • Motorcycles • ATVs • Boats
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 80px 0; background: #111;">
+    <div class="footer-link">
+        <a href="rentals.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
+            Need a Vehicle? View Rentals →
+        </a>
+    </div>
+    <p style="color: #666; font-size: 12px; margin-top: 40px;">© 2026 AutoCross LLC. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 }
 
 .site-logo img {
