@@ -1,39 +1,290 @@
-/* =========================
-RESET
-========================= */
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-background: #0b0b0b;
-color: #f2f2f2;
-font-family: "Inter", system-ui, sans-serif;
+    background: #0b0b0b;
+    color: #f2f2f2;
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* =========================
-NAVIGATION
-========================= */
+img {
+    max-width: 100%;
+    display: block;
+}
 
-/* MOBILE NAV BAR */
+/* ==========================================================================
+   2. NAVIGATION
+   ========================================================================== */
+
+/* MOBILE BAR */
 .mobile-nav-bar {
-height: 64px;
-background: #000;
-padding: 0 18px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-@media (min-width: 901px) {
-.mobile-nav-bar {
-display: none;
-}
+    height: 70px;
+    background: #000;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
 }
 
 .site-logo img {
+    height: 45px;
+    width: auto;
+}
+
+.menu-toggle {
+    background: none;
+    border: 2px solid #ff0000;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* MOBILE OVERLAY MENU */
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #000;
+    display: none;
+    flex-direction: column;
+    padding: 40px 10%;
+    z-index: 10000;
+    border-top: 1px solid #222;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 15px 0;
+    border-bottom: 1px solid #111;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+    display: none; /* Hidden on mobile */
+    height: 70px;
+    background: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.desktop-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.desktop-menu a:hover, .desktop-menu a.active {
+    color: #ff0000;
+}
+
+@media (min-width: 901px) {
+    .mobile-nav-bar, .mobile-menu { display: none !important; }
+    .desktop-menu { display: flex; }
+}
+
+/* ==========================================================================
+   3. HERO SYSTEM (GLOBAL)
+   ========================================================================== */
+.hero {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 70px; /* Offset for fixed nav */
+}
+
+.hero-overlay {
+    padding: 24px;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(40px, 8vw, 90px);
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-title span {
+    color: #ff0000;
+}
+
+.hero-tagline {
+    margin-top: 20px;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 40px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* HERO IMAGES */
+.hero-home { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("hero.png"); }
+.hero-ls { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("ls-hero.png"); }
+.hero-services { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("services-hero.png"); }
+.hero-about { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("valve-cover.png"); }
+.hero-contact { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("contact-hero.png"); }
+.hero-gallery { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.95)), url("gallery-hero.png"); }
+.hero-rentals { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("rentals-hero.png"); }
+
+/* ==========================================================================
+   4. CONTENT SECTIONS & GRIDS
+   ========================================================================== */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 24px;
+}
+
+.section h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.services-grid, .rentals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-box, .rental-card {
+    background: #111;
+    padding: 40px;
+    border-top: 4px solid #ff0000;
+    transition: 0.3s;
+}
+
+.service-box:hover, .rental-card:hover {
+    background: #1a1a1a;
+    transform: translateY(-5px);
+}
+
+.service-box h3, .rental-card h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.service-box p, .rental-card p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   5. CONTACT & FOOTER
+   ========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    padding: 15px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    font-family: inherit;
+}
+
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: #050505;
+    border-top: 1px solid #222;
+}
+
+.footer-link a {
+    color: #ff0000;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.vehicles {
+    text-align: center;
+    margin-top: 50px;
+    color: #444;
+    font-weight: 800;
+    letter-spacing: 5px;
+    font-size: 0.85rem;
+}
 height: 40px;
 }
 
