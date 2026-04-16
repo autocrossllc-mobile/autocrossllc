@@ -10,82 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #0b0b0b; color: #f2f2f2; font-family: "Inter", sans-serif; overflow-x: hidden; }
-
-        /* HEADER & NAV */
-        header {
-            position: fixed; top: 0; left: 0; right: 0; height: 70px;
-            background: rgba(0,0,0,0.95); display: flex; align-items: center;
-            justify-content: space-between; padding: 0 5%; z-index: 10000;
-            border-bottom: 1px solid rgba(255,0,0,0.2);
-        }
-        .site-logo img { height: 45px; width: auto; }
-        .desktop-menu { display: none; gap: 25px; }
-        .desktop-menu a { color: #fff; text-decoration: none; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.3s; }
-        .desktop-menu a:hover, .desktop-menu a.active { color: #ff0000; }
-        .menu-toggle { background: none; border: 2px solid #ff0000; color: #fff; font-family: "Oswald", sans-serif; padding: 5px 15px; cursor: pointer; font-weight: 700; }
-
-        /* MOBILE MENU */
-        .mobile-menu { position: fixed; top: 70px; left: 0; right: 0; background: #000; display: none; flex-direction: column; z-index: 9999; border-bottom: 2px solid #ff0000; }
-        .mobile-menu a { padding: 15px 5%; text-decoration: none; color: #fff; font-family: "Oswald", sans-serif; border-bottom: 1px solid #222; text-transform: uppercase; }
-        .mobile-menu.active { display: flex; }
-
-        /* HERO */
-        .hero {
-            height: 75vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('services-hero.png') center/cover no-repeat;
-            display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px;
-        }
-        .hero-title { font-family: "Oswald", sans-serif; font-size: clamp(40px, 8vw, 80px); line-height: 1.1; text-transform: uppercase; font-weight: 900; }
-        .hero-title span { color: #ff0000; }
-        .hero-tagline { margin-top: 15px; font-size: 1.2rem; letter-spacing: 2px; color: #ccc; text-transform: uppercase; }
-
-        /* SECTION & GRID */
-        .section { max-width: 1200px; margin: auto; padding: 80px 20px; }
-        h2 { font-family: "Oswald", sans-serif; font-size: 3rem; text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-box { background: #111; padding: 40px; border-top: 4px solid #ff0000; transition: 0.3s; }
-        .service-box:hover { background: #1a1a1a; transform: translateY(-5px); }
-        .service-box h3 { font-family: "Oswald", sans-serif; font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; color: #fff; }
-        .service-box p { color: #aaa; line-height: 1.6; font-size: 0.95rem; }
-
-        /* FOOTER */
-        footer { text-align: center; padding: 80px 20px; background: #050505; border-top: 1px solid #222; }
-        .cta-button { 
-            display: inline-block; padding: 15px 35px; background: #ff0000; color: #fff; 
-            text-decoration: none; font-family: "Oswald", sans-serif; font-weight: 700; 
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border: none; cursor: pointer;
-        }
-        .cta-button:hover { background: #cc0000; }
-        .vehicles { text-align: center; margin-top: 60px; color: #666; letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; }
-
-        @media (min-width: 900px) {
-            .desktop-menu { display: flex; }
-            .menu-toggle { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
+<header class="mobile-nav-bar">
     <a href="index.html" class="site-logo">
         <img src="official-logo.png" alt="AutoCross LLC">
     </a>
-    <nav class="desktop-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="ls.html">LS</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="rentals.html">Rentals</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-    </nav>
-    <button class="menu-toggle" id="menuToggle">MENU</button>
+    <button id="menuToggle" class="menu-toggle">MENU</button>
 </header>
 
-<nav class="mobile-menu" id="mobileMenu">
+<nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="ls.html">LS</a>
@@ -94,81 +31,82 @@
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
+
+<nav class="desktop-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
   
-<section class="hero">
-    <div class="hero-content">
+<section class="hero hero-services">
+    <div class="hero-overlay">
         <h1 class="hero-title">PERFORMANCE <span>BUILT</span><br>NOT RUSHED</h1>
         <p class="hero-tagline">LS Swaps • Engine Builds • Marine Repair</p>
     </div>
 </section>
 
 <section class="section" id="services">
-    <h2>Our Capabilities</h2>
+    <div class="container">
+        <h2>Our Capabilities</h2>
 
-    <div class="services-grid">
-        <div class="service-box">
-            <h3>LS Swaps</h3>
-            <p>Complete engine conversions. From mounts to custom wiring harnesses, we handle the integration so you can handle the power.</p>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>LS Swaps</h3>
+                <p>Complete engine conversions. From mounts to custom wiring harnesses, we handle the integration so you can handle the power.</p>
+            </div>
+            <div class="service-box">
+                <h3>Engine Rebuilds</h3>
+                <p>Precision blueprinting and assembly. From stock refreshes to forged bottom-end high-performance builds.</p>
+            </div>
+            <div class="service-box">
+                <h3>Diagnostics</h3>
+                <p>Advanced electrical and mechanical troubleshooting. We find the root cause, ensuring you don't pay for trial-and-error parts.</p>
+            </div>
+            <div class="service-box">
+                <h3>Transmissions</h3>
+                <p>Performance builds and repairs for 4L60/80e and T56 platforms. Includes shift kits, converters, and complete overhauls.</p>
+            </div>
+            <div class="service-box">
+                <h3>Brakes & Suspension</h3>
+                <p>From standard pad/rotor service to big-brake kit conversions and precision handling upgrades.</p>
+            </div>
+            <div class="service-box">
+                <h3>Marine & Trailer</h3>
+                <p>Specialized boat engine maintenance and trailer axle/bearing service to keep you moving safely on and off the water.</p>
+            </div>
+            <div class="service-box">
+                <h3>Fabrication</h3>
+                <p>Custom bracketry, exhaust modifications, and one-off performance plumbing solutions for unique project needs.</p>
+            </div>
+            <div class="service-box">
+                <h3>Mobile Maintenance</h3>
+                <p>Quality maintenance for your daily driver. Cooling systems, charging systems, and major component repair brought to your door.</p>
+            </div>
         </div>
-        <div class="service-box">
-            <h3>Engine Rebuilds</h3>
-            <p>Precision blueprinting and assembly. From stock refreshes to forged bottom-end high-performance builds.</p>
-        </div>
-        <div class="service-box">
-            <h3>Diagnostics</h3>
-            <p>Advanced electrical and mechanical troubleshooting. We find the root cause, ensuring you don't pay for trial-and-error parts.</p>
-        </div>
-        <div class="service-box">
-            <h3>Transmissions</h3>
-            <p>Performance builds and repairs for 4L60/80e and T56 platforms. Includes shift kits, converters, and complete overhauls.</p>
-        </div>
-        <div class="service-box">
-            <h3>Brakes & Suspension</h3>
-            <p>From standard pad/rotor service to big-brake kit conversions and precision handling upgrades.</p>
-        </div>
-        <div class="service-box">
-            <h3>Marine & Trailer</h3>
-            <p>Specialized boat engine maintenance and trailer axle/bearing service to keep you moving safely on and off the water.</p>
-        </div>
-        <div class="service-box">
-            <h3>Fabrication</h3>
-            <p>Custom bracketry, exhaust modifications, and one-off performance plumbing solutions for unique project needs.</p>
-        </div>
-        <div class="service-box">
-            <h3>Mobile Maintenance</h3>
-            <p>Quality maintenance for your daily driver. Cooling systems, charging systems, and major component repair brought to your door.</p>
-        </div>
-    </div>
 
-    <div class="vehicles">
-        CARS • TRUCKS • SUVs • MOTORCYCLES • ATVs • BOATS
+        <p style="text-align: center; margin-top: 60px; color: #666; letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase;">
+            CARS • TRUCKS • SUVs • MOTORCYCLES • ATVs • BOATS
+        </p>
     </div>
 </section>
 
-<footer>
+<footer style="text-align: center; padding: 80px 20px; background: #050505; border-top: 1px solid #222;">
     <div class="footer-link" style="margin-bottom: 30px;">
         <a href="contact.html" class="cta-button">Request Service →</a>
     </div>
-    <p style="margin-bottom: 20px;">
-        <a href="rentals.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; font-family: 'Oswald'; text-transform: uppercase;">Need a Vehicle? View Rentals →</a>
+    <p style="margin-bottom: 25px;">
+        <a href="rentals.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; font-family: 'Oswald'; text-transform: uppercase; letter-spacing: 1px;">
+            Need a Vehicle? View Rentals →
+        </a>
     </p>
-    <p style="color: #666; font-size: 13px;">© 2026 AutoCross LLC • 909-419-1015 • Serving Southern California</p>
+    <p style="color: #444; font-size: 13px;">© 2026 AutoCross LLC • 909-419-1015 • Serving Southern California</p>
 </footer>
 
-<script>
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-    });
-
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-        });
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
