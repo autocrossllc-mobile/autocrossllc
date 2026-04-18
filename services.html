@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | AutoCross LLC</title>
-    <meta name="description" content="Professional mobile automotive services: LS Swaps, Engine Rebuilds, Marine Repair, and Performance Diagnostics.">
+    <title>Vehicle Rentals | AutoCross LLC</title>
+    <meta name="description" content="Reliable vehicle rentals from AutoCross LLC. Work trucks, daily drivers, and cargo vans ready for the road.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,8 +17,8 @@
 
 <header class="mobile-nav-bar">
     <a href="index.html" class="site-logo">
-        <img src="./official-logo.png" alt="AutoCross LLC" onerror="this.style.display='none'">
-    <button id="menuToggle" class="menu-toggle">MENU</button>
+        <img src="./official-logo.png" alt="AutoCross LLC">
+    </a> <button id="menuToggle" class="menu-toggle">MENU</button>
 </header>
 
 <nav id="mobileMenu" class="mobile-menu">
@@ -33,76 +33,77 @@
 
 <nav class="desktop-menu">
     <a href="index.html">Home</a>
-    <a href="services.html" class="active">Services</a>
+    <a href="services.html">Services</a>
     <a href="ls.html">LS</a>
     <a href="gallery.html">Gallery</a>
-    <a href="rentals.html">Rentals</a>
+    <a href="rentals.html" class="active">Rentals</a>
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
-  
-<section class="hero hero-services">
+
+<section class="hero hero-rentals">
     <div class="hero-overlay">
-        <h1 class="hero-title">PERFORMANCE <span>BUILT</span><br>NOT RUSHED</h1>
-        <p class="hero-tagline">LS Swaps • Engine Builds • Marine Repair</p>
+        <h1 class="hero-title">
+            VEHICLE <span>RENTALS</span>
+        </h1>
+        <p class="hero-tagline">Reliable • Clean • Ready to Work</p>
+        <a href="#inventory" class="cta-button">View Inventory</a>
     </div>
 </section>
 
-<section class="section" id="services">
+<section id="inventory" class="section">
     <div class="container">
-        <h2>Our Capabilities</h2>
+        <h2 style="text-align: center; margin-bottom: 50px;">Available Vehicles</h2>
 
         <div class="services-grid">
-            <div class="service-box">
-                <h3>LS Swaps</h3>
-                <p>Complete engine conversions. From mounts to custom wiring harnesses, we handle the integration so you can handle the power.</p>
-            </div>
-            <div class="service-box">
-                <h3>Engine Rebuilds</h3>
-                <p>Precision blueprinting and assembly. From stock refreshes to forged bottom-end high-performance builds.</p>
-            </div>
-            <div class="service-box">
-                <h3>Diagnostics</h3>
-                <p>Advanced electrical and mechanical troubleshooting. We find the root cause, ensuring you don't pay for trial-and-error parts.</p>
-            </div>
-            <div class="service-box">
-                <h3>Transmissions</h3>
-                <p>Performance builds and repairs for 4L60/80e and T56 platforms. Includes shift kits, converters, and complete overhauls.</p>
-            </div>
-            <div class="service-box">
-                <h3>Brakes & Suspension</h3>
-                <p>From standard pad/rotor service to big-brake kit conversions and precision handling upgrades.</p>
-            </div>
-            <div class="service-box">
-                <h3>Marine & Trailer</h3>
-                <p>Specialized boat engine maintenance and trailer axle/bearing service to keep you moving safely on and off the water.</p>
-            </div>
-            <div class="service-box">
-                <h3>Fabrication</h3>
-                <p>Custom bracketry, exhaust modifications, and one-off performance plumbing solutions for unique project needs.</p>
-            </div>
-            <div class="service-box">
-                <h3>Mobile Maintenance</h3>
-                <p>Quality maintenance for your daily driver. Cooling systems, charging systems, and major component repair brought to your door.</p>
-            </div>
-        </div>
 
-        <p style="text-align: center; margin-top: 60px; color: #666; letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase;">
-            CARS • TRUCKS • SUVs • MOTORCYCLES • ATVs • BOATS
-        </p>
+            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
+                <img src="truck1.png" alt="Work Truck" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
+                <h3 style="font-family: 'Oswald';">Work Truck</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$85 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Towing capable, heavy-duty bed liner, perfect for projects and moving.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
+            </div>
+
+            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
+                <img src="sedan1.png" alt="Sedan" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
+                <h3 style="font-family: 'Oswald';">Daily Driver</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$65 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Fuel-efficient and reliable transportation while your car is in the shop.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
+            </div>
+
+            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
+                <img src="van1.png" alt="Cargo Van" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
+                <h3 style="font-family: 'Oswald';">Cargo Van</h3>
+                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$95 / DAY</p>
+                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Spacious interior for moving parts, engines, or professional equipment.</p>
+                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
+            </div>
+
+        </div>
     </div>
 </section>
 
-<footer style="text-align: center; padding: 80px 20px; background: #050505; border-top: 1px solid #222;">
-    <div class="footer-link" style="margin-bottom: 30px;">
-        <a href="contact.html" class="cta-button">Request Service →</a>
+<section class="section bg-dark" style="background: #0a0a0a; border-top: 1px solid #222; border-bottom: 1px solid #222;">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-family: 'Oswald'; margin-bottom: 40px;">Rental Requirements</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: left; line-height: 2.5; background: #111; padding: 40px; border-left: 4px solid #ff3e3e;">
+            <p>• Valid Driver's License required</p>
+            <p>• Proof of active auto insurance required</p>
+            <p>• Security deposit due at time of pickup</p>
+            <p>• Minimum age 21+ required</p>
+        </div>
     </div>
-    <p style="margin-bottom: 25px;">
-        <a href="rentals.html" style="color: #ff3e3e; text-decoration: none; font-weight: bold; font-family: 'Oswald'; text-transform: uppercase; letter-spacing: 1px;">
-            Need a Vehicle? View Rentals →
+</section>
+
+<footer style="text-align: center; padding: 80px 0; background: #111;">
+    <div class="footer-link">
+        <a href="contact.html" class="cta-button" style="background: transparent; border: 2px solid #fff; text-decoration: none;">
+            Questions? Contact AutoCross →
         </a>
-    </p>
-    <p style="color: #444; font-size: 13px;">© 2026 AutoCross LLC • 909-419-1015 • Serving Southern California</p>
+    </div>
+    <p style="color: #666; font-size: 13px; margin-top: 40px;">© 2026 AutoCross LLC • 909-419-1015 • Built Not Rushed</p>
 </footer>
 
 <script src="script.js"></script>
