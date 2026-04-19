@@ -1,112 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Rentals | AutoCross LLC</title>
-    <meta name="description" content="Reliable vehicle rentals from AutoCross LLC. Work trucks, daily drivers, and cargo vans ready for the road.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Services | AutoCross LLC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="mobile-nav-bar">
-    <a href="index.html" class="site-logo">
-        <img src="./official-logo.png" alt="AutoCross LLC">
-    </a> <button id="menuToggle" class="menu-toggle">MENU</button>
-</header>
-
-<nav id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html">LS</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="rentals.html">Rentals</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-
-<nav class="desktop-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html">LS</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="rentals.html" class="active">Rentals</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-
-<section class="hero hero-rentals">
-    <div class="hero-overlay">
-        <h1 class="hero-title">
-            VEHICLE <span>RENTALS</span>
-        </h1>
-        <p class="hero-tagline">Reliable • Clean • Ready to Work</p>
-        <a href="#inventory" class="cta-button">View Inventory</a>
-    </div>
+<section class="page-header">
+    <h1>Our Services</h1>
+    <p>Mobile Performance Engineering & Expert Diagnostics</p>
 </section>
 
-<section id="inventory" class="section">
+<section class="section">
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 50px;">Available Vehicles</h2>
-
-        <div class="services-grid">
-
-            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
-                <img src="truck1.png" alt="Work Truck" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
-                <h3 style="font-family: 'Oswald';">Work Truck</h3>
-                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$85 / DAY</p>
-                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Towing capable, heavy-duty bed liner, perfect for projects and moving.</p>
-                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
+        
+        <div class="service-category">
+            <h2 class="category-title">LS Performance & Swaps</h2>
+            <div class="services-detailed-grid">
+                <div class="detail-card highlight">
+                    <h3>The "Street Slayer" Cam Kit</h3>
+                    <ul>
+                        <li>Custom Camshaft Selection</li>
+                        <li>Dual Valve Spring Upgrade</li>
+                        <li>Hardened Pushrods</li>
+                        <li>Front Cover Gaskets & Seals</li>
+                        <li>Full DOD/AFM Delete (if applicable)</li>
+                    </ul>
+                    <p class="price-start">Starting at $1,500 + Parts</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>Full LS Swap Integration</h3>
+                    <p>Turning your project car into a reliable beast. We handle engine seating, wiring harness integration, and fuel system plumbing.</p>
+                    <a href="contact.html" class="text-link">Inquire for Quote →</a>
+                </div>
             </div>
-
-            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
-                <img src="sedan1.png" alt="Sedan" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
-                <h3 style="font-family: 'Oswald';">Daily Driver</h3>
-                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$65 / DAY</p>
-                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Fuel-efficient and reliable transportation while your car is in the shop.</p>
-                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
-            </div>
-
-            <div class="service-box rental-card" style="text-align: center; padding: 25px; background: #111;">
-                <img src="van1.png" alt="Cargo Van" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333;">
-                <h3 style="font-family: 'Oswald';">Cargo Van</h3>
-                <p style="color: #ff3e3e; font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: 'Oswald';">$95 / DAY</p>
-                <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaa; line-height: 1.5;">Spacious interior for moving parts, engines, or professional equipment.</p>
-                <a href="tel:9094191015" class="cta-button" style="display: block; width: 100%; text-decoration: none;">Call to Rent</a>
-            </div>
-
         </div>
+
+        <hr class="divider">
+
+        <div class="service-category">
+            <h2 class="category-title">Diagnostics & Tech</h2>
+            <div class="services-detailed-grid">
+                <div class="detail-card">
+                    <h3>Advanced Diagnostics</h3>
+                    <p>Misfire hunting, electrical shorts, and "Ghost in the Machine" issues. We use logic-based troubleshooting, not parts-cannon guessing.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Standalone ECU Install</h3>
+                    <p>Expert installation and pin-out for Holley EFI, FuelTech, or Terminator X systems.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="service-category">
+            <h2 class="category-title">Chassis & Maintenance</h2>
+            <div class="services-grid">
+                <div class="service-box-small">
+                    <h4>Brake Upgrades</h4>
+                    <p>Big brake kits and performance pad/rotor bed-in.</p>
+                </div>
+                <div class="service-box-small">
+                    <h4>Suspension</h4>
+                    <p>Coilover installs and bushing replacements.</p>
+                </div>
+                <div class="service-box-small">
+                    <h4>Drivetrain</h4>
+                    <p>Clutch replacements and differential service.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<section class="section bg-dark" style="background: #0a0a0a; border-top: 1px solid #222; border-bottom: 1px solid #222;">
-    <div class="container" style="text-align: center;">
-        <h2 style="font-family: 'Oswald'; margin-bottom: 40px;">Rental Requirements</h2>
-        <div style="max-width: 600px; margin: 0 auto; text-align: left; line-height: 2.5; background: #111; padding: 40px; border-left: 4px solid #ff3e3e;">
-            <p>• Valid Driver's License required</p>
-            <p>• Proof of active auto insurance required</p>
-            <p>• Security deposit due at time of pickup</p>
-            <p>• Minimum age 21+ required</p>
-        </div>
-    </div>
+<section class="cta-banner">
+    <h2>Ready to transform your ride?</h2>
+    <p>All mobile services require a scheduled booking fee to secure your date.</p>
+    <a href="contact.html" class="cta-button">Book Your Build</a>
 </section>
-
-<footer style="text-align: center; padding: 80px 0; background: #111;">
-    <div class="footer-link">
-        <a href="contact.html" class="cta-button" style="background: transparent; border: 2px solid #fff; text-decoration: none;">
-            Questions? Contact AutoCross →
-        </a>
-    </div>
-    <p style="color: #666; font-size: 13px; margin-top: 40px;">© 2026 AutoCross LLC • 909-419-1015 • Built Not Rushed</p>
-</footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
