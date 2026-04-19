@@ -1,28 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("active");
-        });
-
-        mobileMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function () {
-                mobileMenu.classList.remove("active");
-            });
-        });
-
-        document.addEventListener("click", function (e) {
-            if (
-                mobileMenu.classList.contains("active") &&
-                !mobileMenu.contains(e.target) &&
-                e.target !== menuToggle
-            ) {
-                mobileMenu.classList.remove("active");
-            }
-        });
-    }
-
+    menuToggle.addEventListener('click', () => {
+        // Toggle the 'active' class to show/hide menu
+        mobileMenu.classList.toggle('active');
+        
+        // Optional: Change button text
+        if (mobileMenu.classList.contains('active')) {
+            menuToggle.textContent = 'CLOSE';
+        } else {
+            menuToggle.textContent = 'MENU';
+        }
+    });
 });
