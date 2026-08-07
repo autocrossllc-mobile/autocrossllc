@@ -1,23 +1,120 @@
-<!-- Service Request Form Section -->
-<section class="details-grid">
-    <div class="container form-container">
-        <h2>Service Request</h2>
-        <div class="contact-form">
-            <form action="mailto:autocrossllc.services@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="Name" placeholder="Full Name" required>
-                <input type="tel" name="Phone" placeholder="Phone Number" required>
-                <select name="Service_Type" required>
-                    <option value="" disabled selected>Select Service</option>
-                    <option value="LS Swap">LS Swap / Performance</option>
-                    <option value="General Repair">General Repair / Diagnostics</option>
-                    <option value="Marine/Trailer">Marine & Trailer Repair</option>
-                    <option value="Rental">Vehicle Rental Request</option>
-                </select>
-                <input type="date" name="Date" required>
-                <textarea name="Details" placeholder="Vehicle Details & Project Goals..." rows="5"></textarea>
-                
-                <button type="submit" class="btn-primary form-submit-btn">Send Request</button>
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | AutoCross LLC</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Watermark Logo Fixed Behind All Page Content -->
+    <div class="page-bg-overlay"></div>
+
+    <!-- Header / Task Bar Section -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./official-logo.png" alt="AutoCross LLC">
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="ls.html">LS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="rentals.html">RENTALS</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                &#9776;
+            </div>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- Dark Hero Banner Section (Matches About Page) -->
+    <section class="hero-content-block">
+        <div class="container">
+            <h1>GET IN <span>TOUCH</span></h1>
+            <p>Secure Your Slot • Book Your Build</p>
+        </div>
+    </section>
+
+    <!-- Secure Your Appointment Section -->
+    <section class="details-grid">
+        <div class="container" style="flex-direction: column; text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 style="font-family: var(--font-heading); font-size: 32px; text-transform: uppercase; margin-bottom: 20px;">Secure Your Appointment</h2>
+            <p style="line-height: 1.8; font-size: 16px; font-weight: 500; margin-bottom: 30px;">
+                To provide the highest quality service, we require a deposit to lock in your date. 
+                Final balances are due only after the service is completed.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <a href="https://buy.stripe.com/aFa3cxdiD8WofE61dVd3i01" target="_blank" class="btn-primary" style="min-width: 250px;">
+                    Service Booking Fee
+                </a>
+                <a href="https://buy.stripe.com/14AeVf0vR1tWdvY5ubd3i02" target="_blank" class="btn-primary" style="background: #222; border: 1px solid var(--accent); min-width: 250px;">
+                    Vehicle Rental Deposit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Request Form Section -->
+    <section class="details-grid">
+        <div class="container form-container">
+            <h2>Service Request</h2>
+            <div class="contact-form">
+                <form action="mailto:autocrossllc.services@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="tel" name="Phone" placeholder="Phone Number" required>
+                    <select name="Service_Type" required>
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="LS Swap">LS Swap / Performance</option>
+                        <option value="General Repair">General Repair / Diagnostics</option>
+                        <option value="Marine/Trailer">Marine & Trailer Repair</option>
+                        <option value="Rental">Vehicle Rental Request</option>
+                    </select>
+                    <input type="date" name="Date" required>
+                    <textarea name="Details" placeholder="Vehicle Details & Project Goals..." rows="5"></textarea>
+                    
+                    <button type="submit" class="btn-primary form-submit-btn">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container" style="flex-direction: column; gap: 10px; text-align: center;">
+            <p style="color: var(--accent); font-family: var(--font-heading); font-weight: bold; font-size: 1.4rem; margin: 0;">909-419-1015</p>
+            <p style="color: #ccc; font-size: 13px; margin: 0;">autocrossllc.services@gmail.com</p>
+            <p style="color: #888; font-size: 11px; margin-top: 15px;">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.querySelector('.main-nav');
+
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
+
+</body>
+</html>
