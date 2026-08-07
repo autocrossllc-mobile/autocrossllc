@@ -333,3 +333,114 @@ body {
         text-align: center;
     }
 }
+/* --- Rental Page Layout Extensions --- */
+.inventory-wrapper,
+.requirements-wrapper {
+    flex-direction: column;
+}
+
+.rental-cards-container {
+    padding: 0;
+}
+
+.cards-row {
+    gap: 30px;
+    align-items: stretch;
+    padding: 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rental-card {
+    text-align: center;
+    padding: 25px;
+    background: #111111;
+    border-radius: 4px;
+    border: 1px solid #222222;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.card-price {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+}
+
+.requirements-section {
+    padding-bottom: 60px;
+}
+
+.requirements-box {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2.2;
+    background: #111111;
+    color: #ffffff;
+    padding: 35px;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    border: 1px solid #222222;
+    border-left-width: 4px;
+}
+
+.requirements-box p {
+    color: #ffffff;
+}
+
+/* Footer layout utilities */
+.footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.footer-phone {
+    color: var(--accent);
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.footer-email {
+    color: #ccc;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-copy {
+    color: #888;
+    font-size: 11px;
+    margin-top: 15px;
+}
