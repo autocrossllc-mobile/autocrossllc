@@ -1,16 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    menuToggle.addEventListener('click', () => {
-        // Toggle the 'active' class to show/hide menu
-        mobileMenu.classList.toggle('active');
-        
-        // Optional: Change button text
-        if (mobileMenu.classList.contains('active')) {
-            menuToggle.textContent = 'CLOSE';
-        } else {
-            menuToggle.textContent = 'MENU';
-        }
-    });
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+        });
+    }
 });
