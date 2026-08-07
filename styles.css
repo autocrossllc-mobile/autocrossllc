@@ -300,3 +300,61 @@ body {
         font-size: 14px;
     }
 }
+/* Hero Base Rules */
+.hero-section {
+    position: relative;
+    padding: 130px 0 70px;
+    margin-top: 70px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #0d0d0d;
+}
+
+/* Official Logo Background Layout */
+.hero-logo-bg {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+        url('./official-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Typography Overlays */
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+    color: #e60000;
+}
+
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+/* Mobile Screen Formatting */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 90px 0 50px;
+        margin-top: 60px;
+    }
+
+    .hero-logo-bg {
+        background-size: 85% auto;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+}
