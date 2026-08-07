@@ -1,6 +1,6 @@
 /* --- Global Reset & Variables --- */
 :root {
-    --bg-dark: #333333;
+    --bg-dark: #111111;
     --bg-light: #F5F5F5;
     --text-main: #333333;
     --text-inv: #FFFFFF;
@@ -32,38 +32,11 @@ body {
     padding: 0 20px;
 }
 
-/* --- Fixed Logo Background Behind Page Content (Enlarged & More Visible) --- */
-.page-bg-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: 
-        linear-gradient(rgba(245, 245, 245, 0.65), rgba(245, 245, 245, 0.65)), 
-        url('./official-logo.png');
-    background-size: 750px auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Elevate Page Content Above Overlay */
-.main-header,
-.hero-content-block,
-.details-grid,
-.cta-section,
-.main-footer {
-    position: relative;
-    z-index: 1;
-}
-
 /* --- Navigation Header --- */
 .main-header {
-    background-color: rgba(245, 245, 245, 0.95);
+    background-color: rgba(17, 17, 17, 0.95);
     padding: 15px 0;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #222222;
     position: fixed;
     top: 0;
     width: 100%;
@@ -96,7 +69,7 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: #555555;
+    color: #CCCCCC;
     font-family: var(--font-heading);
     font-weight: 500;
     font-size: 16px;
@@ -113,23 +86,33 @@ body {
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: var(--text-main);
+    color: var(--text-inv);
 }
 
-/* --- Hero Banner Text --- */
+/* --- Visible High-Impact Hero Section --- */
 .hero-content-block {
-    padding: 140px 0 30px;
-    margin-top: 70px;
+    position: relative;
+    margin-top: 70px; /* Accounts for fixed nav header */
+    padding: 100px 20px 80px;
     text-align: center;
+    background-color: #0d0d0d;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), 
+        url('./official-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid var(--accent);
 }
 
 .hero-content-block h1 {
     font-family: var(--font-heading);
-    font-size: 42px;
+    font-size: 54px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #111111;
-    margin-bottom: 12px;
+    color: var(--text-inv);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .hero-content-block h1 span {
@@ -137,16 +120,18 @@ body {
 }
 
 .hero-content-block p {
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: #333333;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: #DDDDDD;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* --- Content Sections --- */
 .details-grid {
     background-color: transparent;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 .details-grid .container {
@@ -192,8 +177,8 @@ body {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #cccccc;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
     margin-bottom: 15px;
     font-family: var(--font-body);
     font-size: 15px;
@@ -238,9 +223,9 @@ body {
 
 /* --- Footer --- */
 .main-footer {
-    background-color: var(--bg-dark);
+    background-color: #0A0A0A;
     color: rgba(255, 255, 255, 0.7);
-    padding: 25px 0;
+    padding: 35px 0;
     font-size: 14px;
 }
 
@@ -252,10 +237,6 @@ body {
 
 /* --- Mobile Responsive Formatting --- */
 @media (max-width: 768px) {
-    .page-bg-overlay {
-        background-size: 92% auto;
-    }
-
     .main-header {
         padding: 12px 0;
     }
@@ -270,8 +251,8 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--bg-light);
-        border-bottom: 1px solid #E0E0E0;
+        background-color: #111111;
+        border-bottom: 1px solid #222222;
     }
 
     .main-nav.active {
@@ -287,16 +268,17 @@ body {
     .main-nav li a {
         display: block;
         padding: 12px 0;
-        border-bottom: 1px solid #EEEEEE;
+        border-bottom: 1px solid #222222;
     }
 
     .hero-content-block {
-        padding: 100px 0 20px;
         margin-top: 60px;
+        padding: 70px 15px 50px;
+        background-size: cover;
     }
 
     .hero-content-block h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .hero-content-block p {
@@ -313,21 +295,4 @@ body {
         gap: 15px;
         text-align: center;
     }
-}
-/* Fixed Watermark Logo Background */
-.page-bg-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: 
-        linear-gradient(rgba(245, 245, 245, 0.25), rgba(245, 245, 245, 0.25)), 
-        url('official-logo.png');
-    background-size: 800px auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.85; /* Adjust opacity directly here */
 }
