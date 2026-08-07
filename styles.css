@@ -4,7 +4,7 @@
     --bg-light: #F5F5F5;      /* Light grey sections */
     --text-main: #333333;     /* Dark text on light background */
     --text-inv: #FFFFFF;      /* Light text on dark background */
-    --accent: #D32F2F;        /* Red accent color */
+    --accent: #e60000;        /* Red accent color */
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Inter', sans-serif;
     --container-width: 1200px;
@@ -30,12 +30,12 @@ body {
     padding: 0 20px;
 }
 
-/* --- Header / "Task Bar" --- */
+/* --- Header / Navigation Bar --- */
 .main-header {
     background-color: var(--bg-light);
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #E0E0E0;
-    position: fixed; /* Keep header at the top */
+    position: fixed; /* Fixed to top */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -47,18 +47,17 @@ body {
     align-items: center;
 }
 
+/* Header Logo Image Adjustment */
 .logo {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo .llc {
-    color: var(--accent);
-    font-size: 18px;
-    vertical-align: super;
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .main-nav ul {
@@ -79,10 +78,10 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--text-main);
+    color: var(--accent);
 }
 
-/* Mobile Menu Icon (hidden by default) */
+/* Mobile Hamburger Menu Icon */
 .mobile-menu-icon {
     display: none;
     font-size: 28px;
@@ -90,33 +89,55 @@ body {
     color: var(--text-main);
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section Base --- */
 .hero-section {
+    position: relative;
+    padding: 130px 0 70px;
+    margin-top: 70px; /* Offset for fixed header */
+    color: var(--text-inv);
+    text-align: center;
+    background-color: #0d0d0d;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--text-inv);
-    padding: 150px 0 80px; /* Top padding allows for fixed header */
-    margin-top: 80px; /* Offset for fixed header */
 }
 
+/* Hero Background Options */
+.hero-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./hero-bg.jpg');
+}
+
+.hero-logo-bg {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+        url('./official-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero Typography Overlay */
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    font-size: 40px;
     line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
 }
 
 .hero-content p {
+    font-family: var(--font-body);
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 20px;
+    color: #cccccc;
 }
 
 /* --- Details Grid Section --- */
@@ -148,7 +169,7 @@ body {
     color: #666666;
 }
 
-/* --- Call To Action Button --- */
+/* --- Call To Action Section --- */
 .cta-section {
     padding: 40px 0 60px;
     text-align: center;
@@ -157,7 +178,7 @@ body {
 
 .btn-primary {
     display: inline-block;
-    background-color: #444444; /* Dark grey button */
+    background-color: #222222;
     color: var(--text-inv);
     font-family: var(--font-heading);
     font-weight: 700;
@@ -165,19 +186,19 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
-    border-radius: 5px;
+    border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #222222;
+    background-color: var(--accent);
 }
 
 /* --- Footer --- */
 .main-footer {
     background-color: var(--bg-dark);
     color: rgba(255, 255, 255, 0.6);
-    padding: 20px 0;
+    padding: 25px 0;
     font-size: 14px;
 }
 
@@ -203,12 +224,10 @@ body {
     opacity: 1;
 }
 
-/* --- Responsive Media Queries --- */
-
-/* Mobile Layouts (Tablets and Phones) */
+/* --- Mobile Responsive Rules --- */
 @media (max-width: 768px) {
     .main-header {
-        padding: 15px 0;
+        padding: 12px 0;
     }
 
     .mobile-menu-icon {
@@ -216,7 +235,7 @@ body {
     }
 
     .main-nav {
-        display: none; /* Hide default menu */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -226,121 +245,21 @@ body {
     }
 
     .main-nav.active {
-        display: block; /* Show menu when active */
+        display: block;
     }
 
     .main-nav ul {
         flex-direction: column;
         gap: 0;
-        padding: 20px;
+        padding: 15px 20px;
     }
 
     .main-nav li a {
         display: block;
-        padding: 10px 0;
+        padding: 12px 0;
         border-bottom: 1px solid #EEEEEE;
     }
 
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .details-grid .container {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-/* Hero Section Base */
-.hero-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 140px 0 80px;
-    margin-top: 70px;
-    color: #ffffff;
-    text-align: left;
-}
-
-/* Specific background image for About page */
-.hero-about {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./hero-bg.jpg');
-}
-
-.hero-content h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 42px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.hero-content h1 span {
-    color: #e60000;
-}
-
-.hero-content p {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: #cccccc;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 100px 0 60px;
-        margin-top: 60px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-}
-/* Hero Base Rules */
-.hero-section {
-    position: relative;
-    padding: 130px 0 70px;
-    margin-top: 70px;
-    color: #ffffff;
-    text-align: center;
-    background-color: #0d0d0d;
-}
-
-/* Official Logo Background Layout */
-.hero-logo-bg {
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
-        url('./official-logo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Typography Overlays */
-.hero-content h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.hero-content h1 span {
-    color: #e60000;
-}
-
-.hero-content p {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: #cccccc;
-}
-
-/* Mobile Screen Formatting */
-@media (max-width: 768px) {
     .hero-section {
         padding: 90px 0 50px;
         margin-top: 60px;
@@ -356,5 +275,16 @@ body {
 
     .hero-content p {
         font-size: 13px;
+    }
+
+    .details-grid .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 }
