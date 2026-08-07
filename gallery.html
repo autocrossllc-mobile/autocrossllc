@@ -3,110 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | AutoCross LLC</title>
-    <meta name="description" content="AutoCross LLC gallery — LS builds, engine swaps, fabrication, and shop life.">
-    
+    <title>Project Gallery | AutoCross LLC</title>
+    <meta name="description" content="Explore recent builds, custom work, and project highlights from AutoCross LLC.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header class="mobile-nav-bar">
-    <a href="index.html" class="site-logo">
-        <img src="./official-logo.png" alt="AutoCross LLC">
-    </a> <button id="menuToggle" class="menu-toggle">MENU</button>
-</header>
+    <!-- Watermark Logo Fixed Behind All Page Content -->
+    <div class="page-bg-overlay"></div>
 
-<nav id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html">LS</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="rentals.html">Rentals</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-
-<nav class="desktop-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html">LS</a>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="rentals.html">Rentals</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-
-<section class="hero hero-gallery">
-    <div class="hero-overlay">
-        <h1 class="hero-title">
-            SHOP BUILDS<br>
-            <span>REAL WORK ONLY</span>
-        </h1>
-        <p class="hero-tagline">
-            LS • Fabrication • Performance Culture
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 style="text-align: center; margin-bottom: 40px;">Project Categories</h2>
-        
-        <div class="services-grid">
-
-            <a href="gallery-ls.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>LS Builds</h3>
-                <p>Swaps, cams, boosted setups, and race-only builds.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./official-logo.png" alt="AutoCross LLC">
             </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="ls.html">LS</a></li>
+                    <li><a href="gallery.html" class="active">GALLERY</a></li>
+                    <li><a href="rentals.html">RENTALS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
 
-            <a href="gallery-engines.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>Engine Rebuilds</h3>
-                <p>Precision engine work, overhauls, and long-block assembly.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
-            </a>
-
-            <a href="gallery-transmissions.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>Transmissions</h3>
-                <p>Manual and automatic builds for street or strip performance.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
-            </a>
-
-            <a href="gallery-fabrication.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>Fabrication</h3>
-                <p>Custom brackets, mounts, and one-off performance solutions.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
-            </a>
-
-            <a href="gallery-marine.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>Marine</h3>
-                <p>High-performance boat engines and marine systems.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
-            </a>
-
-            <a href="gallery-shop.html" class="service-box gallery-card" style="text-decoration: none; display: block;">
-                <h3>Shop Life</h3>
-                <p>Behind the scenes, the grind, and the culture of AutoCross LLC.</p>
-                <span class="view-link" style="color: #ff3e3e; display: block; margin-top: 15px; font-weight: bold; font-family: 'Oswald';">View Projects →</span>
-            </a>
-
+            <!-- Mobile Hamburger Menu Button -->
+            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                &#9776;
+            </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer style="text-align: center; padding: 80px 0; background: #111; border-top: 1px solid #222;">
-    <div class="footer-link" style="margin-bottom: 30px;">
-        <a href="contact.html" class="cta-button" style="text-decoration: none;">Have a project? Contact us →</a>
-    </div>
-    <p style="color: #666; font-size: 13px; margin-top: 40px;">© 2026 AutoCross LLC • 909-419-1015</p>
-</footer>
+    <!-- Dark Hero Banner Section -->
+    <section class="hero-content-block">
+        <div class="container">
+            <h1>PROJECT <span>GALLERY</span></h1>
+            <p>Our Work • Custom Builds • Quality Results</p>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Gallery Grid Section -->
+    <section class="details-grid">
+        <div class="container inventory-wrapper">
+            <h2 class="section-title">Featured Work</h2>
+
+            <div class="details-grid rental-cards-container">
+                <div class="container cards-row">
+
+                    <!-- Gallery Item 1 -->
+                    <div class="grid-item rental-card">
+                        <img src="gallery1.png" alt="Custom Performance Build" class="card-img">
+                        <h3 class="card-title">Performance Build</h3>
+                        <p class="card-desc">Custom engine setup and precision tuning tailored for high performance.</p>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="grid-item rental-card">
+                        <img src="gallery2.png" alt="Suspension Work" class="card-img">
+                        <h3 class="card-title">Suspension & Chassis</h3>
+                        <p class="card-desc">Heavy-duty suspension upgrades and custom fabrication for durability.</p>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="grid-item rental-card">
+                        <img src="gallery3.png" alt="Maintenance and Service" class="card-img">
+                        <h3 class="card-title">Detailed Inspection</h3>
+                        <p class="card-desc">Comprehensive mechanical work and diagnostic troubleshooting in progress.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="details-grid requirements-section">
+        <div class="container requirements-wrapper">
+            <h2 class="section-title">Have a Project in Mind?</h2>
+            <div class="requirements-box" style="text-align: center; border-left: none; border-top: 4px solid var(--accent);">
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">Let's get your build scheduled or discuss service options.</p>
+                <a href="contact.html" class="btn-primary" style="display: inline-block; padding: 12px 30px;">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p class="footer-phone">909-419-1015</p>
+            <p class="footer-email">autocrossllc.services@gmail.com</p>
+            <p class="footer-copy">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.querySelector('.main-nav');
+
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
 
 </body>
 </html>
