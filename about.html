@@ -4,55 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoCross LLC - About Us</title>
-    <!-- Link to the Google Fonts used in the theme -->
+    <meta name="description" content="AutoCross LLC is built on real-world automotive experience, LS performance culture, and no-shortcut workmanship.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header / "Task Bar" Section -->
+    <!-- Header / Task Bar Section -->
     <header class="main-header">
         <div class="container">
-            <div class="logo">
-                AutoCross <span class="llc">LLC</span>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="./official-logo.png" alt="AutoCross LLC">
+            </a>
+            
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="ls-cult.html">LS CULT</a></li>
+                    <li><a href="ls.html">LS</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="rentals.html">RENTALS</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="about.html" class="active">ABOUT</a></li>
                 </ul>
             </nav>
-            <!-- Mobile Menu Icon (hamburger) -->
-            <div class="mobile-menu-icon">
+
+            <!-- Mobile Hamburger Menu Button -->
+            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation">
                 &#9776;
             </div>
         </div>
     </header>
 
-    <!-- Hero Section / Main Image -->
-    <section class="hero-section" style="background-image: url('your-garage-image.jpg');">
+    <!-- Hero Section / Main Image Overlay -->
+    <section class="hero-section" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('hero-bg.jpg');">
         <div class="container">
             <div class="hero-content">
-                <h1>Built In The Garage</h1>
-                <p>We believe in diagnostics first, not guesses. Built in the garage where precision matters...</p>
+                <h1>Built In The Garage<br><span style="color: #e60000;">Proven On The Street</span></h1>
+                <p>LS Culture • Diagnostics First • No Guesswork • No Shortcuts</p>
             </div>
         </div>
     </section>
 
-    <!-- Services / Details Grid -->
+    <!-- Who We Are Intro Section -->
     <section class="details-grid">
+        <div class="container" style="text-align: center; display: block; max-width: 900px; margin: 0 auto;">
+            <h2 style="font-family: 'Oswald', sans-serif; font-size: 32px; text-transform: uppercase; margin-bottom: 20px;">Who We Are</h2>
+            <p style="color: #555; line-height: 1.8; font-size: 17px;">
+                AutoCross LLC wasn’t built in a boardroom — it was built in garages, driveways, and engine bays. 
+                We come from hands-on experience, late nights, busted knuckles, and learning the right way by doing the work. 
+                We specialize in bringing high-end mechanical expertise directly to your door.
+            </p>
+        </div>
+    </section>
+
+    <!-- Standards / Core Values Grid -->
+    <section class="details-grid" style="background-color: #eee; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;">
         <div class="container">
             <div class="grid-item">
-                <h3>Diagnostics First, No Guesses</h3>
-                <p>We find the root cause of the issue before suggesting repairs. Accurate diagnostics save you time and money.</p>
+                <h3>Diagnostics First</h3>
+                <p>Logic before labor. Diagnostics before parts. We find the root cause of the issue so you aren't paying for "trial and error."</p>
             </div>
             <div class="grid-item">
-                <h3>No Shortcuts</h3>
-                <p>Quality and precision are non-negotiable. Every job is done right, the first time.</p>
+                <h3>LS Culture</h3>
+                <p>A Chevy-first mindset. From stock rebuilds to full engine swaps, LS performance and reliability are baked into our DNA.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Built, Not Rushed</h3>
+                <p>We don’t cut corners. Every job—from a simple oil change to a complex wiring harness—is treated like it’s our own vehicle.</p>
             </div>
         </div>
     </section>
@@ -60,29 +84,27 @@
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
-            <a href="contact.html" class="btn-primary">REQUEST SERVICE</a>
+            <a href="contact.html" class="btn-primary">REQUEST SERVICE &rarr;</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2026 AutoCross LLC &bull; Serving SoCal.</p>
-            <div class="social-icons">
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            </div>
+            <p>&copy; 2026 AutoCross LLC &bull; 909-419-1015 &bull; Serving SoCal.</p>
         </div>
     </footer>
 
-    <!-- Simple script for mobile menu toggle -->
+    <!-- Mobile Navigation Toggle Script -->
     <script>
-        const menuIcon = document.querySelector('.mobile-menu-icon');
+        const menuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.querySelector('.main-nav');
 
-        menuIcon.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
     </script>
 
 </body>
