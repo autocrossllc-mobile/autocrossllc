@@ -250,3 +250,53 @@ body {
         gap: 30px;
     }
 }
+/* Hero Section Base */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 140px 0 80px;
+    margin-top: 70px;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Specific background image for About page */
+.hero-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./hero-bg.jpg');
+}
+
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: #e60000;
+}
+
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}
