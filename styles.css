@@ -444,3 +444,24 @@ body {
     font-size: 11px;
     margin-top: 15px;
 }
+/* Prevent horizontal overflow across all screens */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Constrain logo size to fit header container */
+.site-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px; /* Adjust height limit to match inner pages */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure images never exceed screen width */
+img {
+  max-width: 100%;
+  height: auto;
+}
