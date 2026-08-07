@@ -18,7 +18,7 @@
     <!-- Watermark Logo Fixed Behind All Page Content -->
     <div class="page-bg-overlay"></div>
 
-    <!-- Header / Task Bar Section -->
+    <!-- Navigation Header -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -44,7 +44,7 @@
         </div>
     </header>
 
-    <!-- Dark Hero Banner Section (Matches About Page) -->
+    <!-- Dark Hero Banner Section -->
     <section class="hero-content-block">
         <div class="container">
             <h1>VEHICLE <span>RENTALS</span></h1>
@@ -52,36 +52,39 @@
         </div>
     </section>
 
-    <!-- Inventory Section -->
+    <!-- Available Vehicles Grid -->
     <section id="inventory" class="details-grid">
-        <div class="container" style="flex-direction: column;">
-            <h2 style="font-family: var(--font-heading); font-size: 32px; text-transform: uppercase; text-align: center; margin-bottom: 40px;">Available Vehicles</h2>
+        <div class="container inventory-wrapper">
+            <h2 class="section-title">Available Vehicles</h2>
 
-            <div class="details-grid" style="padding: 0;">
-                <div class="container" style="gap: 30px; align-items: stretch;">
+            <div class="details-grid rental-cards-container">
+                <div class="container cards-row">
 
-                    <div class="grid-item" style="text-align: center; padding: 25px; background: #111111; border-radius: 4px; border: 1px solid #222222;">
-                        <img src="truck1.png" alt="Work Truck" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333333;">
-                        <h3 style="color: #ffffff;">Work Truck</h3>
-                        <p style="color: var(--accent); font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: var(--font-heading);">$85 / DAY</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaaaaa; line-height: 1.5;">Towing capable, heavy-duty bed liner, perfect for projects and moving.</p>
-                        <a href="tel:9094191015" class="btn-primary" style="display: block; width: 100%;">Call to Rent</a>
+                    <!-- Work Truck Card -->
+                    <div class="grid-item rental-card">
+                        <img src="truck1.png" alt="Work Truck" class="card-img">
+                        <h3 class="card-title">Work Truck</h3>
+                        <p class="card-price">$85 / DAY</p>
+                        <p class="card-desc">Towing capable, heavy-duty bed liner, perfect for projects and moving.</p>
+                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
                     </div>
 
-                    <div class="grid-item" style="text-align: center; padding: 25px; background: #111111; border-radius: 4px; border: 1px solid #222222;">
-                        <img src="sedan1.png" alt="Sedan" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333333;">
-                        <h3 style="color: #ffffff;">Daily Driver</h3>
-                        <p style="color: var(--accent); font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: var(--font-heading);">$65 / DAY</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaaaaa; line-height: 1.5;">Fuel-efficient and reliable transportation while your car is in the shop.</p>
-                        <a href="tel:9094191015" class="btn-primary" style="display: block; width: 100%;">Call to Rent</a>
+                    <!-- Daily Driver Card -->
+                    <div class="grid-item rental-card">
+                        <img src="sedan1.png" alt="Sedan" class="card-img">
+                        <h3 class="card-title">Daily Driver</h3>
+                        <p class="card-price">$65 / DAY</p>
+                        <p class="card-desc">Fuel-efficient and reliable transportation while your car is in the shop.</p>
+                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
                     </div>
 
-                    <div class="grid-item" style="text-align: center; padding: 25px; background: #111111; border-radius: 4px; border: 1px solid #222222;">
-                        <img src="van1.png" alt="Cargo Van" style="width: 100%; border-radius: 4px; margin-bottom: 20px; border: 1px solid #333333;">
-                        <h3 style="color: #ffffff;">Cargo Van</h3>
-                        <p style="color: var(--accent); font-weight: bold; font-size: 1.4rem; margin-bottom: 10px; font-family: var(--font-heading);">$95 / DAY</p>
-                        <p style="font-size: 0.9rem; margin-bottom: 25px; color: #aaaaaa; line-height: 1.5;">Spacious interior for moving parts, engines, or professional equipment.</p>
-                        <a href="tel:9094191015" class="btn-primary" style="display: block; width: 100%;">Call to Rent</a>
+                    <!-- Cargo Van Card -->
+                    <div class="grid-item rental-card">
+                        <img src="van1.png" alt="Cargo Van" class="card-img">
+                        <h3 class="card-title">Cargo Van</h3>
+                        <p class="card-price">$95 / DAY</p>
+                        <p class="card-desc">Spacious interior for moving parts, engines, or professional equipment.</p>
+                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
                     </div>
 
                 </div>
@@ -90,24 +93,24 @@
     </section>
 
     <!-- Rental Requirements Section -->
-    <section class="details-grid">
-        <div class="container" style="flex-direction: column; text-align: center;">
-            <h2 style="font-family: var(--font-heading); font-size: 32px; text-transform: uppercase; margin-bottom: 30px;">Rental Requirements</h2>
-            <div style="max-width: 600px; margin: 0 auto; text-align: left; line-height: 2.2; background: #111111; color: #ffffff; padding: 35px; border-left: 4px solid var(--accent); border-radius: 4px;">
-                <p style="color: #ffffff;">• Valid Driver's License required</p>
-                <p style="color: #ffffff;">• Proof of active auto insurance required</p>
-                <p style="color: #ffffff;">• Security deposit due at time of pickup</p>
-                <p style="color: #ffffff;">• Minimum age 21+ required</p>
+    <section class="details-grid requirements-section">
+        <div class="container requirements-wrapper">
+            <h2 class="section-title">Rental Requirements</h2>
+            <div class="requirements-box">
+                <p>• Valid Driver's License required</p>
+                <p>• Proof of active auto insurance required</p>
+                <p>• Security deposit due at time of pickup</p>
+                <p>• Minimum age 21+ required</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Unified Footer Section -->
     <footer class="main-footer">
-        <div class="container" style="flex-direction: column; gap: 10px; text-align: center;">
-            <p style="color: var(--accent); font-family: var(--font-heading); font-weight: bold; font-size: 1.4rem; margin: 0;">909-419-1015</p>
-            <p style="color: #ccc; font-size: 13px; margin: 0;">autocrossllc.services@gmail.com</p>
-            <p style="color: #888; font-size: 11px; margin-top: 15px;">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
+        <div class="container footer-content">
+            <p class="footer-phone">909-419-1015</p>
+            <p class="footer-email">autocrossllc.services@gmail.com</p>
+            <p class="footer-copy">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
         </div>
     </footer>
 
