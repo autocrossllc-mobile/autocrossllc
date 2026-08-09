@@ -16,11 +16,22 @@
 <body>
 
 <header class="main-header">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="container flex-header">
         <a href="index.html" class="site-logo">
             <img src="./official-logo.png" alt="AutoCross LLC">
         </a> 
-        <button id="menuToggle" class="menu-toggle" style="background: none; border: none; color: #fff; font-family: var(--font-heading); font-size: 18px; cursor: pointer;">MENU</button>
+        
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html" class="active">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="rentals.html">Rentals</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle">MENU</button>
     </div>
 </header>
 
@@ -34,17 +45,7 @@
     <a href="about.html">About</a>
 </nav>
 
-<nav class="desktop-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html" class="active">LS</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="rentals.html">Rentals</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-
-<!-- Hero Section with Clean Split Layout -->
+<!-- Hero Section -->
 <section class="hero hero-home">
     <div class="hero-container">
         <div class="hero-content">
@@ -64,10 +65,11 @@
     </div>
 </section>
 
+<!-- Overview -->
 <section class="section">
-    <div class="container">
-        <h2 style="text-align:center; margin-bottom: 30px;">The Ultimate LS Platform</h2>
-        <p style="max-width: 850px; margin: auto; text-align: center; line-height: 1.9; color: #ccc;">
+    <div class="container text-center">
+        <h2>The Ultimate LS Platform</h2>
+        <p class="intro-text">
             The GM LS architecture is unmatched for power-to-weight, reliability, and sheer capability. 
             Whether you're pushing boost on a stock bottom end, dropping an LS into a custom chassis, or 
             diagnosing complex valvetrain and fueling issues, AutoCross LLC delivers professional expertise on-site.
@@ -75,9 +77,10 @@
     </div>
 </section>
 
-<section class="section bg-dark" style="background: #0a0a0a; border-top: 1px solid #222; border-bottom: 1px solid #222;">
+<!-- Specialties -->
+<section class="section bg-dark">
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 50px;">LS Core Specialties</h2>
+        <h2 class="text-center mb-50">LS Core Specialties</h2>
         <div class="services-grid">
             <div class="service-box">
                 <h3>Diagnostics & Troubleshooting</h3>
@@ -97,33 +100,38 @@
     </div>
 </section>
 
+<!-- Process -->
 <section class="section">
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 50px;">The Process</h2>
+        <h2 class="text-center mb-50">The Process</h2>
         <div class="services-grid">
-            <div class="service-box" style="text-align: center;">
-                <h3 style="color: #ff3333;">1. Request</h3>
+            <div class="service-box text-center">
+                <h3 class="accent-text">1. Request</h3>
                 <p>Submit your LS service details or build goals through our booking form.</p>
             </div>
 
-            <div class="service-box" style="text-align: center;">
-                <h3 style="color: #ff3333;">2. Secure</h3>
+            <div class="service-box text-center">
+                <h3 class="accent-text">2. Secure</h3>
                 <p>Confirm your appointment time with a deposit to lock in your spot.</p>
             </div>
 
-            <div class="service-box" style="text-align: center;">
-                <h3 style="color: #ff3333;">3. Build</h3>
+            <div class="service-box text-center">
+                <h3 class="accent-text">3. Build</h3>
                 <p>We arrive on-site, execute the performance work to spec, and get you back on the road.</p>
             </div>
         </div>
     </div>
 </section>
 
-<footer style="text-align: center; padding: 80px 0; background: #111;">
-    <div class="footer-link" style="margin-bottom: 30px;">
-        <a href="contact.html" class="cta-button">Ready For More Power? Contact Us →</a>
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container text-center">
+        <div class="mb-30">
+            <a href="contact.html" class="cta-button">Ready For More Power? Contact Us →</a>
+        </div>
+        <p class="footer-phone">909-419-1015</p>
+        <p class="footer-copy">© 2026 AutoCross LLC • Built Not Rushed</p>
     </div>
-    <p style="color: #666; font-size: 13px; margin-top: 40px;">© 2026 AutoCross LLC • 909-419-1015 • Built Not Rushed</p>
 </footer>
 
 <script src="script.js"></script>
