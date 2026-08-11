@@ -11,14 +11,141 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Ticker Animation Styling */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Fixed Navigation Header overrides for LS Header alignment */
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
+
+        /* LS Styled Hamburger Menu Button */
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+        .menu-toggle:hover {
+            border-color: #ff0033 !important;
+            box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+        }
+
+        /* LS Styled Dropdown Navigation Panel */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            transition: color 0.2s, background 0.2s;
+        }
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+
+        /* Hero Section Background update with ls-hero.png */
+        .hero.hero-home {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('ls-hero.png') center/cover !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+        }
+    </style>
 </head>
 
 <body>
 
+<!-- Moving Ticker Header Bar -->
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
+
 <header class="main-header">
-    <div class="container flex-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
         <a href="index.html" class="site-logo">
-            <img src="./official-logo.png" alt="AutoCross LLC">
+            <img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;">
         </a> 
         
         <nav class="desktop-menu">
@@ -31,7 +158,7 @@
             <a href="about.html">About</a>
         </nav>
 
-        <button id="menuToggle" class="menu-toggle">MENU</button>
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
     </div>
 </header>
 
@@ -47,20 +174,17 @@
 
 <!-- Hero Section -->
 <section class="hero hero-home">
-    <div class="hero-container">
+    <div class="hero-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
         <div class="hero-content">
             <h1 class="hero-title">
                 MOBILE AUTOMOTIVE<br>
                 <span>LS PERFORMANCE</span>
             </h1>
             <p class="hero-tagline">Engine Swaps • Tuning Support • Proven Reliability</p>
-            <div class="hero-buttons">
+            <div class="hero-buttons" style="display: flex; gap: 15px; margin-top: 20px;">
                 <a href="contact.html" class="cta-button">Book LS Service</a>
                 <a href="services.html" class="cta-button outline">View Services</a>
             </div>
-        </div>
-        <div class="hero-badge-container">
-            <img src="./official-logo.png" alt="AutoCross Emblem" class="hero-emblem-img">
         </div>
     </div>
 </section>
@@ -134,7 +258,17 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    // Inline Toggle Logic for consistency
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+</script>
 
 </body>
 </html>
