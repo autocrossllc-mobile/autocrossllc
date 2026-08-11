@@ -12,17 +12,261 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Ticker Animation Styling */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Fixed Navigation Header */
+        .main-header {
+            background: rgba(8, 8, 8, 0.95);
+            border-bottom: 2px solid #ff0033;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: #ff0033 !important;
+        }
+        .mobile-menu-icon {
+            display: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        @media(max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            .main-nav.active {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #080808;
+                border-bottom: 2px solid #ff0033;
+                padding: 20px;
+            }
+            .main-nav.active ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .mobile-menu-icon {
+                display: block;
+            }
+        }
+
+        /* Page Overrides */
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .hero-content-block {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.png') center/cover;
+            border-bottom: 3px solid #ff0033;
+            padding: 160px 20px 80px 20px;
+            text-align: center;
+        }
+        .hero-content-block h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .hero-content-block h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 20px rgba(255, 0, 51, 0.6);
+        }
+        .hero-content-block p {
+            color: #bbb;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .details-grid {
+            background: #080808;
+            padding: 60px 20px;
+            border-bottom: 1px solid #151515;
+        }
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grid-item.rental-card {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .grid-item.rental-card:hover {
+            border-color: #ff0033;
+            box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
+            transform: translateY(-4px);
+        }
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #222;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .card-price {
+            color: #ff0033;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .card-desc {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 0.92rem;
+            margin-bottom: 20px;
+        }
+        .btn-aggressive {
+            display: inline-block;
+            background: #ff0033;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-aggressive:hover {
+            background: #cc0029;
+            box-shadow: 0 0 15px rgba(255, 0, 51, 0.5);
+        }
+        .requirements-box {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .requirements-box p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        .main-footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Watermark Logo Fixed Behind All Page Content -->
-    <div class="page-bg-overlay"></div>
+    <!-- Moving Ticker Header Bar -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+            <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+            <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+            <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+            <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+        </div>
+    </div>
 
     <!-- Navigation Header -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC">
+                <img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;">
             </a>
             
             <nav class="main-nav">
@@ -57,43 +301,39 @@
         <div class="container inventory-wrapper">
             <h2 class="section-title">What We Offer</h2>
 
-            <div class="details-grid rental-cards-container">
-                <div class="container cards-row">
+            <div class="cards-row">
+                <!-- Service 1 -->
+                <div class="grid-item rental-card">
+                    <img src="service1.png" alt="General Maintenance" class="card-img">
+                    <h3 class="card-title">General Maintenance & Repair</h3>
+                    <p class="card-price">DIAGNOSTICS & REPAIR</p>
+                    <p class="card-desc">Complete vehicle inspections, routine maintenance, brake services, and troubleshooting for optimal performance.</p>
+                    <a href="contact.html" class="btn-aggressive">Schedule Service</a>
+                </div>
 
-<!-- Service 1 -->
-                    <div class="grid-item rental-card">
-                        <img src="service1.png" alt="General Maintenance" class="card-img">
-                        <h3 class="card-title">General Maintenance & Repair</h3>
-                        <p class="card-price">DIAGNOSTICS & REPAIR</p>
-                        <p class="card-desc">Complete vehicle inspections, routine maintenance, brake services, and troubleshooting for optimal performance.</p>
-                        <a href="contact.html" class="btn-primary card-btn">Schedule Service</a>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="grid-item rental-card">
-                        <img src="service2.png" alt="Performance Tuning" class="card-img">
-                        <h3 class="card-title">Performance & Custom Upgrades</h3>
-                        <p class="card-price">CUSTOM BUILDS</p>
-                        <p class="card-desc">Engine upgrades, suspension enhancements, custom fabrication, and performance tuning tailored to your goals.</p>
-                        <a href="contact.html" class="btn-primary card-btn">Get a Quote</a>
-                    </div>
+                <!-- Service 2 -->
+                <div class="grid-item rental-card">
+                    <img src="service2.png" alt="Performance Tuning" class="card-img">
+                    <h3 class="card-title">Performance Upgrades</h3>
+                    <p class="card-price">CUSTOM BUILDS</p>
+                    <p class="card-desc">Engine upgrades, suspension enhancements, custom fabrication, and performance tuning tailored to your goals.</p>
+                    <a href="contact.html" class="btn-aggressive">Get a Quote</a>
+                </div>
 
-                    <!-- Service 3 -->
-                    <div class="grid-item rental-card">
-                        <img src="service3.png" alt="Mobile Service" class="card-img">
-                        <h3 class="card-title">Mobile Assistance & Support</h3>
-                        <p class="card-price">ON-SITE SUPPORT</p>
-                        <p class="card-desc">Convenient mobile diagnostics and select repair services brought directly to your location or job site.</p>
-                        <a href="tel:9094191015" class="btn-primary card-btn">Call Now</a>
-                    </div>
-
+                <!-- Service 3 -->
+                <div class="grid-item rental-card">
+                    <img src="service3.png" alt="Mobile Service" class="card-img">
+                    <h3 class="card-title">Mobile Assistance</h3>
+                    <p class="card-desc">Convenient mobile diagnostics and select repair services brought directly to your location or job site.</p>
+                    <a href="tel:9094191015" class="btn-aggressive">Call Now</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Guarantee Banner -->
-    <section class="details-grid requirements-section">
-        <div class="container requirements-wrapper">
+    <section class="details-grid" style="background: #050505;">
+        <div class="container">
             <h2 class="section-title">The AutoCross Standard</h2>
             <div class="requirements-box">
                 <p>• Clear communication and honest estimates upfront</p>
@@ -106,10 +346,10 @@
 
     <!-- Unified Footer Section -->
     <footer class="main-footer">
-        <div class="container footer-content">
-            <p class="footer-phone">909-419-1015</p>
-            <p class="footer-email">autocrossllc.services@gmail.com</p>
-            <p class="footer-copy">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
+        <div class="container">
+            <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+            <p style="color: #aaa; margin-bottom: 15px;">autocrossllc.services@gmail.com</p>
+            <p style="font-size: 0.85rem;">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
         </div>
     </footer>
 
