@@ -12,22 +12,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Ticker Animation Styling */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Transparent Header Overlaying Hero */
+        .main-header {
+            background: transparent !important;
+            border-bottom: none !important;
+            position: absolute !important;
+            top: 35px; /* Sits right below the ticker */
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Hero Image Override */
+        .hero-content-block {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('hero.png') center/cover !important;
+            padding-top: 160px; /* Extra padding to account for ticker and header overlay */
+            border-bottom: 3px solid #ff0033;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Watermark Logo Fixed Behind All Page Content -->
-    <div class="page-bg-overlay"></div>
+    <!-- Moving Ticker Header Bar with Black Chevy Symbol Vibe -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+            <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+            <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+            <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+            <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+        </div>
+    </div>
 
-    <!-- Navigation Header -->
+    <!-- Transparent Navigation Header -->
     <header class="main-header">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 15px 20px;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px;">
             <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC" style="height: 45px;">
+                <img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;">
             </a>
             
             <nav class="main-nav">
                 <ul style="display: flex; list-style: none; gap: 20px; margin: 0; padding: 0;">
-                    <li><a href="index.html" class="active" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">HOME</a></li>
+                    <li><a href="index.html" class="active" style="color: #ff0033; text-decoration: none; font-family: 'Oswald', sans-serif;">HOME</a></li>
                     <li><a href="services.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">SERVICES</a></li>
                     <li><a href="ls.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">LS</a></li>
                     <li><a href="gallery.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">GALLERY</a></li>
@@ -44,7 +109,7 @@
         </div>
     </header>
 
-    <!-- Dark Hero Banner Section -->
+    <!-- Dark Hero Banner Section (Using hero.png transparent overlay) -->
     <section class="hero-content-block">
         <div class="container">
             <h1>MOBILE AUTOMOTIVE<br><span>LS PERFORMANCE & REPAIR</span></h1>
