@@ -3,205 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoCross LLC - About Us</title>
-    <meta name="description" content="AutoCross LLC is built on real-world automotive experience, LS performance culture, and no-shortcut workmanship.">
-    
-    <!-- Google Fonts -->
+    <title>About Us | AutoCross LLC</title>
+    <meta name="description" content="Learn about AutoCross LLC, our commitment to mobile diagnostics, and our Built Not Rushed philosophy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Aggressive Performance Styling Overrides -->
     <style>
-        body {
-            background-color: #050505;
-            color: #f1f1f1;
-        }
-        .main-header {
-            background: rgba(8, 8, 8, 0.95);
-            border-bottom: 2px solid #ff0033;
-        }
-        .hero-content-block {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('service1.png') center/cover;
-            border-bottom: 3px solid #ff0033;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .hero-content-block h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-        }
-        .hero-content-block h1 span {
-            color: #ff0033;
-            text-shadow: 0 0 15px rgba(255, 0, 51, 0.5);
-        }
-        .hero-content-block p {
-            color: #ccc;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-        .details-grid {
-            background: #0b0b0b;
-            border-top: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
-            padding: 60px 0;
-        }
-        .aggressive-card {
-            background: #111;
-            border: 1px solid #222;
-            border-left: 4px solid #ff0033;
-            padding: 30px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-        .aggressive-card:hover {
-            border-color: #ff0033;
-            box-shadow: 0 5px 20px rgba(255, 0, 51, 0.2);
-            transform: translateY(-3px);
-        }
-        .aggressive-card h3 {
-            font-family: 'Oswald', sans-serif;
-            color: #fff;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-        .aggressive-card p {
-            color: #aaa;
-            line-height: 1.7;
-        }
-        .btn-aggressive {
-            display: inline-block;
-            background: #ff0033;
-            color: #fff;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            padding: 15px 40px;
-            text-decoration: none;
-            letter-spacing: 1.5px;
-            border: none;
-            box-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
-            transition: background 0.2s, box-shadow 0.2s;
-        }
-        .btn-aggressive:hover {
-            background: #cc0029;
-            box-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
-        }
-        .main-footer {
-            background: #050505;
-            border-top: 2px solid #222;
-            text-align: center;
-            padding: 40px 0;
-            color: #666;
-        }
+        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
+        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+        .ticker-item { display: inline-block; padding: 0 30px; }
+        .ticker-item span { color: #ff0033; margin-right: 10px; }
+        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
+        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
+        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
+        .mobile-menu.active { display: flex !important; }
+        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
+        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
+        .hero.hero-about { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('about-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
+        .hero-about h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
+        .hero-about h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
+        .hero-about p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        .about-content { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 40px; max-width: 900px; margin: 0 auto; }
+        .about-content h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 2rem; text-transform: uppercase; margin-bottom: 20px; }
+        .about-content p { color: #aaa; line-height: 1.8; font-size: 1.05rem; margin-bottom: 20px; }
     </style>
 </head>
 <body>
-
-    <!-- Watermark Logo Fixed Behind All Page Content -->
-    <div class="page-bg-overlay"></div>
-
-    <!-- Header / Task Bar Section -->
-    <header class="main-header">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC" style="height: 45px;">
-            </a>
-            
-            <nav class="main-nav">
-                <ul style="display: flex; list-style: none; gap: 20px; margin: 0; padding: 0;">
-                    <li><a href="index.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">HOME</a></li>
-                    <li><a href="services.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">SERVICES</a></li>
-                    <li><a href="ls.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">LS</a></li>
-                    <li><a href="gallery.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">GALLERY</a></li>
-                    <li><a href="rentals.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">RENTALS</a></li>
-                    <li><a href="contact.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif;">CONTACT</a></li>
-                    <li><a href="about.html" class="active" style="color: #ff0033; text-decoration: none; font-family: 'Oswald', sans-serif;">ABOUT</a></li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Hamburger Menu Button -->
-            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation" style="color: #fff; cursor: pointer; font-size: 24px;">
-                &#9776;
-            </div>
+<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+<header class="main-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
+        <nav class="desktop-menu" style="display: flex; gap: 20px;">
+            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
+            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
+            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
+            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
+            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
+            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
+            <a href="about.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+        </nav>
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+    </div>
+</header>
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="merchandise.html">Merch</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html" class="active">About</a>
+</nav>
+<section class="hero hero-about">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>ABOUT <span>AUTOCROSS LLC</span></h1>
+        <p>Diagnostics First • Uncompromising Craftsmanship</p>
+    </div>
+</section>
+<section style="padding: 70px 20px; background: #080808;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="about-content">
+            <h3>Our Philosophy</h3>
+            <p>At AutoCross LLC, we operate under a simple code: <strong>Built Not Rushed</strong>. We specialize in mobile automotive diagnostics, electrical troubleshooting, and high-performance GM LS engine platforms.</p>
+            <p>Whether you need on-site diagnostic support or custom performance execution, we bring professional dedication, technical expertise, and shop-level precision directly to your project.</p>
         </div>
-    </header>
-
-    <!-- Main Content Over Image -->
-    <section class="hero-content-block">
-        <div class="container">
-            <h1>BUILT IN THE GARAGE<br><span>PROVEN ON THE STREET</span></h1>
-            <p>LS CULTURE • DIAGNOSTICS FIRST • NO GUESSWORK • NO SHORTCUTS</p>
-        </div>
-    </section>
-
-    <!-- Who We Are Intro Section -->
-    <section class="details-grid" style="background: #080808;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-transform: uppercase; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Who We Are</h2>
-            <p style="color: #ccc; line-height: 1.9; font-size: 1.1rem; font-weight: 400;">
-                AutoCross LLC wasn’t built in a boardroom — it was forged in garages, driveways, and high-rpm engine bays. 
-                We operate on raw, hands-on experience, late nights, busted knuckles, and doing the hard work the right way. 
-                We bring track-level mechanical expertise and precision diagnostics directly to your door.
-            </p>
-        </div>
-    </section>
-
-    <!-- Standards / Core Values Grid -->
-    <section class="details-grid">
-        <div class="container" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 20px;">
-            
-            <div class="aggressive-card">
-                <h3>Diagnostics First</h3>
-                <p>Logic before labor. Diagnostics before replacement parts. We track down the root cause of electrical and mechanical faults so you don't pay for expensive guesswork.</p>
-            </div>
-
-            <div class="aggressive-card">
-                <h3>LS Culture</h3>
-                <p>A true Chevy-first performance mindset. From factory rebuilds to complete high-output engine swaps, LS power, reliability, and torque are built into our foundation.</p>
-            </div>
-
-            <div class="aggressive-card">
-                <h3>Built, Not Rushed</h3>
-                <p>We refuse to cut corners. Every job—from routine maintenance to custom harness integration—is executed with absolute discipline and treated like our own build.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section style="background: #050505; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <a href="contact.html" class="btn-aggressive">REQUEST SERVICE &rarr;</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 AutoCross LLC &bull; 909-419-1015 &bull; Serving SoCal.</p>
-        </div>
-    </footer>
-
-    <!-- Mobile Navigation Toggle Script -->
-    <script>
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.querySelector('.main-nav');
-
-        if (menuBtn && nav) {
-            menuBtn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
-    </script>
-
+    </div>
+</section>
+<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
+</script>
 </body>
 </html>
