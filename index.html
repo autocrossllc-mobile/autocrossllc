@@ -3,339 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoCross LLC | Mobile LS Performance & Repair</title>
-    <meta name="description" content="Mobile automotive diagnostics, LS performance builds, custom wiring, and expert vehicle repair by AutoCross LLC.">
-
-    <!-- Google Fonts -->
+    <title>AutoCross LLC | Mobile LS Performance & Diagnostics</title>
+    <meta name="description" content="Professional mobile automotive diagnostics, LS engine performance builds, and precision service by AutoCross LLC. Built Not Rushed.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Ticker Animation Styling */
-        .ticker-wrap {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.85);
-            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
-            white-space: nowrap;
-            z-index: 1001;
-            height: 35px;
-            display: flex;
-            align-items: center;
-        }
-        .ticker {
-            display: inline-block;
-            animation: ticker 25s linear infinite;
-            padding-left: 100%;
-            font-family: 'Oswald', sans-serif;
-            font-size: 0.9rem;
-            color: #fff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .ticker-item {
-            display: inline-block;
-            padding: 0 30px;
-        }
-        .ticker-item span {
-            color: #ff0033;
-            margin-right: 10px;
-        }
-        @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
-        }
+        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
+        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+        .ticker-item { display: inline-block; padding: 0 30px; }
+        .ticker-item span { color: #ff0033; margin-right: 10px; }
+        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
 
-        /* Fixed Navigation Header */
-        .main-header {
-            background: rgba(8, 8, 8, 0.85);
-            backdrop-filter: blur(5px);
-            border-bottom: 2px solid #ff0033;
-            position: absolute;
-            top: 35px;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .main-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 12px 20px;
-        }
+        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
+        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease; }
+        .menu-toggle:hover { border-color: #ff0033 !important; box-shadow: 0 0 10px rgba(255, 0, 51, 0.3); }
 
-        /* LS Styled Hamburger Menu Button */
-        .mobile-menu-btn {
-            background: #111;
-            border: 1px solid #333;
-            border-left: 3px solid #ff0033;
-            color: #fff;
-            cursor: pointer;
-            padding: 8px 14px;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
-        }
-        .mobile-menu-btn:hover {
-            border-color: #ff0033;
-            box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
-        }
+        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; box-shadow: 0 10px 30px rgba(0,0,0,0.8); padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
+        .mobile-menu.active { display: flex !important; }
+        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; transition: color 0.2s, background 0.2s; }
+        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
 
-        /* LS Styled Dropdown Navigation Panel */
-        .main-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.98);
-            border-bottom: 3px solid #ff0033;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            padding: 20px 0;
-            z-index: 999;
-        }
-        .main-nav.active {
-            display: block;
-        }
-        .main-nav ul {
-            list-style: none !important;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        .main-nav ul li {
-            list-style: none !important;
-            width: 100%;
-            text-align: center;
-        }
-        .main-nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            display: block;
-            padding: 10px;
-            transition: color 0.2s, background 0.2s;
-        }
-        .main-nav ul li a:hover,
-        .main-nav ul li a.active {
-            color: #ff0033;
-            background: rgba(255, 0, 51, 0.05);
-            border-left: 4px solid #ff0033;
-            border-right: 4px solid #ff0033;
-        }
+        .hero.hero-home { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('index-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 100px; text-align: center; }
+        .hero-home h1 { font-family: 'Oswald', sans-serif; font-size: 3.8rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
+        .hero-home h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
+        .hero-home p { color: #ccc; font-weight: 600; font-size: 1.15rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
 
-        /* Page Overrides & Hero Layout */
-        body {
-            background-color: #050505;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('hero.png') center/cover;
-            border-bottom: 3px solid #ff0033;
-            padding: 180px 20px 100px 20px;
-            text-align: center;
-        }
-        .hero-section h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        .hero-section h1 span {
-            color: #ff0033;
-            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
-        }
-        .hero-section p {
-            color: #ccc;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 35px;
-        }
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .btn-aggressive {
-            display: inline-block;
-            background: #ff0033;
-            color: #fff;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            padding: 12px 28px;
-            text-decoration: none;
-            letter-spacing: 1.5px;
-            border: none;
-            transition: all 0.2s ease;
-        }
-        .btn-aggressive:hover {
-            background: #cc0029;
-            box-shadow: 0 0 20px rgba(255, 0, 51, 0.5);
-            transform: translateY(-2px);
-        }
-        .btn-outline {
-            display: inline-block;
-            background: transparent;
-            color: #fff;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            padding: 12px 28px;
-            text-decoration: none;
-            letter-spacing: 1.5px;
-            border: 2px solid #444;
-            transition: all 0.2s ease;
-        }
-        .btn-outline:hover {
-            border-color: #ff0033;
-            color: #ff0033;
-            box-shadow: 0 0 15px rgba(255, 0, 51, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Content Sections */
-        .content-section {
-            background: #080808;
-            padding: 70px 20px;
-            border-bottom: 1px solid #151515;
-            text-align: center;
-        }
-        .section-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.6rem;
-            text-transform: uppercase;
-            color: #fff;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
-        }
-        .section-desc {
-            max-width: 850px;
-            margin: 0 auto;
-            color: #aaa;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* Main Footer */
-        .main-footer {
-            background: #030303;
-            border-top: 2px solid #1a1a1a;
-            text-align: center;
-            padding: 50px 20px;
-            color: #777;
-        }
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        .btn-primary { display: inline-block; background: #ff0033; color: #fff; font-family: 'Oswald', sans-serif; text-transform: uppercase; padding: 14px 32px; text-decoration: none; letter-spacing: 1.5px; transition: background 0.2s; }
+        .btn-primary:hover { background: #d0002b; }
     </style>
 </head>
 <body>
 
-    <!-- Moving Ticker Header Bar -->
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
-            <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
-            <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
-            <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
-            <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
-        </div>
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
     </div>
+</div>
 
-    <!-- Navigation Header with LS Hamburger Menu -->
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;">
-            </a>
-            
-            <!-- LS Styled Hamburger Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
-                <span>MENU</span> &#9776;
-            </button>
+<header class="main-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
+        <nav class="desktop-menu" style="display: flex; gap: 20px;">
+            <a href="index.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
+            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
+            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
+            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
+            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
+            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
+            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+        </nav>
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+    </div>
+</header>
 
-            <!-- Dropdown Navigation Panel -->
-            <nav class="main-nav" id="mainNav">
-                <ul>
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="ls.html">LS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="rentals.html">RENTALS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="merchandise.html">Merch</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
 
-    <!-- Refined Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>MOBILE AUTOMOTIVE<br><span>LS PERFORMANCE & REPAIR</span></h1>
-            <p>Built Not Rushed &bull; Diagnostics First &bull; Real Power</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn-aggressive">Book Service</a>
-                <a href="services.html" class="btn-outline">View Services</a>
-            </div>
-        </div>
-    </section>
+<section class="hero hero-home">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>BUILT NOT <span>RUSHED</span></h1>
+        <p>Mobile Automotive Diagnostics & High-Performance LS Powerplants</p>
+        <a href="contact.html" class="btn-primary">Schedule Service →</a>
+    </div>
+</section>
 
-    <!-- Intro Overview Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Shop-Level Capability At Your Doorstep</h2>
-            <p class="section-desc">
-                Towing your project car or disabled daily driver to a traditional shop is expensive and a logistical headache. 
-                At AutoCross LLC, we throw out the standard template. We bring professional equipment, factory-level diagnostics, 
-                and expert hands directly to your driveway, garage, or job site.
-            </p>
-        </div>
-    </section>
+<section style="padding: 80px 20px; background: #080808; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; margin-bottom: 20px;">Precision Garage & On-Site Expertise</h2>
+        <p style="color: #aaa; line-height: 1.8; font-size: 1.05rem;">
+            AutoCross LLC delivers professional mobile diagnostics, wiring solutions, and clean LS engine integration. 
+            Whether you are upgrading your valvetrain or troubleshooting complex electrical faults, we bring shop-level execution directly to you.
+        </p>
+    </div>
+</section>
 
-    <!-- Unified Footer Section -->
-    <footer class="main-footer">
-        <div class="container">
-            <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-            <p style="color: #aaa; margin-bottom: 15px;">autocrossllc.services@gmail.com</p>
-            <p style="font-size: 0.85rem;">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
-        </div>
-    </footer>
+<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+</footer>
 
-    <!-- Mobile Navigation Toggle Script -->
-    <script>
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.getElementById('mainNav');
-
-        if (menuBtn && nav) {
-            menuBtn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
-    </script>
-
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
+</script>
 </body>
 </html>
