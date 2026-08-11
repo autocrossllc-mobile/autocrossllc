@@ -3,128 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicle Rentals | AutoCross LLC</title>
-    <meta name="description" content="Reliable vehicle rentals from AutoCross LLC. Work trucks, daily drivers, and cargo vans ready for the road.">
-
-    <!-- Google Fonts -->
+    <title>Equipment & Tool Rentals | AutoCross LLC</title>
+    <meta name="description" content="Professional automotive tools, diagnostic equipment, and specialty gear rentals by AutoCross LLC.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Ticker Animation Styling */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Fixed Navigation Header overrides for Header alignment */
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
+
+        /* LS Styled Hamburger Menu Button */
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+        .menu-toggle:hover {
+            border-color: #ff0033 !important;
+            box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+        }
+
+        /* LS Styled Dropdown Navigation Panel */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            transition: color 0.2s, background 0.2s;
+        }
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+
+        /* Rentals Hero Section Background with rentals-hero.png */
+        .hero.hero-rentals {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('rentals-hero.png') center/cover !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+        .hero-rentals h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .hero-rentals h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+        }
+        .hero-rentals p {
+            color: #ccc;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Rentals Grid & Base Styles */
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .rentals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .rental-card {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .rental-card:hover {
+            border-color: #ff0033;
+            box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
+            transform: translateY(-4px);
+        }
+        .rental-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .rental-card p {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .rental-price {
+            font-family: 'Oswald', sans-serif;
+            color: #ff0033;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Watermark Logo Fixed Behind All Page Content -->
-    <div class="page-bg-overlay"></div>
+<!-- Moving Ticker Header Bar -->
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
 
-    <!-- Navigation Header -->
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC">
-            </a>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="ls.html">LS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="rentals.html" class="active">RENTALS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
+<header class="main-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+        <a href="index.html" class="site-logo">
+            <img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;">
+        </a> 
+        
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="rentals.html" class="active">Rentals</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
 
-            <!-- Mobile Hamburger Menu Button -->
-            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation">
-                &#9776;
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+    </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rentals.html" class="active">Rentals</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<!-- Rentals Hero Section -->
+<section class="hero hero-rentals">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>EQUIPMENT & TOOL <span>RENTALS</span></h1>
+        <p>Professional Diagnostics • Specialty Tools • Reliable Gear</p>
+    </div>
+</section>
+
+<!-- Rentals Overview & Grid Section -->
+<section class="section" style="padding: 70px 20px; background: #080808;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="text-center" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.6rem; text-transform: uppercase; color: #fff; margin-bottom: 15px;">Pro-Grade Equipment Available</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: #aaa; line-height: 1.8;">
+                Tackle your own automotive builds and diagnostics with confidence. We offer reliable specialty tool rentals 
+                to support your garage projects without the steep upfront cost of purchasing equipment outright.
+            </p>
+        </div>
+
+        <div class="rentals-grid">
+            <div class="rental-card">
+                <h3>Advanced Diagnostic Scanners</h3>
+                <p>Full bi-directional scan tools with live data logging, module programming capabilities, and comprehensive fault code isolation.</p>
+                <div class="rental-price">Inquire for Rates</div>
+            </div>
+
+            <div class="rental-card">
+                <h3>Specialty Engine Tools</h3>
+                <p>Harmonic balancer pullers/installers, valve spring compressors, cam alignment tools, and precision measurement kits.</p>
+                <div class="rental-price">Inquire for Rates</div>
+            </div>
+
+            <div class="rental-card">
+                <h3>Testing & Specialty Gauges</h3>
+                <p>High-pressure fuel injection testers, cylinder leak-down kits, digital compression testers, and oil pressure test kits.</p>
+                <div class="rental-price">Inquire for Rates</div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Dark Hero Banner Section -->
-    <section class="hero-content-block">
-        <div class="container">
-            <h1>VEHICLE <span>RENTALS</span></h1>
-            <p>Reliable • Clean • Ready to Work</p>
+<!-- Footer -->
+<footer class="main-footer" style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+    <div class="container text-center">
+        <div class="mb-30" style="margin-bottom: 20px;">
+            <a href="contact.html" class="cta-button" style="display: inline-block; background: #ff0033; color: #fff; font-family: 'Oswald', sans-serif; text-transform: uppercase; padding: 12px 28px; text-decoration: none; letter-spacing: 1.5px;">Reserve Equipment →</a>
         </div>
-    </section>
+        <p class="footer-phone" style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+        <p class="footer-copy" style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+    </div>
+</footer>
 
-    <!-- Available Vehicles Grid -->
-    <section id="inventory" class="details-grid">
-        <div class="container inventory-wrapper">
-            <h2 class="section-title">Available Vehicles</h2>
+<script>
+    // Inline Toggle Logic for consistency
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-            <div class="details-grid rental-cards-container">
-                <div class="container cards-row">
-
-                    <!-- Work Truck Card -->
-                    <div class="grid-item rental-card">
-                        <img src="truck1.png" alt="Work Truck" class="card-img">
-                        <h3 class="card-title">Work Truck</h3>
-                        <p class="card-price">$85 / DAY</p>
-                        <p class="card-desc">Towing capable, heavy-duty bed liner, perfect for projects and moving.</p>
-                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
-                    </div>
-
-                    <!-- Daily Driver Card -->
-                    <div class="grid-item rental-card">
-                        <img src="sedan1.png" alt="Sedan" class="card-img">
-                        <h3 class="card-title">Daily Driver</h3>
-                        <p class="card-price">$65 / DAY</p>
-                        <p class="card-desc">Fuel-efficient and reliable transportation while your car is in the shop.</p>
-                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
-                    </div>
-
-                    <!-- Cargo Van Card -->
-                    <div class="grid-item rental-card">
-                        <img src="van1.png" alt="Cargo Van" class="card-img">
-                        <h3 class="card-title">Cargo Van</h3>
-                        <p class="card-price">$95 / DAY</p>
-                        <p class="card-desc">Spacious interior for moving parts, engines, or professional equipment.</p>
-                        <a href="tel:9094191015" class="btn-primary card-btn">Call to Rent</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rental Requirements Section -->
-    <section class="details-grid requirements-section">
-        <div class="container requirements-wrapper">
-            <h2 class="section-title">Rental Requirements</h2>
-            <div class="requirements-box">
-                <p>• Valid Driver's License required</p>
-                <p>• Proof of active auto insurance required</p>
-                <p>• Security deposit due at time of pickup</p>
-                <p>• Minimum age 21+ required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Unified Footer Section -->
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <p class="footer-phone">909-419-1015</p>
-            <p class="footer-email">autocrossllc.services@gmail.com</p>
-            <p class="footer-copy">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
-        </div>
-    </footer>
-
-    <!-- Mobile Navigation Toggle Script -->
-    <script>
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.querySelector('.main-nav');
-
-        if (menuBtn && nav) {
-            menuBtn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
-    </script>
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+</script>
 
 </body>
 </html>
