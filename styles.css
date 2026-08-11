@@ -347,3 +347,137 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* --- AGGRESSIVE LS THEME GLOBAL STYLES --- */
+body {
+    background-color: #050505;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Header / Nav */
+.main-header {
+    background: rgba(8, 8, 8, 0.95);
+    border-bottom: 2px solid #ff0033;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul li a.active {
+    color: #ff0033 !important;
+}
+
+/* Hero Section */
+.hero-content-block {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('service1.png') center/cover;
+    border-bottom: 3px solid #ff0033;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content-block h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero-content-block h1 span {
+    color: #ff0033;
+    text-shadow: 0 0 20px rgba(255, 0, 51, 0.6);
+}
+
+.hero-content-block p {
+    color: #bbb;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Grid & Cards */
+.details-grid {
+    background: #080808;
+    padding: 60px 20px;
+    border-bottom: 1px solid #151515;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item.rental-card {
+    background: #101010;
+    border: 1px solid #222;
+    border-left: 4px solid #ff0033;
+    padding: 35px 30px;
+    transition: all 0.3s ease;
+}
+
+.grid-item.rental-card:hover {
+    border-color: #ff0033;
+    box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
+    transform: translateY(-4px);
+}
+
+.card-title {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Aggressive Buttons */
+.btn-aggressive {
+    display: inline-block;
+    background: #ff0033;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    border: none;
+    box-shadow: 0 0 15px rgba(255, 0, 51, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-aggressive:hover {
+    background: #cc0029;
+    box-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
+}
+
+/* Footer */
+.main-footer {
+    background: #030303;
+    border-top: 2px solid #1a1a1a;
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+}
