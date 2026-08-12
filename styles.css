@@ -371,3 +371,186 @@ footer p:last-child {
     border-color: #ff0033 !important;
     box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
 }
+/* ==========================================
+   ABOUT PAGE & STORY TIMELINE STYLES
+   ========================================== */
+
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('index-hero.png') center/cover !important;
+    border-bottom: 3px solid #ff0033;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 span {
+    color: #ff0033;
+    text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+}
+
+.about-hero p {
+    color: #ccc;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Story Journey Section */
+.story-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.story-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.story-intro h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.story-intro p {
+    color: #aaa;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Timeline Milestones */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #ff0033;
+}
+
+.milestone {
+    position: relative;
+    margin-bottom: 50px;
+    background: #0b0b0b;
+    border: 1px solid #1a1a1a;
+    border-left: 4px solid #ff0033;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.milestone::before {
+    content: '';
+    position: absolute;
+    left: -47px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: #ff0033;
+    border: 3px solid #050505;
+    border-radius: 50%;
+}
+
+.milestone-tag {
+    display: inline-block;
+    background: rgba(255, 0, 51, 0.1);
+    color: #ff0033;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.milestone h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.milestone p {
+    color: #b0b0b0;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.milestone p:last-child {
+    margin-bottom: 0;
+}
+
+/* Specialties Grid */
+.specialties-section {
+    background: #080808;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.specialties-grid {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.specialty-card {
+    background: #0b0b0b;
+    border: 1px solid #1a1a1a;
+    border-top: 3px solid #ff0033;
+    padding: 35px 25px;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.specialty-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.specialty-card p {
+    color: #999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 { font-size: 2.6rem; }
+    .timeline { padding-left: 20px; }
+    .milestone::before { display: none; }
+    .timeline::before { left: 0; }
+}
