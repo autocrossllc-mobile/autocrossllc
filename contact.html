@@ -1,86 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | AutoCross LLC</title>
-    <meta name="description" content="Get in touch with AutoCross LLC for mobile diagnostics, LS performance builds, and inquiries. Call 909-419-1015.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-contact { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('contact-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-contact h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-contact h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-contact p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .contact-box { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 40px; max-width: 700px; margin: 0 auto; text-align: center; }
-        .contact-box h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 2rem; text-transform: uppercase; margin-bottom: 15px; }
-        .contact-phone { font-family: 'Oswald', sans-serif; color: #ff0033; font-size: 2rem; letter-spacing: 2px; margin: 20px 0; display: inline-block; text-decoration: none; }
-    </style>
-</head>
-<body>
-<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
-<header class="main-header">
-    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
-        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu" style="display: flex; gap: 20px;">
-            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
-            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
-            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
-            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
-            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
-            <a href="contact.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
-            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
-        </nav>
-        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+<div class="ls-contact-wrapper">
+    <div class="ls-form-header">
+        <h3>Start Your Project or Inquiry</h3>
+        <p>Connect with our team for professional service and custom performance solutions.</p>
     </div>
-</header>
-<nav id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="ls.html">LS</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="merchandise.html">Merch</a>
-    <a href="contact.html" class="active">Contact</a>
-    <a href="about.html">About</a>
-</nav>
-<section class="hero hero-contact">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>CONTACT <span>US</span></h1>
-        <p>Ready To Build? Reach Out Today</p>
-    </div>
-</section>
-<section style="padding: 70px 20px; background: #080808;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="contact-box">
-            <h3>Get In Touch</h3>
-            <p style="color: #aaa; line-height: 1.6; margin-bottom: 20px;">For mobile diagnostics, LS performance builds, and project inquiries, contact us directly:</p>
-            <a href="tel:9094191015" class="contact-phone">909-419-1015</a>
-            <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">Built Not Rushed • Professional Service</p>
+    
+    <form class="ls-contact-form">
+        <div class="form-row">
+            <div class="ls-form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="ls-form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
         </div>
-    </div>
-</section>
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
-    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
-</footer>
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
-</script>
-</body>
-</html>
+        
+        <div class="form-row">
+            <div class="ls-form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            </div>
+            <div class="ls-form-group">
+                <label for="subject">Service / Inquiry Type</label>
+                <select id="subject" name="subject">
+                    <option value="custom">Custom Build / Performance</option>
+                    <option value="diagnostic">Diagnostics & Tuning</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="ls-form-group">
+            <label for="message">Project Details / Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're working on..." required></textarea>
+        </div>
+        
+        <button type="submit" class="ls-submit-btn">Submit Inquiry</button>
+    </form>
+</div>
