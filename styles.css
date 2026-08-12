@@ -554,3 +554,11 @@ footer p:last-child {
     .milestone::before { display: none; }
     .timeline::before { left: 0; }
 }
+.merchandise-hero, .about-hero, .ls-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('merchandise-hero.png') center center / cover no-repeat !important;
+    border-bottom: 3px solid #ff0033;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
