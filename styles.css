@@ -30,3 +30,114 @@
 #mobileMenu a:last-child {
     border-bottom: none;
 }
+.ls-contact-wrapper {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #121212;
+    border: 1px solid #222222;
+    border-top: 3px solid #e53935; /* Aggressive performance accent stripe */
+    padding: 2.5rem;
+    font-family: inherit;
+    color: #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+}
+
+.ls-form-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ls-form-header p {
+    margin: 0 0 2rem 0;
+    color: #999999;
+    font-size: 0.95rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.ls-form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.ls-contact-wrapper label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+.ls-contact-wrapper input,
+.ls-contact-wrapper select,
+.ls-contact-wrapper textarea {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ls-contact-wrapper select {
+    cursor: pointer;
+}
+
+.ls-contact-wrapper input:focus,
+.ls-contact-wrapper select:focus,
+.ls-contact-wrapper textarea:focus {
+    border-color: #e53935;
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
+}
+
+.ls-submit-btn {
+    width: 100%;
+    background-color: #e53935;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 1rem;
+}
+
+.ls-submit-btn:hover {
+    background-color: #d32f2f;
+}
+
+.ls-submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .ls-contact-wrapper {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
