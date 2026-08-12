@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | AutoCross LLC</title>
-    <meta name="description" content="Get in touch with AutoCross LLC for professional mobile automotive diagnostics and custom LS engine performance builds.">
+    <meta name="description" content="Get in touch with AutoCross LLC for mobile LS performance, diagnostics, custom builds, and inquiries. Built Not Rushed.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('contact-hero.png') center center / cover no-repeat !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+            padding-bottom: 80px;
+            text-align: center;
+            width: 100%;
+        }
+        .contact-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .contact-hero h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+        }
+        .contact-hero p {
+            color: #ccc;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -49,47 +80,53 @@
     <a href="about.html">About</a>
 </nav>
 
+<section class="contact-hero">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>CONTACT <span>AUTOCROSS LLC</span></h1>
+        <p>Get In Touch For Mobile LS Performance, Diagnostics, & Inquiries</p>
+    </div>
+</section>
+
 <main>
     <div class="ls-contact-wrapper">
         <div class="ls-form-header">
-            <h1>Schedule <span>Service</span></h1>
-            <p>Connect with AutoCross LLC for on-site mobile diagnostics, wiring, and custom LS power solutions.</p>
+            <h1>Send Us A <span>Message</span></h1>
+            <p>Fill out the form below and we’ll get back to you as soon as possible.</p>
         </div>
         
-        <form class="ls-contact-form">
+        <form action="#" method="POST">
             <div class="form-row">
                 <div class="ls-form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
                 </div>
-                <div class="ls-form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                </div>
-            </div>
-            
-            <div class="form-row">
                 <div class="ls-form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(909) 000-0000">
-                </div>
-                <div class="ls-form-group">
-                    <label for="subject">Service Type</label>
-                    <select id="subject" name="subject">
-                        <option value="diagnostic">Mobile Diagnostics & Electrical</option>
-                        <option value="ls-build">LS Engine Build / Swap</option>
-                        <option value="valvetrain">Valvetrain / Tuning Upgrade</option>
-                        <option value="general">General Performance Inquiry</option>
-                    </select>
+                    <input type="tel" id="phone" name="phone" required placeholder="909-419-1015">
                 </div>
             </div>
-            
+
             <div class="ls-form-group">
-                <label for="message">Vehicle Details & Project Notes</label>
-                <textarea id="message" name="message" rows="5" placeholder="Year, make, model, and what you need done..." required></textarea>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
             </div>
-            
-            <button type="submit" class="ls-submit-btn">Submit Service Request →</button>
+
+            <div class="ls-form-group">
+                <label for="service">Inquiry Type</label>
+                <select id="service" name="service">
+                    <option value="ls-performance">Mobile LS Performance / Tuning</option>
+                    <option value="diagnostics">Diagnostics</option>
+                    <option value="merchandise">Merchandise & Apparel</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="ls-form-group">
+                <label for="message">Project Details / Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your vehicle, project, or inquiry..."></textarea>
+            </div>
+
+            <button type="submit" class="ls-submit-btn">Send Message →</button>
         </form>
     </div>
 </main>
