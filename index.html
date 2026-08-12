@@ -4,12 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoCross LLC | Mobile LS Performance & Diagnostics</title>
-    <meta name="description" content="Professional mobile automotive diagnostics and custom LS engine performance builds by AutoCross LLC. Built Not Rushed.">
+    <meta name="description" content="Official AutoCross LLC. Mobile LS performance builds, professional diagnostics, custom tuning, apparel, and parts. Built Not Rushed.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-home {
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('index-hero.png') center center / cover no-repeat !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+            padding-bottom: 100px;
+            text-align: center;
+            width: 100%;
+        }
+        .hero-home h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .hero-home h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+        }
+        .hero-home p {
+            color: #ccc;
+            font-weight: 600;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .home-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .home-card {
+            background: #0b0b0b;
+            border: 1px solid #1a1a1a;
+            border-top: 3px solid #ff0033;
+            padding: 40px 30px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+        .home-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .home-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+    </style>
 </head>
 <body>
 
@@ -49,22 +110,33 @@
     <a href="about.html">About</a>
 </nav>
 
-<!-- Home Hero Section -->
-<section class="index-hero.png">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>MOBILE <span>LS PERFORMANCE</span> & DIAGNOSTICS</h1>
-        <p>Built Not Rushed • Expert Diagnostics, Wiring & Custom Engine Builds</p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 25px;">
-            <a href="contact.html" class="btn-primary">Schedule Service →</a>
-            <a href="ls.html" style="display: inline-block; background: transparent; color: #fff; font-family: 'Oswald', sans-serif; text-transform: uppercase; padding: 14px 32px; text-decoration: none; letter-spacing: 1.5px; border: 2px solid #ff0033; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,0,51,0.1)'" onmouseout="this.style.background='transparent'">Explore LS Builds</a>
-        </div>
+<section class="hero-home">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>MOBILE LS PERFORMANCE & <span>DIAGNOSTICS</span></h1>
+        <p>Built Not Rushed • Professional Precision Tuning & Custom Builds</p>
+        <a href="contact.html" class="btn-primary">Book / Inquire Now →</a>
     </div>
 </section>
 
-<main style="padding: 80px 20px;">
-    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-transform: uppercase; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Precision Power & Mobile Expertise</h2>
-        <p style="color: #aaa; font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px;">From advanced on-site electrical diagnostics to full custom LS powerplants and performance upgrades, AutoCross LLC brings professional-grade shop knowledge directly to your location. No shortcuts, just top-tier mechanical execution.</p>
+<main style="padding: 0;">
+    <div class="home-grid">
+        <div class="home-card">
+            <h3>Mobile LS Performance</h3>
+            <p>Specializing in GM LS engine platforms, custom performance builds, upgrades, and expert mobile diagnostics brought right to your location.</p>
+            <a href="ls.html" class="btn-primary">Explore LS Services →</a>
+        </div>
+        
+        <div class="home-card">
+            <h3>Diagnostics First</h3>
+            <p>Advanced diagnostic capabilities to troubleshoot complex electrical, mechanical, and performance issues accurately before turning a wrench.</p>
+            <a href="services.html" class="btn-primary">View All Services →</a>
+        </div>
+
+        <div class="home-card">
+            <h3>Official Apparel & Merch</h3>
+            <p>Rep the brand with high-durability shop tees, hoodies, workwear, and vinyl banners built for the garage and the street.</p>
+            <a href="merchandise.html" class="btn-primary">Shop Merch →</a>
+        </div>
     </div>
 </main>
 
