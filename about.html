@@ -4,50 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | AutoCross LLC</title>
-    <meta name="description" content="Learn about AutoCross LLC, our commitment to mobile diagnostics, and our Built Not Rushed philosophy.">
+    <meta name="description" content="From wrenching on the street at mom's house to professional shops and owning AutoCross LLC. Family owned, Chevy enthusiast, and LS Swap specialists.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-about { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('about-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-about h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-about h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-about p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .about-content { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 40px; max-width: 900px; margin: 0 auto; }
-        .about-content h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 2rem; text-transform: uppercase; margin-bottom: 20px; }
-        .about-content p { color: #aaa; line-height: 1.8; font-size: 1.05rem; margin-bottom: 20px; }
-    </style>
 </head>
 <body>
-<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
+
 <header class="main-header">
-    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+    <div class="container flex-header">
         <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu" style="display: flex; gap: 20px;">
-            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
-            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
-            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
-            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
-            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
-            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
-            <a href="about.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html" class="active">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
     </div>
 </header>
+
 <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -57,29 +48,82 @@
     <a href="contact.html">Contact</a>
     <a href="about.html" class="active">About</a>
 </nav>
-<section class="hero hero-about">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>ABOUT <span>AUTOCROSS LLC</span></h1>
-        <p>Diagnostics First • Uncompromising Craftsmanship</p>
+
+<section class="about-hero">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>BUILT FROM THE <span>STREET UP</span></h1>
+        <p>The Journey, The Passion, and The Grit Behind AutoCross LLC</p>
     </div>
 </section>
-<section style="padding: 70px 20px; background: #080808;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="about-content">
-            <h3>Our Philosophy</h3>
-            <p>At AutoCross LLC, we operate under a simple code: <strong>Built Not Rushed</strong>. We specialize in mobile automotive diagnostics, electrical troubleshooting, and high-performance GM LS engine platforms.</p>
-            <p>Whether you need on-site diagnostic support or custom performance execution, we bring professional dedication, technical expertise, and shop-level precision directly to your project.</p>
+
+<main style="padding: 0;">
+    <div class="story-container">
+        <div class="story-intro">
+            <h2>Our Story</h2>
+            <p>We didn't start in a sterile corporate showroom with endless capital. We started where real car culture is born: on the asphalt, with basic tools, late nights, and an uncompromising drive to figure out how machines work.</p>
+        </div>
+
+        <div class="timeline">
+            <!-- Phase 1 -->
+            <div class="milestone">
+                <span class="milestone-tag">Chapter 1: The Foundation</span>
+                <h3>Wrenching on the Street</h3>
+                <p>Long before AutoCross LLC had a name or a bay, it started right outside on the street at my mom’s house. Working under streetlights, swapping components in the open air, and diagnosing stubborn electrical gremlins taught me resourcefulness. There were no shortcuts—just pure determination to get the job done right.</p>
+                <p>That grit forged our core motto: <strong>Built Not Rushed</strong>.</p>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="milestone">
+                <span class="milestone-tag">Chapter 2: The Pro Shops</span>
+                <h3>Mastering the Craft</h3>
+                <p>Taking that street-level hustle into professional mechanic shops elevated everything. Working day-in and day-out alongside seasoned technicians, mastering advanced diagnostics, and tackling complex modern powertrain architectures refined our technical precision. We learned the ins and outs of what makes factory systems fail—and how to build them bulletproof.</p>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="milestone">
+                <span class="milestone-tag">Chapter 3: Today</span>
+                <h3>AutoCross LLC — Mobile & Performance</h3>
+                <p>Today, AutoCross LLC brings that lifetime of hands-on experience directly to you. Operating as a family-owned and operated mobile shop, we bridge the gap between high-end shop expertise and ultimate convenience. Whether we're bringing a daily driver back to life or unleashing reliable horsepower, our roots stay grounded in honest work and mechanical integrity.</p>
+            </div>
         </div>
     </div>
-</section>
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
-    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+
+    <div class="specialties-section">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.3rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">What Drives Us</h2>
+            <p style="color: #888; max-width: 700px; margin: 0 auto 30px auto;">Rooted in family values, backed by deep automotive passion.</p>
+            
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <h3>LS Swap Specialists</h3>
+                    <p>As true Chevy enthusiasts, GM LS powerplants are in our blood. From clean engine integration and custom wiring harnesses to valvetrain upgrades and reliable performance tunes, we specialize in making LS power function flawlessly.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>All Makes & Models</h3>
+                    <p>While our heartbeat is high-performance GM engineering, our mobile diagnostics and service capabilities cover all makes and models. From complex electrical troubleshooting to routine maintenance, we service it all.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Family Owned & Operated</h3>
+                    <p>We treat every vehicle like it belongs to our own family. Honesty, transparency, and top-tier workmanship are built into every single job we take on—no corporate runaround, just pure dedication.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>909-419-1015</p>
+    <p>&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
+
 <script>
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
+    if (menuToggle && mobileMenu) { 
+        menuToggle.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('active'); 
+        }); 
+    }
 </script>
 </body>
 </html>
