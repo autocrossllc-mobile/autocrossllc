@@ -3,240 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Performance Solutions</title>
-    <!-- Link to your main stylesheet if saved externally, or paste your CSS inside <style> tags below -->
-    <link rel="stylesheet" href="style.css">
+    <title>Contact Us | AutoCross LLC</title>
+    <meta name="description" content="Get in touch with AutoCross LLC for professional mobile automotive diagnostics and custom LS engine performance builds.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Base page layout & resets */
-        * {
-            margin: 0;
-            padding: 0;
+        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
+        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
+        .ticker-item { display: inline-block; padding: 0 30px; }
+        .ticker-item span { color: #ff0033; margin-right: 10px; }
+        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
+        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease; display: none; }
+        .menu-toggle:hover { border-color: #ff0033 !important; box-shadow: 0 0 10px rgba(255, 0, 51, 0.3); }
+
+        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; box-shadow: 0 10px 30px rgba(0,0,0,0.8); padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
+        .mobile-menu.active { display: flex !important; }
+        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; transition: color 0.2s, background 0.2s; }
+        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
+
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        main { flex: 1; padding: 180px 20px 80px 20px; }
+
+        /* LS Performance Contact Form Styles */
+        .ls-contact-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #0b0b0b;
+            border: 1px solid #1a1a1a;
+            border-top: 3px solid #ff0033;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+            border-radius: 4px;
+        }
+
+        .ls-form-header h1 {
+            font-family: 'Oswald', sans-serif;
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .ls-form-header h1 span {
+            color: #ff0033;
+        }
+
+        .ls-form-header p {
+            margin: 0 0 2.5rem 0;
+            color: #999999;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ls-form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+        }
+
+        .ls-contact-wrapper label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cccccc;
+            margin-bottom: 0.5rem;
+        }
+
+        .ls-contact-wrapper input,
+        .ls-contact-wrapper select,
+        .ls-contact-wrapper textarea {
+            background-color: #121212;
+            border: 1px solid #262626;
+            border-radius: 2px;
+            padding: 0.85rem 1rem;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            outline: none;
+            width: 100%;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #0b0b0b;
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Navigation Bar */
-        header {
-            background-color: #121212;
-            border-bottom: 1px solid #222222;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #e53935;
-        }
-
-        /* Icon-only Mobile Menu Toggle Button */
-        #menuToggle {
-            background: none;
-            border: none;
+        .ls-contact-wrapper select {
             cursor: pointer;
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            padding: 5px;
         }
 
-        #menuToggle .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #ffffff;
-            border-radius: 2px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        .ls-contact-wrapper input:focus,
+        .ls-contact-wrapper select:focus,
+        .ls-contact-wrapper textarea:focus {
+            border-color: #ff0033;
+            box-shadow: 0 0 0 2px rgba(255, 0, 51, 0.2);
         }
 
-        /* Dark Mobile Dropdown Menu */
-        #mobileMenu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
+        .ls-submit-btn {
             width: 100%;
-            background-color: #121212;
-            border-bottom: 1px solid #222222;
-            padding: 1.5rem;
-            flex-direction: column;
-            gap: 1rem;
-            z-index: 1000;
-        }
-
-        #mobileMenu.open {
-            display: flex;
-        }
-
-        #mobileMenu a {
-            text-decoration: none;
-            color: #e0e0e0;
+            background-color: #ff0033;
+            color: #ffffff;
+            border: none;
+            border-radius: 2px;
+            padding: 1rem 1.5rem;
+            font-family: 'Oswald', sans-serif;
             font-size: 1.1rem;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #1a1a1a;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 1rem;
         }
 
-        #mobileMenu a:last-child {
-            border-bottom: none;
+        .ls-submit-btn:hover {
+            background-color: #d0002b;
         }
 
-        /* Main Content Container */
-        main {
-            flex: 1;
-            padding: 3rem 1rem;
+        .ls-submit-btn:active {
+            transform: scale(0.98);
         }
 
-        /* Footer */
-        footer {
-            background-color: #121212;
-            border-top: 1px solid #222222;
-            text-align: center;
-            padding: 1.5rem;
-            color: #777777;
-            font-size: 0.85rem;
-        }
-
-        /* Responsive Breakpoints */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            #menuToggle {
-                display: flex;
-            }
+            .desktop-menu { display: none !important; }
+            .menu-toggle { display: block !important; }
+            .form-row { flex-direction: column; gap: 0; }
+            .ls-contact-wrapper { padding: 1.5rem; margin: 0 10px; }
+            .hero-home h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Performance Brand</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="merchandise.html">Merchandise</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <button id="menuToggle" aria-label="Toggle Navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
 
-        <!-- Mobile Navigation Menu -->
-        <nav id="mobileMenu">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="merchandise.html">Merchandise</a>
-            <a href="contact.html">Contact</a>
+<header class="main-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
+        <nav class="desktop-menu" style="display: flex; gap: 20px;">
+            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
+            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
+            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
+            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
+            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
+            <a href="contact.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
+            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
         </nav>
-    </header>
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+    </div>
+</header>
 
-    <!-- Main Contact Section -->
-    <main>
-        <div class="ls-contact-wrapper">
-            <div class="ls-form-header">
-                <h3>Contact Us</h3>
-                <p>Connect with our team for professional service and custom performance solutions.</p>
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="merchandise.html">Merch</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<main>
+    <div class="ls-contact-wrapper">
+        <div class="ls-form-header">
+            <h1>Schedule <span>Service</span></h1>
+            <p>Connect with AutoCross LLC for on-site mobile diagnostics, wiring, and custom LS power solutions.</p>
+        </div>
+        
+        <form class="ls-contact-form">
+            <div class="form-row">
+                <div class="ls-form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="ls-form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
             </div>
             
-            <form class="ls-contact-form">
-                <div class="form-row">
-                    <div class="ls-form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="ls-form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="ls-form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
-                    </div>
-                    <div class="ls-form-group">
-                        <label for="subject">Service / Inquiry Type</label>
-                        <select id="subject" name="subject">
-                            <option value="custom">Custom Build / Performance</option>
-                            <option value="diagnostic">Diagnostics & Tuning</option>
-                            <option value="general">General Inquiry</option>
-                        </select>
-                    </div>
-                </div>
-                
+            <div class="form-row">
                 <div class="ls-form-group">
-                    <label for="message">Project Details / Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us what you're working on..." required></textarea>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(909) 000-0000">
                 </div>
-                
-                <button type="submit" class="ls-submit-btn">Submit Inquiry</button>
-            </form>
-        </div>
-    </main>
+                <div class="ls-form-group">
+                    <label for="subject">Service Type</label>
+                    <select id="subject" name="subject">
+                        <option value="diagnostic">Mobile Diagnostics & Electrical</option>
+                        <option value="ls-build">LS Engine Build / Swap</option>
+                        <option value="valvetrain">Valvetrain / Tuning Upgrade</option>
+                        <option value="general">General Performance Inquiry</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="ls-form-group">
+                <label for="message">Vehicle Details & Project Notes</label>
+                <textarea id="message" name="message" rows="5" placeholder="Year, make, model, and what you need done..." required></textarea>
+            </div>
+            
+            <button type="submit" class="ls-submit-btn">Submit Service Request →</button>
+        </form>
+    </div>
+</main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 All Rights Reserved.</p>
-    </footer>
+<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+</footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-
-            if (menuToggle && mobileMenu) {
-                menuToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('open');
-                });
-            }
-        });
-    </script>
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) { 
+        menuToggle.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('active'); 
+        }); 
+    }
+</script>
 </body>
 </html>
