@@ -30,7 +30,12 @@
         .service-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; transition: all 0.3s ease; }
         .service-card:hover { border-color: #ff0033; box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25); transform: translateY(-4px); }
         .service-card h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 12px; }
-        .service-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+        .service-card h3 a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+        .service-card h3 a:hover { color: #ff0033; }
+        .service-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+        .estimate-box { margin-top: 15px; padding-top: 12px; border-top: 1px solid #222; font-size: 0.88rem; color: #ccc; }
+        .estimate-box strong { color: #ff0033; font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
+        .estimate-box a { color: #ff0033; text-decoration: underline; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -69,16 +74,25 @@
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <div class="services-grid">
             <div class="service-card">
-                <h3>Mobile Diagnostics</h3>
+                <h3><a href="contact.html">Mobile Diagnostics</a></h3>
                 <p>Advanced diagnostic scanning, electrical fault tracing, and sensor checks brought directly to your location.</p>
+                <div class="estimate-box">
+                    <strong>SoCal Estimate:</strong> $125 – $175 call-out & full scan fee (distance-dependent). <a href="contact.html">Book Now</a>
+                </div>
             </div>
             <div class="service-card">
-                <h3>LS Performance Builds</h3>
+                <h3><a href="contact.html">LS Performance Builds</a></h3>
                 <p>Camshaft swaps, valvetrain upgrades, intake manifold installs, and complete engine integration.</p>
+                <div class="estimate-box">
+                    <strong>SoCal Estimate:</strong> Cam swaps starting from $1,200+; Full LS Swaps & Integration starting at $3,500+ labor. <a href="contact.html">Request Quote</a>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Mechanical Repairs</h3>
+                <h3><a href="contact.html">Mechanical Repairs</a></h3>
                 <p>Reliable wrenching and component replacement done right the first time with uncompromising quality standards.</p>
+                <div class="estimate-box">
+                    <strong>SoCal Estimate:</strong> Standard labor averaging $110 – $150/hr depending on repair type (brakes, suspension, etc.). <a href="contact.html">Inquire</a>
+                </div>
             </div>
         </div>
     </div>
