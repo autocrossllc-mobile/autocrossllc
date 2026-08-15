@@ -1,3 +1,6 @@
+Here is the updated `merchandise.html` fully integrated with your new CSS structure from [autocrossllc/styles.css](https://github.com/autocrossllc-mobile/autocrossllc/blob/main/styles.css). This version incorporates the `.product-info` wrapper, category labels, and specification badges (`.product-details`) for a polished, professional finish:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,38 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; letter-spacing: 1px; }
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-merch { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('merchandise-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-merch h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-merch h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-merch p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        
-        /* Site-wide matching grid and card styles */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; transition: all 0.3s ease; }
-        .service-card:hover { border-color: #ff0033; box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25); transform: translateY(-4px); }
-        .service-card h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 12px; }
-        .service-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
-        .service-card a.order-btn { display: inline-block; color: #ff0033; text-decoration: none; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: color 0.2s; }
-        .service-card a.order-btn:hover { color: #fff; }
-        
-        /* Card image wrapper styled to match site aesthetic */
-        .card-img-wrap { width: 100%; height: 210px; overflow: hidden; margin: -30px -30px 20px -30px; border-bottom: 2px solid #ff0033; background: #000; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; }
-        .card-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.3s ease; }
-        .service-card:hover .card-img-wrap img { transform: scale(1.05); }
-    </style>
 </head>
 <body>
 
@@ -56,18 +27,18 @@
 </div>
 
 <header class="main-header">
-    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+    <div class="container flex-header">
         <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu" style="display: flex; gap: 20px;">
-            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
-            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
-            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
-            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
-            <a href="merchandise.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
-            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
-            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merchandise.html" class="active">Merch</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
     </div>
 </header>
 
@@ -81,43 +52,74 @@
     <a href="about.html">About</a>
 </nav>
 
-<section class="hero hero-merch">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+<section class="merchandise-hero">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <h1>APPAREL & <span>MERCHANDISE</span></h1>
         <p>Official AutoCross LLC Gear, Shop Apparel, and Streetwear</p>
     </div>
 </section>
 
-<section style="padding: 70px 20px; background: #080808;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-img-wrap">
-                    <img src="hoodie.png" alt="Shop Tees and Hoodies">
-                </div>
-                <h3>SHOP TEES & HOODIES</h3>
+<main style="padding: 0;">
+    <div class="merch-grid">
+        <!-- Card 1: Tees & Hoodies -->
+        <div class="merch-card">
+            <div class="card-img-wrap">
+                <img src="hoodie.png" alt="Shop Tees and Hoodies">
+            </div>
+            <div class="product-info">
+                <span class="product-category">Apparel</span>
+                <h3>Shop Tees & Hoodies</h3>
                 <p>Built for comfort in the garage or out on the street. High-durability cotton blends featuring our signature AutoCross LLC branding and bold automotive graphics.</p>
-                <a href="contact.html" class="order-btn">INQUIRE / ORDER →</a>
+                <div class="product-details">
+                    <span>100% Ringspun Cotton</span>
+                    <span>Heavyweight</span>
+                    <span>S - 3XL</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
             </div>
-            
-            <div class="service-card">
-                <h3>SHOP WORKWEAR</h3>
+        </div>
+        
+        <!-- Card 2: Workwear -->
+        <div class="merch-card">
+            <div class="card-img-wrap">
+                <img src="workwear.png" alt="Shop Workwear">
+            </div>
+            <div class="product-info">
+                <span class="product-category">Professional Gear</span>
+                <h3>Shop Workwear</h3>
                 <p>Professional grade work shirts and durable shop apparel designed to handle the grease, heat, and hard work of building high-performance engines.</p>
-                <a href="contact.html" class="order-btn">INQUIRE / ORDER →</a>
+                <div class="product-details">
+                    <span>Durable Twill</span>
+                    <span>Stain Resistant</span>
+                    <span>Shop Ready</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
             </div>
+        </div>
 
-            <div class="service-card">
-                <h3>LIMITED DECALS & GEAR</h3>
+        <!-- Card 3: Decals & Gear -->
+        <div class="merch-card">
+            <div class="card-img-wrap">
+                <img src="decals.png" alt="Limited Decals and Gear">
+            </div>
+            <div class="product-info">
+                <span class="product-category">Accessories</span>
+                <h3>Limited Decals & Gear</h3>
                 <p>Rep the brand with official vinyl window banners, die-cut logo stickers, and specialty garage accessories stamped with our core motto: Built Not Rushed.</p>
-                <a href="contact.html" class="order-btn">INQUIRE / ORDER →</a>
+                <div class="product-details">
+                    <span>UV Protected</span>
+                    <span>Vinyl Die-Cut</span>
+                    <span>Weatherproof</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
             </div>
         </div>
     </div>
-</section>
+</main>
 
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
-    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+<footer>
+    <p>909-419-1015</p>
+    <p>&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
 
 <script>
@@ -131,3 +133,5 @@
 </script>
 </body>
 </html>
+
+```
