@@ -11,6 +11,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
+        .flex-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        .desktop-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .desktop-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+        .desktop-menu a:hover,
+        .desktop-menu a.active {
+            color: #ff0033;
+        }
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            display: none;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 35px);
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        .mobile-menu a:hover, 
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
         .hero-home {
             background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('index-hero.png') center center / cover no-repeat !important;
             border-bottom: 3px solid #ff0033;
@@ -48,13 +171,19 @@
             gap: 30px;
         }
         .home-card {
-            background: #0b0b0b;
-            border: 1px solid #1a1a1a;
-            border-top: 3px solid #ff0033;
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
             padding: 40px 30px;
             border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: center;
+            transition: all 0.3s ease;
+        }
+        .home-card:hover {
+            border-color: #ff0033;
+            box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
+            transform: translateY(-4px);
         }
         .home-card h3 {
             font-family: 'Oswald', sans-serif;
@@ -70,30 +199,17 @@
             font-size: 1rem;
             margin-bottom: 25px;
         }
-        /* Mobile Menu Responsive Fixes */
-        .mobile-menu {
-            display: none;
-            background: #0b0b0b;
-            border-bottom: 2px solid #ff0033;
-            flex-direction: column;
-            padding: 20px;
-            width: 100%;
+        footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
         }
-        .mobile-menu.active {
-            display: flex;
-        }
-        .mobile-menu a {
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 0;
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #1a1a1a;
-        }
-        .mobile-menu a.active, 
-        .mobile-menu a:hover {
-            color: #ff0033;
+
+        @media (max-width: 768px) {
+            .desktop-menu { display: none; }
+            .menu-toggle { display: block !important; }
         }
     </style>
 </head>
@@ -121,7 +237,7 @@
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
     </div>
 </header>
 
@@ -143,7 +259,7 @@
     </div>
 </section>
 
-<main style="padding: 0;">
+<main style="padding: 60px 20px; background: #080808;">
     <div class="home-grid">
         <div class="home-card">
             <h3>Mobile LS Performance</h3>
@@ -166,8 +282,8 @@
 </main>
 
 <footer>
-    <p>909-419-1015</p>
-    <p>&copy; 2026 AutoCross LLC • Built Not Rushed</p>
+    <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
+    <p style="font-size: 0.85rem; margin: 0;">&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
 
 <script>
