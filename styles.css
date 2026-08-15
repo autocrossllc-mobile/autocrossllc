@@ -578,3 +578,6 @@ footer p:last-child {
 .service-box h2 a:hover {
   color: #ff3333;
 }
+.card-img-wrap {
+  border-bottom-width: 0px;
+}
