@@ -555,3 +555,26 @@ footer p:last-child {
 .about-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('about-hero.png') center center / cover no-repeat !important;
 }
+.service-box .estimate-tag {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.service-box .estimate-tag a {
+  color: #ff3333;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.service-box h2 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.service-box h2 a:hover {
+  color: #ff3333;
+}
