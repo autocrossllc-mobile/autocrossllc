@@ -1,6 +1,3 @@
-Here is the updated HTML for `merchandise.html` with the image wrappers and image tags added to all three merchandise cards for a uniform layout:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,92 +10,6 @@ Here is the updated HTML for `merchandise.html` with the image wrappers and imag
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .merchandise-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('merchandise-hero.png') center center / cover no-repeat !important;
-            border-bottom: 3px solid #ff0033;
-            padding-top: 180px;
-            padding-bottom: 80px;
-            text-align: center;
-            width: 100%;
-        }
-        .merchandise-hero h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        .merchandise-hero h1 span {
-            color: #ff0033;
-            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
-        }
-        .merchandise-hero p {
-            color: #ccc;
-            font-weight: 500;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .merch-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .merch-card {
-            background: #0b0b0b;
-            border: 1px solid #1a1a1a;
-            border-top: 3px solid #ff0033;
-            padding: 40px 30px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            text-align: center;
-        }
-        .merch-card h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-        .merch-card p {
-            color: #b0b0b0;
-            line-height: 1.7;
-            font-size: 1rem;
-            margin-bottom: 25px;
-        }
-        .card-img-wrap {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            margin: -40px -30px 20px -30px;
-            border-bottom: 2px solid #ff0033;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            box-sizing: border-box;
-        }
-        .card-img-wrap img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-        .merch-card:hover .card-img-wrap img {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 <body>
 
@@ -147,31 +58,58 @@ Here is the updated HTML for `merchandise.html` with the image wrappers and imag
 
 <main style="padding: 0;">
     <div class="merch-grid">
+        <!-- Card 1: Tees & Hoodies -->
         <div class="merch-card">
             <div class="card-img-wrap">
                 <img src="hoodie.png" alt="Shop Tees and Hoodies">
             </div>
-            <h3>Shop Tees & Hoodies</h3>
-            <p>Built for comfort in the garage or out on the street. High-durability cotton blends featuring our signature AutoCross LLC branding and bold automotive graphics.</p>
-            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            <div class="product-info">
+                <span class="product-category">Apparel</span>
+                <h3>Shop Tees & Hoodies</h3>
+                <p>Built for comfort in the garage or out on the street. High-durability cotton blends featuring our signature AutoCross LLC branding and bold automotive graphics.</p>
+                <div class="product-details">
+                    <span>100% Ringspun Cotton</span>
+                    <span>Heavyweight</span>
+                    <span>S - 3XL</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            </div>
         </div>
         
+        <!-- Card 2: Workwear -->
         <div class="merch-card">
             <div class="card-img-wrap">
                 <img src="workwear.png" alt="Shop Workwear">
             </div>
-            <h3>Shop Workwear</h3>
-            <p>Professional grade work shirts and durable shop apparel designed to handle the grease, heat, and hard work of building high-performance engines.</p>
-            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            <div class="product-info">
+                <span class="product-category">Professional Gear</span>
+                <h3>Shop Workwear</h3>
+                <p>Professional grade work shirts and durable shop apparel designed to handle the grease, heat, and hard work of building high-performance engines.</p>
+                <div class="product-details">
+                    <span>Durable Twill</span>
+                    <span>Stain Resistant</span>
+                    <span>Shop Ready</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            </div>
         </div>
 
+        <!-- Card 3: Decals & Gear -->
         <div class="merch-card">
             <div class="card-img-wrap">
                 <img src="decals.png" alt="Limited Decals and Gear">
             </div>
-            <h3>Limited Decals & Gear</h3>
-            <p>Rep the brand with official vinyl window banners, die-cut logo stickers, and specialty garage accessories stamped with our core motto: Built Not Rushed.</p>
-            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            <div class="product-info">
+                <span class="product-category">Accessories</span>
+                <h3>Limited Decals & Gear</h3>
+                <p>Rep the brand with official vinyl window banners, die-cut logo stickers, and specialty garage accessories stamped with our core motto: Built Not Rushed.</p>
+                <div class="product-details">
+                    <span>UV Protected</span>
+                    <span>Vinyl Die-Cut</span>
+                    <span>Weatherproof</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+            </div>
         </div>
     </div>
 </main>
@@ -192,5 +130,3 @@ Here is the updated HTML for `merchandise.html` with the image wrappers and imag
 </script>
 </body>
 </html>
-
-```
