@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Diagnostics | AutoCross LLC</title>
-    <meta name="description" content="Mobile automotive diagnostics, LS performance upgrades, and mechanical services by AutoCross LLC.">
+    <title>Services | AutoCross LLC</title>
+    <meta name="description" content="Professional mobile LS performance, diagnostics, and engine builds by AutoCross LLC in Southern California.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         .ticker-item span { color: #ff0033; margin-right: 10px; }
         @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
         .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; letter-spacing: 1px; }
+        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
         .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
         .mobile-menu.active { display: flex !important; }
         .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
@@ -27,15 +27,12 @@
         .hero-services p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
         body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; transition: all 0.3s ease; }
+        .service-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
         .service-card:hover { border-color: #ff0033; box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25); transform: translateY(-4px); }
-        .service-card h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 12px; }
-        .service-card h3 a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
-        .service-card h3 a:hover { color: #ff0033; }
-        .service-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
-        .estimate-box { margin-top: 15px; padding-top: 12px; border-top: 1px solid #222; font-size: 0.88rem; color: #ccc; }
-        .estimate-box strong { color: #ff0033; font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
-        .estimate-box a { color: #ff0033; text-decoration: underline; font-weight: 500; }
+        .service-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #222; }
+        .service-info { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .service-title { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; }
+        .service-desc { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -66,32 +63,41 @@
 </nav>
 <section class="hero hero-services">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>OUR <span>SERVICES</span></h1>
-        <p>Mobile Diagnostics • LS Performance • Precision Repairs</p>
+        <h1>PROFESSIONAL <span>SERVICES</span></h1>
+        <p>Mobile Diagnostics • LS Performance • On-Site Repairs</p>
     </div>
 </section>
-<section style="padding: 70px 20px; background: #080808;">
+<section style="padding: 60px 20px; background: #080808;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <div class="services-grid">
             <div class="service-card">
-                <h3><a href="contact.html">Mobile Diagnostics</a></h3>
-                <p>Advanced diagnostic scanning, electrical fault tracing, and sensor checks brought directly to your location.</p>
-                <div class="estimate-box">
-                    <strong>SoCal Estimate:</strong> $125 – $175 call-out & full scan fee (distance-dependent). <a href="contact.html">Book Now</a>
+                <img src="service1.png" alt="Mobile Diagnostics" class="service-img">
+                <div class="service-info">
+                    <div>
+                        <h3 class="service-title">Mobile Diagnostics & Troubleshooting</h3>
+                        <p class="service-desc">Advanced electrical diagnostics, sensor testing, and troubleshooting brought directly to your location throughout Southern California.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary" style="text-align: center; display: block;">Book Service →</a>
                 </div>
             </div>
             <div class="service-card">
-                <h3><a href="contact.html">LS Performance Builds</a></h3>
-                <p>Camshaft swaps, valvetrain upgrades, intake manifold installs, and complete engine integration.</p>
-                <div class="estimate-box">
-                    <strong>SoCal Estimate:</strong> Cam swaps starting from $1,200+; Full LS Swaps & Integration starting at $3,500+ labor. <a href="contact.html">Request Quote</a>
+                <img src="service2.png" alt="LS Performance Swaps" class="service-img">
+                <div class="service-info">
+                    <div>
+                        <h3 class="service-title">Gen III/IV LS Engine Swaps</h3>
+                        <p class="service-desc">Complete platform overhauls, custom valvetrain setups, camshaft upgrades, and clean engine bay integrations.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary" style="text-align: center; display: block;">Book Service →</a>
                 </div>
             </div>
             <div class="service-card">
-                <h3><a href="contact.html">Mechanical Repairs</a></h3>
-                <p>Reliable wrenching and component replacement done right the first time with uncompromising quality standards.</p>
-                <div class="estimate-box">
-                    <strong>SoCal Estimate:</strong> Standard labor averaging $110 – $150/hr depending on repair type (brakes, suspension, etc.). <a href="contact.html">Inquire</a>
+                <img src="service3.png" alt="Preventative Maintenance" class="service-img">
+                <div class="service-info">
+                    <div>
+                        <h3 class="service-title">Maintenance & Mechanical Repairs</h3>
+                        <p class="service-desc">Reliable mechanical repairs, component replacements, and routine maintenance handled with precision and care.</p>
+                    </div>
+                    <a href="contact.html" class="btn-primary" style="text-align: center; display: block;">Book Service →</a>
                 </div>
             </div>
         </div>
