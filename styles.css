@@ -637,3 +637,122 @@ footer p:last-child {
     width: calc(100% + 60px);      /* Expands width to cover the negative margins (30px + 30px) */
     box-sizing: border-box;        /* Ensures the 2px border is included inside the 220px height */
 }
+/* ==========================================
+   AUTOCROSS MERCH PRODUCT CARDS
+   ========================================== */
+
+.merch-card {
+    background: #0b0b0b;
+    border: 1px solid #222;
+    border-top: 3px solid #ff0033;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.merch-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff0033;
+    box-shadow: 0 15px 40px rgba(255,0,51,0.15);
+}
+
+.card-img-wrap {
+    width: 100%;
+    height: 360px;
+    margin: 0;
+    overflow: hidden;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ff0033;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.merch-card:hover .card-img-wrap img {
+    transform: scale(1.04);
+}
+
+.product-info {
+    padding: 28px 30px 32px;
+}
+
+.product-category {
+    display: inline-block;
+    color: #ff0033;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.merch-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.merch-card p {
+    color: #aaa;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.product-details span {
+    border: 1px solid #333;
+    background: #111;
+    color: #ccc;
+    padding: 6px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.merch-card .btn-primary {
+    width: 100%;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .merch-grid {
+        grid-template-columns: 1fr;
+        padding: 50px 15px;
+        gap: 25px;
+    }
+
+    .card-img-wrap {
+        height: 320px;
+    }
+
+    .product-info {
+        padding: 25px 20px 28px;
+    }
+
+}
