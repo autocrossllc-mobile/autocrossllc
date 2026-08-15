@@ -108,3 +108,18 @@
 </script>
 </body>
 </html>
+<div class="service-card" style="margin: 40px auto; max-width: 600px;">
+    <h3>Instant Quote Estimator</h3>
+    <p style="margin-bottom: 15px;">Select a service to see estimated baseline pricing for Southern California:</p>
+    
+    <select id="calculatorService" style="width: 100%; padding: 12px; background: #121212; color: #fff; border: 1px solid #333; font-family: 'Inter', sans-serif; margin-bottom: 15px;">
+        <option value="125" data-price="125" data-range="false">Mobile Diagnostic Scan ($125)</option>
+        <option value="1200" data-price="1200" data-range="true">LS Camshaft Swap ($1,200+)</option>
+        <option value="3500" data-price="3500" data-range="true">Full LS Engine Swap & Integration ($3,500+ labor)</option>
+        <option value="130" data-price="130" data-range="false">Standard Mechanical Labor Rate (Per Hour)</option>
+    </select>
+    
+    <div style="font-family: 'Oswald', sans-serif; font-size: 1.2rem; color: #fff; text-transform: uppercase;">
+        Estimated Baseline: <span id="quotePrice" style="color: #ff0033; font-size: 1.5rem;">$125</span>
+    </div>
+</div>
