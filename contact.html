@@ -1,49 +1,19 @@
+Here is your updated **Contact** page file configured with your direct email address (`autocrossllc.services@gmail.com`).
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | AutoCross LLC</title>
-    <meta name="description" content="Get in touch with AutoCross LLC for mobile LS performance, diagnostics, custom builds, and inquiries. Built Not Rushed.">
-    
+    <meta name="description" content="Get in touch with AutoCross LLC for mobile LS performance, diagnostics, and mechanical inquiries in Southern California.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .contact-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('contact-hero.png') center center / cover no-repeat !important;
-            border-bottom: 3px solid #ff0033;
-            padding-top: 180px;
-            padding-bottom: 80px;
-            text-align: center;
-            width: 100%;
-        }
-        .contact-hero h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        .contact-hero h1 span {
-            color: #ff0033;
-            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
-        }
-        .contact-hero p {
-            color: #ccc;
-            font-weight: 500;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
-
 <div class="ticker-wrap">
     <div class="ticker">
         <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
@@ -55,18 +25,18 @@
 </div>
 
 <header class="main-header">
-    <div class="container flex-header">
+    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
         <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="ls.html">LS</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="merchandise.html">Merch</a>
-            <a href="contact.html" class="active">Contact</a>
-            <a href="about.html">About</a>
+        <nav class="desktop-menu" style="display: flex; gap: 20px;">
+            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
+            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
+            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
+            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
+            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
+            <a href="contact.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
+            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
     </div>
 </header>
 
@@ -80,60 +50,57 @@
     <a href="about.html">About</a>
 </nav>
 
-<section class="contact-hero.png">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>CONTACT <span>AUTOCROSS LLC</span></h1>
-        <p>Get In Touch For Mobile LS Performance, Diagnostics, & Inquiries</p>
-    </div>
-</section>
-
 <main>
-    <div class="ls-contact-wrapper">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-family: 'Oswald', sans-serif; font-size: 3rem; text-transform: uppercase; color: #fff; letter-spacing: 2px;">Contact <span style="color: #ff0033;">AutoCross LLC</span></h1>
+        <p style="color: #aaa; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500;">Get In Touch For Mobile LS Performance, Diagnostics, & Inquiries</p>
+    </div>
+
+    <form action="mailto:autocrossllc.services@gmail.com" method="POST" enctype="text/plain" class="ls-contact-wrapper">
         <div class="ls-form-header">
             <h1>Send Us A <span>Message</span></h1>
-            <p>Fill out the form below and we’ll get back to you as soon as possible.</p>
+            <p>Fill out the form below to prep your message directly for email dispatch.</p>
         </div>
-        
-        <form action="#" method="POST">
-            <div class="form-row">
-                <div class="ls-form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                </div>
-                <div class="ls-form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="909-419-1015">
-                </div>
-            </div>
 
+        <div class="form-row">
+            <div class="ls-form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="Name" required placeholder="Enter your name">
+            </div>
+            <div class="ls-form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="Phone" required placeholder="909-419-1015">
+            </div>
+        </div>
+
+        <div class="form-row">
             <div class="ls-form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <input type="email" id="email" name="Email" placeholder="your@email.com">
             </div>
-
             <div class="ls-form-group">
                 <label for="service">Inquiry Type</label>
-                <select id="service" name="service">
-                    <option value="ls-performance">Mobile LS Performance / Tuning</option>
-                    <option value="diagnostics">Diagnostics</option>
-                    <option value="merchandise">Merchandise & Apparel</option>
-                    <option value="general">General Inquiry</option>
+                <select id="service" name="Inquiry_Type">
+                    <option value="Mobile Diagnostics">Mobile Diagnostics</option>
+                    <option value="LS Performance Build">LS Performance Build / Cam Swap</option>
+                    <option value="Mechanical Repair">Mechanical Repair</option>
+                    <option value="General Inquiry">General Inquiry</option>
                 </select>
             </div>
+        </div>
 
-            <div class="ls-form-group">
-                <label for="message">Project Details / Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your vehicle, project, or inquiry..."></textarea>
-            </div>
+        <div class="ls-form-group" style="flex: 1;">
+            <label for="message">Project Details / Message</label>
+            <textarea id="message" name="Message" rows="5" placeholder="Tell us about your vehicle, project, or inquiry..." required></textarea>
+        </div>
 
-            <button type="submit" class="ls-submit-btn">Send Message →</button>
-        </form>
-    </div>
+        <button type="submit" class="ls-submit-btn">Send Message Via Email →</button>
+    </form>
 </main>
 
 <footer>
     <p>909-419-1015</p>
-    <p>&copy; 2026 AutoCross LLC • Built Not Rushed</p>
+    <p>© 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
 
 <script>
@@ -147,3 +114,5 @@
 </script>
 </body>
 </html>
+
+```
