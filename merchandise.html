@@ -1,86 +1,185 @@
-<div class="merch-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise & Apparel | AutoCross LLC</title>
+    <meta name="description" content="Shop official AutoCross LLC gear, high-performance apparel, shop tees, and custom merchandise. Built Not Rushed.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .merchandise-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)), url('merchandise-hero.png') center center / cover no-repeat !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+            padding-bottom: 80px;
+            text-align: center;
+            width: 100%;
+        }
+        .merchandise-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .merchandise-hero h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+        }
+        .merchandise-hero p {
+            color: #ccc;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .merch-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .merch-card {
+            background: #0b0b0b;
+            border: 1px solid #1a1a1a;
+            border-top: 3px solid #ff0033;
+            padding: 40px 30px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+        .merch-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .merch-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+        .card-img-wrap {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            margin: -40px -30px 20px -30px;
+            border-bottom: 2px solid #ff0033;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+        .card-img-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .merch-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
 
-    <!-- HOODIE -->
-    <div class="merch-card">
-        <div class="card-img-wrap">
-            <img src="hoodie.png" alt="AutoCross LLC Official Hoodie">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">OFFICIAL WORKWEAR</span>
-            <h3>AutoCross LLC Performance Hoodie</h3>
-
-            <p>
-                Premium AutoCross LLC hoodie featuring the official logo,
-                LS Swaps • Repairs • Diagnostics branding, and durable
-                mechanic-inspired graphics.
-            </p>
-
-            <div class="product-details">
-                <span>BLACK</span>
-                <span>S–5XL</span>
-                <span>UNISEX</span>
-            </div>
-
-            <a href="contact.html" class="btn-primary">
-                INQUIRE / ORDER →
-            </a>
-        </div>
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
     </div>
-
-    <!-- WORK SHIRT -->
-    <div class="merch-card">
-        <div class="card-img-wrap">
-            <img src="work-shirt.png" alt="AutoCross LLC Mechanic Work Shirt">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">MECHANIC WORKWEAR</span>
-            <h3>AutoCross LLC Work Shirt</h3>
-
-            <p>
-                Professional collared mechanic shirt with AutoCross LLC
-                branding, chest pockets, custom name patch area and
-                durable shop-ready construction.
-            </p>
-
-            <div class="product-details">
-                <span>BLACK</span>
-                <span>S–5XL</span>
-                <span>WORK FIT</span>
-            </div>
-
-            <a href="contact.html" class="btn-primary">
-                INQUIRE / ORDER →
-            </a>
-        </div>
-    </div>
-
-    <!-- T-SHIRT -->
-    <div class="merch-card">
-        <div class="card-img-wrap">
-            <img src="tshirt.png" alt="AutoCross LLC Official T-Shirt">
-        </div>
-
-        <div class="product-info">
-            <span class="product-category">STREETWEAR</span>
-            <h3>AutoCross LLC Shop Tee</h3>
-
-            <p>
-                Official AutoCross LLC shop tee featuring the signature
-                automotive logo and performance-shop graphics.
-            </p>
-
-            <div class="product-details">
-                <span>BLACK</span>
-                <span>S–5XL</span>
-                <span>UNISEX</span>
-            </div>
-
-            <a href="contact.html" class="btn-primary">
-                INQUIRE / ORDER →
-            </a>
-        </div>
-    </div>
-
 </div>
+
+<header class="main-header">
+    <div class="container flex-header">
+        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merchandise.html" class="active">Merch</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+    </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="merchandise.html" class="active">Merch</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<section class="merchandise-hero">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1>APPAREL & <span>MERCHANDISE</span></h1>
+        <p>Official AutoCross LLC Gear, Shop Apparel, and Streetwear</p>
+    </div>
+</section>
+
+<main style="padding: 0;">
+    <div class="merch-grid">
+        <div class="merch-card">
+            <div class="card-img-wrap">
+                <img src="hoodie.png" alt="Shop Tees and Hoodies">
+            </div>
+            <h3>Shop Tees & Hoodies</h3>
+            <p>Built for comfort in the garage or out on the street. High-durability cotton blends featuring our signature AutoCross LLC branding and bold automotive graphics.</p>
+            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+        </div>
+        
+        <div class="merch-card">
+            <h3>Shop Workwear</h3>
+            <p>Professional grade work shirts and durable shop apparel designed to handle the grease, heat, and hard work of building high-performance engines.</p>
+            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+        </div>
+
+        <div class="merch-card">
+            <h3>Limited Decals & Gear</h3>
+            <p>Rep the brand with official vinyl window banners, die-cut logo stickers, and specialty garage accessories stamped with our core motto: Built Not Rushed.</p>
+            <a href="contact.html" class="btn-primary">Inquire / Order →</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>909-419-1015</p>
+    <p>&copy; 2026 AutoCross LLC • Built Not Rushed</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle && mobileMenu) { 
+        menuToggle.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('active'); 
+        }); 
+    }
+</script>
+</body>
+</html>
