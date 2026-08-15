@@ -10,46 +10,230 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-ls { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('ls-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-ls h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-ls h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-ls p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .ls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .ls-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; transition: all 0.3s ease; }
-        .ls-card:hover { border-color: #ff0033; box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25); transform: translateY(-4px); }
-        .ls-card h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 12px; }
-        .ls-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
+        .flex-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        .desktop-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .desktop-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+        .desktop-menu a:hover,
+        .desktop-menu a.active {
+            color: #ff0033;
+        }
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            display: none;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 35px);
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        .mobile-menu a:hover, 
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+        .hero.hero-ls {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('ls-hero.png') center/cover !important;
+            border-bottom: 3px solid #ff0033;
+            padding-top: 180px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+        .hero-ls h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .hero-ls h1 span {
+            color: #ff0033;
+            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+        }
+        .hero-ls p {
+            color: #ccc;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .ls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .ls-card {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .ls-card:hover {
+            border-color: #ff0033;
+            box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
+            transform: translateY(-4px);
+        }
+        .ls-card h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .ls-card p {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .desktop-menu { display: none; }
+            .menu-toggle { display: block !important; }
+            .hero-ls h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
+
 <header class="main-header">
-    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
+    <div class="container flex-header">
         <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu" style="display: flex; gap: 20px;">
-            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
-            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
-            <a href="ls.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
-            <a href="gallery.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
-            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
-            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
-            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html" class="active">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
     </div>
 </header>
+
 <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -59,12 +243,14 @@
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
+
 <section class="hero hero-ls">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <h1>LS ENGINE <span>PLATFORM</span></h1>
         <p>Gen III / IV Powerplants • Valvetrain Upgrades • Custom Swaps</p>
     </div>
 </section>
+
 <section style="padding: 70px 20px; background: #080808;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <div class="ls-grid">
@@ -83,14 +269,20 @@
         </div>
     </div>
 </section>
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+
+<footer>
     <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+    <p style="font-size: 0.85rem; margin: 0;">&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
+
 <script>
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
+    if (menuToggle && mobileMenu) { 
+        menuToggle.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('active'); 
+        }); 
+    }
 </script>
 </body>
 </html>
