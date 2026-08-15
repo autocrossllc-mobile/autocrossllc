@@ -585,3 +585,21 @@ footer p:last-child {
   box-sizing: content-box; /* This will make the total height 222px (220px content + 2px border) */
   height: 220px;
 }
+.card-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  box-sizing: content-box;
+  border-bottom: 2px solid rgb(255, 0, 51);
+}
+
+.card-img-wrap img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
