@@ -174,30 +174,38 @@
             background: #101010;
             border: 1px solid #222;
             border-left: 4px solid #ff0033;
-            padding: 40px 30px;
             border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            text-align: center;
+            overflow: hidden;
             transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         .home-card:hover {
             border-color: #ff0033;
             box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25);
             transform: translateY(-4px);
         }
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #222;
+        }
+        .home-info {
+            padding: 25px;
+        }
         .home-card h3 {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .home-card p {
-            color: #b0b0b0;
-            line-height: 1.7;
-            font-size: 1rem;
-            margin-bottom: 25px;
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
         footer {
             background: #030303;
@@ -262,21 +270,30 @@
 <main style="padding: 60px 20px; background: #080808;">
     <div class="home-grid">
         <div class="home-card">
-            <h3>Mobile LS Performance</h3>
-            <p>Specializing in GM LS engine platforms, custom performance builds, upgrades, and expert mobile diagnostics brought right to your location.</p>
-            <a href="ls.html" class="btn-primary">Explore LS Services →</a>
+            <img src="ls-service.png" alt="Mobile LS Performance" class="card-img">
+            <div class="home-info">
+                <h3>Mobile LS Performance</h3>
+                <p>Specializing in GM LS engine platforms, custom performance builds, upgrades, and expert mobile diagnostics brought right to your location.</p>
+                <a href="ls.html" class="btn-primary">Explore LS Services →</a>
+            </div>
         </div>
         
         <div class="home-card">
-            <h3>Diagnostics First</h3>
-            <p>Advanced diagnostic capabilities to troubleshoot complex electrical, mechanical, and performance issues accurately before turning a wrench.</p>
-            <a href="services.html" class="btn-primary">View All Services →</a>
+            <img src="diagnostics-service.png" alt="Diagnostics First" class="card-img">
+            <div class="home-info">
+                <h3>Diagnostics First</h3>
+                <p>Advanced diagnostic capabilities to troubleshoot complex electrical, mechanical, and performance issues accurately before turning a wrench.</p>
+                <a href="services.html" class="btn-primary">View All Services →</a>
+            </div>
         </div>
 
         <div class="home-card">
-            <h3>Official Apparel & Merch</h3>
-            <p>Rep the brand with high-durability shop tees, hoodies, workwear, and vinyl banners built for the garage and the street.</p>
-            <a href="merchandise.html" class="btn-primary">Shop Merch →</a>
+            <img src="merch-service.png" alt="Official Apparel & Merch" class="card-img">
+            <div class="home-info">
+                <h3>Official Apparel & Merch</h3>
+                <p>Rep the brand with high-durability shop tees, hoodies, workwear, and vinyl banners built for the garage and the street.</p>
+                <a href="merchandise.html" class="btn-primary">Shop Merch →</a>
+            </div>
         </div>
     </div>
 </main>
