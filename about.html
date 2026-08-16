@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | AutoCross LLC</title>
-    <meta name="description" content="From wrenching on the street at mom's house to professional shops and owning AutoCross LLC. Family owned, Chevy enthusiast, and LS Swap specialists.">
+    <meta name="description" content="The journey, passion, and grit behind AutoCross LLC - mobile LS performance and mechanical services in Southern California.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -55,8 +55,6 @@
             backdrop-filter: blur(5px);
             border-bottom: 2px solid #ff0033;
         }
-        
-        /* Grid Header Alignment */
         .flex-header {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -142,35 +140,6 @@
             margin: 0;
             padding: 0;
         }
-        .about-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('about-hero.png') center center / cover no-repeat !important;
-            border-bottom: 3px solid #ff0033;
-            padding-top: 180px;
-            padding-bottom: 80px;
-            text-align: center;
-            width: 100%;
-        }
-        .about-hero h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-        .about-hero h1 span {
-            color: #ff0033;
-            text-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
-        }
-        .about-hero p {
-            color: #ccc;
-            font-weight: 500;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            max-width: 800px;
-            margin: 0 auto;
-        }
         footer {
             background: #030303;
             border-top: 2px solid #1a1a1a;
@@ -178,7 +147,6 @@
             padding: 50px 20px;
             color: #777;
         }
-
         @media (max-width: 768px) {
             .flex-header {
                 display: flex;
@@ -229,65 +197,23 @@
     <a href="about.html" class="active">About</a>
 </nav>
 
-<section class="about-hero">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>BUILT FROM THE <span>STREET UP</span></h1>
-        <p>The Journey, The Passion, and The Grit Behind AutoCross LLC</p>
-    </div>
-</section>
+<!-- Full Page Hero Section with transparent overlay -->
+<header style="min-height: 100vh; background: linear-gradient(rgba(5, 5, 5, 0.25), rgba(5, 5, 5, 0.45)), url('./about-hero.png') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 60px 20px; box-sizing: border-box; border-bottom: 2px solid #ff0033;">
+    <h1 style="font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">Built From The <span style="color: #ff0033;">Street Up</span></h1>
+    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1.1rem; text-shadow: 0 1px 6px rgba(0,0,0,0.9);">The Journey, The Passion, And The Grit Behind AutoCross LLC</p>
+</header>
 
-<main style="padding: 0;">
-    <div class="story-container" style="max-width: 1000px; margin: 0 auto; padding: 60px 20px;">
-        <div class="story-intro" style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-transform: uppercase; color: #fff; margin-bottom: 15px;">Our Story</h2>
-            <p style="color: #aaa; font-size: 1.05rem; line-height: 1.6;">We didn't start in a sterile corporate showroom with endless capital. We started where real car culture is born: on the asphalt, with basic tools, late nights, and an uncompromising drive to figure out how machines work.</p>
-        </div>
+<main style="max-width: 900px; margin: 0 auto; padding: 80px 20px;">
+    <section style="margin-bottom: 60px; text-align: center;">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-transform: uppercase; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Our <span style="color: #ff0033;">Story</span></h2>
+        <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8;">We didn't start in a sterile corporate showroom with endless capital. We started where real car culture is born: on the asphalt, with basic tools, late nights, and an uncompromising drive to figure out how machines work.</p>
+    </section>
 
-        <div class="timeline">
-            <!-- Phase 1 -->
-            <div class="milestone" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px; margin-bottom: 30px;">
-                <span class="milestone-tag" style="color: #ff0033; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Chapter 1: The Foundation</span>
-                <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: #fff; margin: 10px 0 15px 0; text-transform: uppercase;">Wrenching on the Street</h3>
-                <p style="color: #aaa; line-height: 1.6; margin-bottom: 15px;">Long before AutoCross LLC had a name or a bay, it started right outside on the street at my mom’s house. Working under streetlights, swapping components in the open air, and diagnosing stubborn electrical gremlins taught me resourcefulness. There were no shortcuts—just pure determination to get the job done right.</p>
-                <p style="color: #aaa; line-height: 1.6;">That grit forged our core motto: <strong style="color: #fff;">Built Not Rushed</strong>.</p>
-            </div>
-
-            <!-- Phase 2 -->
-            <div class="milestone" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px; margin-bottom: 30px;">
-                <span class="milestone-tag" style="color: #ff0033; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Chapter 2: The Pro Shops</span>
-                <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: #fff; margin: 10px 0 15px 0; text-transform: uppercase;">Mastering the Craft</h3>
-                <p style="color: #aaa; line-height: 1.6;">Taking that street-level hustle into professional mechanic shops elevated everything. Working day-in and day-out alongside seasoned technicians, mastering advanced diagnostics, and tackling complex modern powertrain architectures refined our technical precision. We learned the ins and outs of what makes factory systems fail—and how to build them bulletproof.</p>
-            </div>
-
-            <!-- Phase 3 -->
-            <div class="milestone" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px; margin-bottom: 30px;">
-                <span class="milestone-tag" style="color: #ff0033; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Chapter 3: Today</span>
-                <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: #fff; margin: 10px 0 15px 0; text-transform: uppercase;">AutoCross LLC — Mobile & Performance</h3>
-                <p style="color: #aaa; line-height: 1.6;">Today, AutoCross LLC brings that lifetime of hands-on experience directly to you. Operating as a family-owned and operated mobile shop, we bridge the gap between high-end shop expertise and ultimate convenience. Whether we're bringing a daily driver back to life or unleashing reliable horsepower, our roots stay grounded in honest work and mechanical integrity.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="specialties-section" style="background: #080808; padding: 60px 0; border-top: 1px solid #1a1a1a;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.3rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">What Drives Us</h2>
-            <p style="color: #888; max-width: 700px; margin: 0 auto 40px auto; text-transform: uppercase; letter-spacing: 1px; font-size: 0.95rem;">Rooted in family values, backed by deep automotive passion.</p>
-            
-            <div class="specialties-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; text-align: left;">
-                <div class="specialty-card" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px;">
-                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">LS Swap Specialists</h3>
-                    <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">As true Chevy enthusiasts, GM LS powerplants are in our blood. From clean engine integration and custom wiring harnesses to valvetrain upgrades and reliable performance tunes, we specialize in making LS power function flawlessly.</p>
-                </div>
-                <div class="specialty-card" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px;">
-                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">All Makes & Models</h3>
-                    <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">While our heartbeat is high-performance GM engineering, our mobile diagnostics and service capabilities cover all makes and models. From complex electrical troubleshooting to routine maintenance, we service it all.</p>
-                </div>
-                <div class="specialty-card" style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 30px; border-radius: 4px;">
-                    <h3 style="font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Family Owned & Operated</h3>
-                    <p style="color: #aaa; line-height: 1.6; font-size: 0.95rem;">We treat every vehicle like it belongs to our own family. Honesty, transparency, and top-tier workmanship are built into every single job we take on—no corporate runaround, just pure dedication.</p>
-                </div>
-            </div>
-        </div>
+    <div style="background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; padding: 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px;">
+        <span style="font-family: 'Oswald', sans-serif; color: #ff0033; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Chapter 1: The Foundation</span>
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 2rem; color: #fff; text-transform: uppercase; margin: 10px 0 20px 0;">Wrenching On The Street</h3>
+        <p style="color: #bbb; line-height: 1.8; margin-bottom: 15px;">Long before AutoCross LLC had a name or a bay, it started right outside on the street at my mom’s house. Working under streetlights, swapping components in the open air, and diagnosing stubborn electrical gremlins taught me resourcefulness. There were no shortcuts—just pure determination to get the job done right.</p>
+        <p style="color: #fff; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem; margin: 0;">That grit forged our core motto: <span style="color: #ff0033;">Built Not Rushed.</span></p>
     </div>
 </main>
 
