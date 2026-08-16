@@ -16,8 +16,65 @@
         .ticker-item span { color: #ff0033; margin-right: 10px; }
         @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
         .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; }
-        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
+        
+        /* Grid Header Alignment */
+        .flex-header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        .site-logo {
+            grid-column: 1;
+            justify-self: start;
+        }
+        .desktop-menu {
+            grid-column: 2;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .desktop-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+        .desktop-menu a:hover,
+        .desktop-menu a.active {
+            color: #ff0033;
+        }
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            display: none;
+            justify-self: end;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 35px);
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
         .mobile-menu.active { display: flex !important; }
         .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
         .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
@@ -33,23 +90,38 @@
         .gallery-info { padding: 20px; }
         .gallery-title { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; }
         .gallery-desc { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0; }
+
+        @media (max-width: 768px) {
+            .flex-header {
+                display: flex;
+                justify-content: space-between;
+            }
+            .desktop-menu { display: none; }
+            .menu-toggle { display: block !important; }
+        }
     </style>
 </head>
 <body>
 <div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+
 <header class="main-header">
-    <div class="container flex-header" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 12px 20px;">
-        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
-        <nav class="desktop-menu" style="display: flex; gap: 20px;">
-            <a href="index.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Home</a>
-            <a href="services.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Services</a>
-            <a href="ls.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">LS</a>
-            <a href="gallery.html" class="active" style="color:#ff0033; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Gallery</a>
-            <a href="merchandise.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Merch</a>
-            <a href="contact.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">Contact</a>
-            <a href="about.html" style="color:#fff; text-decoration:none; font-family:'Oswald',sans-serif; text-transform:uppercase;">About</a>
+    <div class="flex-header">
+        <div class="site-logo">
+            <a href="index.html"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a>
+        </div>
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
+    </div>
 </header>
+
 <nav id="mobileMenu" class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -59,12 +131,14 @@
     <a href="contact.html">Contact</a>
     <a href="about.html">About</a>
 </nav>
+
 <section class="hero hero-gallery">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <h1>PROJECT <span>GALLERY</span></h1>
         <p>Custom Builds • Performance Swaps • Clean Execution</p>
     </div>
 </section>
+
 <section style="padding: 60px 20px; background: #080808;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <div class="gallery-grid">
@@ -92,14 +166,20 @@
         </div>
     </div>
 </section>
+
 <footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
     <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
     <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
+
 <script>
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    if (menuToggle && mobileMenu) { menuToggle.addEventListener('click', () => { mobileMenu.classList.toggle('active'); }); }
+    if (menuToggle && mobileMenu) { 
+        menuToggle.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('active'); 
+        }); 
+    }
 </script>
 </body>
 </html>
