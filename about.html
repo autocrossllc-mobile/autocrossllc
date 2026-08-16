@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | AutoCross LLC</title>
     <meta name="description" content="From wrenching on the street at mom's house to professional shops and owning AutoCross LLC. Family owned, Chevy enthusiast, and LS Swap specialists.">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -56,17 +55,25 @@
             backdrop-filter: blur(5px);
             border-bottom: 2px solid #ff0033;
         }
+        
+        /* Grid Header Alignment */
         .flex-header {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 12px 20px;
         }
+        .site-logo {
+            grid-column: 1;
+            justify-self: start;
+        }
         .desktop-menu {
+            grid-column: 2;
             display: flex;
             gap: 20px;
+            justify-content: center;
         }
         .desktop-menu a {
             color: #fff;
@@ -91,6 +98,7 @@
             font-family: 'Oswald', sans-serif !important;
             text-transform: uppercase;
             display: none;
+            justify-self: end;
         }
         .mobile-menu {
             display: none;
@@ -172,6 +180,10 @@
         }
 
         @media (max-width: 768px) {
+            .flex-header {
+                display: flex;
+                justify-content: space-between;
+            }
             .desktop-menu { display: none; }
             .menu-toggle { display: block !important; }
         }
@@ -190,8 +202,10 @@
 </div>
 
 <header class="main-header">
-    <div class="container flex-header">
-        <a href="index.html" class="site-logo"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a> 
+    <div class="flex-header">
+        <div class="site-logo">
+            <a href="index.html"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a>
+        </div>
         <nav class="desktop-menu">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -201,7 +215,8 @@
             <a href="contact.html">Contact</a>
             <a href="about.html" class="active">About</a>
         </nav>
-    
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
+    </div>
 </header>
 
 <nav id="mobileMenu" class="mobile-menu">
