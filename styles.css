@@ -305,3 +305,18 @@ footer {
         padding: 25px 20px 28px;
     }
 }
+.btn-checkout {
+  display: inline-block;
+  background-color: #635bff;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-checkout:hover {
+  background-color: #5147e5;
+}
