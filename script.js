@@ -83,3 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'FETCH_DATA') {
+    fetch(message.url)
+      .then(res => res.json())
+      .then(data => sendResponse({ success: true, data }))
+      .catch(err => sendResponse({ success: false, error: err.message }));
+    
+    return true; // Keeps the message channel open for the async fetch
+  }
+  // If not returning true here, the channel closes immediately.
+});
