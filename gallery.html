@@ -4,20 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery | AutoCross LLC</title>
-    <meta name="description" content="Explore custom LS engine builds, mobile diagnostics, and project cars by AutoCross LLC.">
+    <meta name="description" content="Explore the project gallery of AutoCross LLC showcasing custom LS performance swaps, AWD/RWD builds, diagnostics, and mobile service work in Southern California.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        
-        /* Grid Header Alignment */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
         .flex-header {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -75,22 +112,134 @@
             align-items: center;
             gap: 15px;
         }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-gallery { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('gallery-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-gallery h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-gallery h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-gallery p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .gallery-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; overflow: hidden; transition: all 0.3s ease; }
-        .gallery-card:hover { border-color: #ff0033; box-shadow: 0 8px 25px rgba(255, 0, 51, 0.25); transform: translateY(-4px); }
-        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #222; }
-        .gallery-info { padding: 20px; }
-        .gallery-title { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 8px; }
-        .gallery-desc { color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0; }
-
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        .mobile-menu a:hover, 
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Gallery Filter Tabs */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 20px 30px 20px;
+        }
+        .filter-btn {
+            background: #101010;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 10px 22px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ff0033;
+            color: #fff;
+            border-color: #ff0033;
+        }
+        /* Gallery Grid Layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+        .gallery-item {
+            background: #101010;
+            border: 1px solid #222;
+            border-bottom: 3px solid #ff0033;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 51, 0.2);
+        }
+        .gallery-img-wrap {
+            width: 100%;
+            height: 220px;
+            background: #181818;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+        }
+        .gallery-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-img-wrap img {
+            transform: scale(1.05);
+        }
+        .gallery-content {
+            padding: 20px;
+        }
+        .gallery-tag {
+            font-family: 'Oswald', sans-serif;
+            color: #ff0033;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+        .gallery-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .gallery-desc {
+            font-size: 0.9rem;
+            color: #aaa;
+            line-height: 1.6;
+            margin: 0;
+        }
+        footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+        }
         @media (max-width: 768px) {
             .flex-header {
                 display: flex;
@@ -102,7 +251,16 @@
     </style>
 </head>
 <body>
-<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> DIAGNOSTICS FIRST</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
 
 <header class="main-header">
     <div class="flex-header">
@@ -132,47 +290,148 @@
     <a href="about.html">About</a>
 </nav>
 
-<section class="hero hero-gallery">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>PROJECT <span>GALLERY</span></h1>
-        <p>Custom Builds • Performance Swaps • Clean Execution</p>
-    </div>
-</section>
+<!-- Hero Section -->
+<header style="background: linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.7)), url('./gallery-hero.png') center/cover no-repeat; padding: 160px 20px 60px 20px; text-align: center; border-bottom: 2px solid #ff0033;">
+    <h1 style="font-family: 'Oswald', sans-serif; font-size: 3rem; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">Project <span style="color: #ff0033;">Gallery</span></h1>
+    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Custom Builds • Performance Swaps • Clean Execution</p>
+</header>
 
-<section style="padding: 60px 20px; background: #080808;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="gallery-grid">
-            <div class="gallery-card">
-                <img src="gallery.png" alt="LS Engine Build" class="gallery-img">
-                <div class="gallery-info">
-                    <h3 class="gallery-title">Gen III/IV LS Powerplants</h3>
-                    <p class="gallery-desc">Precision valvetrain upgrades, custom camshaft setups, and clean engine bay integration.</p>
-                </div>
+<!-- Category Filter Tabs -->
+<div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    <button class="filter-btn" data-filter="ls-swaps">LS Swaps & Powerplants</button>
+    <button class="filter-btn" data-filter="diagnostics">Diagnostics & Wiring</button>
+    <button class="filter-btn" data-filter="mobile">On-Site & Mobile Service</button>
+    <button class="filter-btn" data-filter="body-mods">Body & Custom Mods</button>
+</div>
+
+<main>
+    <div class="gallery-grid" id="galleryGrid">
+
+        <!-- LS Swaps & Powerplants Items -->
+        <div class="gallery-item ls-swaps">
+            <div class="gallery-img-wrap">
+                <img src="./ls-camaro-3rd.png" alt="3rd Gen Camaro LS Swap" onerror="this.src='./official-logo.png'">
             </div>
-            <div class="gallery-card">
-                <img src="gallery2.png" alt="Custom Wiring & Diagnostics" class="gallery-img">
-                <div class="gallery-info">
-                    <h3 class="gallery-title">Diagnostics & Wiring</h3>
-                    <p class="gallery-desc">Harness tucking, sensor troubleshooting, and computer diagnostics done right the first time.</p>
-                </div>
-            </div>
-            <div class="gallery-card">
-                <img src="gallery3.png" alt="Mobile Service Setup" class="gallery-img">
-                <div class="gallery-info">
-                    <h3 class="gallery-title">On-Site Support</h3>
-                    <p class="gallery-desc">Fully equipped mobile service bringing shop-level capability directly to your driveway.</p>
-                </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">LS Swaps & Powerplants</span>
+                <h3 class="gallery-title">3rd Gen Camaro LS3 Swap</h3>
+                <p class="gallery-desc">Clean engine bay integration, custom mounts, and meticulous wiring harness tucking for classic F-body performance.</p>
             </div>
         </div>
-    </div>
-</section>
 
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+        <div class="gallery-item ls-swaps">
+            <div class="gallery-img-wrap">
+                <img src="./turbo-lm7.png" alt="Turbo LM7 5.3 Cast Iron" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">LS Swaps & Powerplants</span>
+                <h3 class="gallery-title">Turbocharged 5.3L LM7 Build</h3>
+                <p class="gallery-desc">Bulletproof cast iron block paired with precision turbocharging for maximum boost and reliable street horsepower.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item ls-swaps">
+            <div class="gallery-img-wrap">
+                <img src="./silverado-awd.png" alt="Silverado AWD LS Swap" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">LS Swaps & Powerplants</span>
+                <h3 class="gallery-title">Chevy Silverado AWD LS Setup</h3>
+                <p class="gallery-desc">All-wheel drive traction meets high-output LS power, built for flawless hookup and everyday drivability.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item ls-swaps">
+            <div class="gallery-img-wrap">
+                <img src="./camaro-4th-5th.png" alt="4th and 5th Gen Camaros" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">LS Swaps & Powerplants</span>
+                <h3 class="gallery-title">4th & 5th Gen Camaro Cam & Valvetrain</h3>
+                <p class="gallery-desc">Precision valvetrain upgrades, custom camshaft setups, and dyno tuning for aggressive idle and top-end pull.</p>
+            </div>
+        </div>
+
+        <!-- Diagnostics & Wiring Items -->
+        <div class="gallery-item diagnostics">
+            <div class="gallery-img-wrap">
+                <img src="./diag-scan.png" alt="Advanced Computer Diagnostics" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">Diagnostics & Wiring</span>
+                <h3 class="gallery-title">Advanced Computer Diagnostics</h3>
+                <p class="gallery-desc">OE-level live data scanning, sensor troubleshooting, and module re-flashing to eliminate stubborn electrical gremlins.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item diagnostics">
+            <div class="gallery-img-wrap">
+                <img src="./harness-tuck.png" alt="Custom Wiring Harness Tucking" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">Diagnostics & Wiring</span>
+                <h3 class="gallery-title">Custom Harness Tucking & Repair</h3>
+                <p class="gallery-desc">Military-spec wire loom, solder connections, and hidden routing for a show-ready, trouble-free engine bay.</p>
+            </div>
+        </div>
+
+        <!-- On-Site & Mobile Service Items -->
+        <div class="gallery-item mobile">
+            <div class="gallery-img-wrap">
+                <img src="./mobile-truck.png" alt="Mobile Service Truck in Action" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">On-Site & Mobile Service</span>
+                <h3 class="gallery-title">Fully Equipped Mobile Unit</h3>
+                <p class="gallery-desc">Bringing shop-level diagnostic gear, professional tools, and expert mechanic services directly to your driveway.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item mobile">
+            <div class="gallery-img-wrap">
+                <img src="./mobile-repair.png" alt="On-Site Driveway Repair" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">On-Site & Mobile Service</span>
+                <h3 class="gallery-title">On-Site Southern California Repairs</h3>
+                <p class="gallery-desc">Reliable mobile troubleshooting and mechanical repairs performed on-location across the Inland Empire and surrounding areas.</p>
+            </div>
+        </div>
+
+        <!-- Body & Custom Mods Items -->
+        <div class="gallery-item body-mods">
+            <div class="gallery-img-wrap">
+                <img src="./body-mod-1.png" alt="Custom Fabrication & Bodywork" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">Body & Custom Mods</span>
+                <h3 class="gallery-title">Custom Fabrication & Styling</h3>
+                <p class="gallery-desc">Tailored body modifications, aero execution, and custom fitment to ensure your vehicle looks as mean as it runs.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item body-mods">
+            <div class="gallery-img-wrap">
+                <img src="./el-camino-monte.png" alt="El Camino & Monte Carlo Restomod" onerror="this.src='./official-logo.png'">
+            </div>
+            <div class="gallery-content">
+                <span class="gallery-tag">Body & Custom Mods</span>
+                <h3 class="gallery-title">El Camino & Monte Carlo Restomod</h3>
+                <p class="gallery-desc">Restoring classic Chevy lines with modern drivetrain reliability and clean body panel alignment.</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
     <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">© 2026 AutoCross LLC • Built Not Rushed</p>
+    <p style="font-size: 0.85rem; margin: 0;">&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
 
 <script>
+    // Mobile Navigation Toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuToggle && mobileMenu) { 
@@ -180,6 +439,27 @@
             mobileMenu.classList.toggle('active'); 
         }); 
     }
+
+    // Gallery Category Filtering Tabs
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 </script>
 </body>
 </html>
