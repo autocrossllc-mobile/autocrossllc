@@ -140,13 +140,20 @@
             margin: 0;
             padding: 0;
         }
-        /* Hero Section with dark gradient overlay for text legibility over about-hero.png */
+        /* Full-Screen Hero Section with about-hero.png and gradient overlay */
         .hero-about {
             position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('./about-hero.png') center/cover no-repeat;
-            padding: 180px 20px 80px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             border-bottom: 3px solid #ff0033;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
         .hero-about h1 {
             font-family: 'Oswald', sans-serif;
@@ -305,9 +312,9 @@
     <a href="about.html" class="active">About</a>
 </nav>
 
-<!-- Hero Section with Background and Transparent Overlay for Legibility -->
+<!-- Full-Screen Hero Section with Background and Transparent Overlay for Legibility -->
 <section class="hero-about">
-    <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="max-width: 1200px; width: 100%;">
         <h1>Built From The <span>Street Up</span></h1>
         <p>Family Legacy, Professional Craftsmanship, and Uncompromising LS Performance in Southern California</p>
     </div>
