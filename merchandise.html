@@ -4,42 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Merchandise | AutoCross LLC</title>
-    <meta name="description" content="Shop official AutoCross LLC gear, high-performance apparel, shop tees, and custom merchandise. Built Not Rushed.">
+    <meta name="description" content="Shop official AutoCross LLC gear, high-performance apparel, workwear, hats, and custom merchandise. Built Not Rushed.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .ticker-wrap { position: absolute; top: 0; width: 100%; overflow: hidden; background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid rgba(255, 0, 51, 0.3); white-space: nowrap; z-index: 1001; height: 35px; display: flex; align-items: center; }
-        .ticker { display: inline-block; animation: ticker 25s linear infinite; padding-left: 100%; font-family: 'Oswald', sans-serif; font-size: 0.9rem; color: #fff; letter-spacing: 2px; text-transform: uppercase; }
-        .ticker-item { display: inline-block; padding: 0 30px; }
-        .ticker-item span { color: #ff0033; margin-right: 10px; }
-        @keyframes ticker { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
-        .main-header { position: absolute; top: 35px; left: 0; width: 100%; z-index: 1000; background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(5px); border-bottom: 2px solid #ff0033; }
-        .menu-toggle { background: #111 !important; border: 1px solid #333 !important; border-left: 3px solid #ff0033 !important; color: #fff !important; cursor: pointer; padding: 8px 14px !important; font-size: 18px !important; font-family: 'Oswald', sans-serif !important; text-transform: uppercase; display: none; }
-        .mobile-menu { display: none; position: absolute; top: calc(100% + 35px); left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); border-bottom: 3px solid #ff0033; padding: 20px 0; z-index: 999; flex-direction: column; align-items: center; gap: 15px; }
-        .mobile-menu.active { display: flex !important; }
-        .mobile-menu a { color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.2rem; letter-spacing: 2px; display: block; width: 100%; text-align: center; padding: 10px; }
-        .mobile-menu a:hover, .mobile-menu a.active { color: #ff0033 !important; background: rgba(255, 0, 51, 0.05); border-left: 4px solid #ff0033; border-right: 4px solid #ff0033; }
-        .hero.hero-merch { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('merchandise-hero.png') center/cover !important; border-bottom: 3px solid #ff0033; padding-top: 180px; padding-bottom: 80px; text-align: center; }
-        .hero-merch h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; margin-bottom: 15px; }
-        .hero-merch h1 span { color: #ff0033; text-shadow: 0 0 25px rgba(255, 0, 51, 0.6); }
-        .hero-merch p { color: #ccc; font-weight: 600; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        body { background-color: #050505; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-        .merch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .merch-card { background: #101010; border: 1px solid #222; border-left: 4px solid #ff0033; border-radius: 4px; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
-        .merch-card:hover { border-color: #ff0033; box-shadow: 0 15px 40px rgba(255, 0, 51, 0.2); transform: translateY(-5px); }
-        .card-img-wrap { width: 100%; height: 320px; background: #050505; overflow: hidden; display: flex; align-items: center; justify-content: center; border-bottom: 2px solid #ff0033; }
-        .card-img-wrap img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.35s ease; }
-        .merch-card:hover .card-img-wrap img { transform: scale(1.04); }
-        .product-info { padding: 25px 25px 30px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
-        .product-category { display: inline-block; color: #ff0033; font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-        .merch-card h3 { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-        .merch-card p { color: #aaa; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
-        .product-details { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
-        .product-details span { border: 1px solid #333; background: #111; color: #ccc; padding: 6px 12px; font-family: 'Oswald', sans-serif; font-size: 0.75rem; letter-spacing: 1px; }
-
-        /* Grid Header Alignment */
+        .ticker-wrap {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(255, 0, 51, 0.3);
+            white-space: nowrap;
+            z-index: 1001;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+            padding-left: 100%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .ticker-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        .ticker-item span {
+            color: #ff0033;
+            margin-right: 10px;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .main-header {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid #ff0033;
+        }
         .flex-header {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
@@ -58,22 +73,249 @@
             gap: 20px;
             justify-content: center;
         }
+        .desktop-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+        }
+        .desktop-menu a:hover,
+        .desktop-menu a.active {
+            color: #ff0033;
+        }
+        .menu-toggle {
+            background: #111 !important;
+            border: 1px solid #333 !important;
+            border-left: 3px solid #ff0033 !important;
+            color: #fff !important;
+            cursor: pointer;
+            padding: 8px 14px !important;
+            font-size: 18px !important;
+            font-family: 'Oswald', sans-serif !important;
+            text-transform: uppercase;
+            display: none;
+            justify-self: end;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 35px);
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            border-bottom: 3px solid #ff0033;
+            padding: 20px 0;
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .mobile-menu.active {
+            display: flex !important;
+        }
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+        .mobile-menu a:hover, 
+        .mobile-menu a.active {
+            color: #ff0033 !important;
+            background: rgba(255, 0, 51, 0.05);
+            border-left: 4px solid #ff0033;
+            border-right: 4px solid #ff0033;
+        }
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Merch Category Tabs */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 20px 30px 20px;
+        }
+        .filter-btn {
+            background: #101010;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 12px 20px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ff0033;
+            color: #fff;
+            border-color: #ff0033;
+            box-shadow: 0 4px 15px rgba(255, 0, 51, 0.3);
+        }
+        /* Tab Panes */
+        .tab-pane {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        /* Merchandise Grid Layout */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .merch-item {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            border-bottom: 3px solid #ff0033;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .merch-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 51, 0.2);
+        }
+        .merch-media-wrap {
+            width: 100%;
+            height: 260px;
+            background: #181818;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #222;
+        }
+        .merch-media-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .merch-item:hover .merch-media-wrap img {
+            transform: scale(1.04);
+        }
+        .merch-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .merch-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .merch-tag {
+            font-family: 'Oswald', sans-serif;
+            color: #ff0033;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+        }
+        .merch-price {
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+        .merch-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+        .merch-desc {
+            font-size: 0.9rem;
+            color: #aaa;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+        .merch-specs {
+            font-size: 0.8rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .buy-btn {
+            background: #ff0033;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+        .buy-btn:hover {
+            background: #d6002b;
+            box-shadow: 0 4px 15px rgba(255, 0, 51, 0.4);
+        }
+        footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+        }
         @media (max-width: 768px) {
             .flex-header {
                 display: flex;
                 justify-content: space-between;
             }
-            .desktop-menu {
-                display: none;
-            }
-            .menu-toggle {
-                display: block !important;
-            }
+            .desktop-menu { display: none; }
+            .menu-toggle { display: block !important; }
         }
     </style>
 </head>
 <body>
-<div class="ticker-wrap"><div class="ticker"><div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div><div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div><div class="ticker-item"><span>&#9632;</span> OFFICIAL GEAR & APPAREL</div><div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div><div class="ticker-item"><span>&#9632;</span> 909-419-1015</div></div></div>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> OFFICIAL MERCHANDISE</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
+        <div class="ticker-item"><span>&#9632;</span> WORLDWIDE SHIPPING</div>
+        <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
+    </div>
+</div>
 
 <header class="main-header">
     <div class="flex-header">
@@ -89,7 +331,7 @@
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
         </nav>
-        <button id="menuToggle" class="menu-toggle">MENU &#9776;</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
     </div>
 </header>
 
@@ -103,107 +345,193 @@
     <a href="about.html">About</a>
 </nav>
 
-<section class="hero hero-merch">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1>OFFICIAL <span>MERCHANDISE</span></h1>
-        <p>High-Performance Workwear • Shop Gear • Built Not Rushed</p>
-    </div>
-</section>
+<!-- Hero Section -->
+<header style="background: linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.7)), url('./merchandise-hero.png') center/cover no-repeat; padding: 160px 20px 60px 20px; text-align: center; border-bottom: 2px solid #ff0033;">
+    <h1 style="font-family: 'Oswald', sans-serif; font-size: 3rem; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">Official <span style="color: #ff0033;">Merchandise</span></h1>
+    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Apparel • Workwear • Hats & Beanies • Decals & Accessories</p>
+</header>
 
-<section style="padding: 60px 20px; background: #080808;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+<!-- 4 Category Tabs -->
+<div class="filter-container">
+    <button class="filter-btn active" data-tab="hoodies-shirts">Hoodies & Shirts</button>
+    <button class="filter-btn" data-tab="workwear">Workwear & High-Vis</button>
+    <button class="filter-btn" data-tab="hats">Hats & Beanies</button>
+    <button class="filter-btn" data-tab="accessories">Decals & Accessories</button>
+</div>
+
+<main>
+    <!-- TAB 1: HOODIES & SHIRTS -->
+    <div id="hoodies-shirts" class="tab-pane active">
         <div class="merch-grid">
-
-            <!-- Product 1: Classic Logo Tee -->
-            <div class="merch-card">
-                <div class="card-img-wrap">
+            <div class="merch-item">
+                <div class="merch-media-wrap">
                     <img src="./shirt-logo.png" alt="AutoCross Classic Logo Tee" onerror="this.src='./official-logo.png'">
                 </div>
-                <div class="product-info">
+                <div class="merch-content">
                     <div>
-                        <span class="product-category">Apparel</span>
-                        <h3>AutoCross Classic Logo Tee</h3>
-                        <p>Heavyweight cotton-blend tee featuring the official AutoCross LLC chest logo. Built tough for the shop or everyday wear.</p>
-                        <div class="product-details">
-                            <span>S - 3XL</span>
-                            <span>Black / Red</span>
-                            <span>$28.00</span>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Apparel</span>
+                            <span class="merch-price">$28.00</span>
                         </div>
+                        <h3 class="merch-title">AutoCross Classic Logo Tee</h3>
+                        <p class="merch-desc">Heavyweight cotton-blend tee featuring the official AutoCross LLC chest logo. Built tough for the shop or everyday wear.</p>
+                        <div class="merch-specs">Sizes: S - 3XL • Black / Red</div>
                     </div>
-                    <a href="https://buy.stripe.com/sample_link_tee" class="btn-checkout" target="_blank" rel="noopener">Buy Now</a>
+                    <a href="https://buy.stripe.com/sample_link_tee" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
                 </div>
             </div>
 
-            <!-- Product 2: High-Vis Work Shirt -->
-            <div class="merch-card">
-                <div class="card-img-wrap">
-                    <img src="./hivis-shirt.png" alt="High-Vis Pro Work Shirt" onerror="this.src='./official-logo.png'">
-                </div>
-                <div class="product-info">
-                    <div>
-                        <span class="product-category">Workwear</span>
-                        <h3>High-Vis Pro Work Shirt</h3>
-                        <p>Designed for mobile technicians and shop work. Breathable, durable, and engineered with high-visibility safety accents.</p>
-                        <div class="product-details">
-                            <span>M - 4XL</span>
-                            <span>Safety Rated</span>
-                            <span>$45.00</span>
-                        </div>
-                    </div>
-                    <a href="https://buy.stripe.com/sample_link_hivis" class="btn-checkout" target="_blank" rel="noopener">Buy Now</a>
-                </div>
-            </div>
-
-            <!-- Product 3: LS Powered Hoodie -->
-            <div class="merch-card">
-                <div class="card-img-wrap">
+            <div class="merch-item">
+                <div class="merch-media-wrap">
                     <img src="./hoodie-ls.png" alt="LS Powered Fleece Hoodie" onerror="this.src='./official-logo.png'">
                 </div>
-                <div class="product-info">
+                <div class="merch-content">
                     <div>
-                        <span class="product-category">Outerwear</span>
-                        <h3>LS Powered Fleece Hoodie</h3>
-                        <p>Warm, thick-knit pullover hoodie celebrating cast iron LS performance builds, turbocharging, and late-night garage sessions.</p>
-                        <div class="product-details">
-                            <span>S - 3XL</span>
-                            <span>Charcoal</span>
-                            <span>$55.00</span>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Outerwear</span>
+                            <span class="merch-price">$55.00</span>
                         </div>
+                        <h3 class="merch-title">LS Powered Fleece Hoodie</h3>
+                        <p class="merch-desc">Warm, thick-knit pullover hoodie celebrating cast iron LS performance builds, turbocharging, and late-night garage sessions.</p>
+                        <div class="merch-specs">Sizes: S - 3XL • Charcoal</div>
                     </div>
-                    <a href="https://buy.stripe.com/sample_link_hoodie" class="btn-checkout" target="_blank" rel="noopener">Buy Now</a>
+                    <a href="https://buy.stripe.com/sample_link_hoodie" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
                 </div>
             </div>
-
-            <!-- Product 4: Vinyl Decal Pack -->
-            <div class="merch-card">
-                <div class="card-img-wrap">
-                    <img src="./decal-pack.png" alt="Official Vinyl Decal Pack" onerror="this.src='./official-logo.png'">
-                </div>
-                <div class="product-info">
-                    <div>
-                        <span class="product-category">Accessories</span>
-                        <h3>Official Vinyl Decal Pack</h3>
-                        <p>Weather-resistant die-cut vinyl stickers featuring the AutoCross LLC crest and "Built Not Rushed" badge for toolboxes and windows.</p>
-                        <div class="product-details">
-                            <span>3-Pack</span>
-                            <span>UV Resistant</span>
-                            <span>$15.00</span>
-                        </div>
-                    </div>
-                    <a href="https://buy.stripe.com/sample_link_decals" class="btn-checkout" target="_blank" rel="noopener">Buy Now</a>
-                </div>
-            </div>
-
         </div>
     </div>
-</section>
 
-<footer style="background: #030303; border-top: 2px solid #1a1a1a; text-align: center; padding: 50px 20px; color: #777;">
+    <!-- TAB 2: WORKWEAR & HIGH-VIS -->
+    <div id="workwear" class="tab-pane">
+        <div class="merch-grid">
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./hivis-shirt.png" alt="High-Vis Pro Work Shirt" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Workwear</span>
+                            <span class="merch-price">$45.00</span>
+                        </div>
+                        <h3 class="merch-title">High-Vis Pro Work Shirt</h3>
+                        <p class="merch-desc">Designed for mobile technicians and shop work. Breathable, durable, and engineered with high-visibility safety accents.</p>
+                        <div class="merch-specs">Sizes: M - 4XL • Safety Rated</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_hivis" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./merch-jacket.png" alt="Pro Mechanic Utility Jacket" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Workwear</span>
+                            <span class="merch-price">$85.00</span>
+                        </div>
+                        <h3 class="merch-title">Pro Mechanic Utility Jacket</h3>
+                        <p class="merch-desc">Rugged, oil-resistant canvas work jacket designed for heavy-duty shop environments and mobile service calls.</p>
+                        <div class="merch-specs">Sizes: M - 3XL • Black</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_jacket" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 3: HATS & BEANIES -->
+    <div id="hats" class="tab-pane">
+        <div class="merch-grid">
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./merch-snapback.png" alt="Structured Snapback Cap" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Headwear</span>
+                            <span class="merch-price">$32.00</span>
+                        </div>
+                        <h3 class="merch-title">Structured Snapback Cap</h3>
+                        <p class="merch-desc">Structured flat-bill snapback featuring high-definition embroidered AutoCross LLC crest patch.</p>
+                        <div class="merch-specs">Adjustable • Black / Red</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_snapback" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./merch-beanie.png" alt="Woven Shop Beanie" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Headwear</span>
+                            <span class="merch-price">$24.00</span>
+                        </div>
+                        <h3 class="merch-title">Woven Shop Beanie</h3>
+                        <p class="merch-desc">Warm ribbed knit beanie with woven AutoCross LLC front label tag for early morning mobile service runs.</p>
+                        <div class="merch-specs">One Size • Charcoal / Black</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_beanie" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 4: DECALS & ACCESSORIES -->
+    <div id="accessories" class="tab-pane">
+        <div class="merch-grid">
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./decal-pack.png" alt="Official Vinyl Decal Pack" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Accessories</span>
+                            <span class="merch-price">$15.00</span>
+                        </div>
+                        <h3 class="merch-title">Official Vinyl Decal Pack</h3>
+                        <p class="merch-desc">Weather-resistant die-cut vinyl stickers featuring the AutoCross LLC crest and "Built Not Rushed" badge for toolboxes and windows.</p>
+                        <div class="merch-specs">3-Pack • UV Resistant</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_decals" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="merch-item">
+                <div class="merch-media-wrap">
+                    <img src="./merch-lanyard.png" alt="Key Tag & Lanyard Combo" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="merch-content">
+                    <div>
+                        <div class="merch-meta">
+                            <span class="merch-tag">Accessories</span>
+                            <span class="merch-price">$18.00</span>
+                        </div>
+                        <h3 class="merch-title">Key Tag & Lanyard Combo</h3>
+                        <p class="merch-desc">Durable heavy-duty woven keychain lanyard and embroidered tactical morale patch set.</p>
+                        <div class="merch-specs">Combo Set • Red / Black</div>
+                    </div>
+                    <a href="https://buy.stripe.com/sample_link_lanyard" class="buy-btn" target="_blank" rel="noopener">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
     <p style="color: #fff; font-weight: 600; font-size: 1.1rem; margin-bottom: 5px;">909-419-1015</p>
-    <p style="font-size: 0.85rem;">&copy; 2026 AutoCross LLC • Built Not Rushed</p>
+    <p style="font-size: 0.85rem; margin: 0;">&copy; 2026 AutoCross LLC • Built Not Rushed</p>
 </footer>
 
 <script>
+    // Mobile Navigation Toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuToggle && mobileMenu) { 
@@ -211,6 +539,27 @@
             mobileMenu.classList.toggle('active'); 
         }); 
     }
+
+    // Tab Switcher Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const targetTab = btn.getAttribute('data-tab');
+
+            tabPanes.forEach(pane => {
+                if (pane.id === targetTab) {
+                    pane.classList.add('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+        });
+    });
 </script>
 </body>
 </html>
