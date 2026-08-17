@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery | AutoCross LLC</title>
-    <meta name="description" content="Explore the project gallery of AutoCross LLC showcasing custom LS performance swaps, AWD/RWD builds, diagnostics, and mobile service work in Southern California.">
+    <meta name="description" content="Explore photos and videos of custom LS swaps, diagnostics, wiring, and mobile automotive services by AutoCross LLC in Southern California.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -140,23 +140,23 @@
             margin: 0;
             padding: 0;
         }
-        /* Gallery Filter Tabs */
+        /* Gallery Tab Buttons */
         .filter-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 15px;
             margin: 40px 20px 30px 20px;
         }
         .filter-btn {
             background: #101010;
             color: #ccc;
             border: 1px solid #333;
-            padding: 10px 22px;
+            padding: 12px 28px;
             font-family: 'Oswald', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             cursor: pointer;
             border-radius: 4px;
             transition: all 0.2s ease;
@@ -166,15 +166,23 @@
             background: #ff0033;
             color: #fff;
             border-color: #ff0033;
+            box-shadow: 0 4px 15px rgba(255, 0, 51, 0.3);
+        }
+        /* Tab Panes */
+        .tab-pane {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+        .tab-pane.active {
+            display: block;
         }
         /* Gallery Grid Layout */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto 80px auto;
-            padding: 0 20px;
         }
         .gallery-item {
             background: #101010;
@@ -188,7 +196,7 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(255, 0, 51, 0.2);
         }
-        .gallery-img-wrap {
+        .gallery-media-wrap {
             width: 100%;
             height: 220px;
             background: #181818;
@@ -198,13 +206,15 @@
             justify-content: center;
             border-bottom: 1px solid #222;
         }
-        .gallery-img-wrap img {
+        .gallery-media-wrap img,
+        .gallery-media-wrap video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
             transition: transform 0.3s ease;
         }
-        .gallery-item:hover .gallery-img-wrap img {
+        .gallery-item:hover .gallery-media-wrap img {
             transform: scale(1.05);
         }
         .gallery-content {
@@ -293,135 +303,162 @@
 <!-- Hero Section -->
 <header style="background: linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.7)), url('./gallery-hero.png') center/cover no-repeat; padding: 160px 20px 60px 20px; text-align: center; border-bottom: 2px solid #ff0033;">
     <h1 style="font-family: 'Oswald', sans-serif; font-size: 3rem; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">Project <span style="color: #ff0033;">Gallery</span></h1>
-    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Custom Builds • Performance Swaps • Clean Execution</p>
+    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Photos & Videos • LS Swaps • Diagnostics • Mobile Service</p>
 </header>
 
-<!-- Category Filter Tabs -->
+<!-- 3 Main Subject Tabs -->
 <div class="filter-container">
-    <button class="filter-btn active" data-filter="all">All Photos</button>
-    <button class="filter-btn" data-filter="ls-swaps">LS Swaps & Powerplants</button>
-    <button class="filter-btn" data-filter="diagnostics">Diagnostics & Wiring</button>
-    <button class="filter-btn" data-filter="mobile">On-Site & Mobile Service</button>
-    <button class="filter-btn" data-filter="body-mods">Body & Custom Mods</button>
+    <button class="filter-btn active" data-tab="ls-swaps">LS Swaps</button>
+    <button class="filter-btn" data-tab="diagnostics">Diagnostics & Wiring</button>
+    <button class="filter-btn" data-tab="mobile">On-Site & Mobile Service</button>
 </div>
 
 <main>
-    <div class="gallery-grid" id="galleryGrid">
-
-        <!-- LS Swaps & Powerplants Items -->
-        <div class="gallery-item ls-swaps">
-            <div class="gallery-img-wrap">
-                <img src="./ls-camaro-3rd.png" alt="3rd Gen Camaro LS Swap" onerror="this.src='./official-logo.png'">
+    <!-- TAB 1: LS SWAPS -->
+    <div id="ls-swaps" class="tab-pane active">
+        <div class="gallery-grid">
+            <!-- Video Item -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <video controls preload="metadata">
+                        <source src="./ls-dyno-run.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Video • LS Swaps</span>
+                    <h3 class="gallery-title">LS3 Swapped 3rd Gen Dyno Pull</h3>
+                    <p class="gallery-desc">High RPM dyno tuning session showing clean power delivery and crisp throttle response on our custom F-body swap.</p>
+                </div>
             </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">LS Swaps & Powerplants</span>
-                <h3 class="gallery-title">3rd Gen Camaro LS3 Swap</h3>
-                <p class="gallery-desc">Clean engine bay integration, custom mounts, and meticulous wiring harness tucking for classic F-body performance.</p>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./ls-camaro-3rd.png" alt="3rd Gen Camaro LS Swap" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • LS Swaps</span>
+                    <h3 class="gallery-title">3rd Gen Camaro LS3 Bay</h3>
+                    <p class="gallery-desc">Detailed engine bay layout featuring custom motor mounts, tucked wiring, and precision plumbing.</p>
+                </div>
+            </div>
+
+            <!-- Video Item -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <video controls preload="metadata">
+                        <source src="./turbo-lm7-startup.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Video • LS Swaps</span>
+                    <h3 class="gallery-title">Turbo LM7 Cast Iron First Startup</h3>
+                    <p class="gallery-desc">First cold start on a built 5.3L cast iron LM7 block running a precision turbocharger setup.</p>
+                </div>
+            </div>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./silverado-awd.png" alt="Silverado AWD LS Setup" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • LS Swaps</span>
+                    <h3 class="gallery-title">Silverado AWD LS Setup</h3>
+                    <p class="gallery-desc">All-wheel drive traction combined with high-output LS power for ultimate launch capability.</p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="gallery-item ls-swaps">
-            <div class="gallery-img-wrap">
-                <img src="./turbo-lm7.png" alt="Turbo LM7 5.3 Cast Iron" onerror="this.src='./official-logo.png'">
+    <!-- TAB 2: DIAGNOSTICS & WIRING -->
+    <div id="diagnostics" class="tab-pane">
+        <div class="gallery-grid">
+            <!-- Video Item -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <video controls preload="metadata">
+                        <source src="./live-data-diag.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Video • Diagnostics</span>
+                    <h3 class="gallery-title">Advanced Live Data Scanning</h3>
+                    <p class="gallery-desc">Real-time oscilloscope and OE scanner troubleshooting to pinpoint intermittent electrical gremlins.</p>
+                </div>
             </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">LS Swaps & Powerplants</span>
-                <h3 class="gallery-title">Turbocharged 5.3L LM7 Build</h3>
-                <p class="gallery-desc">Bulletproof cast iron block paired with precision turbocharging for maximum boost and reliable street horsepower.</p>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./diag-scan.png" alt="Computer Diagnostics" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • Diagnostics</span>
+                    <h3 class="gallery-title">OE-Level Module Diagnostics</h3>
+                    <p class="gallery-desc">Pinpoint sensor analysis and module re-flashing for complex powertrain issues.</p>
+                </div>
+            </div>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./harness-tuck.png" alt="Custom Wiring Harness" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • Wiring</span>
+                    <h3 class="gallery-title">Custom Harness Tucking</h3>
+                    <p class="gallery-desc">Military-grade wire loom, soldered connections, and hidden wire routing for a show-clean finish.</p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="gallery-item ls-swaps">
-            <div class="gallery-img-wrap">
-                <img src="./silverado-awd.png" alt="Silverado AWD LS Swap" onerror="this.src='./official-logo.png'">
+    <!-- TAB 3: ON-SITE & MOBILE SERVICE -->
+    <div id="mobile" class="tab-pane">
+        <div class="gallery-grid">
+            <!-- Video Item -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <video controls preload="metadata">
+                        <source src="./mobile-truck-walkaround.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Video • Mobile Service</span>
+                    <h3 class="gallery-title">Fully Equipped Mobile Unit Walkaround</h3>
+                    <p class="gallery-desc">A look inside our mobile service truck loaded with professional tools and diagnostic equipment.</p>
+                </div>
             </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">LS Swaps & Powerplants</span>
-                <h3 class="gallery-title">Chevy Silverado AWD LS Setup</h3>
-                <p class="gallery-desc">All-wheel drive traction meets high-output LS power, built for flawless hookup and everyday drivability.</p>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./mobile-truck.png" alt="Mobile Service Truck" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • Mobile Service</span>
+                    <h3 class="gallery-title">On-Site Dispatch in Southern California</h3>
+                    <p class="gallery-desc">Bringing professional mechanic service and diagnostics directly to your home or shop location.</p>
+                </div>
+            </div>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./mobile-repair.png" alt="Driveway Repair" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • Mobile Service</span>
+                    <h3 class="gallery-title">Professional Driveway Repairs</h3>
+                    <p class="gallery-desc">Expert mechanical service performed on-site with zero hassle and absolute precision.</p>
+                </div>
             </div>
         </div>
-
-        <div class="gallery-item ls-swaps">
-            <div class="gallery-img-wrap">
-                <img src="./camaro-4th-5th.png" alt="4th and 5th Gen Camaros" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">LS Swaps & Powerplants</span>
-                <h3 class="gallery-title">4th & 5th Gen Camaro Cam & Valvetrain</h3>
-                <p class="gallery-desc">Precision valvetrain upgrades, custom camshaft setups, and dyno tuning for aggressive idle and top-end pull.</p>
-            </div>
-        </div>
-
-        <!-- Diagnostics & Wiring Items -->
-        <div class="gallery-item diagnostics">
-            <div class="gallery-img-wrap">
-                <img src="./diag-scan.png" alt="Advanced Computer Diagnostics" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">Diagnostics & Wiring</span>
-                <h3 class="gallery-title">Advanced Computer Diagnostics</h3>
-                <p class="gallery-desc">OE-level live data scanning, sensor troubleshooting, and module re-flashing to eliminate stubborn electrical gremlins.</p>
-            </div>
-        </div>
-
-        <div class="gallery-item diagnostics">
-            <div class="gallery-img-wrap">
-                <img src="./harness-tuck.png" alt="Custom Wiring Harness Tucking" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">Diagnostics & Wiring</span>
-                <h3 class="gallery-title">Custom Harness Tucking & Repair</h3>
-                <p class="gallery-desc">Military-spec wire loom, solder connections, and hidden routing for a show-ready, trouble-free engine bay.</p>
-            </div>
-        </div>
-
-        <!-- On-Site & Mobile Service Items -->
-        <div class="gallery-item mobile">
-            <div class="gallery-img-wrap">
-                <img src="./mobile-truck.png" alt="Mobile Service Truck in Action" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">On-Site & Mobile Service</span>
-                <h3 class="gallery-title">Fully Equipped Mobile Unit</h3>
-                <p class="gallery-desc">Bringing shop-level diagnostic gear, professional tools, and expert mechanic services directly to your driveway.</p>
-            </div>
-        </div>
-
-        <div class="gallery-item mobile">
-            <div class="gallery-img-wrap">
-                <img src="./mobile-repair.png" alt="On-Site Driveway Repair" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">On-Site & Mobile Service</span>
-                <h3 class="gallery-title">On-Site Southern California Repairs</h3>
-                <p class="gallery-desc">Reliable mobile troubleshooting and mechanical repairs performed on-location across the Inland Empire and surrounding areas.</p>
-            </div>
-        </div>
-
-        <!-- Body & Custom Mods Items -->
-        <div class="gallery-item body-mods">
-            <div class="gallery-img-wrap">
-                <img src="./body-mod-1.png" alt="Custom Fabrication & Bodywork" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">Body & Custom Mods</span>
-                <h3 class="gallery-title">Custom Fabrication & Styling</h3>
-                <p class="gallery-desc">Tailored body modifications, aero execution, and custom fitment to ensure your vehicle looks as mean as it runs.</p>
-            </div>
-        </div>
-
-        <div class="gallery-item body-mods">
-            <div class="gallery-img-wrap">
-                <img src="./el-camino-monte.png" alt="El Camino & Monte Carlo Restomod" onerror="this.src='./official-logo.png'">
-            </div>
-            <div class="gallery-content">
-                <span class="gallery-tag">Body & Custom Mods</span>
-                <h3 class="gallery-title">El Camino & Monte Carlo Restomod</h3>
-                <p class="gallery-desc">Restoring classic Chevy lines with modern drivetrain reliability and clean body panel alignment.</p>
-            </div>
-        </div>
-
     </div>
 </main>
 
@@ -440,22 +477,22 @@
         }); 
     }
 
-    // Gallery Category Filtering Tabs
+    // 3 Tab Switcher Logic
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const filter = btn.getAttribute('data-filter');
+            const targetTab = btn.getAttribute('data-tab');
 
-            galleryItems.forEach(item => {
-                if (filter === 'all' || item.classList.contains(filter)) {
-                    item.style.display = 'block';
+            tabPanes.forEach(pane => {
+                if (pane.id === targetTab) {
+                    pane.classList.add('active');
                 } else {
-                    item.style.display = 'none';
+                    pane.classList.remove('active');
                 }
             });
         });
