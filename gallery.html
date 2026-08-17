@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Gallery | AutoCross LLC</title>
-    <meta name="description" content="Explore photos and videos of custom LS swaps, engine and transmission overhauls, diagnostics, and mobile automotive services by AutoCross LLC.">
+    <meta name="description" content="Explore photos and videos of custom LS swaps, engine overhauls, general repairs, diagnostics, and mobile automotive services by AutoCross LLC.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -145,18 +145,18 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
             margin: 40px 20px 30px 20px;
         }
         .filter-btn {
             background: #101010;
             color: #ccc;
             border: 1px solid #333;
-            padding: 12px 24px;
+            padding: 12px 20px;
             font-family: 'Oswald', sans-serif;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             border-radius: 4px;
             transition: all 0.2s ease;
@@ -266,7 +266,7 @@
     <div class="ticker">
         <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
         <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
-        <div class="ticker-item"><span>&#9632;</span> ENGINE & TRANSMISSION OVERHAUL</div>
+        <div class="ticker-item"><span>&#9632;</span> GENERAL REPAIRS & OVERHAULS</div>
         <div class="ticker-item"><span>&#9632;</span> BUILT NOT RUSHED</div>
         <div class="ticker-item"><span>&#9632;</span> 909-419-1015</div>
     </div>
@@ -303,14 +303,15 @@
 <!-- Hero Section -->
 <header style="background: linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.7)), url('./gallery-hero.png') center/cover no-repeat; padding: 160px 20px 60px 20px; text-align: center; border-bottom: 2px solid #ff0033;">
     <h1 style="font-family: 'Oswald', sans-serif; font-size: 3rem; text-transform: uppercase; color: #fff; letter-spacing: 2px; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">Project <span style="color: #ff0033;">Gallery</span></h1>
-    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Photos & Videos • LS Swaps • Overhauls • Diagnostics • Mobile Service</p>
+    <p style="color: #fff; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; font-size: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">Photos & Videos • LS Swaps • Overhauls • General Repairs • Mobile Service</p>
 </header>
 
-<!-- 4 Main Subject Tabs -->
+<!-- 5 Main Subject Tabs -->
 <div class="filter-container">
     <button class="filter-btn active" data-tab="ls-swaps">LS Swaps</button>
     <button class="filter-btn" data-tab="diagnostics">Diagnostics & Wiring</button>
     <button class="filter-btn" data-tab="overhaul">Engine & Trans Overhaul</button>
+    <button class="filter-btn" data-tab="general-repairs">General Repairs</button>
     <button class="filter-btn" data-tab="mobile">On-Site & Mobile Service</button>
 </div>
 
@@ -462,7 +463,48 @@
         </div>
     </div>
 
-    <!-- TAB 4: ON-SITE & MOBILE SERVICE -->
+    <!-- TAB 4: GENERAL REPAIRS -->
+    <div id="general-repairs" class="tab-pane">
+        <div class="gallery-grid">
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./brake-service.png" alt="Brake System Replacement" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • General Repairs</span>
+                    <h3 class="gallery-title">Heavy-Duty Brake Service</h3>
+                    <p class="gallery-desc">Precision rotor machining, premium ceramic pads, and caliper servicing for maximum stopping power.</p>
+                </div>
+            </div>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./suspension-repair.png" alt="Suspension and Steering Component Repair" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • General Repairs</span>
+                    <h3 class="gallery-title">Suspension & Steering Overhaul</h3>
+                    <p class="gallery-desc">Control arm replacement, ball joints, struts, and steering linkage installation for tight handling.</p>
+                </div>
+            </div>
+
+            <!-- Image Item (PNG) -->
+            <div class="gallery-item">
+                <div class="gallery-media-wrap">
+                    <img src="./belt-alternator.png" alt="Alternator and Belts" onerror="this.src='./official-logo.png'">
+                </div>
+                <div class="gallery-content">
+                    <span class="gallery-tag">Photo • General Repairs</span>
+                    <h3 class="gallery-title">Alternator & Accessory Drive Service</h3>
+                    <p class="gallery-desc">Reliable replacement of failing alternators, idler pulleys, and serpentine belts to keep your charging system solid.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 5: ON-SITE & MOBILE SERVICE -->
     <div id="mobile" class="tab-pane">
         <div class="gallery-grid">
             <!-- Video Item -->
