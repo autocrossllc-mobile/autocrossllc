@@ -320,3 +320,39 @@ footer {
 .btn-checkout:hover {
   background-color: #5147e5;
 }
+/* --- Zelle Payment Card --- */
+.zelle-card {
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: #111111;
+    border: 1px solid #222222;
+    border-top: 4px solid #7a278d; /* Zelle Purple Accent */
+    border-radius: 4px;
+    text-align: center;
+}
+
+.zelle-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.zelle-number {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.zelle-qr {
+    width: 220px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #333333;
+    margin: 15px auto;
+    display: block;
+}
