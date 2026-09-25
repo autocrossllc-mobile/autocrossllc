@@ -1,32 +1,101 @@
-<!-- ==========================================
-     CONTACT & PAYMENT PAGE CONTENT
-     ========================================== -->
-<main style="padding: 100px 20px 60px; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-    
-    <!-- Contact Info Section -->
-    <div style="text-align: center; margin-bottom: 40px;">
-        <h1 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
-            Contact AutoCross LLC
-        </h1>
-        <p style="color: #aaa; line-height: 1.7; font-size: 1.05rem; max-width: 600px; margin: 0 auto 25px;">
-            Reach out to schedule your mobile automotive LS performance tuning, diagnostics, or vehicle rentals. 
-        </p>
-        
-        <!-- Primary Call Button -->
-        <a href="tel:+18402494620" class="btn-checkout" style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">
-            Call Us: (840) 249-4620
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AutoCross LLC</title>
+    <!-- Link to your main CSS file below -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==========================================
+         TICKER
+         ========================================== -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item"><span>//</span> AUTOCROSS LLC</div>
+            <div class="ticker-item"><span>//</span> MOBILE LS PERFORMANCE</div>
+            <div class="ticker-item"><span>//</span> DIAGNOSTICS & TUNING</div>
+            <div class="ticker-item"><span>//</span> (840) 249-4620</div>
+            <div class="ticker-item"><span>//</span> AUTOCROSS LLC</div>
+            <div class="ticker-item"><span>//</span> MOBILE LS PERFORMANCE</div>
+        </div>
     </div>
 
-    <!-- Zelle Payment Card -->
-    <div class="zelle-card">
-        <h2 class="zelle-title">Send Money with Zelle®</h2>
-        <p style="color: #ccc; margin-bottom: 5px; font-size: 1.1rem; letter-spacing: 1px;">AUTOCROSS LLC</p>
-        
-        <!-- QR Code Image -->
-        <img src="129.jpg" alt="AutoCross LLC Zelle QR Code" class="zelle-qr">
-        
-        <p class="zelle-number">(840) 249-4620</p>
-    </div>
+    <!-- ==========================================
+         MAIN HEADER
+         ========================================== -->
+    <header class="main-header">
+        <div class="flex-header">
+            <div class="site-logo">
+                <a href="index.html" style="color: #fff; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.5rem; letter-spacing: 2px;">AUTOCROSS <span style="color: #ff0033;">LLC</span></a>
+            </div>
+            <nav class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="merch.html">Merch</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <button class="menu-toggle">MENU</button>
+        </div>
+    </header>
 
-</main>
+    <!-- ==========================================
+         MAIN CONTACT SECTION
+         ========================================== -->
+    <main style="padding: 120px 20px 80px; max-width: 1000px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">
+                Get In Touch
+            </h1>
+        </div>
+
+        <!-- Layout Grid for Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; justify-content: center; align-items: start;">
+            
+            <!-- Contact Card (Uses the same style as your Merch Cards) -->
+            <div class="merch-card" style="padding-bottom: 30px;">
+                <div class="product-info" style="padding-top: 30px;">
+                    <span class="product-category">Contact Info</span>
+                    <h3>AutoCross LLC</h3>
+                    <p style="margin-bottom: 30px;">Reach out to schedule your mobile automotive LS performance tuning, custom engine swaps, diagnostics, or vehicle rentals in Southern California.</p>
+                    
+                    <div class="product-details">
+                        <span>CALL OR TEXT</span>
+                        <span>MOBILE SERVICE</span>
+                    </div>
+
+                    <!-- Call Button styled to match your site's red accent -->
+                    <a href="tel:+18402494620" class="btn-checkout" style="width: 80%; display: block; margin: 0 auto; background-color: #ff0033; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+                        (840) 249-4620
+                    </a>
+                </div>
+            </div>
+
+            <!-- Zelle Payment Card -->
+            <div class="zelle-card" style="margin: 0; height: 100%; box-sizing: border-box;">
+                <h2 class="zelle-title">Send Money with Zelle®</h2>
+                <p style="color: #ccc; margin-bottom: 5px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; font-size: 1.2rem;">AUTOCROSS LLC</p>
+                
+                <!-- QR Code Reference -->
+                <img src="129.jpg" alt="Zelle QR Code" class="zelle-qr">
+                
+                <p class="zelle-number">(840) 249-4620</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <p>&copy; 2026 AutoCross LLC. All Rights Reserved.</p>
+        <p style="margin-top: 10px;">Phone: <a href="tel:+18402494620" style="color: #ff0033; text-decoration: none;">(840) 249-4620</a></p>
+    </footer>
+
+</body>
+</html>
