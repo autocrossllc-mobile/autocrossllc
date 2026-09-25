@@ -1,129 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Booking | AutoCross LLC</title>
+<!-- ==========================================
+     CONTACT & PAYMENT PAGE CONTENT
+     ========================================== -->
+<main style="padding: 100px 20px 60px; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <!-- Contact Info Section -->
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
+            Contact AutoCross LLC
+        </h1>
+        <p style="color: #aaa; line-height: 1.7; font-size: 1.05rem; max-width: 600px; margin: 0 auto 25px;">
+            Reach out to schedule your mobile automotive LS performance tuning, diagnostics, or vehicle rentals. 
+        </p>
+        
+        <!-- Primary Call Button -->
+        <a href="tel:+18402494620" class="btn-checkout" style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">
+            Call Us: (840) 249-4620
+        </a>
+    </div>
 
-    <!-- Watermark Logo Fixed Behind All Page Content -->
-    <div class="page-bg-overlay"></div>
+    <!-- Zelle Payment Card -->
+    <div class="zelle-card">
+        <h2 class="zelle-title">Send Money with Zelle®</h2>
+        <p style="color: #ccc; margin-bottom: 5px; font-size: 1.1rem; letter-spacing: 1px;">AUTOCROSS LLC</p>
+        
+        <!-- QR Code Image -->
+        <img src="129.jpg" alt="AutoCross LLC Zelle QR Code" class="zelle-qr">
+        
+        <p class="zelle-number">(840) 249-4620</p>
+    </div>
 
-    <!-- Navigation Header -->
-    <header class="main-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="./official-logo.png" alt="AutoCross LLC">
-            </a>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="ls.html">LS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="rentals.html">RENTALS</a></li>
-                    <li><a href="contact.html" class="active">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Hamburger Menu Button -->
-            <div class="mobile-menu-icon" id="mobileMenuBtn" aria-label="Toggle Navigation">
-                &#9776;
-            </div>
-        </div>
-    </header>
-
-    <!-- Dark Hero Section -->
-    <section class="hero-content-block">
-        <div class="container">
-            <h1>GET IN <span>TOUCH</span></h1>
-            <p>Secure Your Slot • Book Your Build</p>
-        </div>
-    </section>
-
-    <!-- Secure Your Appointment Section -->
-    <section class="details-grid">
-        <div class="container requirements-wrapper" style="text-align: center;">
-            <h2 class="section-title">Secure Your Appointment</h2>
-            <p style="line-height: 1.8; font-size: 16px; font-weight: 500; margin-bottom: 30px;">
-                To provide the highest quality service, we require a deposit to lock in your date. 
-                Final balances are due only after the service is completed.
-            </p>
-            
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <a href="https://buy.stripe.com/aFa3cxdiD8WofE61dVd3i01" target="_blank" class="btn-primary" style="min-width: 250px;">
-                    Service Booking Fee
-                </a>
-                <a href="https://buy.stripe.com/14AeVf0vR1tWdvY5ubd3i02" target="_blank" class="btn-primary" style="background: #222; border: 1px solid var(--accent); min-width: 250px;">
-                    Vehicle Rental Deposit
-                </a>
-            </div>
-
-            <!-- Business Zelle QR Code Box -->
-            <div class="zelle-card">
-                <h3 class="zelle-title">Pay via Zelle</h3>
-                <p style="color: #aaaaaa; font-size: 14px;">Scan or send directly to Business Zelle:</p>
-                <p class="zelle-number">840-249-4620</p>
-                <img src="zelle-qr.png" alt="AutoCross LLC Business Zelle QR Code" class="zelle-qr">
-                <p style="color: #888888; font-size: 12px; margin-top: 10px;">Account Name: AutoCross LLC</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Request Form Section -->
-    <section class="details-grid">
-        <div class="container form-container">
-            <h2 class="section-title">Service Request</h2>
-            <div class="contact-form">
-                <form action="mailto:autocrossllc.services@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="Name" placeholder="Full Name" required>
-                    <input type="tel" name="Phone" placeholder="Phone Number" required>
-                    <select name="Service_Type" required>
-                        <option value="" disabled selected>Select Service</option>
-                        <option value="LS Swap">LS Swap / Performance</option>
-                        <option value="General Repair">General Repair / Diagnostics</option>
-                        <option value="Marine/Trailer">Marine & Trailer Repair</option>
-                        <option value="Rental">Vehicle Rental Request</option>
-                    </select>
-                    <input type="date" name="Date" required>
-                    <textarea name="Details" placeholder="Vehicle Details & Project Goals..." rows="5"></textarea>
-                    
-                    <button type="submit" class="btn-primary form-submit-btn">Send Request</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Unified Footer Section -->
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <p class="footer-phone"><a href="tel:8402494620" style="color: inherit; text-decoration: none;">840-249-4620</a></p>
-            <p class="footer-email">autocrossllc.services@gmail.com</p>
-            <p class="footer-copy">&copy; 2026 AutoCross LLC &bull; Built Not Rushed</p>
-        </div>
-    </footer>
-
-    <!-- Mobile Navigation Toggle Script -->
-    <script>
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const nav = document.querySelector('.main-nav');
-
-        if (menuBtn && nav) {
-            menuBtn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
-    </script>
-
-</body>
-</html>
+</main>
