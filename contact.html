@@ -140,6 +140,7 @@
             margin: 0;
             padding: 0;
         }
+        /* Hero Section with offset padding so header/ticker don't overlap */
         .hero-contact {
             position: relative;
             width: 100%;
@@ -151,7 +152,7 @@
             justify-content: center;
             text-align: center;
             border-bottom: 3px solid #ff0033;
-            padding: 0 20px;
+            padding: 120px 20px 40px; /* Accounts for fixed ticker + header */
             box-sizing: border-box;
         }
         .hero-contact h1 {
@@ -408,7 +409,7 @@
     <a href="about.html">About</a>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero Section with proper spacing underneath fixed header -->
 <section class="hero-contact">
     <div style="max-width: 1200px; width: 100%;">
         <h1>Service <span>Inquiry & Deposit</span></h1>
@@ -455,15 +456,14 @@
             </form>
         </div>
 
-        <!-- Right Column: Stripe Deposit, Direct Call & Zelle Cards -->
+        <!-- Right Column: Stripe Direct Checkout, Direct Call & Zelle Cards -->
         <div class="side-stack">
             
-            <!-- Stripe $100 Deposit Card -->
+            <!-- Stripe $100 Deposit Card with Active Checkout Link -->
             <div class="stripe-card">
                 <h3 style="font-family: 'Oswald', sans-serif; color: #fff; margin-top: 0; text-transform: uppercase;">Secure $100 Deposit</h3>
-                <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Ready to lock in your diagnostic or service slot? Pay your $100 deposit securely online via Stripe.</p>
-                <!-- Replace '#' with your actual Stripe payment link URL -->
-                <a href="#" class="stripe-btn">Pay $100 Deposit via Stripe</a>
+                <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Ready to lock in your diagnostic or service slot? Click below to go straight to Stripe checkout.</p>
+                <a href="https://buy.stripe.com/6oU4gBbav0pSajMe0Hd3i03" class="stripe-btn" target="_blank">Pay $100 Deposit Now</a>
             </div>
 
             <div class="action-card">
