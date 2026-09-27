@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | AutoCross LLC</title>
-    <!-- Link to your main CSS file below -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -25,7 +24,7 @@
     </div>
 
     <!-- ==========================================
-         MAIN HEADER
+         MAIN HEADER & CENTERED GRID MENU
          ========================================== -->
     <header class="main-header">
         <div class="flex-header">
@@ -42,48 +41,60 @@
         </div>
     </header>
 
+    <!-- Mobile Menu Container (matches rest of site behavior) -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="merch.html">Merch</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+
     <!-- ==========================================
-         MAIN CONTACT SECTION
+         CONTACT CONTENT SECTION
          ========================================== -->
-    <main style="padding: 120px 20px 80px; max-width: 1000px; margin: 0 auto;">
+    <main style="padding: 140px 20px 80px; max-width: 1100px; margin: 0 auto;">
         
         <div style="text-align: center; margin-bottom: 40px;">
-            <h1 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 1px;">
-                Get In Touch
+            <span class="product-category" style="font-size: 0.9rem;">Get In Touch</span>
+            <h1 style="font-family: 'Oswald', sans-serif; font-size: 2.8rem; color: #fff; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px;">
+                Contact & Payments
             </h1>
         </div>
 
-        <!-- Layout Grid for Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; justify-content: center; align-items: start;">
+        <!-- Layout Grid mirroring Merch/Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; justify-content: center;">
             
-            <!-- Contact Card (Uses the same style as your Merch Cards) -->
-            <div class="merch-card" style="padding-bottom: 30px;">
-                <div class="product-info" style="padding-top: 30px;">
-                    <span class="product-category">Contact Info</span>
+            <!-- Contact Info Card styled as a Merch Card -->
+            <div class="merch-card" style="text-align: left;">
+                <div class="product-info">
+                    <span class="product-category">Direct Line</span>
                     <h3>AutoCross LLC</h3>
-                    <p style="margin-bottom: 30px;">Reach out to schedule your mobile automotive LS performance tuning, custom engine swaps, diagnostics, or vehicle rentals in Southern California.</p>
+                    <p>
+                        Reach out for mobile automotive LS performance builds, custom wiring, diagnostics, or local service scheduling across Southern California.
+                    </p>
                     
-                    <div class="product-details">
-                        <span>CALL OR TEXT</span>
+                    <div class="product-details" style="justify-content: flex-start; margin-top: 20px;">
                         <span>MOBILE SERVICE</span>
+                        <span>LS SPECIALIST</span>
                     </div>
 
-                    <!-- Call Button styled to match your site's red accent -->
-                    <a href="tel:+18402494620" class="btn-checkout" style="width: 80%; display: block; margin: 0 auto; background-color: #ff0033; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">
-                        (840) 249-4620
-                    </a>
+                    <div style="margin-top: 30px; text-align: center;">
+                        <a href="tel:+18402494620" class="btn-checkout" style="background-color: #ff0033; width: 100%; box-sizing: border-box; font-family: 'Oswald', sans-serif; letter-spacing: 1px; text-transform: uppercase;">
+                            Call / Text: (840) 249-4620
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Zelle Payment Card -->
-            <div class="zelle-card" style="margin: 0; height: 100%; box-sizing: border-box;">
-                <h2 class="zelle-title">Send Money with Zelle®</h2>
-                <p style="color: #ccc; margin-bottom: 5px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; font-size: 1.2rem;">AUTOCROSS LLC</p>
+            <div class="zelle-card" style="margin: 0; width: 100%; box-sizing: border-box;">
+                <h2 class="zelle-title" style="font-family: 'Oswald', sans-serif;">Send Money with Zelle®</h2>
+                <p style="color: #aaa; margin-bottom: 10px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; font-size: 1.1rem; text-transform: uppercase;">AUTOCROSS LLC</p>
                 
-                <!-- QR Code Reference -->
-                <img src="129.jpg" alt="Zelle QR Code" class="zelle-qr">
+                <!-- QR Code linked to 129.jpg -->
+                <img src="129.jpg" alt="AutoCross LLC Zelle QR Code" class="zelle-qr">
                 
-                <p class="zelle-number">(840) 249-4620</p>
+                <p class="zelle-number" style="font-family: 'Oswald', sans-serif; color: #ff0033;">(840) 249-4620</p>
             </div>
 
         </div>
@@ -94,8 +105,18 @@
          ========================================== -->
     <footer>
         <p>&copy; 2026 AutoCross LLC. All Rights Reserved.</p>
-        <p style="margin-top: 10px;">Phone: <a href="tel:+18402494620" style="color: #ff0033; text-decoration: none;">(840) 249-4620</a></p>
+        <p style="margin-top: 10px;">Direct Contact: <a href="tel:+18402494620" style="color: #ff0033; text-decoration: none;">(840) 249-4620</a></p>
     </footer>
 
+    <!-- Optional JS snippet if your site uses a mobile menu toggle script -->
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if(toggleBtn && mobileMenu) {
+            toggleBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
