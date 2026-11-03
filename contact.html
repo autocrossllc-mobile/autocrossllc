@@ -351,4 +351,321 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 4px;
-            letter-spacing
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease;
+            margin-top: 10px;
+        }
+        .phone-cta-btn:hover {
+            background-color: #e0002c;
+        }
+
+        /* Direct Payment Link Card */
+        .deposit-pay-card {
+            background: #101010;
+            border: 1px solid #222;
+            border-left: 4px solid #ff0033;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .pay-cta-btn {
+            display: inline-block;
+            background-color: #ff0033;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease;
+            margin-top: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .pay-cta-btn:hover {
+            background-color: #d3002b;
+        }
+
+        /* Zelle Card */
+        .zelle-card {
+            background: #101010;
+            border: 1px solid #222;
+            border-bottom: 3px solid #7a278d;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .zelle-qr {
+            width: 170px;
+            height: auto;
+            border-radius: 6px;
+            border: 2px solid #333;
+            margin: 15px auto;
+            display: block;
+        }
+
+        /* Pricing Grid & Configurator Styling */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .price-card {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-top: 3px solid #ff0033;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .price-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .price-range {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            color: #ff0033;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .price-card ul {
+            padding-left: 18px;
+            margin: 0;
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* LS Configurator Box */
+        .configurator-box {
+            background: #090909;
+            border: 1px solid #262626;
+            border-left: 4px solid #ff0033;
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .config-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .config-grid { grid-template-columns: 1fr; }
+        }
+        .builder-result {
+            background: #141414;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .estimate-val {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            color: #ff0033;
+            font-weight: 800;
+            margin: 8px 0;
+        }
+
+        /* Policy Cards */
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .policy-card {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-left: 3px solid #ff0033;
+            padding: 25px;
+            border-radius: 4px;
+        }
+        .policy-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .policy-card p {
+            color: #aaa;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        footer {
+            background: #030303;
+            border-top: 2px solid #1a1a1a;
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            .flex-header {
+                display: flex;
+                justify-content: space-between;
+            }
+            .desktop-menu { display: none; }
+            .menu-toggle { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker-item"><span>&#9632;</span> AUTOCROSS LLC</div>
+        <div class="ticker-item"><span>&#9632;</span> MOBILE LS PERFORMANCE</div>
+        <div class="ticker-item"><span>&#9632;</span> BUILT FROM THE STREET UP</div>
+        <div class="ticker-item"><span>&#9632;</span> 840-249-4620</div>
+        <div class="ticker-item"><span>&#9632;</span> SECURE DEPOSITS & INQUIRIES</div>
+    </div>
+</div>
+
+<header class="main-header">
+    <div class="flex-header">
+        <div class="site-logo">
+            <a href="index.html"><img src="./official-logo.png" alt="AutoCross LLC" style="height: 40px;"></a>
+        </div>
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="ls.html">LS</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="merchandise.html">Merch</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Navigation">MENU &#9776;</button>
+    </div>
+</header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ls.html">LS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="merchandise.html">Merch</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="about.html">About</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-contact">
+    <div style="max-width: 1200px; width: 100%;">
+        <h1>Service <span>Inquiry & Rates</span></h1>
+        <p>Schedule Your Build, Explore Pricing & Policies, or Secure Your Spot via Square / Zelle</p>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<main class="content-section">
+
+    <!-- TAB CONTROLS -->
+    <div class="contact-tabs-nav">
+        <button class="tab-trigger-btn active" onclick="switchContactTab(event, 'tab-booking')">📅 Schedule & Pay Deposit</button>
+        <button class="tab-trigger-btn" onclick="switchContactTab(event, 'tab-pricing')">⚙️ Service Rates & LS Estimator</button>
+        <button class="tab-trigger-btn" onclick="switchContactTab(event, 'tab-policies')">📋 Shop Policies & Terms</button>
+    </div>
+
+    <!-- TAB 1: SCHEDULE & DEPOSIT -->
+    <div id="tab-booking" class="tab-pane active">
+        <div class="contact-grid">
+            
+            <!-- Left Column: Fillable SMS Request Form -->
+            <div class="form-card">
+                <h2>Schedule & Diagnostics Request</h2>
+                <p>Fill out the details below. When you click submit, it will automatically package your request and open your text messages to send directly to our line.</p>
+                
+                <form id="smsForm" onsubmit="sendTextMsg(event)">
+                    <div class="form-group">
+                        <label for="clientName">Your Name</label>
+                        <input type="text" id="clientName" class="form-control" placeholder="e.g. John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="carDetails">Vehicle / Equipment Year, Make, & Model</label>
+                        <input type="text" id="carDetails" class="form-control" placeholder="e.g. 2012 Chevy Camaro SS / Sea-Doo / Utility Trailer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enginePlatform">Service Category / Engine Platform</label>
+                        <select id="enginePlatform" class="form-control">
+                            <option value="GM LS (LS1, LS2, LS3, LSX)">GM LS Performance (LS1, LS2, LS3, LSX)</option>
+                            <option value="GM Truck (LM7, LQ4, LQ9)">GM Truck (LM7, LQ4, LQ9)</option>
+                            <option value="GM LT Series">GM LT Series</option>
+                            <option value="OEM Automotive Maintenance">General Automotive Repair & Maintenance</option>
+                            <option value="Transmission / Engine Swap">Transmission Overhaul / Engine Swap</option>
+                            <option value="Power Sports / Marine / ATV / 2-Cycle">ATV / Marine / 2-Cycle / Powersports</option>
+                            <option value="Trailer / Roadside Assistance">Trailer Repair / Emergency Roadside</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceReason">Reason for Visit / How Can We Help?</label>
+                        <textarea id="serviceReason" class="form-control" placeholder="Describe mechanical issue, custom build specs, maintenance needs, or quote request..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="sms-btn">Send Request as Text Message</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Direct Deposit, Phone Call & Zelle Cards -->
+            <div class="side-stack">
+                
+                <!-- Square Secure Deposit Card -->
+                <div class="deposit-pay-card">
+                    <h3 style="font-family: 'Oswald', sans-serif; color: #fff; margin-top: 0; text-transform: uppercase;">Secure Service Deposit</h3>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Ready to lock in your diagnostic or build slot? Click below to complete your service deposit via Square.</p>
+                    <a href="https://square.link/u/qB8nol7n" class="pay-cta-btn" target="_blank">Pay Deposit Now</a>
+                </div>
+
+                <div class="action-card">
+                    <h3 style="font-family: 'Oswald', sans-serif; color: #fff; margin-top: 0; text-transform: uppercase;">Prefer Direct Call?</h3>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Give us a direct ring or text right now.</p>
+                    <a href="tel:+18402494620" class="phone-cta-btn">840-249-4620</a>
+                </div>
+
+                <div class="zelle-card">
+                    <h3 style="font-family: 'Oswald', sans-serif; color: #fff; margin-top: 0; text-transform: uppercase;">Send Money with Zelle®</h3>
+                    <p style="color: #aaa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">AutoCross LLC</p>
+                    
+                    <img src="zelle-qr.png" alt="AutoCross LLC Zelle QR Code" class="zelle-qr">
+                    
+                    <p style="font-family: 'Oswald', sans-serif; font-size: 1.15rem; color: #fff; letter-spacing: 1px; margin-top: 10px; margin-bottom: 2px;">840-249-4620</p>
+                    <p style="color: #888; font-size: 0.8rem; margin: 0;">Scan code in banking app for secure payments.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TAB 2: SERVICE RATES & LS ESTIMATOR -->
+    <div id="tab-pricing" class="tab-pane">
+        <div class="info-panel-card">
+            <h2>Complete Service Rates ($100 – $70,000+)</h2>
+            <p>From essential maintenance and power sports repairs up to turn-key 1,200+ HP LSX racing builds.</p>
+            
+            <div class="pricing-grid">
+                <!-- Tier 1 -->
+                <div class="price-card">
+                    <h3>Small Engine, Marine & Trailer</h3>
+                    <div class="price-range">$100 – $600</div>
+                    <ul>
+                        <li>2-Cycle equipment tune-ups & carb rebuilds</li>
