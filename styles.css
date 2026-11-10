@@ -157,7 +157,58 @@ body {
 }
 
 /* ==========================================
-   5. CONTACT & TABBED NAVIGATION
+   5. HERO BANNER & MAIN LAYOUT
+   ========================================== */
+.hero-contact {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 320px;
+    background: linear-gradient(rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0.85)), url('./about-hero.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 3px solid #ff0033;
+    padding: 120px 20px 30px;
+    box-sizing: border-box;
+}
+
+.hero-contact h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+}
+
+.hero-contact h1 span {
+    color: #ff0033;
+    text-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
+}
+
+.hero-contact p {
+    color: #dcdcdc;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   6. CONTACT & TABBED NAVIGATION
    ========================================== */
 .contact-tabs-nav {
     display: flex;
@@ -211,7 +262,197 @@ body {
 }
 
 /* ==========================================
-   6. PRICING SPECTRUM & LS ESTIMATOR
+   7. GRID LAYOUT, CARDS & FORMS
+   ========================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.form-card, .info-panel-card {
+    background: #101010;
+    border: 1px solid #222;
+    border-left: 4px solid #ff0033;
+    padding: 35px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.form-card h2, .info-panel-card h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form-card p, .info-panel-card p {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    background: #080808;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff0033;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.sms-btn {
+    display: block;
+    width: 100%;
+    background-color: #ff0033;
+    color: #ffffff;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 51, 0.4);
+    box-sizing: border-box;
+}
+
+.sms-btn:hover {
+    background-color: #e0002c;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   8. SIDE STACK, PAYMENT & EGIFT CARDS
+   ========================================== */
+.side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.action-card {
+    background: #101010;
+    border: 1px solid #222;
+    border-left: 4px solid #ff0033;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.phone-cta-btn {
+    display: inline-block;
+    background-color: #ff0033;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.phone-cta-btn:hover {
+    background-color: #e0002c;
+}
+
+.deposit-pay-card {
+    background: #101010;
+    border: 1px solid #222;
+    border-left: 4px solid #ff0033;
+    padding: 25px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.pay-cta-btn {
+    display: inline-block;
+    background-color: #ff0033;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pay-cta-btn:hover {
+    background-color: #d3002b;
+}
+
+.zelle-card {
+    background: #101010;
+    border: 1px solid #222;
+    border-bottom: 3px solid #7a278d;
+    padding: 25px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.zelle-qr {
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #333;
+    margin: 15px auto;
+    display: block;
+}
+
+/* ==========================================
+   9. PRICING SPECTRUM & LS ESTIMATOR
    ========================================== */
 .pricing-grid {
     display: grid;
@@ -222,4 +463,126 @@ body {
 
 .price-card {
     background: #0d0d0d;
-    border:
+    border: 1px solid #222;
+    border-top: 3px solid #ff0033;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.price-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.price-range {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    color: #ff0033;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.price-card ul {
+    padding-left: 18px;
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.configurator-box {
+    background: #090909;
+    border: 1px solid #262626;
+    border-left: 4px solid #ff0033;
+    padding: 30px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.config-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.builder-result {
+    background: #141414;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.estimate-val {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    color: #ff0033;
+    font-weight: 800;
+    margin: 8px 0;
+}
+
+/* ==========================================
+   10. SHOP POLICIES & TERMS
+   ========================================== */
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.policy-card {
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-left: 3px solid #ff0033;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.policy-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.policy-card p {
+    color: #aaa;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   11. FOOTER & RESPONSIVE MEDIA QUERIES
+   ========================================== */
+footer {
+    background: #030303;
+    border-top: 2px solid #1a1a1a;
+    text-align: center;
+    padding: 50px 20px;
+    color: #777;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .desktop-menu { display: none; }
+    .menu-toggle { display: block !important; }
+    .config-grid { grid-template-columns: 1fr; }
+}
